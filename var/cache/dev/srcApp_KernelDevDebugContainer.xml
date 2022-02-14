@@ -339,12 +339,49 @@
     <service id="kernel" class="App\Kernel" public="true" synthetic="true">
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\ActivityController" class="App\Controller\ActivityController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\ActivityController"/>
+      </call>
+    </service>
+    <service id="App\Controller\CategoryController" class="App\Controller\CategoryController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\CategoryController"/>
+      </call>
+    </service>
+    <service id="App\Controller\ExerciceController" class="App\Controller\ExerciceController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\ExerciceController"/>
+      </call>
+    </service>
     <service id="App\Controller\TestController" class="App\Controller\TestController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\TestController"/>
       </call>
+    </service>
+    <service id="App\Repository\ActivityRepository" class="App\Repository\ActivityRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ExerciceRepository" class="App\Repository\ExerciceRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ImageActExRepository" class="App\Repository\ImageActExRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id=".legacy_controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -3893,7 +3930,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.I3K77mT"/>
+      <argument type="service" id=".service_locator.HmMtQ70"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4873,9 +4910,26 @@
         <argument>server:status</argument>
       </call>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ActivityController" class="App\Controller\ActivityController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ActivityController" class="App\Controller\ActivityController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ActivityController" class="App\Controller\ActivityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ExerciceController" class="App\Controller\ExerciceController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ExerciceController" class="App\Controller\ExerciceController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ExerciceController" class="App\Controller\ExerciceController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TestController" class="App\Controller\TestController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ActivityRepository" class="App\Repository\ActivityRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ActivityRepository" class="App\Repository\ActivityRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ExerciceRepository" class="App\Repository\ExerciceRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ExerciceRepository" class="App\Repository\ExerciceRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ImageActExRepository" class="App\Repository\ImageActExRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ImageActExRepository" class="App\Repository\ImageActExRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5397,6 +5451,15 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
+    <service id=".service_locator.HmMtQ70" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Repository\ActivityRepository" type="service_closure" id="App\Repository\ActivityRepository"/>
+        <argument key="App\Repository\CategoryRepository" type="service_closure" id="App\Repository\CategoryRepository"/>
+        <argument key="App\Repository\ExerciceRepository" type="service_closure" id="App\Repository\ExerciceRepository"/>
+        <argument key="App\Repository\ImageActExRepository" type="service_closure" id="App\Repository\ImageActExRepository"/>
+      </argument>
+    </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
       <argument type="service" id="security.access.authenticated_voter"/>
       <argument type="service" id="debug.event_dispatcher"/>
@@ -5444,6 +5507,24 @@
         <argument key="session" type="service_closure" id="session" on-invalid="ignore"/>
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\ActivityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ActivityController"/>
+      <argument>App\Controller\ActivityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\CategoryController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\CategoryController"/>
+      <argument>App\Controller\CategoryController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\ExerciceController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ExerciceController"/>
+      <argument>App\Controller\ExerciceController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
     <service id=".service_locator.vdmMuyE.App\Controller\TestController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\TestController"/>

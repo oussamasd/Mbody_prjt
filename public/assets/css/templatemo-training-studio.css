@@ -499,7 +499,8 @@ header
     display: block !important;
   }
   .header-area .main-nav {
-    overflow: hidden;
+    /*overflow: hidden;*/
+
   }
   .header-area .main-nav .nav {
     float: none;
@@ -516,7 +517,7 @@ header
   }
   .header-area .main-nav .nav li:last-child {
     width: 100%;
-    background-color: #ed563b;
+    background-color: #0a0c0d;
     color: #fff;
   }
   .header-area .main-nav .nav li:last-child a {

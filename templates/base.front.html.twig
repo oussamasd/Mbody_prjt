@@ -55,7 +55,7 @@ https://templatemo.com/tm-548-training-studio
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
                             <li class="scroll-to-section"><a href="#features">Produit</a></li>
-                            <li class="scroll-to-section"><a href="#our-classes">Activite</a></li>
+                            <li class="scroll-to-section"><a href="test/1">Activite</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Abonnement</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Entraineur</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Feedback</a></li>
@@ -71,25 +71,33 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-
+    {% block accueil %}
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
+        {% block top %}
+        {% block video %}
         <video autoplay muted loop id="bg-video">
             <source src="{{ asset('assets/images/gym-video.mp4') }}" type="video/mp4" />
         </video>
+        {% endblock %}
 
         <div class="video-overlay header-text">
             <div class="caption">
+                {% block cen %}
                 <h6>work harder, get stronger</h6>
                 <h2>easy with our <em>gym</em></h2>
                 <div class="main-button scroll-to-section">
                     <a href="#features">Become a member</a>
                 </div>
+                {% endblock %}
             </div>
         </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
+        {% endblock %}
 
+    </div>
+    {% endblock %}
+    <!-- ***** Main Banner Area End ***** -->
+    {% block body %}
     <!-- ***** Features Item Start ***** -->
     <section class="section" id="features">
         <div class="container">
@@ -442,8 +450,9 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </section>
     <!-- ***** Contact Us Area Ends ***** -->
-    
+    {% endblock %}
     <!-- ***** Footer Start ***** -->
+    {% block footer %}
     <footer>
         <div class="container">
             <div class="row">
@@ -458,6 +467,8 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </footer>
+    {% endblock %}
+
 
     <!-- jQuery -->
     <script src="{{ asset('assets/js/jquery-2.1.0.min.js') }}"></script>
