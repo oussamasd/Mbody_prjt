@@ -22,6 +22,11 @@ class ImageActEx
      */
     private $image_url;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Activity::class, inversedBy="images")
+     */
+    private $activity;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class ImageActEx
     public function setImageUrl(?string $image_url): self
     {
         $this->image_url = $image_url;
+
+        return $this;
+    }
+
+    public function getActivity(): ?Activity
+    {
+        return $this->activity;
+    }
+
+    public function setActivity(?Activity $activity): self
+    {
+        $this->activity = $activity;
 
         return $this;
     }

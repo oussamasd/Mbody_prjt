@@ -15,6 +15,12 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
+    'activity' => [[], ['_controller' => 'App\\Controller\\ActivityController::index'], [], [['text', '/activity']], [], []],
+    'activityAdd' => [[], ['_controller' => 'App\\Controller\\ActivityController::add'], [], [['text', '/addActivity']], [], []],
+    'category' => [[], ['_controller' => 'App\\Controller\\CategoryController::index'], [], [['text', '/category']], [], []],
+    'categoryAdd' => [[], ['_controller' => 'App\\Controller\\CategoryController::add'], [], [['text', '/addCategory']], [], []],
+    'exercice' => [[], ['_controller' => 'App\\Controller\\ExerciceController::index'], [], [['text', '/exercice']], [], []],
+    'exerciceAdd' => [[], ['_controller' => 'App\\Controller\\ExerciceController::add'], [], [['text', '/addExercice']], [], []],
     'test' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/test']], [], []],
     'test1' => [[], ['_controller' => 'App\\Controller\\TestController::index2'], [], [['text', '/test/1']], [], []],
 ];

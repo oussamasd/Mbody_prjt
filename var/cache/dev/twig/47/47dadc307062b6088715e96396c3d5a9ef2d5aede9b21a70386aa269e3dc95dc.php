@@ -251,7 +251,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                 </ul>
@@ -602,7 +602,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                 </ul>
@@ -674,6 +674,6 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 <script src=\"{{ asset('Back/js/charts-home.js') }}\"></script>
 <script src=\"{{ asset('Back/js/front.js') }}\"></script>
 </body>
-</html>", "base.back.html.twig", "C:\\wamp64\\www\\Mbody_Prjt\\templates\\base.back.html.twig");
+</html>", "base.back.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\base.back.html.twig");
     }
 }
