@@ -29,7 +29,7 @@ class ActivityType extends AbstractType
             /*->add('exercices', EntityType::class, array(
                 'class' => Exercice::class,
                 'choice_label' => 'nom_Exercice',))*/
-            ->add('Submit',SubmitType::class)
+            ->add('Add',SubmitType::class)
 
         ;
     }

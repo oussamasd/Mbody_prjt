@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Activity;
 use App\Form\ActivityType;
+use App\Repository\ActivityRepository;
+use App\Repository\ExerciceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,6 +28,8 @@ class ActivityController extends AbstractController
      */
     public function add(Request $request)
     {
+        $activityAll= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+
         $activity= new Activity();
         $form= $this->createForm(ActivityType::class,$activity);
         $form->handleRequest($request);
@@ -33,9 +37,37 @@ class ActivityController extends AbstractController
             $em= $this->getDoctrine()->getManager();
             $em->persist($activity);
             $em->flush();
-            return $this->redirectToRoute("activity");
+            return $this->redirectToRoute("activityAdd");
         }
         return $this->render("activity/add.html.twig",
-            array("formActivity"=>$form->createView()));
+            array("formActivity"=>$form->createView() , 'activities' => $activityAll ,));
+    }
+    /**
+     * @Route("/updateActivite/{id}",name="ActivityUpdate")
+     */
+    public function updateActivite(ActivityRepository   $s,$id,Request $request)
+    {
+        $activityAll= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+
+        $activity= $s->find($id);
+        //var_dump($student).die();
+        $form= $this->createForm(ActivityType::class,$activity);
+        $form->handleRequest($request);
+        if($form->isSubmitted()&& $form->isValid()){
+            $em= $this->getDoctrine()->getManager();
+            $em->flush();
+            return $this->redirectToRoute("activityAdd");
+        }
+        return $this->render("activity/add.html.twig", array("formActivity"=>$form->createView(),'activities' => $activityAll ,));
+    }
+    /**
+     * @Route("/DeleteActivity/{id}",name="ActivityDelete")
+     */
+    public function delete($id){
+        $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
+        $em= $this->getDoctrine()->getManager();
+        $em->remove($activity);
+        $em->flush();
+        return $this->redirectToRoute("activityAdd");
     }
 }

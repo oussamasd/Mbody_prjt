@@ -39,6 +39,14 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/update(?'
+                    .'|Activite/([^/]++)(*:196)'
+                    .'|Exercice/([^/]++)(*:221)'
+                .')'
+                .'|/Delete(?'
+                    .'|Activity/([^/]++)(*:257)'
+                    .'|Exercice/([^/]++)(*:282)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -48,8 +56,12 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        196 => [[['_route' => 'ActivityUpdate', '_controller' => 'App\\Controller\\ActivityController::updateActivite'], ['id'], null, null, false, true, null]],
+        221 => [[['_route' => 'ExerciceUpdate', '_controller' => 'App\\Controller\\ExerciceController::updateExercice'], ['id'], null, null, false, true, null]],
+        257 => [[['_route' => 'ActivityDelete', '_controller' => 'App\\Controller\\ActivityController::delete'], ['id'], null, null, false, true, null]],
+        282 => [
+            [['_route' => 'ExerciceDelete', '_controller' => 'App\\Controller\\ExerciceController::delete'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

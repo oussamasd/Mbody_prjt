@@ -1,2 +1,64 @@
+{% extends 'base.back.html.twig' %}
+{% block body %}
 <h1>add activite</h1>
-{{ form(formActivity) }}
+{#{{ form(formActivity) }}#}
+{{ form_start(formActivity) }}
+<table>
+    <tr>
+        <td>  {{ form_label(formActivity.nom_Act,"Nom Activite")}}  </td>
+        <td>  {{ form_errors(formActivity.nom_Act) }} </td>
+        <td> {{ form_widget(formActivity.nom_Act)}}   </td>
+    </tr>
+    <tr>
+        <td>  {{ form_label(formActivity.date_Act,"Date Activite")}}  </td>
+        <td>  {{ form_errors(formActivity.date_Act) }} </td>
+        <td> {{ form_widget(formActivity.date_Act)}}   </td>
+    </tr>
+    <tr>
+        <td>  {{ form_label(formActivity.temp_act,"Temps  Activite")}}  </td>
+        <td>  {{ form_errors(formActivity.temp_act) }} </td>
+        <td> {{ form_widget(formActivity.temp_act)}}   </td>
+    </tr>
+    <tr>
+        <td>  {{ form_label(formActivity.description_Act,"Description")}}  </td>
+        <td>  {{ form_errors(formActivity.description_Act) }} </td>
+        <td> {{ form_widget(formActivity.description_Act)}}   </td>
+    </tr>
+    <tr>
+        <td>  {{ form_label(formActivity.category,"Category")}}  </td>
+        <td>  {{ form_errors(formActivity.category) }} </td>
+        <td> {{ form_widget(formActivity.category)}}   </td>
+    </tr>
+    <tr>
+
+
+    </tr>
+</table>
+{{ form_end(formActivity) }}
+    <table border="1">
+        <tr>
+            <td>nom activitie</td>
+            <td>date activite</td>
+            <td>temps activite </td>
+            <td>description </td>
+            <td>category </td>
+            <td>Action </td>
+
+        </tr>
+        {% for e in activities %}
+            <tr>
+                <td>{{ e.getNomAct()}}</td>
+                <td>{{ e.getDateAct()|date('Y-m-d')}}</td>
+                <td>{{ e.getTempAct()|date('H:i')}} </td>
+                <td>{{ e.getDescriptionAct()}}</td>
+                <td>{{ e.getCategory.getNomCat()}} </td>
+                <td>
+                    <a href="{{ path('ActivityUpdate',{"id":e.getId}) }}"> Edit </a>
+                    <a href="{{ path('ActivityDelete',{"id":e.getId}) }}">Delete</a>
+
+                </td>
+
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

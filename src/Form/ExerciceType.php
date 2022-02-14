@@ -22,7 +22,7 @@ class ExerciceType extends AbstractType
             ->add('category', EntityType::class, array(
                 'class' => Category::class,
                 'choice_label' => 'nom_cat',))
-            ->add('Submit',SubmitType::class)
+            ->add('Add',SubmitType::class)
         ;
     }
 

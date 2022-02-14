@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\ActivityRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,16 +22,19 @@ class Activity
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank(message = " Nom est obligatoire")
      */
     private $nom_Act;
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank(message = " date est obligatoire")
      */
     private $date_Act;
 
     /**
      * @ORM\Column(type="time")
+     * @Assert\NotBlank(message = " temps est obligatoire")
      */
     private $temp_act;
 

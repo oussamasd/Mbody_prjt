@@ -1,2 +1,9 @@
 <h1>add category</h1>
-{{ form(formCategory) }}
+{#{{ form(formCategory) }}#}
+{{ form_start(formCategory) }}
+<tr>
+    <td>{{ form_label(formCategory.nom_Cat," New Category")}}  </td>
+    <td>{{ form_errors(formCategory.nom_Cat) }} </td>
+    <td>{{ form_widget(formCategory.nom_Cat)}}</td>
+</tr>
+{{ form_end(formCategory) }}

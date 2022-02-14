@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\ExerciceRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,16 +22,19 @@ class Exercice
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message = " nom est obligatoire")
      */
     private $nom_Exercice;
 
     /**
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank(message = " date est obligatoire")
      */
     private $dure_Exercice;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message = " description est obligatoire")
      */
     private $description_Exercice;
 

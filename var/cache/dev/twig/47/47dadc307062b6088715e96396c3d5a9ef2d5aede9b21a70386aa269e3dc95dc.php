@@ -251,16 +251,16 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"\">Page</a></li>
+                    <li><a href=\"#\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                 </ul>
             </li>
-            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>table </a>
+            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Gestion Activite </a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"/addActivity\">Activite</a></li>
+                    <li><a href=\"addExercice\">Exercice</a></li>
+                    <li><a href=\"addCategory\">Category</a></li>
                 </ul>
             </li>
 
@@ -602,16 +602,16 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"\">Page</a></li>
+                    <li><a href=\"#\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                     <li><a href=\"#\">Page</a></li>
                 </ul>
             </li>
-            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>table </a>
+            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Gestion Activite </a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"/addActivity\">Activite</a></li>
+                    <li><a href=\"addExercice\">Exercice</a></li>
+                    <li><a href=\"addCategory\">Category</a></li>
                 </ul>
             </li>
 
