@@ -70,4 +70,23 @@ class ActivityController extends AbstractController
         $em->flush();
         return $this->redirectToRoute("activityAdd");
     }
+    /**
+     * @Route("/activitySchedule", name="activitySchedule")
+     */
+    public function Schedule(): Response
+    {
+        $activityAll= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+         $currentDate= date('Y-m-d');
+         $aa=array(1,3,5);
+
+        foreach ($activityAll as $act) {
+
+        }
+
+
+
+
+
+            return $this->render('activity/schedule.html.twig',array('currentdate'=>$currentDate,'activities'=>$activityAll));
+    }
 }

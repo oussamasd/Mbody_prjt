@@ -15,12 +15,13 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/activity' => [[['_route' => 'activity', '_controller' => 'App\\Controller\\ActivityController::index'], null, null, null, false, false, null]],
         '/addActivity' => [[['_route' => 'activityAdd', '_controller' => 'App\\Controller\\ActivityController::add'], null, null, null, false, false, null]],
+        '/activitySchedule' => [[['_route' => 'activitySchedule', '_controller' => 'App\\Controller\\ActivityController::Schedule'], null, null, null, false, false, null]],
         '/category' => [[['_route' => 'category', '_controller' => 'App\\Controller\\CategoryController::index'], null, null, null, false, false, null]],
         '/addCategory' => [[['_route' => 'categoryAdd', '_controller' => 'App\\Controller\\CategoryController::add'], null, null, null, false, false, null]],
         '/exercice' => [[['_route' => 'exercice', '_controller' => 'App\\Controller\\ExerciceController::index'], null, null, null, false, false, null]],
         '/addExercice' => [[['_route' => 'exerciceAdd', '_controller' => 'App\\Controller\\ExerciceController::add'], null, null, null, false, false, null]],
         '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::index'], null, null, null, false, false, null]],
-        '/test/1' => [[['_route' => 'test1', '_controller' => 'App\\Controller\\TestController::index2'], null, null, null, false, false, null]],
+        '/test1' => [[['_route' => 'test1', '_controller' => 'App\\Controller\\TestController::index2'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

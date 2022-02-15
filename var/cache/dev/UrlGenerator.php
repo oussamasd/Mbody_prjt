@@ -19,6 +19,7 @@ return [
     'activityAdd' => [[], ['_controller' => 'App\\Controller\\ActivityController::add'], [], [['text', '/addActivity']], [], []],
     'ActivityUpdate' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::updateActivite'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/updateActivite']], [], []],
     'ActivityDelete' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/DeleteActivity']], [], []],
+    'activitySchedule' => [[], ['_controller' => 'App\\Controller\\ActivityController::Schedule'], [], [['text', '/activitySchedule']], [], []],
     'category' => [[], ['_controller' => 'App\\Controller\\CategoryController::index'], [], [['text', '/category']], [], []],
     'categoryAdd' => [[], ['_controller' => 'App\\Controller\\CategoryController::add'], [], [['text', '/addCategory']], [], []],
     'exercice' => [[], ['_controller' => 'App\\Controller\\ExerciceController::index'], [], [['text', '/exercice']], [], []],
@@ -26,5 +27,5 @@ return [
     'ExerciceUpdate' => [['id'], ['_controller' => 'App\\Controller\\ExerciceController::updateExercice'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/updateExercice']], [], []],
     'ExerciceDelete' => [['id'], ['_controller' => 'App\\Controller\\ExerciceController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/DeleteExercice']], [], []],
     'test' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/test']], [], []],
-    'test1' => [[], ['_controller' => 'App\\Controller\\TestController::index2'], [], [['text', '/test/1']], [], []],
+    'test1' => [[], ['_controller' => 'App\\Controller\\TestController::index2'], [], [['text', '/test1']], [], []],
 ];

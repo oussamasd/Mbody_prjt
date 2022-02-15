@@ -18,6 +18,7 @@ https://templatemo.com/tm-548-training-studio
 
 -->
     <!-- Additional CSS Files -->
+      <link rel="stylesheet" type="text/css" href="{{asset('schedule_css.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
@@ -55,7 +56,7 @@ https://templatemo.com/tm-548-training-studio
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
                             <li class="scroll-to-section"><a href="#features">Produit</a></li>
-                            <li class="scroll-to-section"><a href="test/1">Activite</a></li>
+                            <li class="scroll-to-section"><a href="#call-to-action">Activite</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Abonnement</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Entraineur</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Feedback</a></li>
@@ -187,6 +188,7 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Call to Action Start ***** -->
     <section class="section" id="call-to-action">
         <div class="container">
+            {% block Act %}
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="cta-content">
@@ -198,6 +200,7 @@ https://templatemo.com/tm-548-training-studio
                     </div>
                 </div>
             </div>
+           {% endblock%}
         </div>
     </section>
     <!-- ***** Call to Action End ***** -->
