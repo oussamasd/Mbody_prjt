@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use function PHPSTORM_META\map;
 
 class ActivityController extends AbstractController
 {
@@ -75,18 +76,15 @@ class ActivityController extends AbstractController
      */
     public function Schedule(): Response
     {
-        $activityAll= $this->getDoctrine()->getRepository(Activity::class)->findAll();
-         $currentDate= date('Y-m-d');
-         $aa=array(1,3,5);
-
-        foreach ($activityAll as $act) {
-
-        }
 
 
 
 
 
-            return $this->render('activity/schedule.html.twig',array('currentdate'=>$currentDate,'activities'=>$activityAll));
+
+
+
+
+            return $this->render('activity/schedule.html.twig');
     }
 }

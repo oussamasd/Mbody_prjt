@@ -238,15 +238,18 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
     <nav id=\"sidebar\">
         <!-- Sidebar Header-->
         <div class=\"sidebar-header d-flex align-items-center\">
-            <div class=\"avatar\"><img src=\"img/avatar-6.jpg\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
+            <div class=\"avatar\"><img src=\"";
+        // line 176
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/avatar-6.jpg"), "html", null, true);
+        echo "\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
             <div class=\"title\">
-                <h1 class=\"h5\">Mark Stephen</h1>
+                <h1 class=\"h5\">Saddi Oussama</h1>
                 <p>Web Designer</p>
             </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class=\"heading\">Main</span>
         <ul class=\"list-unstyled\">
-            <li class=\"active\"><a href=\"index.html\"> <i class=\"icon-home\"></i>Home </a></li>
+            <li class=\"active\"><a href=\"/test\"> <i class=\"icon-home\"></i>Home </a></li>
 
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
@@ -409,7 +412,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
     public function getDebugInfo()
     {
-        return array (  372 => 215,  362 => 214,  343 => 6,  330 => 259,  326 => 258,  322 => 257,  318 => 256,  314 => 255,  310 => 254,  306 => 253,  302 => 252,  283 => 235,  281 => 214,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
+        return array (  375 => 215,  365 => 214,  346 => 6,  333 => 259,  329 => 258,  325 => 257,  321 => 256,  317 => 255,  313 => 254,  309 => 253,  305 => 252,  286 => 235,  284 => 214,  243 => 176,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -589,15 +592,15 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
     <nav id=\"sidebar\">
         <!-- Sidebar Header-->
         <div class=\"sidebar-header d-flex align-items-center\">
-            <div class=\"avatar\"><img src=\"img/avatar-6.jpg\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
+            <div class=\"avatar\"><img src=\"{{ asset('back/img/avatar-6.jpg') }}\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
             <div class=\"title\">
-                <h1 class=\"h5\">Mark Stephen</h1>
+                <h1 class=\"h5\">Saddi Oussama</h1>
                 <p>Web Designer</p>
             </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class=\"heading\">Main</span>
         <ul class=\"list-unstyled\">
-            <li class=\"active\"><a href=\"index.html\"> <i class=\"icon-home\"></i>Home </a></li>
+            <li class=\"active\"><a href=\"/test\"> <i class=\"icon-home\"></i>Home </a></li>
 
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>

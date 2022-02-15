@@ -242,10 +242,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         </table>
     </div>
 </div>
-<h1>";
-        // line 180
-        echo twig_escape_filter($this->env, (isset($context["currentdate"]) || array_key_exists("currentdate", $context) ? $context["currentdate"] : (function () { throw new RuntimeError('Variable "currentdate" does not exist.', 180, $this->source); })()), "html", null, true);
-        echo "</h1>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -267,7 +264,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
     public function getDebugInfo()
     {
-        return array (  247 => 180,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -451,7 +448,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         </table>
     </div>
 </div>
-<h1>{{ currentdate }}</h1>
+
 {% endblock %}", "activity/schedule.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\activity\\schedule.html.twig");
     }
 }
