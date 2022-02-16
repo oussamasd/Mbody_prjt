@@ -6,10 +6,12 @@ use App\Entity\Activity;
 use App\Form\ActivityType;
 use App\Repository\ActivityRepository;
 use App\Repository\ExerciceRepository;
+use DateInterval;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\DateTime;
 use function PHPSTORM_META\map;
 
 class ActivityController extends AbstractController
@@ -77,6 +79,57 @@ class ActivityController extends AbstractController
     public function Schedule(): Response
     {
 
+        $currentdate=date('D Y-m-d H:m:s');
+        //$currentdate = date("D M j G:i:s T Y");
+        $c='2022-02-20';
+        //$currentdate|date('d');
+        $em=$this->getDoctrine()->getRepository(Activity::class);
+       /* $a=explode("-",$currentdate);
+        $day=(integer)$a[2];
+        $month=(integer)$a[1];
+        $year=(integer)$a[0];
+        if($day+6>30){
+            if($month==12){
+              $month+=1;
+              $year+=1;
+              $day=$day+6 - 30;
+
+            }else{
+                $month+=1;
+                $day=$day+6 - 30;
+
+
+            }
+
+
+        }else{
+            $day+=6;
+
+
+        }
+        if($day<10){
+
+            $sDay="0".(string)$day;
+        }else{
+            $sDay=(string)$day;
+        }
+        if($month<10){
+
+            $sMonth="0".(string)$month;
+        }else{
+            $sMonth=(string)$month;
+        }
+        $sYear=(string)$year;
+        $nextDate=$sYear."-". $sMonth."-".$sDay;*/
+        /*$Act = $em->findActiviteOfWeek($nextDate);*/
+        //$datetime = $em->nextDate(1);
+        $Act1 = $em->findActiviteOfWeek($em->nextDate(0));
+        $Act2 = $em->findActiviteOfWeek($em->nextDate(1));
+        $Act3 = $em->findActiviteOfWeek($em->nextDate(2));
+        $Act4 = $em->findActiviteOfWeek($em->nextDate(3));
+        $Act5 = $em->findActiviteOfWeek($em->nextDate(4));
+        $Act6 = $em->findActiviteOfWeek($em->nextDate(5));
+        $Act7 = $em->findActiviteOfWeek($em->nextDate(6));
 
 
 
@@ -85,6 +138,26 @@ class ActivityController extends AbstractController
 
 
 
-            return $this->render('activity/schedule.html.twig');
+
+        return $this->render('activity/schedule.html.twig',
+             array(
+                 'Act1'=>$Act1,
+                 'Act2'=>$Act2,
+                 'Act3'=>$Act3,
+                 'Act4'=>$Act4,
+                 'Act5'=>$Act5,
+                 'Act6'=>$Act6,
+                 'Act7'=>$Act7,
+                 'Act1Date'=>$em->nextDate(0),
+                 'Act2Date'=>$em->nextDate(1),
+                 'Act3Date'=>$em->nextDate(2),
+                 'Act4Date'=>$em->nextDate(3),
+                 'Act5Date'=>$em->nextDate(4),
+                 'Act6Date'=>$em->nextDate(5),
+                 'Act7Date'=>$em->nextDate(6),
+
+             ));
+        //return $this->render('activity/test.html.twig',array('cu'=>$Act2));
     }
+
 }

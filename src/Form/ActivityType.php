@@ -21,14 +21,18 @@ class ActivityType extends AbstractType
             ->add('date_Act')
             ->add('temp_act')
             ->add('description_Act')
-            /*->add('category')
-            ->add('exercices')*/
+
             ->add('category', EntityType::class, array(
                 'class' => Category::class,
-                'choice_label' => 'nom_cat',))
-            /*->add('exercices', EntityType::class, array(
+                'choice_label' => 'nom_cat',
+                ))
+            ->add('exercices', EntityType::class, array(
                 'class' => Exercice::class,
-                'choice_label' => 'nom_Exercice',))*/
+                'choice_label' => 'nom_Exercice',
+                'multiple' =>true,
+                'expanded' =>true
+                ))
+
             ->add('Add',SubmitType::class)
 
         ;

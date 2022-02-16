@@ -65,7 +65,7 @@ class __TwigTemplate_2eaae6aaeb26b24a0a78e70d60adb0a86c0e2066a3854b446cecc4698ec
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Act"));
 
         // line 3
-        echo "    <h1> aahah</h1>
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -94,7 +94,7 @@ class __TwigTemplate_2eaae6aaeb26b24a0a78e70d60adb0a86c0e2066a3854b446cecc4698ec
     {
         return new Source("{% extends 'base.front.html.twig' %}
 {% block Act %}
-    <h1> aahah</h1>
+
 {% endblock %}
 
 
