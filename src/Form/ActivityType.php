@@ -7,9 +7,11 @@ use App\Entity\Category;
 use App\Entity\Exercice;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 
 class ActivityType extends AbstractType
@@ -18,7 +20,14 @@ class ActivityType extends AbstractType
     {
         $builder
             ->add('nom_Act')
-            ->add('date_Act')
+            ->add('date_Act',DateType::class,[
+                'widget' => 'single_text',
+
+                // prevents rendering it as type="date", to avoid HTML5 date pickers
+                'html5' => true ,
+
+                // adds a class that can be selected in JavaScript
+               ])
             ->add('temp_act')
             ->add('description_Act')
 
@@ -32,7 +41,12 @@ class ActivityType extends AbstractType
                 'multiple' =>true,
                 'expanded' =>true
                 ))
-
+            ->add('images', FileType::class,[
+                'label' => false,
+                'multiple' => true,
+                'mapped' => false,
+                'required' => false
+            ])
             ->add('Add',SubmitType::class)
 
         ;

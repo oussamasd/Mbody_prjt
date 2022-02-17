@@ -50,12 +50,12 @@ class Activity
     private $category;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Exercice::class, inversedBy="activities")
+     * @ORM\ManyToMany(targetEntity=Exercice::class, inversedBy="activities",)
      */
     private $exercices;
 
     /**
-     * @ORM\OneToMany(targetEntity=ImageActEx::class, mappedBy="activity")
+     * @ORM\OneToMany(targetEntity=ImageActEx::class, mappedBy="activity",cascade={"persist"} )
      */
     private $images;
 

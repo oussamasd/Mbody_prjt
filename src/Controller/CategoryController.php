@@ -36,6 +36,8 @@ class CategoryController extends AbstractController
             $em->flush();
             return $this->redirectToRoute("category");
         }
+
+
         return $this->render("category/add.html.twig",
             array("formCategory"=>$form->createView()));
     }

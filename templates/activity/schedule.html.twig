@@ -24,11 +24,22 @@
                 <th class="text-uppercase">{{ Act1Date }}</th>
                 {% for act in Act1 %}
                 <td>
-                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{ act.getCategory.getNomCat() }}</span>
-                    <div class="margin-10px-top font-size14">9:00-10:00</div>
-                    <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    <a href="#">
+                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{ act.getCategory.getNomCat() }}</span>
+                        <div class="margin-10px-top font-size14 "><p style="color: yellow">{{ act.getTempAct|date('H:m') }}</p></div>
+                        <div class="font-size13 text-light-gray">Ivana Wong</div>
+                    </a>
                 </td>
                 {% endfor %}
+                {% if(sizeAct1<6) %}
+                    {% for i in 1..6-sizeAct1 %}
+                        <td>
+                            <p>.</p>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Nothing</span>
+                            <p>.</p>
+                        </td>
+                    {% endfor %}
+                {% endif %}
                 {#<td>
                     <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
                     <div class="margin-10px-top font-size14">9:00-10:00</div>
@@ -59,133 +70,99 @@
 #}
             </tr>
 
-           
+
             <tr>
 {#                <td class="align-middle">10:00am</td>#}
                 <th class="text-uppercase">{{ Act2Date }}</th>
 
-                <td>
-                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
-                    <div class="margin-10px-top font-size14">10:00-11:00</div>
-                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                </td>
-                <td class="bg-light-gray">
-
-                </td>
-                <td>
-                    <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Art</span>
-                    <div class="margin-10px-top font-size14">10:00-11:00</div>
-                    <div class="font-size13 text-light-gray">Kate Alley</div>
-                </td>
-                <td>
-                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
-                    <div class="margin-10px-top font-size14">10:00-11:00</div>
-                    <div class="font-size13 text-light-gray">Marta Healy</div>
-                </td>
-                <td>
-                    <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
-                    <div class="margin-10px-top font-size14">10:00-11:00</div>
-                    <div class="font-size13 text-light-gray">James Smith</div>
-                </td>
-                <td class="bg-light-gray">
-
-                </td>
-            </tr>
+                {% for act in Act2 %}
+                    <td>
+                        <a href="#">
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{ act.getCategory.getNomCat() }}</span>
+                            <div class="margin-10px-top font-size14"><p style="color: yellow">{{ act.getTempAct|date('H:m') }}</p></div>
+                            <div class="font-size13 text-light-gray">Ivana Wong</div>
+                        </a>
+                    </td>
+                {% endfor %}
+                {% if(sizeAct2<6) %}
+                    {% for i in 1..6-sizeAct2 %}
+                        <td>
+                            <p>.</p>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Nothing</span>
+                            <p>.</p>
+                        </td>
+                    {% endfor %}
+                {% endif %}
 
             <tr>
 {#                <td class="align-middle">11:00am</td>#}
                 <th class="text-uppercase">{{ Act3Date }}</th>
 
-                <td>
-                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                    <div class="margin-10px-top font-size14">11:00-12:00</div>
-                </td>
-                <td>
-                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                    <div class="margin-10px-top font-size14">11:00-12:00</div>
-                </td>
-                <td>
-                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                    <div class="margin-10px-top font-size14">11:00-12:00</div>
-                </td>
-                <td>
-                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                    <div class="margin-10px-top font-size14">11:00-12:00</div>
-                </td>
-                <td>
-                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                    <div class="margin-10px-top font-size14">11:00-12:00</div>
-                </td>
-                <td>
-                    <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Break</span>
-                    <div class="margin-10px-top font-size14">11:00-12:00</div>
-                </td>
-            </tr>
+                {% for act in Act3 %}
+                    <td>
+                        <a href="#">
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{ act.getCategory.getNomCat() }}</span>
+                            <div class="margin-10px-top font-size14"><p style="color: yellow">{{ act.getTempAct|date('H:m') }}</p></div>
+                            <div class="font-size13 text-light-gray">Ivana Wong</div>
+                        </a>
+                    </td>
+                {% endfor %}
+                {% if(sizeAct3<6) %}
+                    {% for i in 1..6-sizeAct3 %}
+                        <td>
+                            <p>.</p>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Nothing</span>
+                            <p>.</p>
+                        </td>
+                    {% endfor %}
+                {% endif %}
 
             <tr>
                 <th class="text-uppercase">{{ Act4Date }}</th>
 
-                {#                <td class="align-middle">12:00pm</td>#}
-                <td class="bg-light-gray">
-
-                </td>
-                <td>
-                    <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Art</span>
-                    <div class="margin-10px-top font-size14">12:00-1:00</div>
-                    <div class="font-size13 text-light-gray">Kate Alley</div>
-                </td>
-                <td>
-                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Dance</span>
-                    <div class="margin-10px-top font-size14">12:00-1:00</div>
-                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                </td>
-                <td>
-                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
-                    <div class="margin-10px-top font-size14">12:00-1:00</div>
-                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                </td>
-                <td class="bg-light-gray">
-
-                </td>
-                <td>
-                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
-                    <div class="margin-10px-top font-size14">12:00-1:00</div>
-                    <div class="font-size13 text-light-gray">Marta Healy</div>
-                </td>
+                {% for act in Act4 %}
+                    <td>
+                        <a href="#">
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{ act.getCategory.getNomCat() }}</span>
+                            <div class="margin-10px-top font-size14"><p style="color: yellow">{{ act.getTempAct|date('H:m') }}</p></div>
+                            <div class="font-size13 text-light-gray">Ivana Wong</div>
+                        </a>
+                    </td>
+                {% endfor %}
+                {% if(sizeAct4<6) %}
+                    {% for i in 1..6-sizeAct4 %}
+                        <td >
+                            <p>.</p>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Nothing</span>
+                            <p>.</p>
+                        </td>
+                    {% endfor %}
+                {% endif %}
             </tr>
 
             <tr>
                 <th class="text-uppercase">{{ Act5Date }}</th>
 
-                {#                <td class="align-middle">01:00pm</td>#}
-                <td>
-                    <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
-                    <div class="margin-10px-top font-size14">1:00-2:00</div>
-                    <div class="font-size13 text-light-gray">James Smith</div>
-                </td>
-                <td>
-                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
-                    <div class="margin-10px-top font-size14">1:00-2:00</div>
-                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                </td>
-                <td class="bg-light-gray">
+                {% for act in Act5 %}
+                    <td>
+                        <a href="#">
+                            <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{ act.getCategory.getNomCat() }}</span>
+                            <div class="margin-10px-top font-size14"><p style="color: yellow">{{ act.getTempAct|date('H:m') }}</p></div>
+                            <div class="font-size13 text-light-gray">Ivana Wong</div>
+                        </a>
+                    </td>
+                {% endfor %}
+                {% if(sizeAct5<6) %}
+                    {% for i in 1..6-sizeAct5 %}
+                        <td >
+                            <p>.</p>
+                            <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Nothing</span>
 
-                </td>
-                <td>
-                    <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">English</span>
-                    <div class="margin-10px-top font-size14">1:00-2:00</div>
-                    <div class="font-size13 text-light-gray">James Smith</div>
-                </td>
-                <td>
-                    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Yoga</span>
-                    <div class="margin-10px-top font-size14">1:00-2:00</div>
-                    <div class="font-size13 text-light-gray">Marta Healy</div>
-                </td>
-                <td>
-                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Music</span>
-                    <div class="margin-10px-top font-size14">1:00-2:00</div>
-                    <div class="font-size13 text-light-gray">Ivana Wong</div>
-                </td>
+                            <p>.</p>
+
+                        </td>
+                    {% endfor %}
+                {% endif %}
             </tr>
             </tbody>
         </table>

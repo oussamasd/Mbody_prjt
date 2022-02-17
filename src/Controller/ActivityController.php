@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Activity;
+use App\Entity\ImageActEx;
 use App\Form\ActivityType;
 use App\Repository\ActivityRepository;
 use App\Repository\ExerciceRepository;
@@ -36,10 +37,29 @@ class ActivityController extends AbstractController
         $activity= new Activity();
         $form= $this->createForm(ActivityType::class,$activity);
         $form->handleRequest($request);
-        if($form->isSubmitted()){
+        if($form->isSubmitted()&& $form->isValid()){
+            // On récupère les images transmises
+            $images = $form->get('images')->getData();
+
+            // On boucle sur les images
+            foreach($images as $image){
+                // On génère un nouveau nom de fichier
+                $fichier = md5(uniqid()).'.'.$image->guessExtension();
+
+                // On copie le fichier dans le dossier uploads
+                $image->move(
+                    $this->getParameter('images_directory'),
+                    $fichier
+                );
+
+                // On crée l'image dans la base de données
+                $img = new ImageActEx();
+                $img->setImageUrl($fichier);
+                $activity->addImage($img);
             $em= $this->getDoctrine()->getManager();
             $em->persist($activity);
             $em->flush();
+            }
             return $this->redirectToRoute("activityAdd");
         }
         return $this->render("activity/add.html.twig",
@@ -130,6 +150,7 @@ class ActivityController extends AbstractController
         $Act5 = $em->findActiviteOfWeek($em->nextDate(4));
         $Act6 = $em->findActiviteOfWeek($em->nextDate(5));
         $Act7 = $em->findActiviteOfWeek($em->nextDate(6));
+        sizeof($Act1);
 
 
 
@@ -155,6 +176,13 @@ class ActivityController extends AbstractController
                  'Act5Date'=>$em->nextDate(4),
                  'Act6Date'=>$em->nextDate(5),
                  'Act7Date'=>$em->nextDate(6),
+                 'sizeAct1'=>sizeof($Act1),
+                 'sizeAct2'=>sizeof($Act2),
+                 'sizeAct3'=>sizeof($Act3),
+                 'sizeAct4'=>sizeof($Act4),
+                 'sizeAct5'=>sizeof($Act5),
+                 'sizeAct6'=>sizeof($Act6),
+                 'sizeAct7'=>sizeof($Act7),
 
              ));
         //return $this->render('activity/test.html.twig',array('cu'=>$Act2));

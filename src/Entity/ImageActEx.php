@@ -23,7 +23,7 @@ class ImageActEx
     private $image_url;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Activity::class, inversedBy="images")
+     * @ORM\ManyToOne(targetEntity=Activity::class, inversedBy="images" )
      */
     private $activity;
 
