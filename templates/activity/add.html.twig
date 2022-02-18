@@ -2,7 +2,7 @@
 {% block body %}
 <h1>add activite</h1>
 {#{{ form(formActivity) }}#}
-{{ form_start(formActivity) }}
+{{ form_start(formActivity , {'attr': {'novalidate': 'novalidate'}}) }}
 <table>
     <tr>
         <td>  {{ form_label(formActivity.nom_Act,"Nom Activite")}}  </td>
@@ -30,8 +30,9 @@
         <td> {{ form_widget(formActivity.category)}}   </td>
     </tr>
     <tr>
-
-
+        <td>  {{ form_label(formActivity.images,"Image")}}  </td>
+        <td>  {{ form_errors(formActivity.images) }} </td>
+        <td> {{ form_widget(formActivity.images)}}   </td>
     </tr>
 </table>
 {{ form_end(formActivity) }}

@@ -68,7 +68,7 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
         echo "<h1>add activite</h1>
 ";
         // line 5
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 5, $this->source); })()), 'form_start');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 5, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
 <table>
     <tr>
@@ -142,13 +142,23 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
         echo "   </td>
     </tr>
     <tr>
-
-
+        <td>  ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 33, $this->source); })()), "images", [], "any", false, false, false, 33), 'label', ["label" => "Image"]);
+        echo "  </td>
+        <td>  ";
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 34, $this->source); })()), "images", [], "any", false, false, false, 34), 'errors');
+        echo " </td>
+        <td> ";
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 35, $this->source); })()), "images", [], "any", false, false, false, 35), 'widget');
+        echo "   </td>
     </tr>
 </table>
 ";
-        // line 37
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 37, $this->source); })()), 'form_end');
+        // line 38
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formActivity"]) || array_key_exists("formActivity", $context) ? $context["formActivity"] : (function () { throw new RuntimeError('Variable "formActivity" does not exist.', 38, $this->source); })()), 'form_end');
         echo "
     <table border=\"1\">
         <tr>
@@ -161,40 +171,40 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
 
         </tr>
         ";
-        // line 48
+        // line 49
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 48, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 49, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 49
+            // line 50
             echo "            <tr>
                 <td>";
-            // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomAct", [], "method", false, false, false, 50), "html", null, true);
-            echo "</td>
-                <td>";
             // line 51
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDateAct", [], "method", false, false, false, 51), "Y-m-d"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomAct", [], "method", false, false, false, 51), "html", null, true);
             echo "</td>
                 <td>";
             // line 52
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getTempAct", [], "method", false, false, false, 52), "H:i"), "html", null, true);
-            echo " </td>
-                <td>";
-            // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDescriptionAct", [], "method", false, false, false, 53), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDateAct", [], "method", false, false, false, 52), "Y-m-d"), "html", null, true);
             echo "</td>
                 <td>";
+            // line 53
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getTempAct", [], "method", false, false, false, 53), "H:i"), "html", null, true);
+            echo " </td>
+                <td>";
             // line 54
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["e"], "getCategory", [], "any", false, false, false, 54), "getNomCat", [], "method", false, false, false, 54), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDescriptionAct", [], "method", false, false, false, 54), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["e"], "getCategory", [], "any", false, false, false, 55), "getNomCat", [], "method", false, false, false, 55), "html", null, true);
             echo " </td>
                 <td>
                     <a href=\"";
-            // line 56
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityUpdate", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 56)]), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityUpdate", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 57)]), "html", null, true);
             echo "\"> Edit </a>
                     <a href=\"";
-            // line 57
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityDelete", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 57)]), "html", null, true);
+            // line 58
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityDelete", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 58)]), "html", null, true);
             echo "\">Delete</a>
 
                 </td>
@@ -205,7 +215,7 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 64
         echo "    </table>
 ";
         
@@ -228,7 +238,7 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
 
     public function getDebugInfo()
     {
-        return array (  209 => 63,  197 => 57,  193 => 56,  188 => 54,  184 => 53,  180 => 52,  176 => 51,  172 => 50,  169 => 49,  165 => 48,  151 => 37,  141 => 30,  137 => 29,  133 => 28,  127 => 25,  123 => 24,  119 => 23,  113 => 20,  109 => 19,  105 => 18,  99 => 15,  95 => 14,  91 => 13,  85 => 10,  81 => 9,  77 => 8,  71 => 5,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  219 => 64,  207 => 58,  203 => 57,  198 => 55,  194 => 54,  190 => 53,  186 => 52,  182 => 51,  179 => 50,  175 => 49,  161 => 38,  155 => 35,  151 => 34,  147 => 33,  141 => 30,  137 => 29,  133 => 28,  127 => 25,  123 => 24,  119 => 23,  113 => 20,  109 => 19,  105 => 18,  99 => 15,  95 => 14,  91 => 13,  85 => 10,  81 => 9,  77 => 8,  71 => 5,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -237,7 +247,7 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
 {% block body %}
 <h1>add activite</h1>
 {#{{ form(formActivity) }}#}
-{{ form_start(formActivity) }}
+{{ form_start(formActivity , {'attr': {'novalidate': 'novalidate'}}) }}
 <table>
     <tr>
         <td>  {{ form_label(formActivity.nom_Act,\"Nom Activite\")}}  </td>
@@ -265,8 +275,9 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
         <td> {{ form_widget(formActivity.category)}}   </td>
     </tr>
     <tr>
-
-
+        <td>  {{ form_label(formActivity.images,\"Image\")}}  </td>
+        <td>  {{ form_errors(formActivity.images) }} </td>
+        <td> {{ form_widget(formActivity.images)}}   </td>
     </tr>
 </table>
 {{ form_end(formActivity) }}

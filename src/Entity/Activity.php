@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 /**
  * @ORM\Entity(repositoryClass=ActivityRepository::class)
@@ -27,8 +28,8 @@ class Activity
     private $nom_Act;
 
     /**
-     * @ORM\Column(type="date")
-     * @Assert\NotBlank(message = " date est obligatoire")
+     * @ORM\Column(type="date" )
+     * @Assert\NotNull(message = " date est obligatoire")
      */
     private $date_Act;
 
@@ -39,7 +40,8 @@ class Activity
     private $temp_act;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 )
+     * @Assert\NotBlank(message = " description est obligatoire")
      */
     private $description_Act;
 
@@ -51,11 +53,13 @@ class Activity
 
     /**
      * @ORM\ManyToMany(targetEntity=Exercice::class, inversedBy="activities",)
+     * @Assert\NotBlank(message = " choisir au minimum un exercice")
      */
     private $exercices;
 
     /**
      * @ORM\OneToMany(targetEntity=ImageActEx::class, mappedBy="activity",cascade={"persist"} )
+     * @Assert\NotBlank(message = " choisir au minimum un image")
      */
     private $images;
 
@@ -182,5 +186,9 @@ class Activity
         }
 
         return $this;
+    }
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+        $metadata->addPropertyConstraint('date_Act', new Assert\LessThanOrEqual(date('Y-m-d')));
     }
 }

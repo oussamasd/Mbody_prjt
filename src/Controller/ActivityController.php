@@ -150,7 +150,7 @@ class ActivityController extends AbstractController
         $Act5 = $em->findActiviteOfWeek($em->nextDate(4));
         $Act6 = $em->findActiviteOfWeek($em->nextDate(5));
         $Act7 = $em->findActiviteOfWeek($em->nextDate(6));
-        sizeof($Act1);
+
 
 
 

@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 
+
 class ActivityType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -21,7 +22,9 @@ class ActivityType extends AbstractType
         $builder
             ->add('nom_Act')
             ->add('date_Act',DateType::class,[
-                'widget' => 'single_text',
+                'widget' => 'choice',
+
+
 
                 // prevents rendering it as type="date", to avoid HTML5 date pickers
                 'html5' => true ,
@@ -45,7 +48,7 @@ class ActivityType extends AbstractType
                 'label' => false,
                 'multiple' => true,
                 'mapped' => false,
-                'required' => false
+                'required' => true
             ])
             ->add('Add',SubmitType::class)
 

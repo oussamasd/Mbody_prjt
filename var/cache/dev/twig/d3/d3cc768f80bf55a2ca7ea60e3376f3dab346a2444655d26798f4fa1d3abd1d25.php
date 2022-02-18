@@ -77,16 +77,14 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             <tr>
 ";
         // line 24
-        echo "                <th class=\"text-uppercase\">";
-        echo twig_escape_filter($this->env, (isset($context["Act1Date"]) || array_key_exists("Act1Date", $context) ? $context["Act1Date"] : (function () { throw new RuntimeError('Variable "Act1Date" does not exist.', 24, $this->source); })()), "html", null, true);
-        echo "</th>
+        echo "                <th class=\"text-uppercase\">Monday</th>
                 ";
         // line 25
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["Act1"]) || array_key_exists("Act1", $context) ? $context["Act1"] : (function () { throw new RuntimeError('Variable "Act1" does not exist.', 25, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 26
-            echo "                <td>
+            echo "                <td style=\"height: 85px\">
                     <a href=\"#\">
                         <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 28
@@ -113,7 +111,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct1"]) || array_key_exists("sizeAct1", $context) ? $context["sizeAct1"] : (function () { throw new RuntimeError('Variable "sizeAct1" does not exist.', 35, $this->source); })()))));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 36
-                echo "                        <td>
+                echo "                        <td style=\"height: 85px\">
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
                             <p>.</p>
@@ -135,9 +133,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             <tr>
 ";
         // line 76
-        echo "                <th class=\"text-uppercase\">";
-        echo twig_escape_filter($this->env, (isset($context["Act2Date"]) || array_key_exists("Act2Date", $context) ? $context["Act2Date"] : (function () { throw new RuntimeError('Variable "Act2Date" does not exist.', 76, $this->source); })()), "html", null, true);
-        echo "</th>
+        echo "                <th class=\"text-uppercase\">Tuesday</th>
 
                 ";
         // line 78
@@ -145,7 +141,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         $context['_seq'] = twig_ensure_traversable((isset($context["Act2"]) || array_key_exists("Act2", $context) ? $context["Act2"] : (function () { throw new RuntimeError('Variable "Act2" does not exist.', 78, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 79
-            echo "                    <td>
+            echo "                    <td style=\"height: 85px \">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 81
@@ -172,11 +168,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct2"]) || array_key_exists("sizeAct2", $context) ? $context["sizeAct2"] : (function () { throw new RuntimeError('Variable "sizeAct2" does not exist.', 88, $this->source); })()))));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 89
-                echo "                        <td>
-                            <p>.</p>
-                            <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
-                            <p>.</p>
-                        </td>
+                echo "                        <td style=\"height: 95px \">
+                           ";
+                // line 93
+                echo "                        </td>
                     ";
             }
             $_parent = $context['_parent'];
@@ -190,9 +185,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             <tr>
 ";
         // line 99
-        echo "                <th class=\"text-uppercase\">";
-        echo twig_escape_filter($this->env, (isset($context["Act3Date"]) || array_key_exists("Act3Date", $context) ? $context["Act3Date"] : (function () { throw new RuntimeError('Variable "Act3Date" does not exist.', 99, $this->source); })()), "html", null, true);
-        echo "</th>
+        echo "                <th class=\"text-uppercase\" > Wednesday </th>
 
                 ";
         // line 101
@@ -200,7 +193,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         $context['_seq'] = twig_ensure_traversable((isset($context["Act3"]) || array_key_exists("Act3", $context) ? $context["Act3"] : (function () { throw new RuntimeError('Variable "Act3" does not exist.', 101, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 102
-            echo "                    <td>
+            echo "                    <td style=\"height: 85px\">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 104
@@ -227,7 +220,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct3"]) || array_key_exists("sizeAct3", $context) ? $context["sizeAct3"] : (function () { throw new RuntimeError('Variable "sizeAct3" does not exist.', 111, $this->source); })()))));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 112
-                echo "                        <td>
+                echo "                        <td   style=\"height: 85px\"  >
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
                             <p>.</p>
@@ -243,10 +236,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         // line 119
         echo "
             <tr>
-                <th class=\"text-uppercase\">";
-        // line 121
-        echo twig_escape_filter($this->env, (isset($context["Act4Date"]) || array_key_exists("Act4Date", $context) ? $context["Act4Date"] : (function () { throw new RuntimeError('Variable "Act4Date" does not exist.', 121, $this->source); })()), "html", null, true);
-        echo "</th>
+                <th class=\"text-uppercase\">Thursday</th>
 
                 ";
         // line 123
@@ -254,7 +244,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         $context['_seq'] = twig_ensure_traversable((isset($context["Act4"]) || array_key_exists("Act4", $context) ? $context["Act4"] : (function () { throw new RuntimeError('Variable "Act4" does not exist.', 123, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 124
-            echo "                    <td>
+            echo "                    <td style=\"height: 85px\">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 126
@@ -281,7 +271,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct4"]) || array_key_exists("sizeAct4", $context) ? $context["sizeAct4"] : (function () { throw new RuntimeError('Variable "sizeAct4" does not exist.', 133, $this->source); })()))));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 134
-                echo "                        <td >
+                echo "                        <td style=\"height: 85px\">
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
                             <p>.</p>
@@ -298,10 +288,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         echo "            </tr>
 
             <tr>
-                <th class=\"text-uppercase\">";
-        // line 144
-        echo twig_escape_filter($this->env, (isset($context["Act5Date"]) || array_key_exists("Act5Date", $context) ? $context["Act5Date"] : (function () { throw new RuntimeError('Variable "Act5Date" does not exist.', 144, $this->source); })()), "html", null, true);
-        echo "</th>
+                <th class=\"text-uppercase\">Friday</th>
 
                 ";
         // line 146
@@ -309,7 +296,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         $context['_seq'] = twig_ensure_traversable((isset($context["Act5"]) || array_key_exists("Act5", $context) ? $context["Act5"] : (function () { throw new RuntimeError('Variable "Act5" does not exist.', 146, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 147
-            echo "                    <td>
+            echo "                    <td style=\"height: 85px\">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 149
@@ -336,7 +323,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct5"]) || array_key_exists("sizeAct5", $context) ? $context["sizeAct5"] : (function () { throw new RuntimeError('Variable "sizeAct5" does not exist.', 156, $this->source); })()))));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
                 // line 157
-                echo "                        <td >
+                echo "                        <td style=\"height: 85px\" >
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
 
@@ -352,6 +339,112 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             echo "                ";
         }
         // line 166
+        echo "            </tr>
+            <tr>
+                <th class=\"text-uppercase\">Saturday</th>
+
+                ";
+        // line 170
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["Act6"]) || array_key_exists("Act6", $context) ? $context["Act6"] : (function () { throw new RuntimeError('Variable "Act6" does not exist.', 170, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
+            // line 171
+            echo "                    <td style=\"height: 85px\">
+                        <a href=\"#\">
+                            <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
+            // line 173
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["act"], "getCategory", [], "any", false, false, false, 173), "getNomCat", [], "method", false, false, false, 173), "html", null, true);
+            echo "</span>
+                            <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">";
+            // line 174
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 174), "H:m"), "html", null, true);
+            echo "</p></div>
+                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                        </a>
+                    </td>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['act'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 179
+        echo "                ";
+        if ((-1 === twig_compare((isset($context["sizeAct6"]) || array_key_exists("sizeAct6", $context) ? $context["sizeAct6"] : (function () { throw new RuntimeError('Variable "sizeAct6" does not exist.', 179, $this->source); })()), 6))) {
+            // line 180
+            echo "                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct6"]) || array_key_exists("sizeAct6", $context) ? $context["sizeAct6"] : (function () { throw new RuntimeError('Variable "sizeAct6" does not exist.', 180, $this->source); })()))));
+            foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+                // line 181
+                echo "                        <td style=\"height: 85px\" >
+                            <p>.</p>
+                            <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
+
+                            <p>.</p>
+
+                        </td>
+                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 189
+            echo "                ";
+        }
+        // line 190
+        echo "            </tr>
+            <tr>
+                <th class=\"text-uppercase\">Sunday</th>
+
+                ";
+        // line 194
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["Act7"]) || array_key_exists("Act7", $context) ? $context["Act7"] : (function () { throw new RuntimeError('Variable "Act7" does not exist.', 194, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
+            // line 195
+            echo "                    <td style=\"height: 85px\">
+                        <a href=\"#\">
+                            <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
+            // line 197
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["act"], "getCategory", [], "any", false, false, false, 197), "getNomCat", [], "method", false, false, false, 197), "html", null, true);
+            echo "</span>
+                            <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">";
+            // line 198
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 198), "H:m"), "html", null, true);
+            echo "</p></div>
+                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                        </a>
+                    </td>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['act'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 203
+        echo "                ";
+        if ((-1 === twig_compare((isset($context["sizeAct7"]) || array_key_exists("sizeAct7", $context) ? $context["sizeAct7"] : (function () { throw new RuntimeError('Variable "sizeAct7" does not exist.', 203, $this->source); })()), 6))) {
+            // line 204
+            echo "                    ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["sizeAct7"]) || array_key_exists("sizeAct7", $context) ? $context["sizeAct7"] : (function () { throw new RuntimeError('Variable "sizeAct7" does not exist.', 204, $this->source); })()))));
+            foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+                // line 205
+                echo "                        <td style=\"height: 85px\" >
+                            <p>.</p>
+                            <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
+
+                            <p>.</p>
+
+                        </td>
+                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 213
+            echo "                ";
+        }
+        // line 214
         echo "            </tr>
             </tbody>
         </table>
@@ -379,7 +472,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
     public function getDebugInfo()
     {
-        return array (  355 => 166,  352 => 165,  339 => 157,  334 => 156,  331 => 155,  320 => 150,  316 => 149,  312 => 147,  308 => 146,  303 => 144,  298 => 141,  295 => 140,  284 => 134,  279 => 133,  276 => 132,  265 => 127,  261 => 126,  257 => 124,  253 => 123,  248 => 121,  244 => 119,  241 => 118,  230 => 112,  225 => 111,  222 => 110,  211 => 105,  207 => 104,  203 => 102,  199 => 101,  193 => 99,  189 => 96,  186 => 95,  175 => 89,  170 => 88,  167 => 87,  156 => 82,  152 => 81,  148 => 79,  144 => 78,  138 => 76,  132 => 71,  130 => 43,  127 => 42,  116 => 36,  111 => 35,  108 => 34,  97 => 29,  93 => 28,  89 => 26,  85 => 25,  80 => 24,  76 => 21,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  448 => 214,  445 => 213,  432 => 205,  427 => 204,  424 => 203,  413 => 198,  409 => 197,  405 => 195,  401 => 194,  395 => 190,  392 => 189,  379 => 181,  374 => 180,  371 => 179,  360 => 174,  356 => 173,  352 => 171,  348 => 170,  342 => 166,  339 => 165,  326 => 157,  321 => 156,  318 => 155,  307 => 150,  303 => 149,  299 => 147,  295 => 146,  288 => 141,  285 => 140,  274 => 134,  269 => 133,  266 => 132,  255 => 127,  251 => 126,  247 => 124,  243 => 123,  237 => 119,  234 => 118,  223 => 112,  218 => 111,  215 => 110,  204 => 105,  200 => 104,  196 => 102,  192 => 101,  188 => 99,  184 => 96,  181 => 95,  174 => 93,  171 => 89,  166 => 88,  163 => 87,  152 => 82,  148 => 81,  144 => 79,  140 => 78,  136 => 76,  130 => 71,  128 => 43,  125 => 42,  114 => 36,  109 => 35,  106 => 34,  95 => 29,  91 => 28,  87 => 26,  83 => 25,  80 => 24,  76 => 21,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -407,9 +500,9 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             <tbody>
             <tr>
 {#                <td class=\"align-middle\">09:00am</td>#}
-                <th class=\"text-uppercase\">{{ Act1Date }}</th>
+                <th class=\"text-uppercase\">Monday</th>
                 {% for act in Act1 %}
-                <td>
+                <td style=\"height: 85px\">
                     <a href=\"#\">
                         <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                         <div class=\"margin-10px-top font-size14 \"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -419,7 +512,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% endfor %}
                 {% if(sizeAct1<6) %}
                     {% for i in 1..6-sizeAct1 %}
-                        <td>
+                        <td style=\"height: 85px\">
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
                             <p>.</p>
@@ -459,10 +552,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
             <tr>
 {#                <td class=\"align-middle\">10:00am</td>#}
-                <th class=\"text-uppercase\">{{ Act2Date }}</th>
+                <th class=\"text-uppercase\">Tuesday</th>
 
                 {% for act in Act2 %}
-                    <td>
+                    <td style=\"height: 85px \">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -472,20 +565,20 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% endfor %}
                 {% if(sizeAct2<6) %}
                     {% for i in 1..6-sizeAct2 %}
-                        <td>
-                            <p>.</p>
+                        <td style=\"height: 95px \">
+                           {# <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
-                            <p>.</p>
+                            <p>.</p>#}
                         </td>
                     {% endfor %}
                 {% endif %}
 
             <tr>
 {#                <td class=\"align-middle\">11:00am</td>#}
-                <th class=\"text-uppercase\">{{ Act3Date }}</th>
+                <th class=\"text-uppercase\" > Wednesday </th>
 
                 {% for act in Act3 %}
-                    <td>
+                    <td style=\"height: 85px\">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -495,7 +588,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% endfor %}
                 {% if(sizeAct3<6) %}
                     {% for i in 1..6-sizeAct3 %}
-                        <td>
+                        <td   style=\"height: 85px\"  >
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
                             <p>.</p>
@@ -504,10 +597,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% endif %}
 
             <tr>
-                <th class=\"text-uppercase\">{{ Act4Date }}</th>
+                <th class=\"text-uppercase\">Thursday</th>
 
                 {% for act in Act4 %}
-                    <td>
+                    <td style=\"height: 85px\">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -517,7 +610,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% endfor %}
                 {% if(sizeAct4<6) %}
                     {% for i in 1..6-sizeAct4 %}
-                        <td >
+                        <td style=\"height: 85px\">
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
                             <p>.</p>
@@ -527,10 +620,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             </tr>
 
             <tr>
-                <th class=\"text-uppercase\">{{ Act5Date }}</th>
+                <th class=\"text-uppercase\">Friday</th>
 
                 {% for act in Act5 %}
-                    <td>
+                    <td style=\"height: 85px\">
                         <a href=\"#\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -540,7 +633,55 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% endfor %}
                 {% if(sizeAct5<6) %}
                     {% for i in 1..6-sizeAct5 %}
-                        <td >
+                        <td style=\"height: 85px\" >
+                            <p>.</p>
+                            <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
+
+                            <p>.</p>
+
+                        </td>
+                    {% endfor %}
+                {% endif %}
+            </tr>
+            <tr>
+                <th class=\"text-uppercase\">Saturday</th>
+
+                {% for act in Act6 %}
+                    <td style=\"height: 85px\">
+                        <a href=\"#\">
+                            <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
+                            <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
+                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                        </a>
+                    </td>
+                {% endfor %}
+                {% if(sizeAct6<6) %}
+                    {% for i in 1..6-sizeAct6 %}
+                        <td style=\"height: 85px\" >
+                            <p>.</p>
+                            <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
+
+                            <p>.</p>
+
+                        </td>
+                    {% endfor %}
+                {% endif %}
+            </tr>
+            <tr>
+                <th class=\"text-uppercase\">Sunday</th>
+
+                {% for act in Act7 %}
+                    <td style=\"height: 85px\">
+                        <a href=\"#\">
+                            <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
+                            <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
+                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                        </a>
+                    </td>
+                {% endfor %}
+                {% if(sizeAct7<6) %}
+                    {% for i in 1..6-sizeAct7 %}
+                        <td style=\"height: 85px\" >
                             <p>.</p>
                             <span class=\"bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13\">Nothing</span>
 
