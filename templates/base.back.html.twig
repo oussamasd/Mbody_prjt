@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dark Bootstrap Admin by {% block title %}Bootstrapious.com {% endblock %}</title>
+    <title>MbodyUp {% block title %}Bootstrapious.com {% endblock %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -42,7 +42,7 @@
         <div class="container-fluid d-flex align-items-center justify-content-between">
             <div class="navbar-header">
                 <!-- Navbar Header--><a href="index.html" class="navbar-brand">
-                    <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
+                    <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">MBodyUp</strong><strong>GYM</strong></div>
                     <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
                 <!-- Sidebar Toggle Btn-->
                 <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
@@ -173,22 +173,21 @@
     <nav id="sidebar">
         <!-- Sidebar Header-->
         <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-                <h1 class="h5">Mark Stephen</h1>
-                <p>Web Designer</p>
+                <h1 class="h5">Salle de sport et de fitness</h1>
+                <p></p>
             </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
-            <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
+            <li class="active"><a href="index.html"> <i class="icon-home"></i>Acceuil </a></li>
 
 
-            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>information</a>
+            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Abonnement</a>
                 <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
+                    <li><a href="{{ path('abonnement_index') }}">les abonnements</a></li>
+                    <li><a href="{{ path('offre_index') }}">les offres </a></li>
+
                 </ul>
             </li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>table </a>

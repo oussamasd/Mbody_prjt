@@ -1,0 +1,34 @@
+
+{{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+                         <tr>
+                         <th>Nom:</th>
+                         {{ form_widget(form.nom) }}
+                          {% if not form.nom.vars.valid %}
+                              <div class="alert alert-danger">
+                                  {{ form_errors(form.nom) }}
+                              </div>
+                          {% endif %}
+                         </tr>
+                        <tr>
+                        <th>Prix:</th>
+ {{ form_widget(form.prix) }}
+                          {% if not form.prix.vars.valid %}
+                              <div class="alert alert-danger">
+                                  {{ form_errors(form.prix) }}
+                              </div>
+                        </tr>
+                          {% endif %}
+                         <tr>
+                         <th>Catégories:</th>
+ {{ form_widget(form.categories) }}
+                          {% if not form.categories.vars.valid %}
+                              <div class="alert alert-danger">
+                                  {{ form_errors(form.categories) }}
+                              </div>
+                         </tr>
+                          {% endif %}
+{{ form_widget(form) }}
+{#<button class="btn"> {{ button_label|default('Envoyer') }}</button>#}
+<button type="btn" class="btn btn-primary"> {{ button_label|default('Envoyer') }}</button>
+{{ form_end(form) }}
+

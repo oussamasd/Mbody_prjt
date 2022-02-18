@@ -47,7 +47,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 <head>
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-    <title>Dark Bootstrap Admin by ";
+    <title>MbodyUp ";
         // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
@@ -107,7 +107,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         <div class=\"container-fluid d-flex align-items-center justify-content-between\">
             <div class=\"navbar-header\">
                 <!-- Navbar Header--><a href=\"index.html\" class=\"navbar-brand\">
-                    <div class=\"brand-text brand-big visible text-uppercase\"><strong class=\"text-primary\">Dark</strong><strong>Admin</strong></div>
+                    <div class=\"brand-text brand-big visible text-uppercase\"><strong class=\"text-primary\">MBodyUp</strong><strong>GYM</strong></div>
                     <div class=\"brand-text brand-sm\"><strong class=\"text-primary\">D</strong><strong>A</strong></div></a>
                 <!-- Sidebar Toggle Btn-->
                 <button class=\"sidebar-toggle\"><i class=\"fa fa-long-arrow-left\"></i></button>
@@ -238,22 +238,27 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
     <nav id=\"sidebar\">
         <!-- Sidebar Header-->
         <div class=\"sidebar-header d-flex align-items-center\">
-            <div class=\"avatar\"><img src=\"img/avatar-6.jpg\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
             <div class=\"title\">
-                <h1 class=\"h5\">Mark Stephen</h1>
-                <p>Web Designer</p>
+                <h1 class=\"h5\">Salle de sport et de fitness</h1>
+                <p></p>
             </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class=\"heading\">Main</span>
         <ul class=\"list-unstyled\">
-            <li class=\"active\"><a href=\"index.html\"> <i class=\"icon-home\"></i>Home </a></li>
+            <li class=\"active\"><a href=\"index.html\"> <i class=\"icon-home\"></i>Acceuil </a></li>
 
 
-            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
+            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Abonnement</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"";
+        // line 188
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_index");
+        echo "\">les abonnements</a></li>
+                    <li><a href=\"";
+        // line 189
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_index");
+        echo "\">les offres </a></li>
+
                 </ul>
             </li>
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>table </a>
@@ -277,9 +282,9 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         </div>
 
         ";
-        // line 214
+        // line 213
         $this->displayBlock('body', $context, $blocks);
-        // line 235
+        // line 234
         echo "
 
 
@@ -298,35 +303,35 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 </div>
 <!-- JavaScript files-->
 <script src=\"";
-        // line 252
+        // line 251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 253
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/popper.js/umd/popper.min.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 254
+        // line 253
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 255
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery.cookie/jquery.cookie.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 256
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 257
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery-validation/jquery.validate.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 258
+        // line 257
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/js/charts-home.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 259
+        // line 258
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/js/front.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -358,7 +363,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
     }
 
-    // line 214
+    // line 213
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -368,7 +373,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 215
+        // line 214
         echo "        <section class=\"no-padding-bottom\">
             <div class=\"container-fluid\">
                 <div class=\"row\">
@@ -409,7 +414,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
     public function getDebugInfo()
     {
-        return array (  372 => 215,  362 => 214,  343 => 6,  330 => 259,  326 => 258,  322 => 257,  318 => 256,  314 => 255,  310 => 254,  306 => 253,  302 => 252,  283 => 235,  281 => 214,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
+        return array (  377 => 214,  367 => 213,  348 => 6,  335 => 258,  331 => 257,  327 => 256,  323 => 255,  319 => 254,  315 => 253,  311 => 252,  307 => 251,  288 => 234,  286 => 213,  259 => 189,  255 => 188,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -419,7 +424,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 <head>
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-    <title>Dark Bootstrap Admin by {% block title %}Bootstrapious.com {% endblock %}</title>
+    <title>MbodyUp {% block title %}Bootstrapious.com {% endblock %}</title>
     <meta name=\"description\" content=\"\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <meta name=\"robots\" content=\"all,follow\">
@@ -458,7 +463,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         <div class=\"container-fluid d-flex align-items-center justify-content-between\">
             <div class=\"navbar-header\">
                 <!-- Navbar Header--><a href=\"index.html\" class=\"navbar-brand\">
-                    <div class=\"brand-text brand-big visible text-uppercase\"><strong class=\"text-primary\">Dark</strong><strong>Admin</strong></div>
+                    <div class=\"brand-text brand-big visible text-uppercase\"><strong class=\"text-primary\">MBodyUp</strong><strong>GYM</strong></div>
                     <div class=\"brand-text brand-sm\"><strong class=\"text-primary\">D</strong><strong>A</strong></div></a>
                 <!-- Sidebar Toggle Btn-->
                 <button class=\"sidebar-toggle\"><i class=\"fa fa-long-arrow-left\"></i></button>
@@ -589,22 +594,21 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
     <nav id=\"sidebar\">
         <!-- Sidebar Header-->
         <div class=\"sidebar-header d-flex align-items-center\">
-            <div class=\"avatar\"><img src=\"img/avatar-6.jpg\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
             <div class=\"title\">
-                <h1 class=\"h5\">Mark Stephen</h1>
-                <p>Web Designer</p>
+                <h1 class=\"h5\">Salle de sport et de fitness</h1>
+                <p></p>
             </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class=\"heading\">Main</span>
         <ul class=\"list-unstyled\">
-            <li class=\"active\"><a href=\"index.html\"> <i class=\"icon-home\"></i>Home </a></li>
+            <li class=\"active\"><a href=\"index.html\"> <i class=\"icon-home\"></i>Acceuil </a></li>
 
 
-            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
+            <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Abonnement</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"{{ path('abonnement_index') }}\">les abonnements</a></li>
+                    <li><a href=\"{{ path('offre_index') }}\">les offres </a></li>
+
                 </ul>
             </li>
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>table </a>
@@ -674,6 +678,6 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 <script src=\"{{ asset('Back/js/charts-home.js') }}\"></script>
 <script src=\"{{ asset('Back/js/front.js') }}\"></script>
 </body>
-</html>", "base.back.html.twig", "C:\\wamp64\\www\\Mbody_Prjt\\templates\\base.back.html.twig");
+</html>", "base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\base.back.html.twig");
     }
 }

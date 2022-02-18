@@ -145,6 +145,7 @@
                                         </div>
                                     </div>
                                     <div class="row megamenu-services d-none d-lg-flex pl-lg-5">
+                                        {% block body %}
                                         <div class="col-xl-3 col-lg-6 d-flex">
                                             <div class="megamenu-services-item">
                                                 <svg class="svg-icon megamenu-services-icon">
@@ -154,12 +155,14 @@
                                                     <h6 class="text-uppercase">Best rentals</h6>
                                                     <p class="mb-0 text-muted text-sm">Find the perfect place</p>
                                                 </div>
+                                                {% endblock %}
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-lg-6 d-flex">
                                             <div class="megamenu-services-item">
                                                 <svg class="svg-icon megamenu-services-icon">
                                                     <use xlink:href="#money-box-1"> </use>
+
                                                 </svg>
                                                 <div>
                                                     <h6 class="text-uppercase">Earn points</h6>
@@ -215,6 +218,7 @@
     </nav>
     <!-- /Navbar -->
 </header>
+{% block body %}
 <section class="hero-home">
     <div class="swiper-container hero-slider">
         <div class="swiper-wrapper dark-overlay">
@@ -772,6 +776,7 @@
         </div>
     </div>
 </footer>
+{% endblock %}
 <!-- JavaScript files-->
 <script>
     // ------------------------------------------------------- //

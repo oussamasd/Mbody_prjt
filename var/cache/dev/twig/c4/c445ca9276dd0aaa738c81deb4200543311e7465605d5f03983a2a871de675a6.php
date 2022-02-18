@@ -191,6 +191,6 @@ class __TwigTemplate_d9877dd0e39f1521ed25d99cd653a789ad8ce762d5b34cf60fe62d78287
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\wamp64\\www\\Mbody_Prjt\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\base.html.twig");
     }
 }

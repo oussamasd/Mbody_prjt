@@ -28,7 +28,6 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
         $this->blocks = [
             'Produit' => [$this, 'block_Produit'],
-            'Activite' => [$this, 'block_Activite'],
         ];
     }
 
@@ -53,7 +52,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
     <meta name=\"author\" content=\"\">
     <link href=\"https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap\" rel=\"stylesheet\">
 
-    <title>Training Studio - Free CSS Template</title>
+    <title>MbodyUP-GYM</title>
 <!--
 
 TemplateMo 548 Training Studio
@@ -144,15 +143,16 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </div>
+
     <!-- ***** Main Banner Area End ***** -->
 
     <!-- ***** Features Item Start ***** -->
     <section class=\"section\" id=\"features\">
         <div class=\"container\">
             ";
-        // line 96
+        // line 97
         $this->displayBlock('Produit', $context, $blocks);
-        // line 175
+        // line 176
         echo "        </div>
     </section>
     <!-- ***** Features Item End ***** -->
@@ -178,11 +178,90 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Our Classes Start ***** -->
     <section class=\"section\" id=\"our-classes\">
         <div class=\"container\">
-            ";
-        // line 200
-        $this->displayBlock('Activite', $context, $blocks);
-        // line 258
-        echo "        </div>
+            <div class=\"row\">
+                <div class=\"col-lg-6 offset-lg-3\">
+                    <div class=\"section-heading\">
+                        <h2>Our <em>Classes</em></h2>
+                        <img src=\"";
+        // line 205
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
+        echo "\" alt=\"\">
+                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class=\"row\" id=\"tabs\">
+              <div class=\"col-lg-4\">
+                <ul>
+                  <li><a href='#tabs-1'><img src=\"";
+        // line 213
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
+        echo "\" alt=\"\">First Training Class</a></li>
+                  <li><a href='#tabs-2'><img src=\"";
+        // line 214
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
+        echo "\" alt=\"\">Second Training Class</a></a></li>
+                  <li><a href='#tabs-3'><img src=\"";
+        // line 215
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
+        echo "\" alt=\"\">Third Training Class</a></a></li>
+                  <li><a href='#tabs-4'><img src=\"";
+        // line 216
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
+        echo "\" alt=\"\">Fourth Training Class</a></a></li>
+                  <div class=\"main-rounded-button\"><a href=\"#\">View All Schedules</a></div>
+                </ul>
+              </div>
+              <div class=\"col-lg-8\">
+                <section class='tabs-content'>
+                  <article id='tabs-1'>
+                    <img src=\"";
+        // line 223
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-01.jpg"), "html", null, true);
+        echo "\" alt=\"First Class\">
+                    <h4>First Training Class</h4>
+                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                    <div class=\"main-button\">
+                        <a href=\"#\">View Schedule</a>
+                    </div>
+                  </article>
+                  <article id='tabs-2'>
+                    <img src=\"";
+        // line 231
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-02.jpg"), "html", null, true);
+        echo "\" alt=\"Second Training\">
+                    <h4>Second Training Class</h4>
+                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <div class=\"main-button\">
+                        <a href=\"#\">View Schedule</a>
+                    </div>
+                  </article>
+                  <article id='tabs-3'>
+                    <img src=\"";
+        // line 239
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-03.jpg"), "html", null, true);
+        echo "\" alt=\"Third Class\">
+                    <h4>Third Training Class</h4>
+                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
+                    <div class=\"main-button\">
+                        <a href=\"#\">View Schedule</a>
+                    </div>
+                  </article>
+                  <article id='tabs-4'>
+                    <img src=\"";
+        // line 247
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-04.jpg"), "html", null, true);
+        echo "\" alt=\"Fourth Training\">
+                    <h4>Fourth Training Class</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
+                    <div class=\"main-button\">
+                        <a href=\"#\">View Schedule</a>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+        </div>
     </section>
     <!-- ***** Our Classes End ***** -->
     
@@ -191,12 +270,14 @@ https://templatemo.com/tm-548-training-studio
             <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading dark-bg\">
-                        <h2>Classes <em>Schedule</em></h2>
+                        <h2>Nos <em>Abonnements</em></h2>
+                        <h2>Nos <em>Offres</em></h2>
                         <img src=\"";
         // line 268
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/abonn.PNG"), "html", null, true);
         echo "\" alt=\"\">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                        <p></p>
+
                     </div>
                 </div>
             </div>
@@ -204,52 +285,11 @@ https://templatemo.com/tm-548-training-studio
                 <div class=\"col-lg-12\">
                     <div class=\"filters\">
                         <ul class=\"schedule-filter\">
-                            <li class=\"active\" data-tsfilter=\"monday\">Monday</li>
-                            <li data-tsfilter=\"tuesday\">Tuesday</li>
-                            <li data-tsfilter=\"wednesday\">Wednesday</li>
-                            <li data-tsfilter=\"thursday\">Thursday</li>
-                            <li data-tsfilter=\"friday\">Friday</li>
+
                         </ul>
                     </div>
                 </div>
-                <div class=\"col-lg-10 offset-lg-1\">
-                    <div class=\"schedule-table filtering\">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class=\"day-time\">Fitness Class</td>
-                                    <td class=\"monday ts-item show\" data-tsmeta=\"monday\">10:00AM - 11:30AM</td>
-                                    <td class=\"tuesday ts-item\" data-tsmeta=\"tuesday\">2:00PM - 3:30PM</td>
-                                    <td>William G. Stewart</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Muscle Training</td>
-                                    <td class=\"friday ts-item\" data-tsmeta=\"friday\">10:00AM - 11:30AM</td>
-                                    <td class=\"thursday friday ts-item\" data-tsmeta=\"thursday\" data-tsmeta=\"friday\">2:00PM - 3:30PM</td>
-                                    <td>Paul D. Newman</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Body Building</td>
-                                    <td class=\"tuesday ts-item\" data-tsmeta=\"tuesday\">10:00AM - 11:30AM</td>
-                                    <td class=\"monday ts-item show\" data-tsmeta=\"monday\">2:00PM - 3:30PM</td>
-                                    <td>Boyd C. Harris</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Yoga Training Class</td>
-                                    <td class=\"wednesday ts-item\" data-tsmeta=\"wednesday\">10:00AM - 11:30AM</td>
-                                    <td class=\"friday ts-item\" data-tsmeta=\"friday\">2:00PM - 3:30PM</td>
-                                    <td>Hector T. Daigle</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Advanced Training</td>
-                                    <td class=\"thursday ts-item\" data-tsmeta=\"thursday\">10:00AM - 11:30AM</td>
-                                    <td class=\"wednesday ts-item\" data-tsmeta=\"wednesday\">2:00PM - 3:30PM</td>
-                                    <td>Bret D. Bowers</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -262,7 +302,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"section-heading\">
                         <h2>Expert <em>Trainers</em></h2>
                         <img src=\"";
-        // line 334
+        // line 294
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -274,7 +314,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 343
+        // line 303
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/first-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -295,7 +335,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 361
+        // line 321
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/second-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -316,7 +356,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 379
+        // line 339
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/third-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -401,51 +441,52 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </footer>
 
+
     <!-- jQuery -->
     <script src=\"";
-        // line 463
+        // line 424
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery-2.1.0.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Bootstrap -->
     <script src=\"";
-        // line 466
+        // line 427
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/popper.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 467
+        // line 428
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Plugins -->
     <script src=\"";
-        // line 470
+        // line 431
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scrollreveal.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 471
+        // line 432
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/waypoints.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 472
+        // line 433
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 473
+        // line 434
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/imgfix.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 474
+        // line 435
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mixitup.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 475
+        // line 436
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/accordions.js"), "html", null, true);
         echo "\"></script>
     
     <!-- Global Init -->
     <script src=\"";
-        // line 478
+        // line 439
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -459,7 +500,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 96
+    // line 97
     public function block_Produit($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -469,13 +510,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Produit"));
 
-        // line 97
+        // line 98
         echo "            <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
                         <h2>Choose <em>Hadil</em></h2>
                         <img src=\"";
-        // line 101
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"waves\">
                         <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
@@ -486,7 +527,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 109
+        // line 110
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"First One\">
                             </div>
@@ -499,7 +540,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 119
+        // line 120
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"second one\">
                             </div>
@@ -512,7 +553,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 129
+        // line 130
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"third gym training\">
                             </div>
@@ -529,7 +570,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 143
+        // line 144
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"fourth muscle\">
                             </div>
@@ -542,7 +583,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 153
+        // line 154
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"training fifth\">
                             </div>
@@ -555,7 +596,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 163
+        // line 164
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"gym training\">
                             </div>
@@ -567,109 +608,6 @@ https://templatemo.com/tm-548-training-studio
                         </li>
                     </ul>
                 </div>
-            </div>
-            ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 200
-    public function block_Activite($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Activite"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Activite"));
-
-        // line 201
-        echo "            <div class=\"row\">
-                <div class=\"col-lg-6 offset-lg-3\">
-                    <div class=\"section-heading\">
-                        <h2>Our <em>Classes</em></h2>
-                        <img src=\"";
-        // line 205
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
-        echo "\" alt=\"\">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class=\"row\" id=\"tabs\">
-              <div class=\"col-lg-4\">
-                <ul>
-                  <li><a href='#tabs-1'><img src=\"";
-        // line 213
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">First Training Class</a></li>
-                  <li><a href='#tabs-2'><img src=\"";
-        // line 214
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">Second Training Class</a></a></li>
-                  <li><a href='#tabs-3'><img src=\"";
-        // line 215
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">Third Training Class</a></a></li>
-                  <li><a href='#tabs-4'><img src=\"";
-        // line 216
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">Fourth Training Class</a></a></li>
-                  <div class=\"main-rounded-button\"><a href=\"#\">View All Schedules</a></div>
-                </ul>
-              </div>
-              <div class=\"col-lg-8\">
-                <section class='tabs-content'>
-                  <article id='tabs-1'>
-                    <img src=\"";
-        // line 223
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-01.jpg"), "html", null, true);
-        echo "\" alt=\"First Class\">
-                    <h4>First Training Class</h4>
-                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-                    <div class=\"main-button\">
-                        <a href=\"#\">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-2'>
-                    <img src=\"";
-        // line 231
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-02.jpg"), "html", null, true);
-        echo "\" alt=\"Second Training\">
-                    <h4>Second Training Class</h4>
-                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <div class=\"main-button\">
-                        <a href=\"#\">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-3'>
-                    <img src=\"";
-        // line 239
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-03.jpg"), "html", null, true);
-        echo "\" alt=\"Third Class\">
-                    <h4>Third Training Class</h4>
-                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
-                    <div class=\"main-button\">
-                        <a href=\"#\">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-4'>
-                    <img src=\"";
-        // line 247
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-04.jpg"), "html", null, true);
-        echo "\" alt=\"Fourth Training\">
-                    <h4>Fourth Training Class</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
-                    <div class=\"main-button\">
-                        <a href=\"#\">View Schedule</a>
-                    </div>
-                  </article>
-                </section>
-              </div>
             </div>
             ";
         
@@ -692,7 +630,7 @@ https://templatemo.com/tm-548-training-studio
 
     public function getDebugInfo()
     {
-        return array (  663 => 247,  652 => 239,  641 => 231,  630 => 223,  620 => 216,  616 => 215,  612 => 214,  608 => 213,  597 => 205,  591 => 201,  581 => 200,  559 => 163,  546 => 153,  533 => 143,  516 => 129,  503 => 119,  490 => 109,  479 => 101,  473 => 97,  463 => 96,  449 => 478,  443 => 475,  439 => 474,  435 => 473,  431 => 472,  427 => 471,  423 => 470,  417 => 467,  413 => 466,  407 => 463,  320 => 379,  299 => 361,  278 => 343,  266 => 334,  197 => 268,  185 => 258,  183 => 200,  156 => 175,  154 => 96,  133 => 78,  77 => 25,  72 => 23,  67 => 21,  45 => 1,);
+        return array (  600 => 164,  587 => 154,  574 => 144,  557 => 130,  544 => 120,  531 => 110,  520 => 102,  514 => 98,  504 => 97,  490 => 439,  484 => 436,  480 => 435,  476 => 434,  472 => 433,  468 => 432,  464 => 431,  458 => 428,  454 => 427,  448 => 424,  360 => 339,  339 => 321,  318 => 303,  306 => 294,  277 => 268,  253 => 247,  242 => 239,  231 => 231,  220 => 223,  210 => 216,  206 => 215,  202 => 214,  198 => 213,  187 => 205,  156 => 176,  154 => 97,  132 => 78,  76 => 25,  71 => 23,  66 => 21,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -708,7 +646,7 @@ https://templatemo.com/tm-548-training-studio
     <meta name=\"author\" content=\"\">
     <link href=\"https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap\" rel=\"stylesheet\">
 
-    <title>Training Studio - Free CSS Template</title>
+    <title>MbodyUP-GYM</title>
 <!--
 
 TemplateMo 548 Training Studio
@@ -787,6 +725,7 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </div>
+
     <!-- ***** Main Banner Area End ***** -->
 
     <!-- ***** Features Item Start ***** -->
@@ -896,7 +835,6 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Our Classes Start ***** -->
     <section class=\"section\" id=\"our-classes\">
         <div class=\"container\">
-            {% block Activite %}
             <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
@@ -953,7 +891,6 @@ https://templatemo.com/tm-548-training-studio
                 </section>
               </div>
             </div>
-            {% endblock %}
         </div>
     </section>
     <!-- ***** Our Classes End ***** -->
@@ -963,9 +900,11 @@ https://templatemo.com/tm-548-training-studio
             <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading dark-bg\">
-                        <h2>Classes <em>Schedule</em></h2>
-                        <img src=\"{{ asset('assets/images/line-dec.png') }}\" alt=\"\">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                        <h2>Nos <em>Abonnements</em></h2>
+                        <h2>Nos <em>Offres</em></h2>
+                        <img src=\"{{ asset('assets/images/abonn.PNG') }}\" alt=\"\">
+                        <p></p>
+
                     </div>
                 </div>
             </div>
@@ -973,52 +912,11 @@ https://templatemo.com/tm-548-training-studio
                 <div class=\"col-lg-12\">
                     <div class=\"filters\">
                         <ul class=\"schedule-filter\">
-                            <li class=\"active\" data-tsfilter=\"monday\">Monday</li>
-                            <li data-tsfilter=\"tuesday\">Tuesday</li>
-                            <li data-tsfilter=\"wednesday\">Wednesday</li>
-                            <li data-tsfilter=\"thursday\">Thursday</li>
-                            <li data-tsfilter=\"friday\">Friday</li>
+
                         </ul>
                     </div>
                 </div>
-                <div class=\"col-lg-10 offset-lg-1\">
-                    <div class=\"schedule-table filtering\">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class=\"day-time\">Fitness Class</td>
-                                    <td class=\"monday ts-item show\" data-tsmeta=\"monday\">10:00AM - 11:30AM</td>
-                                    <td class=\"tuesday ts-item\" data-tsmeta=\"tuesday\">2:00PM - 3:30PM</td>
-                                    <td>William G. Stewart</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Muscle Training</td>
-                                    <td class=\"friday ts-item\" data-tsmeta=\"friday\">10:00AM - 11:30AM</td>
-                                    <td class=\"thursday friday ts-item\" data-tsmeta=\"thursday\" data-tsmeta=\"friday\">2:00PM - 3:30PM</td>
-                                    <td>Paul D. Newman</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Body Building</td>
-                                    <td class=\"tuesday ts-item\" data-tsmeta=\"tuesday\">10:00AM - 11:30AM</td>
-                                    <td class=\"monday ts-item show\" data-tsmeta=\"monday\">2:00PM - 3:30PM</td>
-                                    <td>Boyd C. Harris</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Yoga Training Class</td>
-                                    <td class=\"wednesday ts-item\" data-tsmeta=\"wednesday\">10:00AM - 11:30AM</td>
-                                    <td class=\"friday ts-item\" data-tsmeta=\"friday\">2:00PM - 3:30PM</td>
-                                    <td>Hector T. Daigle</td>
-                                </tr>
-                                <tr>
-                                    <td class=\"day-time\">Advanced Training</td>
-                                    <td class=\"thursday ts-item\" data-tsmeta=\"thursday\">10:00AM - 11:30AM</td>
-                                    <td class=\"wednesday ts-item\" data-tsmeta=\"wednesday\">2:00PM - 3:30PM</td>
-                                    <td>Bret D. Bowers</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -1158,6 +1056,7 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </footer>
 
+
     <!-- jQuery -->
     <script src=\"{{ asset('assets/js/jquery-2.1.0.min.js') }}\"></script>
 
@@ -1177,6 +1076,6 @@ https://templatemo.com/tm-548-training-studio
     <script src=\"{{ asset('assets/js/custom.js') }}\"></script>
 
   </body>
-</html>", "base.front.html.twig", "C:\\wamp64\\www\\Mbody_Prjt\\templates\\base.front.html.twig");
+</html>", "base.front.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\base.front.html.twig");
     }
 }
