@@ -22,12 +22,14 @@ class ActivityType extends AbstractType
         $builder
             ->add('nom_Act')
             ->add('date_Act',DateType::class,[
-                'widget' => 'choice',
+                'widget' => 'single_text',
 
 
 
                 // prevents rendering it as type="date", to avoid HTML5 date pickers
                 'html5' => true ,
+                'required' => true,
+                'empty_data' => '01/01/2000',
 
                 // adds a class that can be selected in JavaScript
                ])

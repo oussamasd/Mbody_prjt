@@ -189,6 +189,7 @@ class Activity
     }
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
-        $metadata->addPropertyConstraint('date_Act', new Assert\LessThanOrEqual(date('Y-m-d')));
+        $metadata->addPropertyConstraint('date_Act', new Assert\GreaterThan(date('Y-m-d')));
+        $metadata->addPropertyConstraint('date_Act', new Assert\NotNull());
     }
 }
