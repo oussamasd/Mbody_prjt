@@ -117,19 +117,33 @@ class __TwigTemplate_375201e0bf95caffd5dbfbb59ac217991d1ba9c33fb7e009bab2b36f866
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["abonnement"]) || array_key_exists("abonnement", $context) ? $context["abonnement"] : (function () { throw new RuntimeError('Variable "abonnement" does not exist.', 24, $this->source); })()), "categories", [], "any", false, false, false, 24), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>description</th>
+                <td>";
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["abonnement"]) || array_key_exists("abonnement", $context) ? $context["abonnement"] : (function () { throw new RuntimeError('Variable "abonnement" does not exist.', 28, $this->source); })()), "description", [], "any", false, false, false, 28), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>image</th>
+                <td><img style=\"width: 150px;\" src=\"/uploads/";
+        // line 32
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["abonnement"]) || array_key_exists("abonnement", $context) ? $context["abonnement"] : (function () { throw new RuntimeError('Variable "abonnement" does not exist.', 32, $this->source); })()), "photo", [], "any", false, false, false, 32), "html", null, true);
+        echo "\"</td>
+            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 29
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_index");
+        // line 37
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ck");
         echo "\">retourner à la liste</a>
 
    ";
-        // line 32
+        // line 40
         echo "
     ";
-        // line 33
+        // line 41
         echo twig_include($this->env, $context, "abonnement/_delete_form.html.twig");
         echo "
 ";
@@ -153,7 +167,7 @@ class __TwigTemplate_375201e0bf95caffd5dbfbb59ac217991d1ba9c33fb7e009bab2b36f866
 
     public function getDebugInfo()
     {
-        return array (  133 => 33,  130 => 32,  125 => 29,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 41,  144 => 40,  139 => 37,  131 => 32,  124 => 28,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -183,15 +197,23 @@ class __TwigTemplate_375201e0bf95caffd5dbfbb59ac217991d1ba9c33fb7e009bab2b36f866
                 <th>Categories</th>
                 <td>{{ abonnement.categories }}</td>
             </tr>
+            <tr>
+                <th>description</th>
+                <td>{{ abonnement.description }}</td>
+            </tr>
+            <tr>
+                <th>image</th>
+                <td><img style=\"width: 150px;\" src=\"/uploads/{{ abonnement.photo }}\"</td>
+            </tr>
         </tbody>
     </table>
 
-    <a href=\"{{ path('abonnement_index') }}\">retourner à la liste</a>
+    <a href=\"{{ path('ck') }}\">retourner à la liste</a>
 
    {#   <a href=\"{{ path('abonnement_edit', {'id': abonnement.id}) }}\">editer</a> #}
 
     {{ include('abonnement/_delete_form.html.twig') }}
 {% endblock %}
-", "abonnement/show.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\abonnement\\show.html.twig");
+", "abonnement/show.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\abonnement\\show.html.twig");
     }
 }

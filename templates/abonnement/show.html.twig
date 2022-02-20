@@ -23,10 +23,18 @@
                 <th>Categories</th>
                 <td>{{ abonnement.categories }}</td>
             </tr>
+            <tr>
+                <th>description</th>
+                <td>{{ abonnement.description }}</td>
+            </tr>
+            <tr>
+                <th>image</th>
+                <td><img style="width: 150px;" src="/uploads/{{ abonnement.photo }}"</td>
+            </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('abonnement_index') }}">retourner à la liste</a>
+    <a href="{{ path('ck') }}">retourner à la liste</a>
 
    {#   <a href="{{ path('abonnement_edit', {'id': abonnement.id}) }}">editer</a> #}
 

@@ -20,10 +20,12 @@ return [
     'abonnement_show' => [['id'], ['_controller' => 'App\\Controller\\AbonnementController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/abonnement']], [], []],
     'abonnement_edit' => [['id'], ['_controller' => 'App\\Controller\\AbonnementController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id'], ['text', '/abonnement']], [], []],
     'abonnement_delete' => [['id'], ['_controller' => 'App\\Controller\\AbonnementController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/abonnement']], [], []],
+    'ck' => [[], ['_controller' => 'App\\Controller\\AbonnementController::afficher'], [], [['text', '/abonnement/abon/back']], [], []],
+    'abonnement_front' => [[], ['_controller' => 'App\\Controller\\AbonnementController::index1'], [], [['text', '/abonnement/frontabon']], [], []],
     'offre_index' => [[], ['_controller' => 'App\\Controller\\OffreController::index'], [], [['text', '/offre/']], [], []],
     'offre_new' => [[], ['_controller' => 'App\\Controller\\OffreController::new'], [], [['text', '/offre/new']], [], []],
     'offre_show' => [['id'], ['_controller' => 'App\\Controller\\OffreController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],
     'offre_edit' => [['id'], ['_controller' => 'App\\Controller\\OffreController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],
     'offre_delete' => [['id'], ['_controller' => 'App\\Controller\\OffreController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],
-    'test' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/test']], [], []],
+    'offre_front' => [[], ['_controller' => 'App\\Controller\\OffreController::afficher'], [], [['text', '/offre/off/front']], [], []],
 ];

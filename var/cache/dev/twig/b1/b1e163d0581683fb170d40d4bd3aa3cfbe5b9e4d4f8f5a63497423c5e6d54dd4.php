@@ -92,6 +92,6 @@ class __TwigTemplate_d1c2b96cf09ee07ca9550a2cb523e3ea83ee8d5b69ffa8ef4e31d6942a9
         return new Source("{% extends 'base.front.html.twig' %}
 {% block body %}
 {% endblock %}
-", "test/index.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\test\\index.html.twig");
+", "test/index.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\test\\index.html.twig");
     }
 }

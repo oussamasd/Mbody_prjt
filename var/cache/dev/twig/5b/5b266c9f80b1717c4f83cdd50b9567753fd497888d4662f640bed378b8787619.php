@@ -105,16 +105,20 @@ class __TwigTemplate_93d294d92cfa5497c0e088d9034e4aae10071c2dc7bf590fa64a67577fe
                           ";
         }
         // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'widget');
         echo "
+
 ";
         // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'widget');
+        echo "
+";
+        // line 34
         echo "<button type=\"btn\" class=\"btn btn-primary\"> ";
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 32, $this->source); })()), "Envoyer")) : ("Envoyer")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 34, $this->source); })()), "Envoyer")) : ("Envoyer")), "html", null, true);
         echo "</button>
 ";
-        // line 33
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form_end');
+        // line 35
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'form_end');
         echo "
 
 ";
@@ -138,7 +142,7 @@ class __TwigTemplate_93d294d92cfa5497c0e088d9034e4aae10071c2dc7bf590fa64a67577fe
 
     public function getDebugInfo()
     {
-        return array (  117 => 33,  112 => 32,  108 => 30,  101 => 26,  98 => 25,  96 => 24,  92 => 23,  88 => 21,  81 => 17,  78 => 16,  76 => 15,  72 => 14,  67 => 11,  61 => 8,  58 => 7,  56 => 6,  52 => 5,  46 => 2,  43 => 1,);
+        return array (  121 => 35,  116 => 34,  112 => 32,  108 => 30,  101 => 26,  98 => 25,  96 => 24,  92 => 23,  88 => 21,  81 => 17,  78 => 16,  76 => 15,  72 => 14,  67 => 11,  61 => 8,  58 => 7,  56 => 6,  52 => 5,  46 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -172,11 +176,13 @@ class __TwigTemplate_93d294d92cfa5497c0e088d9034e4aae10071c2dc7bf590fa64a67577fe
                               </div>
                          </tr>
                           {% endif %}
+
+
 {{ form_widget(form) }}
 {#<button class=\"btn\"> {{ button_label|default('Envoyer') }}</button>#}
 <button type=\"btn\" class=\"btn btn-primary\"> {{ button_label|default('Envoyer') }}</button>
 {{ form_end(form) }}
 
-", "abonnement/_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\abonnement\\_form.html.twig");
+", "abonnement/_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\abonnement\\_form.html.twig");
     }
 }

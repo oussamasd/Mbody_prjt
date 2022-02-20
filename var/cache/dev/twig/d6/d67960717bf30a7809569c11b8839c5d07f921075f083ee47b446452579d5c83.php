@@ -42,7 +42,7 @@ class __TwigTemplate_493163baa08cc83e7713deb76f0af9241d4fdc5edbf2e3b7a8cd9ad1f85
         // line 1
         echo "<form method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["offre"]) || array_key_exists("offre", $context) ? $context["offre"] : (function () { throw new RuntimeError('Variable "offre" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('Est ce que vous etes sûr de supprimer cet élèment?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["offre"]) || array_key_exists("offre", $context) ? $context["offre"] : (function () { throw new RuntimeError('Variable "offre" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
@@ -78,12 +78,12 @@ class __TwigTemplate_493163baa08cc83e7713deb76f0af9241d4fdc5edbf2e3b7a8cd9ad1f85
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('offre_delete', {'id': offre.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('offre_delete', {'id': offre.id}) }}\" onsubmit=\"return confirm('Est ce que vous etes sûr de supprimer cet élèment?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ offre.id) }}\">
     {#  <button class=\"btn\">supprimer</button>#}
     <button type=\"btn\" class=\"btn btn-danger\">supprimer</button>
 
 </form>
-", "offre/_delete_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\offre\\_delete_form.html.twig");
+", "offre/_delete_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\offre\\_delete_form.html.twig");
     }
 }

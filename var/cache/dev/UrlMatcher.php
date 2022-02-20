@@ -15,9 +15,10 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/abonnement' => [[['_route' => 'abonnement_index', '_controller' => 'App\\Controller\\AbonnementController::index'], null, ['GET' => 0], null, true, false, null]],
         '/abonnement/new' => [[['_route' => 'abonnement_new', '_controller' => 'App\\Controller\\AbonnementController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/abonnement/abon/back' => [[['_route' => 'ck', '_controller' => 'App\\Controller\\AbonnementController::afficher'], null, ['GET' => 0], null, false, false, null]],
         '/offre' => [[['_route' => 'offre_index', '_controller' => 'App\\Controller\\OffreController::index'], null, ['GET' => 0], null, true, false, null]],
         '/offre/new' => [[['_route' => 'offre_new', '_controller' => 'App\\Controller\\OffreController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::index'], null, null, null, false, false, null]],
+        '/offre/off/front' => [[['_route' => 'offre_front', '_controller' => 'App\\Controller\\OffreController::afficher'], null, ['GET' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -36,15 +37,18 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/abonnement/([^/]++)(?'
-                    .'|(*:192)'
-                    .'|/edit(*:205)'
-                    .'|(*:213)'
+                .'|/abonnement/(?'
+                    .'|([^/]++)(?'
+                        .'|(*:195)'
+                        .'|/edit(*:208)'
+                        .'|(*:216)'
+                    .')'
+                    .'|frontabon(*:234)'
                 .')'
                 .'|/offre/([^/]++)(?'
-                    .'|(*:240)'
-                    .'|/edit(*:253)'
                     .'|(*:261)'
+                    .'|/edit(*:274)'
+                    .'|(*:282)'
                 .')'
             .')/?$}sD',
     ],
@@ -56,12 +60,13 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        192 => [[['_route' => 'abonnement_show', '_controller' => 'App\\Controller\\AbonnementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        205 => [[['_route' => 'abonnement_edit', '_controller' => 'App\\Controller\\AbonnementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        213 => [[['_route' => 'abonnement_delete', '_controller' => 'App\\Controller\\AbonnementController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        240 => [[['_route' => 'offre_show', '_controller' => 'App\\Controller\\OffreController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        253 => [[['_route' => 'offre_edit', '_controller' => 'App\\Controller\\OffreController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        261 => [
+        195 => [[['_route' => 'abonnement_show', '_controller' => 'App\\Controller\\AbonnementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        208 => [[['_route' => 'abonnement_edit', '_controller' => 'App\\Controller\\AbonnementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        216 => [[['_route' => 'abonnement_delete', '_controller' => 'App\\Controller\\AbonnementController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        234 => [[['_route' => 'abonnement_front', '_controller' => 'App\\Controller\\AbonnementController::index1'], [], ['GET' => 0], null, false, false, null]],
+        261 => [[['_route' => 'offre_show', '_controller' => 'App\\Controller\\OffreController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        274 => [[['_route' => 'offre_edit', '_controller' => 'App\\Controller\\OffreController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        282 => [
             [['_route' => 'offre_delete', '_controller' => 'App\\Controller\\OffreController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

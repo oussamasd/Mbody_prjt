@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerKarTQ25/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerGvmxJUQ/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -35,7 +35,6 @@ $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AbonnementController';
 $classes[] = 'App\Controller\OffreController';
-$classes[] = 'App\Controller\TestController';
 $classes[] = 'App\Form\AbonnementType';
 $classes[] = 'App\Form\OffreType';
 $classes[] = 'App\Repository\AbonnementRepository';

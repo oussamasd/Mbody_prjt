@@ -117,19 +117,25 @@ class __TwigTemplate_d9e3737b9ceb1ee86fe1699f41d4f7d75b2eeef0d9caa81052b56e078e3
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["offre"]) || array_key_exists("offre", $context) ? $context["offre"] : (function () { throw new RuntimeError('Variable "offre" does not exist.', 24, $this->source); })()), "Description", [], "any", false, false, false, 24), "html", null, true);
         echo "</td>
             </tr>
+            <tr>
+                <th>Nom_Abonnement</th>
+                <td>";
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["offre"]) || array_key_exists("offre", $context) ? $context["offre"] : (function () { throw new RuntimeError('Variable "offre" does not exist.', 28, $this->source); })()), "getNomAbonnement", [], "any", false, false, false, 28), "getNom", [], "method", false, false, false, 28), "html", null, true);
+        echo "</td>            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 29
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_index");
         echo "\">retourner à la liste</a>
 
 ";
-        // line 32
+        // line 35
         echo "
     ";
-        // line 33
+        // line 36
         echo twig_include($this->env, $context, "offre/_delete_form.html.twig");
         echo "
 ";
@@ -153,7 +159,7 @@ class __TwigTemplate_d9e3737b9ceb1ee86fe1699f41d4f7d75b2eeef0d9caa81052b56e078e3
 
     public function getDebugInfo()
     {
-        return array (  133 => 33,  130 => 32,  125 => 29,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  139 => 36,  136 => 35,  131 => 32,  124 => 28,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -183,6 +189,9 @@ class __TwigTemplate_d9e3737b9ceb1ee86fe1699f41d4f7d75b2eeef0d9caa81052b56e078e3
                 <th>Description</th>
                 <td>{{ offre.Description }}</td>
             </tr>
+            <tr>
+                <th>Nom_Abonnement</th>
+                <td>{{ offre.getNomAbonnement.getNom()}}</td>            </tr>
         </tbody>
     </table>
 
@@ -192,6 +201,6 @@ class __TwigTemplate_d9e3737b9ceb1ee86fe1699f41d4f7d75b2eeef0d9caa81052b56e078e3
 
     {{ include('offre/_delete_form.html.twig') }}
 {% endblock %}
-", "offre/show.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\offre\\show.html.twig");
+", "offre/show.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\offre\\show.html.twig");
     }
 }

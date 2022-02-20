@@ -674,6 +674,6 @@ class __TwigTemplate_f28865181adde4f49b098ab0d510ed97c674302b05bdea7efcdafe7971f
 <script src=\"{{ asset('Back/js/charts-home.js') }}\"></script>
 <script src=\"{{ asset('Back/js/front.js') }}\"></script>
 </body>
-</html>", "MbodyUp/base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\MbodyUp\\base.back.html.twig");
+</html>", "MbodyUp/base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\MbodyUp\\base.back.html.twig");
     }
 }

@@ -96,7 +96,7 @@ class __TwigTemplate_4306ee80de8ea6cc672fceed66ba1d3bb932223a45a009de2a807157f1a
 
     <a href=\"";
         // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ck");
         echo "\">retourner à la liste</a>
 
  ";
@@ -136,10 +136,10 @@ class __TwigTemplate_4306ee80de8ea6cc672fceed66ba1d3bb932223a45a009de2a807157f1a
     {{ include('abonnement/_form.html.twig', {'button_label': 'Modifier'}) }}
 
 
-    <a href=\"{{ path('abonnement_index') }}\">retourner à la liste</a>
+    <a href=\"{{ path('ck') }}\">retourner à la liste</a>
 
  {#    {{ include('abonnement/_delete_form.html.twig') }} #}
 {% endblock %}
-", "abonnement/edit.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\abonnement\\edit.html.twig");
+", "abonnement/edit.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\abonnement\\edit.html.twig");
     }
 }

@@ -138,6 +138,6 @@ class __TwigTemplate_d9947ceff2c8b2cdce6be1829368357b3bd1c0be5896f35aa6996742cfb
 
 {# {{ include('offre/_delete_form.html.twig') }}#}
 {% endblock %}
-", "offre/edit.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\offre\\edit.html.twig");
+", "offre/edit.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\offre\\edit.html.twig");
     }
 }

@@ -39,9 +39,22 @@ class Abonnement
     private $categories;
 
     /**
-     * @ORM\OneToMany(targetEntity=Offre::class, mappedBy="nom_abonnement")
+     * @ORM\OneToMany(targetEntity=Offre::class, mappedBy="nom_abonnement" , cascade={"remove"})
      */
     private $offres;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *  @Assert\NotBlank(message=" ce champ est obligatoire ")
+     */
+    private $Description;
+
+
 
     public function __construct()
     {
@@ -115,6 +128,42 @@ class Abonnement
                 $offre->setNomAbonnement(null);
             }
         }
+
+        return $this;
+    }
+
+    /*public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }*/
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->Description;
+    }
+
+    public function setDescription(string $Description): self
+    {
+        $this->Description = $Description;
 
         return $this;
     }

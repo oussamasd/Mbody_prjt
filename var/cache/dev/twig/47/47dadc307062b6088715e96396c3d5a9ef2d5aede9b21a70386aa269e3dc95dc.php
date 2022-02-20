@@ -252,7 +252,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
                     <li><a href=\"";
         // line 188
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ck");
         echo "\">les abonnements</a></li>
                     <li><a href=\"";
         // line 189
@@ -606,7 +606,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Abonnement</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"{{ path('abonnement_index') }}\">les abonnements</a></li>
+                    <li><a href=\"{{ path('ck') }}\">les abonnements</a></li>
                     <li><a href=\"{{ path('offre_index') }}\">les offres </a></li>
 
                 </ul>
@@ -678,6 +678,6 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 <script src=\"{{ asset('Back/js/charts-home.js') }}\"></script>
 <script src=\"{{ asset('Back/js/front.js') }}\"></script>
 </body>
-</html>", "base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\base.back.html.twig");
+</html>", "base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\base.back.html.twig");
     }
 }

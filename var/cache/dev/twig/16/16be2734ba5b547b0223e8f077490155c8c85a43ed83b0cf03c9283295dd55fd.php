@@ -133,6 +133,6 @@ class __TwigTemplate_46a832e8c9ab8c2840a064b8dcbad4c160f987b8eb4394dd343b38f5d2c
 
     <a href=\"{{ path('offre_index') }}\">retourner à la liste</a>
 {% endblock %}
-", "offre/new.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\offre\\new.html.twig");
+", "offre/new.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\offre\\new.html.twig");
     }
 }

@@ -67,10 +67,10 @@ class Abonnement extends \App\Entity\Abonnement implements \Doctrine\ORM\Proxy\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'categories', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'offres'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'categories', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'offres', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'Description'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'categories', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'offres'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'prix', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'categories', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'offres', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'photo', '' . "\0" . 'App\\Entity\\Abonnement' . "\0" . 'Description'];
     }
 
     /**
@@ -289,6 +289,50 @@ class Abonnement extends \App\Entity\Abonnement implements \Doctrine\ORM\Proxy\P
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeOffre', [$offre]);
 
         return parent::removeOffre($offre);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPhoto(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPhoto', []);
+
+        return parent::getPhoto();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPhoto(?string $photo): \App\Entity\Abonnement
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPhoto', [$photo]);
+
+        return parent::setPhoto($photo);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDescription(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDescription', []);
+
+        return parent::getDescription();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDescription(string $Description): \App\Entity\Abonnement
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDescription', [$Description]);
+
+        return parent::setDescription($Description);
     }
 
 }

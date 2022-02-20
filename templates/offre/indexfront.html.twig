@@ -1,0 +1,52 @@
+{% extends 'base.front.html.twig' %}
+
+{% block title %}Offre index{% endblock %}
+
+{% block body %}
+    <h1>Liste des offres</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Delai</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offre in offres %}
+            <tr>
+                <td>{{ offre.id }}</td>
+                <td>{{ offre.delai ? offre.delai|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ offre.nom }}</td>
+                <td>{{ offre.Description }}</td>
+                <td>{{ offre.getNomAbonnement.getNom()}}</td>
+                <td>
+                   {#  <a href="{{ path('offre_show', {'id': offre.id}) }}">afficher</a>
+
+                    <a href="{{ path('offre_edit', {'id': offre.id}) }}">Modifier</a>#}
+                    <form  action="{{ path('offre_show', {'id': offre.id})}}" >
+                        <button type="submit" name="submitAction"  value="modifier" class="btn btn-info">Afficher</button>
+                    </form>
+                </td>
+                <td>
+                    <form  action="{{ path('offre_edit', {'id': offre.id})}}" >
+                        <button type="submit" name="submitAction"  value="modifier" class="btn btn-warning">Modifier</button>
+                    </form>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{#    <a href="{{ path('offre_new') }}">Créer nouveau</a>#}
+    <form method="post" action="{{ path('offre_new') }}" >
+        <button type="btn" class="btn btn-success"> {{ button_label|default('Ajouter') }}</button>
+    </form>
+{% endblock %}

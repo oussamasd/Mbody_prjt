@@ -84,6 +84,6 @@ class __TwigTemplate_f07fe4cc81623c1671aebe94e99d7ed64360168dd4807573b379c9ac093
     <button type=\"btn\" class=\"btn btn-danger\">supprimer</button>
 
 </form>
-", "abonnement/_delete_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\abonnement\\_delete_form.html.twig");
+", "abonnement/_delete_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\abonnement\\_delete_form.html.twig");
     }
 }

@@ -83,11 +83,21 @@ class OffreController extends AbstractController
      */
     public function delete(Request $request, Offre $offre, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$offre->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $offre->getId(), $request->request->get('_token'))) {
             $entityManager->remove($offre);
             $entityManager->flush();
         }
 
         return $this->redirectToRoute('offre_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+    /**
+     * @Route("/off/front", name="offre_front", methods={"GET"})
+     */
+    public function afficher(OffreRepository $offreRepository): Response
+    {
+        return $this->render('offre/indexfront.html.twig', [
+            'offres' => $offreRepository->findAll(),
+        ]);
     }
 }

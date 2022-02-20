@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Gedmo\Sluggable\Util\Urlizer;
 
 /**
  * @Route("/abonnement")
@@ -36,10 +37,22 @@ class AbonnementController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if ($form->isSubmitted() && $form->isValid()) {
+                /** @var UploadedFile $uploadedFile */
+                $uploadedFile = $form['imageFile']->getData();
+                $destination = $this->getParameter('kernel.project_dir').'/public/uploads';
+                $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
+                $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();
+                $uploadedFile->move(
+                    $destination,
+                    $newFilename
+                );
+                $abonnement->setPhoto($newFilename);
             $entityManager->persist($abonnement);
             $entityManager->flush();
 
-            return $this->redirectToRoute('abonnement_index', [], Response::HTTP_SEE_OTHER);
+
+            return $this->redirectToRoute('ck', [], Response::HTTP_SEE_OTHER);}
         }
 
         return $this->render('abonnement/new.html.twig', [
@@ -69,12 +82,13 @@ class AbonnementController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('abonnement_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('ck', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('abonnement/edit.html.twig', [
             'abonnement' => $abonnement,
             'form' => $form->createView(),
+            
         ]);
     }
 
@@ -88,6 +102,24 @@ class AbonnementController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('abonnement_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('ck', [], Response::HTTP_SEE_OTHER);
+    }
+    /**
+     * @Route("/abon/back", name="ck", methods={"GET"})
+     */
+    public function afficher(AbonnementRepository $abonnementRepository): Response
+    {
+        return $this->render('abonnement/indexback.html.twig', [
+            'abonnements' => $abonnementRepository->findAll(),
+        ]);
+    }
+    /**
+     * @Route("/frontabon", name="abonnement_front", methods={"GET"})
+     */
+    public function index1(AbonnementRepository $abonnementRepository): Response
+    {
+        return $this->render('abonnement/indexback.html.twig', [
+            'abonnements' => $abonnementRepository->findAll(),
+        ]);
     }
 }

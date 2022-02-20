@@ -179,6 +179,6 @@ class __TwigTemplate_8478f42d2f903d5ef5eba68ed5a34df9818c906cf6bf29d2de9d9761542
 <button type=\"btn\" class=\"btn btn-primary\"> {{ button_label|default('Envoyer') }}</button>
 
 {{ form_end(form) }}
-", "offre/_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\offre\\_form.html.twig");
+", "offre/_form.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\offre\\_form.html.twig");
     }
 }

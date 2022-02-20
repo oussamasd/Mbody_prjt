@@ -249,6 +249,6 @@ class __TwigTemplate_8b01b38719d74e4cc9f3636eeb8d4d31482a7ec3f8bff1f402f3b3658ad
         <button type=\"btn\" class=\"btn btn-success\"> {{ button_label|default('Ajouter') }}</button>
     </form>
 {% endblock %}
-", "offre/index.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\Mbody_Prjt\\templates\\offre\\index.html.twig");
+", "offre/index.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\offre\\index.html.twig");
     }
 }

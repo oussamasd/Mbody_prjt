@@ -1,4 +1,4 @@
-{% extends 'base.back.html.twig' %}
+{% extends 'base.front.html.twig' %}
 
 {% block title %}Abonnement index{% endblock %}
 
@@ -12,6 +12,8 @@
                 <th>Nom</th>
                 <th>Prix</th>
                 <th>Categories</th>
+                <th>Description</th>
+                <th>image</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -22,6 +24,8 @@
                 <td>{{ abonnement.nom }}</td>
                 <td>{{ abonnement.prix }}</td>
                 <td>{{ abonnement.categories }}</td>
+                <td>{{ abonnement.description }}</td>
+                <td><img style="width: 150px;" src="/uploads/{{ abonnement.photo }}"</td>
                 <td>
   {#                       <a href="{{ path('abonnement_show', {'id': abonnement.id}) }}">Afficher</a>#}
                     {#  <a href="{{ path('abonnement_edit', {'id': abonnement.id}) }}">Modifier</a>#}
@@ -48,4 +52,6 @@
 <form method="post" action="{{ path('abonnement_new') }}" >
 <button type="btn" class="btn btn-success"> {{ button_label|default('Ajouter') }}</button>
 </form>
+    {% block b1 %}
+        {% endblock %}
 {% endblock %}
