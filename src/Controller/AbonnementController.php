@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Abonnement;
+
+use App\Entity\Offre;
 use App\Form\AbonnementType;
 use App\Repository\AbonnementRepository;
+use App\Repository\OffreRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,10 +23,12 @@ class AbonnementController extends AbstractController
     /**
      * @Route("/", name="abonnement_index", methods={"GET"})
      */
-    public function index(AbonnementRepository $abonnementRepository): Response
+    public function index(AbonnementRepository $abonnementRepository,OffreRepository $offrerep): Response
     {
         return $this->render('abonnement/index.html.twig', [
             'abonnements' => $abonnementRepository->findAll(),
+            'offres' => $offrerep->findAll(),
+
         ]);
     }
 
@@ -80,7 +85,7 @@ class AbonnementController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->flush();
+            $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('ck', [], Response::HTTP_SEE_OTHER);
         }
@@ -88,7 +93,7 @@ class AbonnementController extends AbstractController
         return $this->render('abonnement/edit.html.twig', [
             'abonnement' => $abonnement,
             'form' => $form->createView(),
-            
+
         ]);
     }
 

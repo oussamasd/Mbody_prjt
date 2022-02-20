@@ -19,6 +19,7 @@ class AbonnementType extends AbstractType
             ->add('nom')
             ->add('prix')
             ->add('categories')
+
             ->add('description')
             ->add('imageFile', FileType::class, [
                 'mapped' => false])

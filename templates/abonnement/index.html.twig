@@ -2,43 +2,54 @@
 
 {% block title %}Abonnement index{% endblock %}
 
-{% block body %}
-    <h1>Liste des abonnements</h1>
+{% block b1 %}
 
+    <section class="section" id="trainers" >
+
+        <div class="container">
+            <div class="row">
+                {% for p in abonnements %}
+                    <div class="col-lg-4">
+                        <div class="trainer-item" >
+                            <div class="image-thumb">
+
+                                <img src="../uploads/{{ p.photo }}">
+                            </div>
+                            <div class="down-content">
+                                <span> {{ p.nom }}</span>
+                                <h4>{{ p.prix }}</h4>
+
+                                <h4>{{ p.description }}</h4>
+                                <p>{{ p.categories }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+
+                    <h1 >vide</h1>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prix</th>
-                <th>Categories</th>
-                <th>Description</th>
-                <th>image</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Delai</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Nom-abonnement</th>
+        </tr>
         </thead>
         <tbody>
-        {% for abonnement in abonnements %}
+        {% for offre in offres %}
             <tr>
-                <td>{{ abonnement.id }}</td>
-                <td>{{ abonnement.nom }}</td>
-                <td>{{ abonnement.prix }}</td>
-                <td>{{ abonnement.categories }}</td>
-                <td>{{ abonnement.description }}</td>
-                <td><img style="width: 150px;" src="/uploads/{{ abonnement.photo }}"</td>
-                <td>
-  {#                       <a href="{{ path('abonnement_show', {'id': abonnement.id}) }}">Afficher</a>#}
-                    {#  <a href="{{ path('abonnement_edit', {'id': abonnement.id}) }}">Modifier</a>#}
+                <td>{{ offre.delai ? offre.delai|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ offre.nom }}</td>
+                <td>{{ offre.Description }}</td>
+                <td>{{ offre.getNomAbonnement.getNom()}}</td>
 
-                    <form  action="{{ path('abonnement_show', {'id': abonnement.id})}}" >
-                        <button type="submit" name="submitAction"  value="modifier" class="btn btn-info">Afficher</button>
-                    </form>
-                </td>
-               <td>
-                   <form method="post" action="{{ path('abonnement_edit', {'id': abonnement.id}) }}" >
-                       <button type="btn" class="btn btn-warning"> {{ button_label|default('Modifier') }}</button>
-                   </form>
-                </td>
             </tr>
         {% else %}
             <tr>
@@ -48,10 +59,8 @@
         </tbody>
     </table>
 
-     {#   <a href="{{ path('abonnement_new') }}">Créer nouvelle</a>#}
-<form method="post" action="{{ path('abonnement_new') }}" >
-<button type="btn" class="btn btn-success"> {{ button_label|default('Ajouter') }}</button>
-</form>
-    {% block b1 %}
-        {% endblock %}
+    {#   <a href="{{ path('abonnement_new') }}">Créer nouvelle</a>#}
+    <form method="post" action="{{ path('abonnement_new') }}" >
+    </form>
+
 {% endblock %}

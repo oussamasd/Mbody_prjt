@@ -74,13 +74,15 @@
 <!-- ***** Header Area End ***** -->
 <!-- ***** Testimonials Starts ***** -->
 <section class="section" id="trainers">
+
     <div class="container">
+
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
                     <h2>nos <em>abonnements</em></h2>
                     <h2>nos <em>offres</em></h2>
-                    <img src="{{ asset('assets/images/line-dec.png') }}" alt="">
+                    <img src="{{ asset('assets/images/features-first-icon.png') }}" alt="second one">
                 </div>
             </div>
         </div>
@@ -97,34 +99,10 @@
 
 
 
-    <section class="section" id="trainers" >
-        <div class="container">
-            <div class="row">
-                {% for p in abonnements %}
-                    <div class="col-lg-4">
-                        <div class="trainer-item" >
-                            <div class="image-thumb">
-                                <img src="../uploads/{{ p.photo }}">
-                            </div>
-                            <div class="down-content">
-                                <span> {{ p.nom }}</span>
-                                <h4>{{ p.prix }}</h4>
-                                <p>{{ p.categories }}</p>
-                            </div>
-                        </div>
-                    </div>
-                {% else %}
-
-                    <h1 >vide</h1>
-
-                {% endfor %}
-
-            </div>
-        </div>
-    </section>
 
 
-    <p> {% block prix %}Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel. {% endblock %}</p>
+
+     {% block prix %} {% endblock %}
 
     </div>
     </div>
@@ -410,7 +388,7 @@
                         <div class="down-content">
                             <span>Strength Trainer</span>
                             <h4>Bret D. Bowers</h4>
-                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -428,7 +406,7 @@
                         <div class="down-content">
                             <span>Muscle Trainer</span>
                             <h4>Hector T. Daigl</h4>
-                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -446,7 +424,7 @@
                         <div class="down-content">
                             <span>Power Trainer</span>
                             <h4>Paul D. Newman</h4>
-                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>

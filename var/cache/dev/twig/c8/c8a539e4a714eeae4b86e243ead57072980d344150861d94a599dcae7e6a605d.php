@@ -94,51 +94,52 @@ class __TwigTemplate_8b01b38719d74e4cc9f3636eeb8d4d31482a7ec3f8bff1f402f3b3658ad
                 <th>Delai</th>
                 <th>Nom</th>
                 <th>Description</th>
+                <th>Nom-Abonnement</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 19
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["offres"]) || array_key_exists("offres", $context) ? $context["offres"] : (function () { throw new RuntimeError('Variable "offres" does not exist.', 19, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["offres"]) || array_key_exists("offres", $context) ? $context["offres"] : (function () { throw new RuntimeError('Variable "offres" does not exist.', 20, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["offre"]) {
-            // line 20
+            // line 21
             echo "            <tr>
                 <td>";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "id", [], "any", false, false, false, 21), "html", null, true);
-            echo "</td>
-                <td>";
             // line 22
-            ((twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 22)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 22), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "id", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                 <td>";
             // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "nom", [], "any", false, false, false, 23), "html", null, true);
+            ((twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 23)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 23), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "Description", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "nom", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["offre"], "getNomAbonnement", [], "any", false, false, false, 25), "getNom", [], "method", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "Description", [], "any", false, false, false, 25), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["offre"], "getNomAbonnement", [], "any", false, false, false, 26), "getNom", [], "method", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>
                    ";
-            // line 30
+            // line 31
             echo "                    <form  action=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_show", ["id" => twig_get_attribute($this->env, $this->source, $context["offre"], "id", [], "any", false, false, false, 30)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_show", ["id" => twig_get_attribute($this->env, $this->source, $context["offre"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\" >
                         <button type=\"submit\" name=\"submitAction\"  value=\"modifier\" class=\"btn btn-info\">Afficher</button>
                     </form>
                 </td>
                 <td>
                     <form  action=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["offre"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["offre"], "id", [], "any", false, false, false, 36)]), "html", null, true);
             echo "\" >
                         <button type=\"submit\" name=\"submitAction\"  value=\"modifier\" class=\"btn btn-warning\">Modifier</button>
                     </form>
@@ -148,7 +149,7 @@ class __TwigTemplate_8b01b38719d74e4cc9f3636eeb8d4d31482a7ec3f8bff1f402f3b3658ad
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 41
+            // line 42
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -157,18 +158,18 @@ class __TwigTemplate_8b01b38719d74e4cc9f3636eeb8d4d31482a7ec3f8bff1f402f3b3658ad
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 46
         echo "        </tbody>
     </table>
 
 ";
-        // line 49
+        // line 50
         echo "    <form method=\"post\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_new");
         echo "\" >
         <button type=\"btn\" class=\"btn btn-success\"> ";
-        // line 50
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 50, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 51, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
         echo "</button>
     </form>
 ";
@@ -192,7 +193,7 @@ class __TwigTemplate_8b01b38719d74e4cc9f3636eeb8d4d31482a7ec3f8bff1f402f3b3658ad
 
     public function getDebugInfo()
     {
-        return array (  171 => 50,  166 => 49,  161 => 45,  152 => 41,  141 => 35,  132 => 30,  127 => 25,  123 => 24,  119 => 23,  115 => 22,  111 => 21,  108 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  172 => 51,  167 => 50,  162 => 46,  153 => 42,  142 => 36,  133 => 31,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -211,6 +212,7 @@ class __TwigTemplate_8b01b38719d74e4cc9f3636eeb8d4d31482a7ec3f8bff1f402f3b3658ad
                 <th>Delai</th>
                 <th>Nom</th>
                 <th>Description</th>
+                <th>Nom-Abonnement</th>
                 <th>actions</th>
             </tr>
         </thead>

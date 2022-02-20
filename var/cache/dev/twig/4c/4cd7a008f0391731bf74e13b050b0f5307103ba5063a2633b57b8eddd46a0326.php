@@ -26,7 +26,7 @@ class __TwigTemplate_68fb7f78ad05fe7543513ecac347904978c5e94636d1490bd6e23bb72cb
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'b1' => [$this, 'block_b1'],
         ];
     }
 
@@ -75,14 +75,14 @@ class __TwigTemplate_68fb7f78ad05fe7543513ecac347904978c5e94636d1490bd6e23bb72cb
     }
 
     // line 5
-    public function block_body($context, array $blocks = [])
+    public function block_b1($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b1"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b1"));
 
         // line 6
         echo "    <h1>Liste des offres</h1>
@@ -201,7 +201,7 @@ class __TwigTemplate_68fb7f78ad05fe7543513ecac347904978c5e94636d1490bd6e23bb72cb
 
 {% block title %}Offre index{% endblock %}
 
-{% block body %}
+{% block b1 %}
     <h1>Liste des offres</h1>
 
     <table class=\"table\">

@@ -18,17 +18,29 @@
                               </div>
                         </tr>
                           {% endif %}
-                         <tr>
-                         <th>Catégories:</th>
- {{ form_widget(form.categories) }}
-                          {% if not form.categories.vars.valid %}
-                              <div class="alert alert-danger">
-                                  {{ form_errors(form.categories) }}
-                              </div>
-                         </tr>
-                          {% endif %}
+<tr>
+    <th>Catégories:</th>
+    {{ form_widget(form.categories) }}
+    {% if not form.categories.vars.valid %}
+    <div class="alert alert-danger">
+        {{ form_errors(form.categories) }}
+    </div>
+</tr>
+{% endif %}
+<tr>
+
+    <th>description:</th>
+
+    {{ form_widget(form.description) }}
+    {% if not form.description.vars.valid %}
+    <div class="alert alert-danger">
+
+        {{ form_errors(form.description) }}
+    </div>
 
 
+</tr>
+{% endif %}
 {{ form_widget(form) }}
 {#<button class="btn"> {{ button_label|default('Envoyer') }}</button>#}
 <button type="btn" class="btn btn-primary"> {{ button_label|default('Envoyer') }}</button>
