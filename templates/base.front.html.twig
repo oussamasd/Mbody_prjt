@@ -75,6 +75,8 @@ https://templatemo.com/tm-548-training-studio
     </header>
     <!-- ***** Header Area End ***** -->
     {% block accueil %}
+
+        {% block b2 %}
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner" id="top">
         {% block top %}
@@ -99,8 +101,10 @@ https://templatemo.com/tm-548-training-studio
 
     </div>
     {% endblock %}
+    {% endblock %}
     <!-- ***** Main Banner Area End ***** -->
     {% block body %}
+        {% block b1 %}
     <!-- ***** Features Item Start ***** -->
     <section class="section" id="features">
         <div class="container">
@@ -185,9 +189,11 @@ https://templatemo.com/tm-548-training-studio
             {% endblock %}
         </div>
     </section>
+            {% endblock %}
     <!-- ***** Features Item End ***** -->
 
     <!-- ***** Call to Action Start ***** -->
+        {% block a3 %}
     <section class="section" id="call-to-action">
         <div class="container">
             {% block Act %}
@@ -205,8 +211,9 @@ https://templatemo.com/tm-548-training-studio
            {% endblock%}
         </div>
     </section>
+            {% endblock %}
     <!-- ***** Call to Action End ***** -->
-
+{% block a1 %}
     <!-- ***** Our Classes Start ***** -->
     <section class="section" id="our-classes">
         <div class="container">
@@ -270,8 +277,9 @@ https://templatemo.com/tm-548-training-studio
             {% endblock %}
         </div>
     </section>
+{% endblock %}
     <!-- ***** Our Classes End ***** -->
-    
+    {% block a2 %}
     <section class="section" id="schedule">
         <div class="container">
             <div class="row">
@@ -336,10 +344,12 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </section>
+     {% endblock%}
 
     <!-- ***** Testimonials Starts ***** -->
     <section class="section" id="trainers">
         <div class="container">
+            {% block b3 %}
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
@@ -405,11 +415,13 @@ https://templatemo.com/tm-548-training-studio
                     </div>
                 </div>
             </div>
+            {% endblock %}
         </div>
     </section>
     <!-- ***** Testimonials Ends ***** -->
     
     <!-- ***** Contact Us Area Starts ***** -->
+        {% block b4 %}
     <section class="section" id="contact-us">
         <div class="container-fluid">
             <div class="row">
@@ -454,6 +466,7 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </section>
+            {% endblock %}
     <!-- ***** Contact Us Area Ends ***** -->
     {% endblock %}
     <!-- ***** Footer Start ***** -->

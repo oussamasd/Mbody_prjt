@@ -23,7 +23,7 @@ class ActivityController extends AbstractController
     public function index(): Response
     {
         $activity= $this->getDoctrine()->getRepository(Activity::class)->findAll();
-        return $this->render('activity/index.html.twig', [
+        return $this->render('activity/Affichactivity.html.twig', [
             'activities' => $activity ,
         ]);
     }
