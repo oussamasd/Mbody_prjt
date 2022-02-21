@@ -31,6 +31,7 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
             'a2' => [$this, 'block_a2'],
             'a3' => [$this, 'block_a3'],
             'b3' => [$this, 'block_b3'],
+            'css' => [$this, 'block_css'],
             'b4' => [$this, 'block_b4'],
         ];
     }
@@ -161,98 +162,90 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b3"));
 
         // line 14
+        echo "     ";
+        $this->displayBlock('css', $context, $blocks);
+        // line 18
         echo "    <div class=\"row\">
         <div class=\"col-lg-6 offset-lg-3\">
             <div class=\"section-heading\">
                 <h2>Expert <em>Trainers</em></h2>
                 <img src=\"";
-        // line 18
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                 <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
             </div>
         </div>
     </div>
+
     <div class=\"row\">
         ";
-        // line 24
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 29, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["activity"]) {
-            // line 25
+            // line 30
+            echo "            ";
+            $context["i"] = twig_get_attribute($this->env, $this->source, $context["activity"], "getImages", [], "method", false, false, false, 30);
+            // line 52
             echo "
-        <div class=\"col-lg-4\">
+";
+            // line 55
+            echo "
+";
+            // line 74
+            echo "        <div class=\"col-lg-4\">
             <div class=\"trainer-item\">
                 <div class=\"image-thumb\">
-                    <img src=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/first-trainer.jpg"), "html", null, true);
-            echo "\" alt=\"\">
-                </div>
-                <div class=\"down-content\">
-                    <span>Strength Trainer</span>
-                    <h4>Bret D. Bowers</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                    <ul class=\"social-icons\">
-                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class=\"col-lg-4\">
-            <div class=\"trainer-item\">
-                <div class=\"image-thumb\">
-                    <img src=\"/public/uploads/\" alt=\"\">
                     ";
-            // line 48
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "images", [], "any", false, false, false, 48)));
-            foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
-                // line 49
-                echo "                    <h1>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "getImageUrl", [], "any", false, false, false, 49), "html", null, true);
-                echo "</h1>
+            // line 77
+            if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 77, $this->source); })())), 0))) {
+                // line 78
+                echo "
+                    <img src=\"http://127.0.0.1:8000/uploads/";
+                // line 79
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 79, $this->source); })()), 0, [], "array", false, false, false, 79), "getImageUrl", [], "method", false, false, false, 79), "html", null, true);
+                echo "\" alt=\"\">
+                    ";
+            } else {
+                // line 81
+                echo "                    <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">
                     ";
             }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 51
-            echo "                </div>
+            // line 83
+            echo "
+
+                </div>
                 <div class=\"down-content\">
-                    <span>Muscle Trainer</span>
-                    <h4>Hector T. Daigl</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+                    <span>";
+            // line 87
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["activity"], "getCategory", [], "any", false, false, false, 87), "getNomCat", [], "method", false, false, false, 87), "html", null, true);
+            echo "</span>
+                    <h4>";
+            // line 88
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getNomAct", [], "method", false, false, false, 88), "html", null, true);
+            echo "</h4>
+                    <p>";
+            // line 89
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDescriptionAct", [], "method", false, false, false, 89), "html", null, true);
+            echo "</p>
+                    <table>
+                    <tr>
+                        <td>
                     <ul class=\"social-icons\">
                         <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class=\"col-lg-4\">
-            <div class=\"trainer-item\">
-                <div class=\"image-thumb\">
-                    <img src=\"";
-            // line 68
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/third-trainer.jpg"), "html", null, true);
-            echo "\" alt=\"\">
-                </div>
-                <div class=\"down-content\">
-                    <span>Power Trainer</span>
-                    <h4>Paul D. Newman</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                    <ul class=\"social-icons\">
-                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
-                    </ul>
+                        </td>
+                        <td>
+                            <div class=\"stage\">
+                                <a class=\"lnkSchow\" href=\"#\">Read More</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -261,7 +254,7 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['activity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 84
+        // line 111
         echo "    </div>
 ";
         
@@ -272,7 +265,34 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
 
     }
 
-    // line 86
+    // line 14
+    public function block_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        // line 15
+        echo "         ";
+        $this->displayParentBlock("css", $context, $blocks);
+        echo "
+         <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("ReadmoreCss.css"), "html", null, true);
+        echo "\">
+     ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 113
     public function block_b4($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -302,7 +322,7 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
 
     public function getDebugInfo()
     {
-        return array (  276 => 86,  265 => 84,  243 => 68,  224 => 51,  215 => 49,  211 => 48,  189 => 29,  183 => 25,  179 => 24,  170 => 18,  164 => 14,  154 => 13,  136 => 11,  118 => 9,  100 => 7,  82 => 5,  64 => 3,  41 => 1,);
+        return array (  296 => 113,  284 => 16,  279 => 15,  269 => 14,  258 => 111,  230 => 89,  226 => 88,  222 => 87,  216 => 83,  212 => 81,  207 => 79,  204 => 78,  202 => 77,  197 => 74,  194 => 55,  191 => 52,  188 => 30,  184 => 29,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -320,6 +340,10 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
 {% block a3 %}
 {% endblock %}
 {% block b3 %}
+     {% block css %}
+         {{ parent() }}
+         <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('ReadmoreCss.css') }}\">
+     {% endblock %}
     <div class=\"row\">
         <div class=\"col-lg-6 offset-lg-3\">
             <div class=\"section-heading\">
@@ -329,63 +353,86 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
             </div>
         </div>
     </div>
+
     <div class=\"row\">
         {% for activity in activities %}
+            {% set i =activity.getImages() %}
+{#        <div class=\"col-lg-4\">#}
+{#            <div class=\"trainer-item\">#}
+{#                <div class=\"image-thumb\">#}
+{#                    <img src=\"{{ asset('assets/images/first-trainer.jpg') }}\" alt=\"\">#}
+{#                </div>#}
+{#                <div class=\"down-content\">#}
+{#                    <span>Strength Trainer</span>#}
+{#                    <h4>Bret D. Bowers</h4>#}
+{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
+{#                    <ul class=\"social-icons\">#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class=\"col-lg-4\">#}
+{#            <div class=\"trainer-item\">#}
+{#                <div class=\"image-thumb\">#}
 
+{#                    {% if i|length >0 %}#}
+{#                        {% set imgg =\"uploads/\"+{{ i[0].getImageUrl() }}  %}#}
+
+{#                        <img src=\"http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}\" alt=\"\">#}
+{#                     {% else%}#}
+{#                         <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">#}
+{#                    {% endif %}#}
+{#                </div>#}
+{#                <div class=\"down-content\">#}
+{#                    <span>Muscle Trainer</span>#}
+{#                    <h4>Hector T. Daigl</h4>#}
+{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
+{#                    <ul class=\"social-icons\">#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>#}
+{#                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
         <div class=\"col-lg-4\">
             <div class=\"trainer-item\">
                 <div class=\"image-thumb\">
-                    <img src=\"{{ asset('assets/images/first-trainer.jpg') }}\" alt=\"\">
+                    {% if i|length >0 %}
+
+                    <img src=\"http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}\" alt=\"\">
+                    {% else%}
+                    <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">
+                    {% endif %}
+
+
                 </div>
                 <div class=\"down-content\">
-                    <span>Strength Trainer</span>
-                    <h4>Bret D. Bowers</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+                    <span>{{ activity.getCategory.getNomCat() }}</span>
+                    <h4>{{ activity.getNomAct() }}</h4>
+                    <p>{{ activity.getDescriptionAct() }}</p>
+                    <table>
+                    <tr>
+                        <td>
                     <ul class=\"social-icons\">
                         <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class=\"col-lg-4\">
-            <div class=\"trainer-item\">
-                <div class=\"image-thumb\">
-                    <img src=\"/public/uploads/\" alt=\"\">
-                    {%  for a in activity.images|first %}
-                    <h1>{{ a.getImageUrl }}</h1>
-                    {% endfor %}
-                </div>
-                <div class=\"down-content\">
-                    <span>Muscle Trainer</span>
-                    <h4>Hector T. Daigl</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                    <ul class=\"social-icons\">
-                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class=\"col-lg-4\">
-            <div class=\"trainer-item\">
-                <div class=\"image-thumb\">
-                    <img src=\"{{ asset('assets/images/third-trainer.jpg') }}\" alt=\"\">
-                </div>
-                <div class=\"down-content\">
-                    <span>Power Trainer</span>
-                    <h4>Paul D. Newman</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                    <ul class=\"social-icons\">
-                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
-                    </ul>
+                        </td>
+                        <td>
+                            <div class=\"stage\">
+                                <a class=\"lnkSchow\" href=\"#\">Read More</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
                 </div>
             </div>
         </div>

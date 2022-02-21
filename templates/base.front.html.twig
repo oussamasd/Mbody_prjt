@@ -18,6 +18,7 @@ https://templatemo.com/tm-548-training-studio
 
 -->
     <!-- Additional CSS Files -->
+      {% block css %}
       <link rel="stylesheet" type="text/css" href="{{asset('schedule_css.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
@@ -25,7 +26,7 @@ https://templatemo.com/tm-548-training-studio
 
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-training-studio.css') }}">
       <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
+    {% endblock %}
 
     </head>
     
@@ -492,8 +493,10 @@ https://templatemo.com/tm-548-training-studio
     <script src="{{ asset('assets/js/jquery-2.1.0.min.js') }}"></script>
 
     <!-- Bootstrap -->
+
     <script src="{{ asset('assets/js/popper.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
 
     <!-- Plugins -->
     <script src="{{ asset('assets/js/scrollreveal.min.js') }}"></script>

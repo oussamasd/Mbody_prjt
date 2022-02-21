@@ -20,6 +20,7 @@ return [
     'ActivityUpdate' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::updateActivite'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/updateActivite']], [], []],
     'ActivityDelete' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/DeleteActivity']], [], []],
     'activitySchedule' => [[], ['_controller' => 'App\\Controller\\ActivityController::Schedule'], [], [['text', '/activitySchedule']], [], []],
+    'activityDetails' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::showmore'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/activity/details']], [], []],
     'category' => [[], ['_controller' => 'App\\Controller\\CategoryController::index'], [], [['text', '/category']], [], []],
     'categoryAdd' => [[], ['_controller' => 'App\\Controller\\CategoryController::add'], [], [['text', '/addCategory']], [], []],
     'exercice' => [[], ['_controller' => 'App\\Controller\\ExerciceController::index'], [], [['text', '/exercice']], [], []],

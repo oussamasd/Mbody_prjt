@@ -23,6 +23,8 @@ class ActivityController extends AbstractController
     public function index(): Response
     {
         $activity= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+        $h=$activity[15]->getImages();
+        var_dump(sizeof($h));
         return $this->render('activity/Affichactivity.html.twig', [
             'activities' => $activity ,
         ]);
@@ -77,8 +79,30 @@ class ActivityController extends AbstractController
         $form= $this->createForm(ActivityType::class,$activity);
         $form->handleRequest($request);
         if($form->isSubmitted()&& $form->isValid()){
-            $em= $this->getDoctrine()->getManager();
-            $em->flush();
+
+           /* $em= $this->getDoctrine()->getManager();
+            $em->flush();*/
+            // On récupère les images transmises
+            $images = $form->get('images')->getData();
+
+            // On boucle sur les images
+            foreach($images as $image){
+                // On génère un nouveau nom de fichier
+                $fichier = md5(uniqid()).'.'.$image->guessExtension();
+
+                // On copie le fichier dans le dossier uploads
+                $image->move(
+                    $this->getParameter('images_directory'),
+                    $fichier
+                );
+
+                // On crée l'image dans la base de données
+                $img = new ImageActEx();
+                $img->setImageUrl($fichier);
+                $activity->addImage($img);
+                $em= $this->getDoctrine()->getManager();
+                $em->flush();
+            }
             return $this->redirectToRoute("activityAdd");
         }
         return $this->render("activity/add.html.twig", array("formActivity"=>$form->createView(),'activities' => $activityAll ,));
@@ -186,6 +210,17 @@ class ActivityController extends AbstractController
 
              ));
         //return $this->render('activity/test.html.twig',array('cu'=>$Act2));
+    }
+    /**
+     * @Route("/activity/details/{id}", name="activityDetails")
+     */
+    public function showmore($id): Response
+    {
+        $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
+
+        return $this->render('activity/detailActivity.html.twig', [
+            'activity' => $activity ,
+        ]);
     }
 
 }

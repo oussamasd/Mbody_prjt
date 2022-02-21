@@ -11,6 +11,10 @@
 {% block a3 %}
 {% endblock %}
 {% block b3 %}
+     {% block css %}
+         {{ parent() }}
+         <link rel="stylesheet" type="text/css" href="{{ asset('ReadmoreCss.css') }}">
+     {% endblock %}
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="section-heading">
@@ -20,63 +24,86 @@
             </div>
         </div>
     </div>
+
     <div class="row">
         {% for activity in activities %}
+            {% set i =activity.getImages() %}
+{#        <div class="col-lg-4">#}
+{#            <div class="trainer-item">#}
+{#                <div class="image-thumb">#}
+{#                    <img src="{{ asset('assets/images/first-trainer.jpg') }}" alt="">#}
+{#                </div>#}
+{#                <div class="down-content">#}
+{#                    <span>Strength Trainer</span>#}
+{#                    <h4>Bret D. Bowers</h4>#}
+{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
+{#                    <ul class="social-icons">#}
+{#                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+{#                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+{#                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>#}
+{#                        <li><a href="#"><i class="fa fa-behance"></i></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="col-lg-4">#}
+{#            <div class="trainer-item">#}
+{#                <div class="image-thumb">#}
 
+{#                    {% if i|length >0 %}#}
+{#                        {% set imgg ="uploads/"+{{ i[0].getImageUrl() }}  %}#}
+
+{#                        <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" alt="">#}
+{#                     {% else%}#}
+{#                         <img src="http://127.0.0.1:8000/uploads/noimg.jpg" alt="">#}
+{#                    {% endif %}#}
+{#                </div>#}
+{#                <div class="down-content">#}
+{#                    <span>Muscle Trainer</span>#}
+{#                    <h4>Hector T. Daigl</h4>#}
+{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
+{#                    <ul class="social-icons">#}
+{#                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+{#                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+{#                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>#}
+{#                        <li><a href="#"><i class="fa fa-behance"></i></a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
         <div class="col-lg-4">
             <div class="trainer-item">
                 <div class="image-thumb">
-                    <img src="{{ asset('assets/images/first-trainer.jpg') }}" alt="">
+                    {% if i|length >0 %}
+
+                    <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" alt="">
+                    {% else%}
+                    <img src="http://127.0.0.1:8000/uploads/noimg.jpg" alt="">
+                    {% endif %}
+
+
                 </div>
                 <div class="down-content">
-                    <span>Strength Trainer</span>
-                    <h4>Bret D. Bowers</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
+                    <span>{{ activity.getCategory.getNomCat() }}</span>
+                    <h4>{{ activity.getNomAct() }}</h4>
+                    <p>{{ activity.getDescriptionAct() }}</p>
+                    <table>
+                    <tr>
+                        <td>
                     <ul class="social-icons">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="trainer-item">
-                <div class="image-thumb">
-                    <img src="/public/uploads/" alt="">
-                    {%  for a in activity.images|first %}
-                    <h1>{{ a.getImageUrl }}</h1>
-                    {% endfor %}
-                </div>
-                <div class="down-content">
-                    <span>Muscle Trainer</span>
-                    <h4>Hector T. Daigl</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="trainer-item">
-                <div class="image-thumb">
-                    <img src="{{ asset('assets/images/third-trainer.jpg') }}" alt="">
-                </div>
-                <div class="down-content">
-                    <span>Power Trainer</span>
-                    <h4>Paul D. Newman</h4>
-                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
+                        </td>
+                        <td>
+                            <div class="stage">
+                                <a class="lnkSchow" href="#">Read More</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </table>
                 </div>
             </div>
         </div>

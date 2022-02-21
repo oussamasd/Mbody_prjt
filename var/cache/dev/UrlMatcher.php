@@ -48,6 +48,7 @@ return [
                     .'|Activity/([^/]++)(*:257)'
                     .'|Exercice/([^/]++)(*:282)'
                 .')'
+                .'|/activity/details/([^/]++)(*:317)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -61,8 +62,9 @@ return [
         196 => [[['_route' => 'ActivityUpdate', '_controller' => 'App\\Controller\\ActivityController::updateActivite'], ['id'], null, null, false, true, null]],
         221 => [[['_route' => 'ExerciceUpdate', '_controller' => 'App\\Controller\\ExerciceController::updateExercice'], ['id'], null, null, false, true, null]],
         257 => [[['_route' => 'ActivityDelete', '_controller' => 'App\\Controller\\ActivityController::delete'], ['id'], null, null, false, true, null]],
-        282 => [
-            [['_route' => 'ExerciceDelete', '_controller' => 'App\\Controller\\ExerciceController::delete'], ['id'], null, null, false, true, null],
+        282 => [[['_route' => 'ExerciceDelete', '_controller' => 'App\\Controller\\ExerciceController::delete'], ['id'], null, null, false, true, null]],
+        317 => [
+            [['_route' => 'activityDetails', '_controller' => 'App\\Controller\\ActivityController::showmore'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

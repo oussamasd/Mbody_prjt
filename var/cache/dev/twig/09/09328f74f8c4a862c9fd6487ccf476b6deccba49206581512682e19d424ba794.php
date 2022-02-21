@@ -27,6 +27,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
         $this->parent = false;
 
         $this->blocks = [
+            'css' => [$this, 'block_css'],
             'accueil' => [$this, 'block_accueil'],
             'b2' => [$this, 'block_b2'],
             'top' => [$this, 'block_top'],
@@ -76,27 +77,11 @@ https://templatemo.com/tm-548-training-studio
 
 -->
     <!-- Additional CSS Files -->
-      <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+      ";
         // line 21
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("schedule_css.css"), "html", null, true);
-        echo "\">
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 22
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/bootstrap.min.css"), "html", null, true);
-        echo "\">
-
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/font-awesome.css"), "html", null, true);
-        echo "\">
-
-    <link rel=\"stylesheet\" href=\"";
-        // line 26
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/templatemo-training-studio.css"), "html", null, true);
-        echo "\">
-      <script src=\"https://code.jquery.com/jquery-3.6.0.js\" integrity=\"sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\" crossorigin=\"anonymous\"></script>
-
-
+        $this->displayBlock('css', $context, $blocks);
+        // line 30
+        echo "
     </head>
     
     <body>
@@ -145,66 +130,68 @@ https://templatemo.com/tm-548-training-studio
     </header>
     <!-- ***** Header Area End ***** -->
     ";
-        // line 77
+        // line 78
         $this->displayBlock('accueil', $context, $blocks);
-        // line 105
+        // line 106
         echo "    <!-- ***** Main Banner Area End ***** -->
     ";
-        // line 106
+        // line 107
         $this->displayBlock('body', $context, $blocks);
-        // line 472
+        // line 473
         echo "    <!-- ***** Footer Start ***** -->
     ";
-        // line 473
+        // line 474
         $this->displayBlock('footer', $context, $blocks);
-        // line 489
+        // line 490
         echo "
 
     <!-- jQuery -->
     <script src=\"";
-        // line 492
+        // line 493
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery-2.1.0.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Bootstrap -->
+
     <script src=\"";
-        // line 495
+        // line 497
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/popper.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 496
+        // line 498
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
+
     <!-- Plugins -->
     <script src=\"";
-        // line 499
+        // line 502
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scrollreveal.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 500
+        // line 503
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/waypoints.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 501
+        // line 504
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 502
+        // line 505
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/imgfix.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 503
+        // line 506
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mixitup.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 504
+        // line 507
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/accordions.js"), "html", null, true);
         echo "\"></script>
     
     <!-- Global Init -->
     <script src=\"";
-        // line 507
+        // line 510
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -212,7 +199,7 @@ https://templatemo.com/tm-548-training-studio
 
   </body>
 ";
-        // line 520
+        // line 523
         echo "</html>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -222,7 +209,45 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 77
+    // line 21
+    public function block_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        // line 22
+        echo "      <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("schedule_css.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/bootstrap.min.css"), "html", null, true);
+        echo "\">
+
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/font-awesome.css"), "html", null, true);
+        echo "\">
+
+    <link rel=\"stylesheet\" href=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/templatemo-training-studio.css"), "html", null, true);
+        echo "\">
+      <script src=\"https://code.jquery.com/jquery-3.6.0.js\" integrity=\"sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\" crossorigin=\"anonymous\"></script>
+    ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 78
     public function block_accueil($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -232,12 +257,12 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "accueil"));
 
-        // line 78
+        // line 79
         echo "
         ";
-        // line 79
+        // line 80
         $this->displayBlock('b2', $context, $blocks);
-        // line 104
+        // line 105
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -247,7 +272,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 79
+    // line 80
     public function block_b2($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -257,13 +282,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b2"));
 
-        // line 80
+        // line 81
         echo "    <!-- ***** Main Banner Area Start ***** -->
     <div class=\"main-banner\" id=\"top\">
         ";
-        // line 82
+        // line 83
         $this->displayBlock('top', $context, $blocks);
-        // line 101
+        // line 102
         echo "
     </div>
     ";
@@ -275,7 +300,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 82
+    // line 83
     public function block_top($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -285,17 +310,17 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "top"));
 
-        // line 83
+        // line 84
         echo "        ";
         $this->displayBlock('video', $context, $blocks);
-        // line 88
+        // line 89
         echo "
         <div class=\"video-overlay header-text\">
             <div class=\"caption\">
                 ";
-        // line 91
+        // line 92
         $this->displayBlock('cen', $context, $blocks);
-        // line 98
+        // line 99
         echo "            </div>
         </div>
         ";
@@ -307,7 +332,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 83
+    // line 84
     public function block_video($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -317,10 +342,10 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "video"));
 
-        // line 84
+        // line 85
         echo "        <video autoplay muted loop id=\"bg-video\">
             <source src=\"";
-        // line 85
+        // line 86
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/gym-video.mp4"), "html", null, true);
         echo "\" type=\"video/mp4\" />
         </video>
@@ -333,7 +358,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 91
+    // line 92
     public function block_cen($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -343,7 +368,7 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "cen"));
 
-        // line 92
+        // line 93
         echo "                <h6>work harder, get stronger</h6>
                 <h2>easy with our <em>gym</em></h2>
                 <div class=\"main-button scroll-to-section\">
@@ -358,7 +383,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 106
+    // line 107
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -368,44 +393,44 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 107
+        // line 108
         echo "        ";
         $this->displayBlock('b1', $context, $blocks);
-        // line 193
+        // line 194
         echo "    <!-- ***** Features Item End ***** -->
 
     <!-- ***** Call to Action Start ***** -->
         ";
-        // line 196
+        // line 197
         $this->displayBlock('a3', $context, $blocks);
-        // line 215
+        // line 216
         echo "    <!-- ***** Call to Action End ***** -->
 ";
-        // line 216
+        // line 217
         $this->displayBlock('a1', $context, $blocks);
-        // line 281
+        // line 282
         echo "    <!-- ***** Our Classes End ***** -->
     ";
-        // line 282
+        // line 283
         $this->displayBlock('a2', $context, $blocks);
-        // line 348
+        // line 349
         echo "
     <!-- ***** Testimonials Starts ***** -->
     <section class=\"section\" id=\"trainers\">
         <div class=\"container\">
             ";
-        // line 352
+        // line 353
         $this->displayBlock('b3', $context, $blocks);
-        // line 419
+        // line 420
         echo "        </div>
     </section>
     <!-- ***** Testimonials Ends ***** -->
     
     <!-- ***** Contact Us Area Starts ***** -->
         ";
-        // line 424
+        // line 425
         $this->displayBlock('b4', $context, $blocks);
-        // line 470
+        // line 471
         echo "    <!-- ***** Contact Us Area Ends ***** -->
     ";
         
@@ -416,7 +441,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 107
+    // line 108
     public function block_b1($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -426,14 +451,14 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b1"));
 
-        // line 108
+        // line 109
         echo "    <!-- ***** Features Item Start ***** -->
     <section class=\"section\" id=\"features\">
         <div class=\"container\">
             ";
-        // line 111
+        // line 112
         $this->displayBlock('Produit', $context, $blocks);
-        // line 190
+        // line 191
         echo "        </div>
     </section>
             ";
@@ -445,7 +470,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 111
+    // line 112
     public function block_Produit($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -455,13 +480,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Produit"));
 
-        // line 112
+        // line 113
         echo "            <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
                         <h2>Choose <em>Hadil</em></h2>
                         <img src=\"";
-        // line 116
+        // line 117
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"waves\">
                         <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
@@ -472,7 +497,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 124
+        // line 125
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"First One\">
                             </div>
@@ -485,7 +510,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 134
+        // line 135
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"second one\">
                             </div>
@@ -498,7 +523,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 144
+        // line 145
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"third gym training\">
                             </div>
@@ -515,7 +540,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 158
+        // line 159
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"fourth muscle\">
                             </div>
@@ -528,7 +553,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 168
+        // line 169
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"training fifth\">
                             </div>
@@ -541,7 +566,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 178
+        // line 179
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"gym training\">
                             </div>
@@ -563,7 +588,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 196
+    // line 197
     public function block_a3($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -573,13 +598,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "a3"));
 
-        // line 197
+        // line 198
         echo "    <section class=\"section\" id=\"call-to-action\">
         <div class=\"container\">
             ";
-        // line 199
+        // line 200
         $this->displayBlock('Act', $context, $blocks);
-        // line 212
+        // line 213
         echo "        </div>
     </section>
             ";
@@ -591,7 +616,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 199
+    // line 200
     public function block_Act($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -601,7 +626,7 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Act"));
 
-        // line 200
+        // line 201
         echo "            <div class=\"row\">
                 <div class=\"col-lg-10 offset-lg-1\">
                     <div class=\"cta-content\">
@@ -622,7 +647,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 216
+    // line 217
     public function block_a1($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -632,14 +657,14 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "a1"));
 
-        // line 217
+        // line 218
         echo "    <!-- ***** Our Classes Start ***** -->
     <section class=\"section\" id=\"our-classes\">
         <div class=\"container\">
             ";
-        // line 220
+        // line 221
         $this->displayBlock('Activite', $context, $blocks);
-        // line 278
+        // line 279
         echo "        </div>
     </section>
 ";
@@ -651,7 +676,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 220
+    // line 221
     public function block_Activite($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -661,13 +686,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Activite"));
 
-        // line 221
+        // line 222
         echo "            <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
                         <h2>Our <em>Classes</em></h2>
                         <img src=\"";
-        // line 225
+        // line 226
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -678,19 +703,19 @@ https://templatemo.com/tm-548-training-studio
               <div class=\"col-lg-4\">
                 <ul>
                   <li><a href='#tabs-1'><img src=\"";
-        // line 233
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">First Training Class</a></li>
                   <li><a href='#tabs-2'><img src=\"";
-        // line 234
+        // line 235
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">Second Training Class</a></a></li>
                   <li><a href='#tabs-3'><img src=\"";
-        // line 235
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">Third Training Class</a></a></li>
                   <li><a href='#tabs-4'><img src=\"";
-        // line 236
+        // line 237
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">Fourth Training Class</a></a></li>
                   <div class=\"main-rounded-button\"><a href=\"#\">View All Schedules</a></div>
@@ -700,7 +725,7 @@ https://templatemo.com/tm-548-training-studio
                 <section class='tabs-content'>
                   <article id='tabs-1'>
                     <img src=\"";
-        // line 243
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-01.jpg"), "html", null, true);
         echo "\" alt=\"First Class\">
                     <h4>First Training Class</h4>
@@ -711,7 +736,7 @@ https://templatemo.com/tm-548-training-studio
                   </article>
                   <article id='tabs-2'>
                     <img src=\"";
-        // line 251
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-02.jpg"), "html", null, true);
         echo "\" alt=\"Second Training\">
                     <h4>Second Training Class</h4>
@@ -722,7 +747,7 @@ https://templatemo.com/tm-548-training-studio
                   </article>
                   <article id='tabs-3'>
                     <img src=\"";
-        // line 259
+        // line 260
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-03.jpg"), "html", null, true);
         echo "\" alt=\"Third Class\">
                     <h4>Third Training Class</h4>
@@ -733,7 +758,7 @@ https://templatemo.com/tm-548-training-studio
                   </article>
                   <article id='tabs-4'>
                     <img src=\"";
-        // line 267
+        // line 268
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-04.jpg"), "html", null, true);
         echo "\" alt=\"Fourth Training\">
                     <h4>Fourth Training Class</h4>
@@ -754,7 +779,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 282
+    // line 283
     public function block_a2($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -764,7 +789,7 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "a2"));
 
-        // line 283
+        // line 284
         echo "    <section class=\"section\" id=\"schedule\">
         <div class=\"container\">
             <div class=\"row\">
@@ -772,7 +797,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"section-heading dark-bg\">
                         <h2>Classes <em>Schedule</em></h2>
                         <img src=\"";
-        // line 289
+        // line 290
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -841,7 +866,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 352
+    // line 353
     public function block_b3($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -851,13 +876,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b3"));
 
-        // line 353
+        // line 354
         echo "            <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
                         <h2>Expert <em>Trainers</em></h2>
                         <img src=\"";
-        // line 357
+        // line 358
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -869,7 +894,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 366
+        // line 367
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/first-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -890,7 +915,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 384
+        // line 385
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/second-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -911,7 +936,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 402
+        // line 403
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/third-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -938,7 +963,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 424
+    // line 425
     public function block_b4($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -948,7 +973,7 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b4"));
 
-        // line 425
+        // line 426
         echo "    <section class=\"section\" id=\"contact-us\">
         <div class=\"container-fluid\">
             <div class=\"row\">
@@ -1002,7 +1027,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 473
+    // line 474
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1012,7 +1037,7 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 474
+        // line 475
         echo "    <footer>
         <div class=\"container\">
             <div class=\"row\">
@@ -1048,7 +1073,7 @@ https://templatemo.com/tm-548-training-studio
 
     public function getDebugInfo()
     {
-        return array (  1016 => 474,  1006 => 473,  952 => 425,  942 => 424,  915 => 402,  894 => 384,  873 => 366,  861 => 357,  855 => 353,  845 => 352,  776 => 289,  768 => 283,  758 => 282,  737 => 267,  726 => 259,  715 => 251,  704 => 243,  694 => 236,  690 => 235,  686 => 234,  682 => 233,  671 => 225,  665 => 221,  655 => 220,  643 => 278,  641 => 220,  636 => 217,  626 => 216,  605 => 200,  595 => 199,  583 => 212,  581 => 199,  577 => 197,  567 => 196,  545 => 178,  532 => 168,  519 => 158,  502 => 144,  489 => 134,  476 => 124,  465 => 116,  459 => 112,  449 => 111,  437 => 190,  435 => 111,  430 => 108,  420 => 107,  409 => 470,  407 => 424,  400 => 419,  398 => 352,  392 => 348,  390 => 282,  387 => 281,  385 => 216,  382 => 215,  380 => 196,  375 => 193,  372 => 107,  362 => 106,  347 => 92,  337 => 91,  324 => 85,  321 => 84,  311 => 83,  299 => 98,  297 => 91,  292 => 88,  289 => 83,  279 => 82,  267 => 101,  265 => 82,  261 => 80,  251 => 79,  241 => 104,  239 => 79,  236 => 78,  226 => 77,  216 => 520,  208 => 507,  202 => 504,  198 => 503,  194 => 502,  190 => 501,  186 => 500,  182 => 499,  176 => 496,  172 => 495,  166 => 492,  161 => 489,  159 => 473,  156 => 472,  154 => 106,  151 => 105,  149 => 77,  95 => 26,  90 => 24,  85 => 22,  81 => 21,  59 => 1,);
+        return array (  1041 => 475,  1031 => 474,  977 => 426,  967 => 425,  940 => 403,  919 => 385,  898 => 367,  886 => 358,  880 => 354,  870 => 353,  801 => 290,  793 => 284,  783 => 283,  762 => 268,  751 => 260,  740 => 252,  729 => 244,  719 => 237,  715 => 236,  711 => 235,  707 => 234,  696 => 226,  690 => 222,  680 => 221,  668 => 279,  666 => 221,  661 => 218,  651 => 217,  630 => 201,  620 => 200,  608 => 213,  606 => 200,  602 => 198,  592 => 197,  570 => 179,  557 => 169,  544 => 159,  527 => 145,  514 => 135,  501 => 125,  490 => 117,  484 => 113,  474 => 112,  462 => 191,  460 => 112,  455 => 109,  445 => 108,  434 => 471,  432 => 425,  425 => 420,  423 => 353,  417 => 349,  415 => 283,  412 => 282,  410 => 217,  407 => 216,  405 => 197,  400 => 194,  397 => 108,  387 => 107,  372 => 93,  362 => 92,  349 => 86,  346 => 85,  336 => 84,  324 => 99,  322 => 92,  317 => 89,  314 => 84,  304 => 83,  292 => 102,  290 => 83,  286 => 81,  276 => 80,  266 => 105,  264 => 80,  261 => 79,  251 => 78,  238 => 27,  233 => 25,  228 => 23,  223 => 22,  213 => 21,  203 => 523,  195 => 510,  189 => 507,  185 => 506,  181 => 505,  177 => 504,  173 => 503,  169 => 502,  162 => 498,  158 => 497,  151 => 493,  146 => 490,  144 => 474,  141 => 473,  139 => 107,  136 => 106,  134 => 78,  84 => 30,  82 => 21,  60 => 1,);
     }
 
     public function getSourceContext()
@@ -1073,6 +1098,7 @@ https://templatemo.com/tm-548-training-studio
 
 -->
     <!-- Additional CSS Files -->
+      {% block css %}
       <link rel=\"stylesheet\" type=\"text/css\" href=\"{{asset('schedule_css.css')}}\">
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('assets/css/bootstrap.min.css') }}\">
 
@@ -1080,7 +1106,7 @@ https://templatemo.com/tm-548-training-studio
 
     <link rel=\"stylesheet\" href=\"{{ asset('assets/css/templatemo-training-studio.css') }}\">
       <script src=\"https://code.jquery.com/jquery-3.6.0.js\" integrity=\"sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=\" crossorigin=\"anonymous\"></script>
-
+    {% endblock %}
 
     </head>
     
@@ -1547,8 +1573,10 @@ https://templatemo.com/tm-548-training-studio
     <script src=\"{{ asset('assets/js/jquery-2.1.0.min.js') }}\"></script>
 
     <!-- Bootstrap -->
+
     <script src=\"{{ asset('assets/js/popper.js') }}\"></script>
     <script src=\"{{ asset('assets/js/bootstrap.min.js') }}\"></script>
+
 
     <!-- Plugins -->
     <script src=\"{{ asset('assets/js/scrollreveal.min.js') }}\"></script>

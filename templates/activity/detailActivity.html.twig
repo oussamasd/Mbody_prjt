@@ -1,0 +1,43 @@
+{% extends 'base.details.html.twig' %}
+{% set i = activity.images  %}
+{% block fimage %}
+
+    {% if i|length >0 %}
+
+        <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" class="img-fluid" alt="">
+    {% else%}
+        <img src="http://127.0.0.1:8000/uploads/noimg.jpg" alt="">
+    {% endif %}
+{% endblock %}
+{% block tit %}
+    {{ activity.getNomAct() }}
+{% endblock %}
+{% block cat %}
+    {{ activity.getCategory.getNomCat() }}
+{% endblock %}
+{% block dt %}
+    {{ activity.getDateAct|date('Y-m-d') }} , {{ activity.getTempAct|date('H:m') }}
+{% endblock %}
+
+{% block pict %}
+    {% for image in i %}
+    <li>
+        <a href="#">
+            <img class="img-fluid" src="http://127.0.0.1:8000/uploads/{{ image.getImageUrl() }}" alt="">
+        </a>
+    </li>
+    {% endfor %}
+{% endblock %}
+{% block Exercice %}
+    {% for e in activity.exercices %}
+    <div class="media post_item">
+        <img  style=" width:40%" src="http://127.0.0.1:8000/uploads/noimg.jpg"  alt="post">
+        <div class="media-body">
+            <a href="blog_details.html">
+                <h3>{{ e.getNomExercice()}}</h3>
+            </a>
+            <p>{{ e.getDureExercice()}}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
