@@ -85,7 +85,7 @@ class __TwigTemplate_46a832e8c9ab8c2840a064b8dcbad4c160f987b8eb4394dd343b38f5d2c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Créer nouveau Offre</h1>
+        echo "    <h1>Créer une nouvelle offre</h1>
 
     ";
         // line 8
@@ -127,7 +127,7 @@ class __TwigTemplate_46a832e8c9ab8c2840a064b8dcbad4c160f987b8eb4394dd343b38f5d2c
 {% block title %}New Offre{% endblock %}
 
 {% block body %}
-    <h1>Créer nouveau Offre</h1>
+    <h1>Créer une nouvelle offre</h1>
 
     {{ include('offre/_form.html.twig') }}
 

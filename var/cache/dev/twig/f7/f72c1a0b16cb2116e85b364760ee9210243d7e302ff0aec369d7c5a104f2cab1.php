@@ -85,7 +85,7 @@ class __TwigTemplate_d9e3737b9ceb1ee86fe1699f41d4f7d75b2eeef0d9caa81052b56e078e3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Offre</h1>
+        echo "    <h1>Afficher une offre</h1>
 
     <table class=\"table\">
         <tbody>
@@ -169,7 +169,7 @@ class __TwigTemplate_d9e3737b9ceb1ee86fe1699f41d4f7d75b2eeef0d9caa81052b56e078e3
 {% block title %}Offre{% endblock %}
 
 {% block body %}
-    <h1>Offre</h1>
+    <h1>Afficher une offre</h1>
 
     <table class=\"table\">
         <tbody>

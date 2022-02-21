@@ -85,7 +85,7 @@ class __TwigTemplate_d9947ceff2c8b2cdce6be1829368357b3bd1c0be5896f35aa6996742cfb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Modifier Offre</h1>
+        echo "    <h1>Modifier une offre</h1>
 
     ";
         // line 8
@@ -129,7 +129,7 @@ class __TwigTemplate_d9947ceff2c8b2cdce6be1829368357b3bd1c0be5896f35aa6996742cfb
 {% block title %}Edit Offre{% endblock %}
 
 {% block body %}
-    <h1>Modifier Offre</h1>
+    <h1>Modifier une offre</h1>
 
     {{ include('offre/_form.html.twig', {'button_label': 'Modifier'}) }}
 

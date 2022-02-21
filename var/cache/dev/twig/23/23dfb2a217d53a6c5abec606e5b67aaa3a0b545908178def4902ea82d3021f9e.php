@@ -85,7 +85,7 @@ class __TwigTemplate_4306ee80de8ea6cc672fceed66ba1d3bb932223a45a009de2a807157f1a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Modifier Abonnement</h1>
+        echo "    <h1>Modifier une Abonnement</h1>
 
    ";
         // line 9
@@ -130,7 +130,7 @@ class __TwigTemplate_4306ee80de8ea6cc672fceed66ba1d3bb932223a45a009de2a807157f1a
 {% block title %}Edit Abonnement{% endblock %}
 
 {% block body %}
-    <h1>Modifier Abonnement</h1>
+    <h1>Modifier une Abonnement</h1>
 
    {#   {{ include('abonnement/_form.html.twig', {'button_label': 'Modifier'}) }}#}
     {{ include('abonnement/_form.html.twig', {'button_label': 'Modifier'}) }}
