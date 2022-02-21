@@ -25,12 +25,15 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'tp' => [$this, 'block_tp'],
             'fimage' => [$this, 'block_fimage'],
             'tit' => [$this, 'block_tit'],
             'cat' => [$this, 'block_cat'],
             'dt' => [$this, 'block_dt'],
+            'des' => [$this, 'block_des'],
             'pict' => [$this, 'block_pict'],
             'Exercice' => [$this, 'block_Exercice'],
+            'jq' => [$this, 'block_jq'],
         ];
     }
 
@@ -49,8 +52,8 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "activity/detailActivity.html.twig"));
 
-        // line 2
-        $context["i"] = twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 2, $this->source); })()), "images", [], "any", false, false, false, 2);
+        // line 11
+        $context["i"] = twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 11, $this->source); })()), "images", [], "any", false, false, false, 11);
         // line 1
         $this->parent = $this->loadTemplate("base.details.html.twig", "activity/detailActivity.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
@@ -62,7 +65,34 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     }
 
-    // line 3
+    // line 2
+    public function block_tp($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "tp"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "tp"));
+
+        // line 3
+        echo "    <div style=\"background-color: gray ; width: 70px ; height: 30px ; align-items: center ;align-content: center\">
+        <a  href=\"/activitySchedule\"><h5>Back</h5></a>
+    </div>
+    <div style=\"background-color: yellow ; width: 130px ; height: 30px ; align-items: center ;align-content: center\">
+        <a  href=\"/activity\"><h5>Show More</h5></a>
+    </div>
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 12
     public function block_fimage($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -72,20 +102,20 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "fimage"));
 
-        // line 4
+        // line 13
         echo "
     ";
-        // line 5
-        if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 5, $this->source); })())), 0))) {
-            // line 6
+        // line 14
+        if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 14, $this->source); })())), 0))) {
+            // line 15
             echo "
         <img src=\"http://127.0.0.1:8000/uploads/";
-            // line 7
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 7, $this->source); })()), 0, [], "array", false, false, false, 7), "getImageUrl", [], "method", false, false, false, 7), "html", null, true);
-            echo "\" class=\"img-fluid\" alt=\"\">
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 16, $this->source); })()), 0, [], "array", false, false, false, 16), "getImageUrl", [], "method", false, false, false, 16), "html", null, true);
+            echo "\" class=\"img-fluid\" id=\"big_img\" alt=\"\">
     ";
         } else {
-            // line 9
+            // line 18
             echo "        <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">
     ";
         }
@@ -97,7 +127,7 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     }
 
-    // line 12
+    // line 21
     public function block_tit($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -107,9 +137,9 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "tit"));
 
-        // line 13
+        // line 22
         echo "    ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 13, $this->source); })()), "getNomAct", [], "method", false, false, false, 13), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 22, $this->source); })()), "getNomAct", [], "method", false, false, false, 22), "html", null, true);
         echo "
 ";
         
@@ -120,7 +150,7 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     }
 
-    // line 15
+    // line 24
     public function block_cat($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -130,9 +160,9 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "cat"));
 
-        // line 16
+        // line 25
         echo "    ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 16, $this->source); })()), "getCategory", [], "any", false, false, false, 16), "getNomCat", [], "method", false, false, false, 16), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 25, $this->source); })()), "getCategory", [], "any", false, false, false, 25), "getNomCat", [], "method", false, false, false, 25), "html", null, true);
         echo "
 ";
         
@@ -143,7 +173,7 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     }
 
-    // line 18
+    // line 27
     public function block_dt($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -153,11 +183,11 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "dt"));
 
-        // line 19
+        // line 28
         echo "    ";
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 19, $this->source); })()), "getDateAct", [], "any", false, false, false, 19), "Y-m-d"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 28, $this->source); })()), "getDateAct", [], "any", false, false, false, 28), "Y-m-d"), "html", null, true);
         echo " , ";
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 19, $this->source); })()), "getTempAct", [], "any", false, false, false, 19), "H:m"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 28, $this->source); })()), "getTempAct", [], "any", false, false, false, 28), "H:m"), "html", null, true);
         echo "
 ";
         
@@ -168,7 +198,30 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     }
 
-    // line 22
+    // line 30
+    public function block_des($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "des"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "des"));
+
+        // line 31
+        echo "    ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 31, $this->source); })()), "getDescriptionAct", [], "method", false, false, false, 31), "html", null, true);
+        echo "
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 33
     public function block_pict($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -178,19 +231,19 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "pict"));
 
-        // line 23
+        // line 34
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 34, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 24
+            // line 35
             echo "    <li>
-        <a href=\"#\">
+
             <img class=\"img-fluid\" src=\"http://127.0.0.1:8000/uploads/";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "getImageUrl", [], "method", false, false, false, 26), "html", null, true);
-            echo "\" alt=\"\">
-        </a>
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "getImageUrl", [], "method", false, false, false, 37), "html", null, true);
+            echo "\" id=\"small_img\" alt=\"\">
+
     </li>
     ";
         }
@@ -205,7 +258,7 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     }
 
-    // line 31
+    // line 42
     public function block_Exercice($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -215,24 +268,24 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Exercice"));
 
-        // line 32
+        // line 43
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 32, $this->source); })()), "exercices", [], "any", false, false, false, 32));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 43, $this->source); })()), "exercices", [], "any", false, false, false, 43));
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 33
+            // line 44
             echo "    <div class=\"media post_item\">
         <img  style=\" width:40%\" src=\"http://127.0.0.1:8000/uploads/noimg.jpg\"  alt=\"post\">
         <div class=\"media-body\">
             <a href=\"blog_details.html\">
                 <h3>";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 37), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 48), "html", null, true);
             echo "</h3>
             </a>
             <p>";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 39), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 50), "html", null, true);
             echo "</p>
         </div>
     </div>
@@ -241,6 +294,27 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 56
+    public function block_jq($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "jq"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "jq"));
+
+        // line 57
+        echo "
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -261,18 +335,27 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
     public function getDebugInfo()
     {
-        return array (  235 => 39,  230 => 37,  224 => 33,  219 => 32,  209 => 31,  191 => 26,  187 => 24,  182 => 23,  172 => 22,  157 => 19,  147 => 18,  134 => 16,  124 => 15,  111 => 13,  101 => 12,  89 => 9,  84 => 7,  81 => 6,  79 => 5,  76 => 4,  66 => 3,  55 => 1,  53 => 2,  40 => 1,);
+        return array (  316 => 57,  306 => 56,  288 => 50,  283 => 48,  277 => 44,  272 => 43,  262 => 42,  244 => 37,  240 => 35,  235 => 34,  225 => 33,  212 => 31,  202 => 30,  187 => 28,  177 => 27,  164 => 25,  154 => 24,  141 => 22,  131 => 21,  119 => 18,  114 => 16,  111 => 15,  109 => 14,  106 => 13,  96 => 12,  79 => 3,  69 => 2,  58 => 1,  56 => 11,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.details.html.twig' %}
+{% block tp %}
+    <div style=\"background-color: gray ; width: 70px ; height: 30px ; align-items: center ;align-content: center\">
+        <a  href=\"/activitySchedule\"><h5>Back</h5></a>
+    </div>
+    <div style=\"background-color: yellow ; width: 130px ; height: 30px ; align-items: center ;align-content: center\">
+        <a  href=\"/activity\"><h5>Show More</h5></a>
+    </div>
+
+{% endblock %}
 {% set i = activity.images  %}
 {% block fimage %}
 
     {% if i|length >0 %}
 
-        <img src=\"http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}\" class=\"img-fluid\" alt=\"\">
+        <img src=\"http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}\" class=\"img-fluid\" id=\"big_img\" alt=\"\">
     {% else%}
         <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">
     {% endif %}
@@ -286,13 +369,15 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 {% block dt %}
     {{ activity.getDateAct|date('Y-m-d') }} , {{ activity.getTempAct|date('H:m') }}
 {% endblock %}
-
+{% block des %}
+    {{ activity.getDescriptionAct() }}
+{% endblock %}
 {% block pict %}
     {% for image in i %}
     <li>
-        <a href=\"#\">
-            <img class=\"img-fluid\" src=\"http://127.0.0.1:8000/uploads/{{ image.getImageUrl() }}\" alt=\"\">
-        </a>
+
+            <img class=\"img-fluid\" src=\"http://127.0.0.1:8000/uploads/{{ image.getImageUrl() }}\" id=\"small_img\" alt=\"\">
+
     </li>
     {% endfor %}
 {% endblock %}
@@ -308,6 +393,10 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         </div>
     </div>
     {% endfor %}
+{% endblock %}
+
+{% block jq %}
+
 {% endblock %}", "activity/detailActivity.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\activity\\detailActivity.html.twig");
     }
 }

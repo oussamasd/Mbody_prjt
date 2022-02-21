@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('detail/assets/img/favicon.ico') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('detail/assets/css/bootstrap.min.css') }}">
@@ -24,7 +25,8 @@
 
 <body>
 <div style="margin-top: 100px">
-
+    {% block tp %}
+    {% endblock %}
 </div>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -65,18 +67,16 @@
                             <li><a href="#">{% block dt %}<i class="fa fa-user"></i> Travel, Lifestyle</a>{% endblock %}</li>
 
                         </ul>
-                        <p class="excert">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                            should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                            fraction of the camp price. However, who has the willpower
-                        </p>
+
 
                         <div class="quote-wrapper">
                             <div class="quotes">
+                                {% block des %}
                                 MCSE boot camps have its supporters and its detractors. Some people do not understand why you
                                 should have to spend money on boot camp when you can get the MCSE study materials yourself at
                                 a fraction of the camp price. However, who has the willpower to actually sit through a
                                 self-imposed MCSE training.
+                                {% endblock %}
                             </div>
                         </div>
 
@@ -244,8 +244,10 @@
 <script src="{{ asset('detail/assets/js/jquery.slicknav.min.js') }}"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
+{% block jquery %}
 <script src="{{ asset('detail/assets/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('detail/assets/js/slick.min.js') }}"></script>
+{% endblock %}
 
 <!-- One Page, Animated-HeadLin -->
 <script src="{{ asset('detail/assets/js/wow.min.js') }}"></script>
@@ -269,7 +271,25 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="{{ asset('detail/assets/js/plugins.js') }}"></script>
 <script src="{{ asset('detail/assets/js/main.js') }}"></script>
-
+<button href="" id="b" type="submit">bbb</button>
 </body>
 
+{#<script type="text/javascript">
+    console.log("errrrr");
+    $(document).ready(function(){
+        console.log("errrrr");
+        $("#small_img").click(function(){
+            $("#img-fluid").attr('src',$(this).attr('src'));
+        });
+    });
+</script>#}
+<script type="text/javascript">
+    console.log("errrrr");
+    $(document).ready(function(){
+        console.log("errrrr");
+
+    });
+</script>
+
 </html>
+

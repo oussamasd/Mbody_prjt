@@ -86,7 +86,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 26
             echo "
                 <td style=\"height: 85px\">
-                    <a href=\"#\">
+                    <a href=\"/activity/details/";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 28), "html", null, true);
+            echo "\">
 
                         <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 30
@@ -145,7 +148,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 82
             echo "                    <td style=\"height: 85px \">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/";
+            // line 83
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 83), "html", null, true);
+            echo "\">
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 85
@@ -200,7 +206,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 107
             echo "                    <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/";
+            // line 108
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 108), "html", null, true);
+            echo "\">
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 110
@@ -252,8 +261,11 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 130
             echo "                    <td style=\"height: 85px\">
-                        <a href=\"#\">
-                            
+                        <a href=\"/activity/details/";
+            // line 131
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 131), "html", null, true);
+            echo "\">
+
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 133
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["act"], "getCategory", [], "any", false, false, false, 133), "getNomCat", [], "method", false, false, false, 133), "html", null, true);
@@ -305,7 +317,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 154
             echo "                    <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/";
+            // line 155
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 155), "html", null, true);
+            echo "\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 156
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["act"], "getCategory", [], "any", false, false, false, 156), "getNomCat", [], "method", false, false, false, 156), "html", null, true);
@@ -358,7 +373,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 178
             echo "                    <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/";
+            // line 179
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 179), "html", null, true);
+            echo "\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 180
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["act"], "getCategory", [], "any", false, false, false, 180), "getNomCat", [], "method", false, false, false, 180), "html", null, true);
@@ -411,7 +429,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
         foreach ($context['_seq'] as $context["_key"] => $context["act"]) {
             // line 202
             echo "                    <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/";
+            // line 203
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getId", [], "method", false, false, false, 203), "html", null, true);
+            echo "\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">";
             // line 204
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["act"], "getCategory", [], "any", false, false, false, 204), "getNomCat", [], "method", false, false, false, 204), "html", null, true);
@@ -480,7 +501,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
     public function getDebugInfo()
     {
-        return array (  456 => 221,  453 => 220,  440 => 212,  435 => 211,  432 => 210,  421 => 205,  417 => 204,  413 => 202,  409 => 201,  403 => 197,  400 => 196,  387 => 188,  382 => 187,  379 => 186,  368 => 181,  364 => 180,  360 => 178,  356 => 177,  350 => 173,  347 => 172,  334 => 164,  329 => 163,  326 => 162,  315 => 157,  311 => 156,  307 => 154,  303 => 153,  296 => 148,  293 => 147,  282 => 141,  277 => 140,  274 => 139,  263 => 134,  259 => 133,  254 => 130,  250 => 129,  244 => 125,  241 => 124,  230 => 118,  225 => 117,  222 => 116,  211 => 111,  207 => 110,  202 => 107,  198 => 106,  194 => 104,  190 => 101,  187 => 100,  175 => 93,  170 => 92,  167 => 91,  156 => 86,  152 => 85,  147 => 82,  143 => 81,  139 => 79,  133 => 74,  131 => 46,  128 => 45,  116 => 38,  111 => 37,  108 => 36,  97 => 31,  93 => 30,  87 => 26,  83 => 25,  80 => 24,  76 => 21,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  477 => 221,  474 => 220,  461 => 212,  456 => 211,  453 => 210,  442 => 205,  438 => 204,  434 => 203,  431 => 202,  427 => 201,  421 => 197,  418 => 196,  405 => 188,  400 => 187,  397 => 186,  386 => 181,  382 => 180,  378 => 179,  375 => 178,  371 => 177,  365 => 173,  362 => 172,  349 => 164,  344 => 163,  341 => 162,  330 => 157,  326 => 156,  322 => 155,  319 => 154,  315 => 153,  308 => 148,  305 => 147,  294 => 141,  289 => 140,  286 => 139,  275 => 134,  271 => 133,  266 => 131,  263 => 130,  259 => 129,  253 => 125,  250 => 124,  239 => 118,  234 => 117,  231 => 116,  220 => 111,  216 => 110,  211 => 108,  208 => 107,  204 => 106,  200 => 104,  196 => 101,  193 => 100,  181 => 93,  176 => 92,  173 => 91,  162 => 86,  158 => 85,  153 => 83,  150 => 82,  146 => 81,  142 => 79,  136 => 74,  134 => 46,  131 => 45,  119 => 38,  114 => 37,  111 => 36,  100 => 31,  96 => 30,  91 => 28,  87 => 26,  83 => 25,  80 => 24,  76 => 21,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -512,7 +533,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                 {% for act in Act1 %}
 
                 <td style=\"height: 85px\">
-                    <a href=\"#\">
+                    <a href=\"/activity/details/{{ act.getId() }}\">
 
                         <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                         <div class=\"margin-10px-top font-size14 \"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -567,7 +588,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                 {% for act in Act2 %}
                     <td style=\"height: 85px \">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/{{ act.getId() }}\">
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -592,7 +613,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                 {% for act in Act3 %}
                     <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/{{ act.getId() }}\">
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
@@ -615,8 +636,8 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                 {% for act in Act4 %}
                     <td style=\"height: 85px\">
-                        <a href=\"#\">
-                            
+                        <a href=\"/activity/details/{{ act.getId() }}\">
+
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
                             <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
@@ -639,7 +660,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                 {% for act in Act5 %}
                     <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/{{ act.getId() }}\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
                             <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
@@ -663,7 +684,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                 {% for act in Act6 %}
                     <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/{{ act.getId() }}\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
                             <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
@@ -687,7 +708,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                 {% for act in Act7 %}
                     <td style=\"height: 85px\">
-                        <a href=\"#\">
+                        <a href=\"/activity/details/{{ act.getId() }}\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
                             <div class=\"font-size13 text-light-gray\">Ivana Wong</div>

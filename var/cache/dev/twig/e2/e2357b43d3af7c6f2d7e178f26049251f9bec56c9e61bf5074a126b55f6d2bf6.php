@@ -241,7 +241,10 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
                         </td>
                         <td>
                             <div class=\"stage\">
-                                <a class=\"lnkSchow\" href=\"#\">Read More</a>
+                                <a class=\"lnkSchow\" href=\"/activity/details/";
+            // line 102
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getId", [], "method", false, false, false, 102), "html", null, true);
+            echo "\">Read More</a>
                             </div>
                         </td>
                     </tr>
@@ -322,7 +325,7 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
 
     public function getDebugInfo()
     {
-        return array (  296 => 113,  284 => 16,  279 => 15,  269 => 14,  258 => 111,  230 => 89,  226 => 88,  222 => 87,  216 => 83,  212 => 81,  207 => 79,  204 => 78,  202 => 77,  197 => 74,  194 => 55,  191 => 52,  188 => 30,  184 => 29,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
+        return array (  299 => 113,  287 => 16,  282 => 15,  272 => 14,  261 => 111,  246 => 102,  230 => 89,  226 => 88,  222 => 87,  216 => 83,  212 => 81,  207 => 79,  204 => 78,  202 => 77,  197 => 74,  194 => 55,  191 => 52,  188 => 30,  184 => 29,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -428,7 +431,7 @@ class __TwigTemplate_b98102fc554bcdfabf65e6bc77157ffa6984f4d573d436e26d8b8b367f7
                         </td>
                         <td>
                             <div class=\"stage\">
-                                <a class=\"lnkSchow\" href=\"#\">Read More</a>
+                                <a class=\"lnkSchow\" href=\"/activity/details/{{ activity.getId() }}\">Read More</a>
                             </div>
                         </td>
                     </tr>

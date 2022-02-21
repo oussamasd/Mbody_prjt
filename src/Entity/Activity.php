@@ -91,7 +91,7 @@ class Activity
         return $this->date_Act;
     }
 
-    public function setDateAct(\DateTimeInterface $date_Act): self
+        public function setDateAct(\DateTimeInterface $date_Act): self
     {
         $this->date_Act = $date_Act;
 

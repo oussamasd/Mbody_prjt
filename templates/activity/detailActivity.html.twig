@@ -1,10 +1,19 @@
 {% extends 'base.details.html.twig' %}
+{% block tp %}
+    <div style="background-color: gray ; width: 70px ; height: 30px ; align-items: center ;align-content: center">
+        <a  href="/activitySchedule"><h5>Back</h5></a>
+    </div>
+    <div style="background-color: yellow ; width: 130px ; height: 30px ; align-items: center ;align-content: center">
+        <a  href="/activity"><h5>Show More</h5></a>
+    </div>
+
+{% endblock %}
 {% set i = activity.images  %}
 {% block fimage %}
 
     {% if i|length >0 %}
 
-        <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" class="img-fluid" alt="">
+        <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" class="img-fluid" id="big_img" alt="">
     {% else%}
         <img src="http://127.0.0.1:8000/uploads/noimg.jpg" alt="">
     {% endif %}
@@ -18,13 +27,15 @@
 {% block dt %}
     {{ activity.getDateAct|date('Y-m-d') }} , {{ activity.getTempAct|date('H:m') }}
 {% endblock %}
-
+{% block des %}
+    {{ activity.getDescriptionAct() }}
+{% endblock %}
 {% block pict %}
     {% for image in i %}
     <li>
-        <a href="#">
-            <img class="img-fluid" src="http://127.0.0.1:8000/uploads/{{ image.getImageUrl() }}" alt="">
-        </a>
+
+            <img class="img-fluid" src="http://127.0.0.1:8000/uploads/{{ image.getImageUrl() }}" id="small_img" alt="">
+
     </li>
     {% endfor %}
 {% endblock %}
@@ -40,4 +51,8 @@
         </div>
     </div>
     {% endfor %}
+{% endblock %}
+
+{% block jq %}
+
 {% endblock %}

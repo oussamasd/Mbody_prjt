@@ -27,12 +27,15 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
         $this->parent = false;
 
         $this->blocks = [
+            'tp' => [$this, 'block_tp'],
             'fimage' => [$this, 'block_fimage'],
             'tit' => [$this, 'block_tit'],
             'cat' => [$this, 'block_cat'],
             'dt' => [$this, 'block_dt'],
+            'des' => [$this, 'block_des'],
             'pict' => [$this, 'block_pict'],
             'Exercice' => [$this, 'block_Exercice'],
+            'jquery' => [$this, 'block_jquery'],
         ];
     }
 
@@ -59,54 +62,58 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
         // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/img/favicon.ico"), "html", null, true);
         echo "\">
+  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
 
     <!-- CSS here -->
     <link rel=\"stylesheet\" href=\"";
-        // line 13
+        // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/bootstrap.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 14
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/owl.carousel.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 15
+        // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/slicknav.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 16
+        // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/animate.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 17
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/magnific-popup.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 18
+        // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/fontawesome-all.min.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 19
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/themify-icons.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/slick.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/nice-select.css"), "html", null, true);
         echo "\">
     <link rel=\"stylesheet\" href=\"";
-        // line 22
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/css/style.css"), "html", null, true);
         echo "\">
 </head>
 
 <body>
 <div style=\"margin-top: 100px\">
-
-</div>
+    ";
+        // line 28
+        $this->displayBlock('tp', $context, $blocks);
+        // line 30
+        echo "</div>
 <!-- Preloader Start -->
 <div id=\"preloader-active\">
     <div class=\"preloader d-flex align-items-center justify-content-center\">
@@ -114,7 +121,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
             <div class=\"preloader-circle\"></div>
             <div class=\"preloader-img pere-text\">
                 <img src=\"";
-        // line 35
+        // line 37
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/img/logo/loder.jpg"), "html", null, true);
         echo "\" alt=\"\">
             </div>
@@ -135,42 +142,38 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
                 <div class=\"single-post\">
                     <div class=\"feature-img\">
                         ";
-        // line 53
+        // line 55
         $this->displayBlock('fimage', $context, $blocks);
-        // line 54
+        // line 56
         echo "                    </div>
                     <div class=\"blog_details\">
 
                         <h2>
                             ";
-        // line 58
+        // line 60
         $this->displayBlock('tit', $context, $blocks);
-        // line 62
+        // line 64
         echo "                        </h2>
                         <ul class=\"blog-info-link mt-3 mb-4\">
                             <li><a href=\"#\">";
-        // line 64
+        // line 66
         $this->displayBlock('cat', $context, $blocks);
         echo "</li>
                             <li><a href=\"#\">";
-        // line 65
+        // line 67
         $this->displayBlock('dt', $context, $blocks);
         echo "</li>
 
                         </ul>
-                        <p class=\"excert\">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                            should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                            fraction of the camp price. However, who has the willpower
-                        </p>
+
 
                         <div class=\"quote-wrapper\">
                             <div class=\"quotes\">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                                should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                                a fraction of the camp price. However, who has the willpower to actually sit through a
-                                self-imposed MCSE training.
-                            </div>
+                                ";
+        // line 74
+        $this->displayBlock('des', $context, $blocks);
+        // line 80
+        echo "                            </div>
                         </div>
 
 
@@ -293,80 +296,88 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
         echo "\"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src=\"";
+";
         // line 247
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/owl.carousel.min.js"), "html", null, true);
-        echo "\"></script>
-<script src=\"";
-        // line 248
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/slick.min.js"), "html", null, true);
-        echo "\"></script>
-
+        $this->displayBlock('jquery', $context, $blocks);
+        // line 251
+        echo "
 <!-- One Page, Animated-HeadLin -->
 <script src=\"";
-        // line 251
+        // line 253
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/wow.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 252
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/animated.headline.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 253
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.magnific-popup.js"), "html", null, true);
         echo "\"></script>
 <!-- counter , waypoint -->
 <script src=\"http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js\"></script>
 <script src=\"";
-        // line 256
+        // line 258
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Nice-select, sticky -->
 <script src=\"";
-        // line 259
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.nice-select.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 260
+        // line 262
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
 
 <!-- contact js -->
 <script src=\"";
-        // line 263
+        // line 265
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/contact.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 264
+        // line 266
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.form.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 265
+        // line 267
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.validate.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 266
+        // line 268
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/mail-script.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 267
+        // line 269
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Jquery Plugins, main Jquery -->
 <script src=\"";
-        // line 270
+        // line 272
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/plugins.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 271
+        // line 273
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/main.js"), "html", null, true);
         echo "\"></script>
-
+<button href=\"\" id=\"b\" type=\"submit\">bbb</button>
 </body>
 
-</html>";
+";
+        // line 286
+        echo "<script type=\"text/javascript\">
+    console.log(\"errrrr\");
+    \$(document).ready(function(){
+        console.log(\"errrrr\");
+
+    });
+</script>
+
+</html>
+
+";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -375,7 +386,27 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     }
 
-    // line 53
+    // line 28
+    public function block_tp($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "tp"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "tp"));
+
+        // line 29
+        echo "    ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 55
     public function block_fimage($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -396,7 +427,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     }
 
-    // line 58
+    // line 60
     public function block_tit($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -406,7 +437,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "tit"));
 
-        // line 59
+        // line 61
         echo "                            Second divided from form fish beast made every of seas
                             all gathered us saying he our
                             ";
@@ -418,7 +449,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     }
 
-    // line 64
+    // line 66
     public function block_cat($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -437,7 +468,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     }
 
-    // line 65
+    // line 67
     public function block_dt($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -448,6 +479,30 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "dt"));
 
         echo "<i class=\"fa fa-user\"></i> Travel, Lifestyle</a>";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 74
+    public function block_des($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "des"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "des"));
+
+        // line 75
+        echo "                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you
+                                should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                                a fraction of the camp price. However, who has the willpower to actually sit through a
+                                self-imposed MCSE training.
+                                ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -592,6 +647,33 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     }
 
+    // line 247
+    public function block_jquery($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "jquery"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "jquery"));
+
+        // line 248
+        echo "<script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/owl.carousel.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 249
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/js/slick.min.js"), "html", null, true);
+        echo "\"></script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "base.details.html.twig";
@@ -604,7 +686,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     public function getDebugInfo()
     {
-        return array (  577 => 210,  565 => 201,  553 => 192,  541 => 183,  538 => 182,  528 => 181,  514 => 171,  506 => 166,  498 => 161,  490 => 156,  482 => 151,  474 => 146,  470 => 144,  460 => 143,  441 => 65,  422 => 64,  410 => 59,  400 => 58,  379 => 53,  364 => 271,  360 => 270,  354 => 267,  350 => 266,  346 => 265,  342 => 264,  338 => 263,  332 => 260,  328 => 259,  322 => 256,  316 => 253,  312 => 252,  308 => 251,  302 => 248,  298 => 247,  292 => 244,  287 => 242,  283 => 241,  279 => 240,  274 => 238,  253 => 219,  251 => 181,  243 => 175,  241 => 143,  189 => 94,  157 => 65,  153 => 64,  149 => 62,  147 => 58,  141 => 54,  139 => 53,  118 => 35,  102 => 22,  98 => 21,  94 => 20,  90 => 19,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  66 => 13,  60 => 10,  49 => 1,);
+        return array (  666 => 249,  661 => 248,  651 => 247,  632 => 210,  620 => 201,  608 => 192,  596 => 183,  593 => 182,  583 => 181,  569 => 171,  561 => 166,  553 => 161,  545 => 156,  537 => 151,  529 => 146,  525 => 144,  515 => 143,  501 => 75,  491 => 74,  472 => 67,  453 => 66,  441 => 61,  431 => 60,  410 => 55,  400 => 29,  390 => 28,  370 => 286,  363 => 273,  359 => 272,  353 => 269,  349 => 268,  345 => 267,  341 => 266,  337 => 265,  331 => 262,  327 => 261,  321 => 258,  315 => 255,  311 => 254,  307 => 253,  303 => 251,  301 => 247,  295 => 244,  290 => 242,  286 => 241,  282 => 240,  277 => 238,  256 => 219,  254 => 181,  246 => 175,  244 => 143,  192 => 94,  176 => 80,  174 => 74,  164 => 67,  160 => 66,  156 => 64,  154 => 60,  148 => 56,  146 => 55,  125 => 37,  116 => 30,  114 => 28,  106 => 23,  102 => 22,  98 => 21,  94 => 20,  90 => 19,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  63 => 10,  52 => 1,);
     }
 
     public function getSourceContext()
@@ -619,6 +701,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
     <meta name=\"description\" content=\"\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"{{ asset('detail/assets/img/favicon.ico') }}\">
+  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
 
     <!-- CSS here -->
     <link rel=\"stylesheet\" href=\"{{ asset('detail/assets/css/bootstrap.min.css') }}\">
@@ -635,7 +718,8 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
 <body>
 <div style=\"margin-top: 100px\">
-
+    {% block tp %}
+    {% endblock %}
 </div>
 <!-- Preloader Start -->
 <div id=\"preloader-active\">
@@ -676,18 +760,16 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
                             <li><a href=\"#\">{% block dt %}<i class=\"fa fa-user\"></i> Travel, Lifestyle</a>{% endblock %}</li>
 
                         </ul>
-                        <p class=\"excert\">
-                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                            should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                            fraction of the camp price. However, who has the willpower
-                        </p>
+
 
                         <div class=\"quote-wrapper\">
                             <div class=\"quotes\">
+                                {% block des %}
                                 MCSE boot camps have its supporters and its detractors. Some people do not understand why you
                                 should have to spend money on boot camp when you can get the MCSE study materials yourself at
                                 a fraction of the camp price. However, who has the willpower to actually sit through a
                                 self-imposed MCSE training.
+                                {% endblock %}
                             </div>
                         </div>
 
@@ -855,8 +937,10 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 <script src=\"{{ asset('detail/assets/js/jquery.slicknav.min.js') }}\"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
+{% block jquery %}
 <script src=\"{{ asset('detail/assets/js/owl.carousel.min.js') }}\"></script>
 <script src=\"{{ asset('detail/assets/js/slick.min.js') }}\"></script>
+{% endblock %}
 
 <!-- One Page, Animated-HeadLin -->
 <script src=\"{{ asset('detail/assets/js/wow.min.js') }}\"></script>
@@ -880,9 +964,28 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 <!-- Jquery Plugins, main Jquery -->
 <script src=\"{{ asset('detail/assets/js/plugins.js') }}\"></script>
 <script src=\"{{ asset('detail/assets/js/main.js') }}\"></script>
-
+<button href=\"\" id=\"b\" type=\"submit\">bbb</button>
 </body>
 
-</html>", "base.details.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\base.details.html.twig");
+{#<script type=\"text/javascript\">
+    console.log(\"errrrr\");
+    \$(document).ready(function(){
+        console.log(\"errrrr\");
+        \$(\"#small_img\").click(function(){
+            \$(\"#img-fluid\").attr('src',\$(this).attr('src'));
+        });
+    });
+</script>#}
+<script type=\"text/javascript\">
+    console.log(\"errrrr\");
+    \$(document).ready(function(){
+        console.log(\"errrrr\");
+
+    });
+</script>
+
+</html>
+
+", "base.details.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\base.details.html.twig");
     }
 }
