@@ -1,0 +1,13 @@
+{% extends 'MbodyUp/base.back.html.twig' %}
+
+{% block title %}Edit Entreneur{% endblock %}
+
+{% block body %}
+    <h1>Edit Entreneur</h1>
+
+    {{ include('entreneur/_form.html.twig', {'button_label': 'Update'}) }}
+
+   <button> <a href="{{ path('entreneur_index') }}">back to list</a></button>
+
+    {{ include('entreneur/_delete_form.html.twig') }}
+{% endblock %}

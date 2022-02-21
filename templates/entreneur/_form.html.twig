@@ -1,0 +1,36 @@
+{{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+<tr>
+    <th>Nom:</th>
+    {{ form_widget(form.nom) }}
+    {% if not form.nom.vars.valid %}
+
+            {{ form_errors(form.nom) }}
+
+    {% endif %}
+</tr>
+<tr>
+    <th>Prenon:</th>
+    {{ form_widget(form.prenom) }}
+    {% if not form.prenom.vars.valid %}
+
+        {{ form_errors(form.prenom) }}
+
+</tr>
+{% endif %}
+<tr>
+    <th>Age:</th>
+    {{ form_widget(form.age) }}
+    {% if not form.age.vars.valid %}
+
+        {{ form_errors(form.age) }}
+
+</tr>
+{% endif %}
+
+
+
+{{ form_widget(form) }}
+{#<button class="btn"> {{ button_label|default('Envoyer') }}</button>#}
+<button type="btn" class="btn btn-primary"> {{ button_label|default('Envoyer') }}</button>
+{{ form_end(form) }}
+

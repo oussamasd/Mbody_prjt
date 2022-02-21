@@ -1,0 +1,41 @@
+{% extends 'MbodyUp/base.back.html.twig' %}
+
+{% block title %}Entreneur index{% endblock %}
+
+{% block body %}
+    <h1>Entreneur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Type</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entreneur in entreneurs %}
+            <tr>
+                <td>{{ entreneur.id }}</td>
+                <td>{{ entreneur.nom }}</td>
+                <td>{{ entreneur.prenom }}</td>
+                <td>{{ entreneur.age }}</td>
+                <td>{{ entreneur.type }}</td>
+                <td>
+         <button>           <a href="{{ path('entreneur_show', {'id': entreneur.id}) }}">show</a></button>
+               <button>     <a href="{{ path('entreneur_edit', {'id': entreneur.id}) }}">edit</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+   <button> <a href="{{ path('entreneur_new') }}">Create new</a></button>
+{% endblock %}

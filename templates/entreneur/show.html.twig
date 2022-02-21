@@ -1,0 +1,38 @@
+{% extends 'MbodyUp/base.back.html.twig' %}
+
+{% block title %}Entreneur{% endblock %}
+
+{% block body %}
+    <h1>Entreneur</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entreneur.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entreneur.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ entreneur.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ entreneur.age }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ entreneur.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+ <button>   <a href="{{ path('entreneur_index') }}">back to list</a></button>
+
+  <button>  <a href="{{ path('entreneur_edit', {'id': entreneur.id}) }}">edit</a></button>
+
+    {{ include('entreneur/_delete_form.html.twig') }}
+{% endblock %}
