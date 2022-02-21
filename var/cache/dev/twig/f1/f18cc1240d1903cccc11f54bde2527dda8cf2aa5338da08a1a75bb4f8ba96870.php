@@ -85,7 +85,7 @@ class __TwigTemplate_375201e0bf95caffd5dbfbb59ac217991d1ba9c33fb7e009bab2b36f866
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Abonnement</h1>
+        echo "    <h1>Afficher les abonnements</h1>
 
     <table class=\"table\">
         <tbody>
@@ -177,7 +177,7 @@ class __TwigTemplate_375201e0bf95caffd5dbfbb59ac217991d1ba9c33fb7e009bab2b36f866
 {% block title %}Abonnement{% endblock %}
 
 {% block body %}
-    <h1>Abonnement</h1>
+    <h1>Afficher les abonnements</h1>
 
     <table class=\"table\">
         <tbody>

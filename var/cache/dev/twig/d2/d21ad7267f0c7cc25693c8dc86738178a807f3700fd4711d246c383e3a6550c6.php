@@ -104,19 +104,20 @@ class __TwigTemplate_8478f42d2f903d5ef5eba68ed5a34df9818c906cf6bf29d2de9d9761542
         }
         // line 30
         echo "
+
 ";
-        // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), 'widget');
+        // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'widget');
         echo "
 ";
-        // line 33
+        // line 34
         echo "<button type=\"btn\" class=\"btn btn-primary\"> ";
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 33, $this->source); })()), "Envoyer")) : ("Envoyer")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 34, $this->source); })()), "Envoyer")) : ("Envoyer")), "html", null, true);
         echo "</button>
 
 ";
-        // line 35
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'form_end');
+        // line 36
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 36, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -139,7 +140,7 @@ class __TwigTemplate_8478f42d2f903d5ef5eba68ed5a34df9818c906cf6bf29d2de9d9761542
 
     public function getDebugInfo()
     {
-        return array (  119 => 35,  113 => 33,  109 => 31,  106 => 30,  99 => 26,  96 => 25,  94 => 24,  90 => 23,  85 => 20,  78 => 16,  75 => 15,  73 => 14,  69 => 13,  65 => 11,  58 => 7,  55 => 6,  53 => 5,  49 => 4,  43 => 1,);
+        return array (  120 => 36,  114 => 34,  110 => 32,  106 => 30,  99 => 26,  96 => 25,  94 => 24,  90 => 23,  85 => 20,  78 => 16,  75 => 15,  73 => 14,  69 => 13,  65 => 11,  58 => 7,  55 => 6,  53 => 5,  49 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -173,6 +174,7 @@ class __TwigTemplate_8478f42d2f903d5ef5eba68ed5a34df9818c906cf6bf29d2de9d9761542
                               </div>
                         </tr>
                           {% endif %}
+
 
 {{ form_widget(form) }}
 {#  <button class=\"btn\">{{ button_label|default('Send') }}</button>#}

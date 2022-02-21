@@ -135,9 +135,8 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
             <div class=\"col-lg-6 offset-lg-3\">
                 <div class=\"section-heading\">
                     <h2>nos <em>abonnements</em></h2>
-                    <h2>nos <em>offres</em></h2>
                     <img src=\"";
-        // line 85
+        // line 84
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"second one\">
                 </div>
@@ -160,9 +159,9 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
 
      ";
-        // line 105
+        // line 104
         $this->displayBlock('prix', $context, $blocks);
-        // line 106
+        // line 105
         echo "
     </div>
     </div>
@@ -173,9 +172,9 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
 <!-- ***** Main Banner Area Start ***** -->
 ";
-        // line 115
+        // line 114
         $this->displayBlock('b1', $context, $blocks);
-        // line 489
+        // line 488
         echo "<!-- ***** Contact Us Area Ends ***** -->
 
 <!-- ***** Footer Start ***** -->
@@ -196,49 +195,49 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
 <!-- jQuery -->
 <script src=\"";
-        // line 508
+        // line 507
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery-2.1.0.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Bootstrap -->
 <script src=\"";
-        // line 511
+        // line 510
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/popper.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 512
+        // line 511
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Plugins -->
 <script src=\"";
-        // line 515
+        // line 514
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scrollreveal.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 516
+        // line 515
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/waypoints.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 517
+        // line 516
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 518
+        // line 517
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/imgfix.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 519
+        // line 518
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mixitup.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 520
+        // line 519
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/accordions.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Global Init -->
 <script src=\"";
-        // line 523
+        // line 522
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -252,7 +251,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
     }
 
-    // line 105
+    // line 104
     public function block_prix($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -271,7 +270,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
     }
 
-    // line 115
+    // line 114
     public function block_b1($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -281,12 +280,12 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b1"));
 
-        // line 116
+        // line 115
         echo "
     <div class=\"main-banner\" id=\"top\">
         <video autoplay muted loop id=\"bg-video\">
             <source src=\"";
-        // line 119
+        // line 118
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/gym-video.mp4"), "html", null, true);
         echo "\" type=\"video/mp4\" />
         </video>
@@ -312,7 +311,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <div class=\"section-heading\">
                         <h2>Choose <em>Hadil</em></h2>
                         <img src=\"";
-        // line 142
+        // line 141
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"waves\">
                         <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
@@ -323,7 +322,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 150
+        // line 149
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"First One\">
                             </div>
@@ -336,7 +335,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 160
+        // line 159
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"second one\">
                             </div>
@@ -349,7 +348,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 170
+        // line 169
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"third gym training\">
                             </div>
@@ -366,7 +365,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 184
+        // line 183
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"fourth muscle\">
                             </div>
@@ -379,7 +378,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 194
+        // line 193
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"training fifth\">
                             </div>
@@ -392,7 +391,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 204
+        // line 203
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"gym training\">
                             </div>
@@ -438,7 +437,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <div class=\"section-heading\">
                         <h2>Our <em>Classes</em></h2>
                         <img src=\"";
-        // line 247
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -449,19 +448,19 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                 <div class=\"col-lg-4\">
                     <ul>
                         <li><a href='#tabs-1'><img src=\"";
-        // line 255
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">First Training Class</a></li>
                         <li><a href='#tabs-2'><img src=\"";
-        // line 256
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">Second Training Class</a></a></li>
                         <li><a href='#tabs-3'><img src=\"";
-        // line 257
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">Third Training Class</a></a></li>
                         <li><a href='#tabs-4'><img src=\"";
-        // line 258
+        // line 257
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">Fourth Training Class</a></a></li>
                         <div class=\"main-rounded-button\"><a href=\"#\">View All Schedules</a></div>
@@ -471,7 +470,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <section class='tabs-content'>
                         <article id='tabs-1'>
                             <img src=\"";
-        // line 265
+        // line 264
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-01.jpg"), "html", null, true);
         echo "\" alt=\"First Class\">
                             <h4>First Training Class</h4>
@@ -482,7 +481,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         </article>
                         <article id='tabs-2'>
                             <img src=\"";
-        // line 273
+        // line 272
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-02.jpg"), "html", null, true);
         echo "\" alt=\"Second Training\">
                             <h4>Second Training Class</h4>
@@ -493,7 +492,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         </article>
                         <article id='tabs-3'>
                             <img src=\"";
-        // line 281
+        // line 280
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-03.jpg"), "html", null, true);
         echo "\" alt=\"Third Class\">
                             <h4>Third Training Class</h4>
@@ -504,7 +503,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         </article>
                         <article id='tabs-4'>
                             <img src=\"";
-        // line 289
+        // line 288
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-04.jpg"), "html", null, true);
         echo "\" alt=\"Fourth Training\">
                             <h4>Fourth Training Class</h4>
@@ -528,7 +527,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <div class=\"section-heading dark-bg\">
                         <h2>Classes <em>Schedule</em></h2>
                         <img src=\"";
-        // line 310
+        // line 309
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -599,7 +598,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                         <h2>nos <em>abonnemets</em></h2>
                         <h2>nos <em>offres</em></h2>
                         <img src=\"";
-        // line 378
+        // line 377
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                     </div>
@@ -610,7 +609,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 386
+        // line 385
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/first-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -631,7 +630,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 404
+        // line 403
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/second-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -652,7 +651,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 422
+        // line 421
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/third-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -741,7 +740,7 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
 
     public function getDebugInfo()
     {
-        return array (  656 => 422,  635 => 404,  614 => 386,  603 => 378,  532 => 310,  508 => 289,  497 => 281,  486 => 273,  475 => 265,  465 => 258,  461 => 257,  457 => 256,  453 => 255,  442 => 247,  396 => 204,  383 => 194,  370 => 184,  353 => 170,  340 => 160,  327 => 150,  316 => 142,  290 => 119,  285 => 116,  275 => 115,  256 => 105,  242 => 523,  236 => 520,  232 => 519,  228 => 518,  224 => 517,  220 => 516,  216 => 515,  210 => 512,  206 => 511,  200 => 508,  179 => 489,  177 => 115,  166 => 106,  164 => 105,  141 => 85,  113 => 59,  77 => 25,  72 => 23,  67 => 21,  45 => 1,);
+        return array (  655 => 421,  634 => 403,  613 => 385,  602 => 377,  531 => 309,  507 => 288,  496 => 280,  485 => 272,  474 => 264,  464 => 257,  460 => 256,  456 => 255,  452 => 254,  441 => 246,  395 => 203,  382 => 193,  369 => 183,  352 => 169,  339 => 159,  326 => 149,  315 => 141,  289 => 118,  284 => 115,  274 => 114,  255 => 104,  241 => 522,  235 => 519,  231 => 518,  227 => 517,  223 => 516,  219 => 515,  215 => 514,  209 => 511,  205 => 510,  199 => 507,  178 => 488,  176 => 114,  165 => 105,  163 => 104,  140 => 84,  113 => 59,  77 => 25,  72 => 23,  67 => 21,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -829,7 +828,6 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
             <div class=\"col-lg-6 offset-lg-3\">
                 <div class=\"section-heading\">
                     <h2>nos <em>abonnements</em></h2>
-                    <h2>nos <em>offres</em></h2>
                     <img src=\"{{ asset('assets/images/features-first-icon.png') }}\" alt=\"second one\">
                 </div>
             </div>

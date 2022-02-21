@@ -83,7 +83,6 @@ class AbonnementController extends AbstractController
     {
         $form = $this->createForm(AbonnementType::class, $abonnement);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
