@@ -1,5 +1,6 @@
 {% extends 'base.back.html.twig' %}
 {% block body %}
+    <div style="margin-left:25% ;padding-left: 10%; height: 40%;width: 40%">
 <h1>add exercice</h1>
 {#{{ form(formExercice) }}#}
 {{ form_start(formExercice, {'attr': {'novalidate': 'novalidate'}}) }}
@@ -48,7 +49,17 @@
           {{ form_errors(formExercice.category) }}
         </td>
     </tr>
+    <tr>
+
+            <td>
+                {{ form_row(formExercice.Add) }}
+            </td>
+
+
+
+    </tr>
 </table>
+    </div>
  {{ form_widget(formExercice.Add)}}
 {{ form_end(formExercice) }}
     <table border="1" style="width: 100%">
@@ -67,8 +78,8 @@
                 <td>{{ e.getDescriptionExercice()}} </td>
                 <td>{{ e.getCategory().getNomCat()}}</td>
                 <td>
-                    <a href="{{ path('ExerciceUpdate',{"id":e.getId}) }}"> Edit </a>
-                    <a href="{{ path('ExerciceDelete',{"id":e.getId}) }}">Delete</a>
+                    <a href="{{ path('ExerciceUpdate',{"id":e.getId}) }}"> <i class="fa-solid fa-cog fa-spin"></i> </a>
+                    <a href="{{ path('ExerciceDelete',{"id":e.getId}) }}"><i class="fa-solid fa-xmark"></i></a>
 
                 </td>
             </tr>

@@ -58,7 +58,7 @@ class Activity
     private $exercices;
 
     /**
-     * @ORM\OneToMany(targetEntity=ImageActEx::class, mappedBy="activity",cascade={"persist"} )
+     * @ORM\OneToMany(targetEntity=ImageActEx::class, mappedBy="activity",cascade={"ALL"} )
      * @Assert\NotBlank(message = " choisir au minimum un image")
      */
     private $images;

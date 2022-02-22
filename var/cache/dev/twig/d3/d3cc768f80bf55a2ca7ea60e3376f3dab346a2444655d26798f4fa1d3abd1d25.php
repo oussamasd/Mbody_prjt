@@ -99,7 +99,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 31
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 31), "H:m"), "html", null, true);
             echo "</p></div>
-                        <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                        <div class=\"font-size13 text-light-gray\">";
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 32), "html", null, true);
+            echo "</div>
                     </a>
                 </td>
                 ";
@@ -161,7 +164,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 86
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 86), "H:m"), "html", null, true);
             echo "</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">";
+            // line 87
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 87), "html", null, true);
+            echo "</div>
                         </a>
                     </td>
                 ";
@@ -219,7 +225,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 111
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 111), "H:m"), "html", null, true);
             echo "</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">";
+            // line 112
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 112), "html", null, true);
+            echo "</div>
                         </a>
                     </td>
                 ";
@@ -274,7 +283,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 134
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 134), "H:m"), "html", null, true);
             echo "</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">";
+            // line 135
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 135), "html", null, true);
+            echo "</div>
                         </a>
                     </td>
                 ";
@@ -329,7 +341,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 157
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 157), "H:m"), "html", null, true);
             echo "</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">";
+            // line 158
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 158), "html", null, true);
+            echo "</div>
                         </a>
                     </td>
                 ";
@@ -385,7 +400,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 181
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 181), "H:m"), "html", null, true);
             echo "</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">";
+            // line 182
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 182), "html", null, true);
+            echo "</div>
                         </a>
                     </td>
                 ";
@@ -441,7 +459,10 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
             // line 205
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getTempAct", [], "any", false, false, false, 205), "H:m"), "html", null, true);
             echo "</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">";
+            // line 206
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["act"], "getNomAct", [], "method", false, false, false, 206), "html", null, true);
+            echo "</div>
                         </a>
                     </td>
                 ";
@@ -501,7 +522,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
     public function getDebugInfo()
     {
-        return array (  477 => 221,  474 => 220,  461 => 212,  456 => 211,  453 => 210,  442 => 205,  438 => 204,  434 => 203,  431 => 202,  427 => 201,  421 => 197,  418 => 196,  405 => 188,  400 => 187,  397 => 186,  386 => 181,  382 => 180,  378 => 179,  375 => 178,  371 => 177,  365 => 173,  362 => 172,  349 => 164,  344 => 163,  341 => 162,  330 => 157,  326 => 156,  322 => 155,  319 => 154,  315 => 153,  308 => 148,  305 => 147,  294 => 141,  289 => 140,  286 => 139,  275 => 134,  271 => 133,  266 => 131,  263 => 130,  259 => 129,  253 => 125,  250 => 124,  239 => 118,  234 => 117,  231 => 116,  220 => 111,  216 => 110,  211 => 108,  208 => 107,  204 => 106,  200 => 104,  196 => 101,  193 => 100,  181 => 93,  176 => 92,  173 => 91,  162 => 86,  158 => 85,  153 => 83,  150 => 82,  146 => 81,  142 => 79,  136 => 74,  134 => 46,  131 => 45,  119 => 38,  114 => 37,  111 => 36,  100 => 31,  96 => 30,  91 => 28,  87 => 26,  83 => 25,  80 => 24,  76 => 21,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  498 => 221,  495 => 220,  482 => 212,  477 => 211,  474 => 210,  464 => 206,  460 => 205,  456 => 204,  452 => 203,  449 => 202,  445 => 201,  439 => 197,  436 => 196,  423 => 188,  418 => 187,  415 => 186,  405 => 182,  401 => 181,  397 => 180,  393 => 179,  390 => 178,  386 => 177,  380 => 173,  377 => 172,  364 => 164,  359 => 163,  356 => 162,  346 => 158,  342 => 157,  338 => 156,  334 => 155,  331 => 154,  327 => 153,  320 => 148,  317 => 147,  306 => 141,  301 => 140,  298 => 139,  288 => 135,  284 => 134,  280 => 133,  275 => 131,  272 => 130,  268 => 129,  262 => 125,  259 => 124,  248 => 118,  243 => 117,  240 => 116,  230 => 112,  226 => 111,  222 => 110,  217 => 108,  214 => 107,  210 => 106,  206 => 104,  202 => 101,  199 => 100,  187 => 93,  182 => 92,  179 => 91,  169 => 87,  165 => 86,  161 => 85,  156 => 83,  153 => 82,  149 => 81,  145 => 79,  139 => 74,  137 => 46,  134 => 45,  122 => 38,  117 => 37,  114 => 36,  104 => 32,  100 => 31,  96 => 30,  91 => 28,  87 => 26,  83 => 25,  80 => 24,  76 => 21,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -537,7 +558,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                         <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                         <div class=\"margin-10px-top font-size14 \"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                        <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                        <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                     </a>
                 </td>
                 {% endfor %}
@@ -592,7 +613,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                         </a>
                     </td>
                 {% endfor %}
@@ -617,7 +638,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                         </a>
                     </td>
                 {% endfor %}
@@ -640,7 +661,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
 
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                         </a>
                     </td>
                 {% endfor %}
@@ -663,7 +684,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                         <a href=\"/activity/details/{{ act.getId() }}\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                         </a>
                     </td>
                 {% endfor %}
@@ -687,7 +708,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                         <a href=\"/activity/details/{{ act.getId() }}\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                         </a>
                     </td>
                 {% endfor %}
@@ -711,7 +732,7 @@ class __TwigTemplate_d7f12b4a29039cb35698f5a9285c2fb17e387b2674a43890fd1997de994
                         <a href=\"/activity/details/{{ act.getId() }}\">
                             <span class=\"bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13\">{{ act.getCategory.getNomCat() }}</span>
                             <div class=\"margin-10px-top font-size14\"><p style=\"color: yellow\">{{ act.getTempAct|date('H:m') }}</p></div>
-                            <div class=\"font-size13 text-light-gray\">Ivana Wong</div>
+                            <div class=\"font-size13 text-light-gray\">{{ act.getNomAct() }}</div>
                         </a>
                     </td>
                 {% endfor %}

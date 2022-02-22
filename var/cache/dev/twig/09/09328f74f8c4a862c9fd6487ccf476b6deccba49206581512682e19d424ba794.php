@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* base.front.html.twig */
+/* base.front.html.twig  */
 class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a414de1 extends Template
 {
     private $source;
@@ -51,10 +51,10 @@ class __TwigTemplate_0ded6d1fdc4c1ad2e92da0ff679b2b8edd1a00861e68cd93468c087d4a4
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.front.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.front.html.twig "));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.front.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.front.html.twig "));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -198,9 +198,14 @@ https://templatemo.com/tm-548-training-studio
 
 
   </body>
-";
-        // line 523
-        echo "</html>";
+  <script type=\"text/javascript\">
+      console.log(\"hhh\");
+      \$(document).ready(function(){
+          console.log(\"errrrr\");
+
+      });
+  </script>
+</html>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -1063,7 +1068,7 @@ https://templatemo.com/tm-548-training-studio
 
     public function getTemplateName()
     {
-        return "base.front.html.twig";
+        return "base.front.html.twig ";
     }
 
     public function isTraitable()
@@ -1073,7 +1078,7 @@ https://templatemo.com/tm-548-training-studio
 
     public function getDebugInfo()
     {
-        return array (  1041 => 475,  1031 => 474,  977 => 426,  967 => 425,  940 => 403,  919 => 385,  898 => 367,  886 => 358,  880 => 354,  870 => 353,  801 => 290,  793 => 284,  783 => 283,  762 => 268,  751 => 260,  740 => 252,  729 => 244,  719 => 237,  715 => 236,  711 => 235,  707 => 234,  696 => 226,  690 => 222,  680 => 221,  668 => 279,  666 => 221,  661 => 218,  651 => 217,  630 => 201,  620 => 200,  608 => 213,  606 => 200,  602 => 198,  592 => 197,  570 => 179,  557 => 169,  544 => 159,  527 => 145,  514 => 135,  501 => 125,  490 => 117,  484 => 113,  474 => 112,  462 => 191,  460 => 112,  455 => 109,  445 => 108,  434 => 471,  432 => 425,  425 => 420,  423 => 353,  417 => 349,  415 => 283,  412 => 282,  410 => 217,  407 => 216,  405 => 197,  400 => 194,  397 => 108,  387 => 107,  372 => 93,  362 => 92,  349 => 86,  346 => 85,  336 => 84,  324 => 99,  322 => 92,  317 => 89,  314 => 84,  304 => 83,  292 => 102,  290 => 83,  286 => 81,  276 => 80,  266 => 105,  264 => 80,  261 => 79,  251 => 78,  238 => 27,  233 => 25,  228 => 23,  223 => 22,  213 => 21,  203 => 523,  195 => 510,  189 => 507,  185 => 506,  181 => 505,  177 => 504,  173 => 503,  169 => 502,  162 => 498,  158 => 497,  151 => 493,  146 => 490,  144 => 474,  141 => 473,  139 => 107,  136 => 106,  134 => 78,  84 => 30,  82 => 21,  60 => 1,);
+        return array (  1046 => 475,  1036 => 474,  982 => 426,  972 => 425,  945 => 403,  924 => 385,  903 => 367,  891 => 358,  885 => 354,  875 => 353,  806 => 290,  798 => 284,  788 => 283,  767 => 268,  756 => 260,  745 => 252,  734 => 244,  724 => 237,  720 => 236,  716 => 235,  712 => 234,  701 => 226,  695 => 222,  685 => 221,  673 => 279,  671 => 221,  666 => 218,  656 => 217,  635 => 201,  625 => 200,  613 => 213,  611 => 200,  607 => 198,  597 => 197,  575 => 179,  562 => 169,  549 => 159,  532 => 145,  519 => 135,  506 => 125,  495 => 117,  489 => 113,  479 => 112,  467 => 191,  465 => 112,  460 => 109,  450 => 108,  439 => 471,  437 => 425,  430 => 420,  428 => 353,  422 => 349,  420 => 283,  417 => 282,  415 => 217,  412 => 216,  410 => 197,  405 => 194,  402 => 108,  392 => 107,  377 => 93,  367 => 92,  354 => 86,  351 => 85,  341 => 84,  329 => 99,  327 => 92,  322 => 89,  319 => 84,  309 => 83,  297 => 102,  295 => 83,  291 => 81,  281 => 80,  271 => 105,  269 => 80,  266 => 79,  256 => 78,  243 => 27,  238 => 25,  233 => 23,  228 => 22,  218 => 21,  195 => 510,  189 => 507,  185 => 506,  181 => 505,  177 => 504,  173 => 503,  169 => 502,  162 => 498,  158 => 497,  151 => 493,  146 => 490,  144 => 474,  141 => 473,  139 => 107,  136 => 106,  134 => 78,  84 => 30,  82 => 21,  60 => 1,);
     }
 
     public function getSourceContext()
@@ -1592,14 +1597,13 @@ https://templatemo.com/tm-548-training-studio
 
 
   </body>
-{#  <script>#}
-{#      \$(document).ready(function() {#}
-{#          // you may need to change this code if you are not using Bootstrap Datepicker#}
-{#          \$('.js-datepicker').datepicker({#}
-{#              format: 'yyyy-mm-dd'#}
-{#          });#}
-{#      });#}
-{#  </script>#}
-</html>", "base.front.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\base.front.html.twig");
+  <script type=\"text/javascript\">
+      console.log(\"hhh\");
+      \$(document).ready(function(){
+          console.log(\"errrrr\");
+
+      });
+  </script>
+</html>", "base.front.html.twig ", "C:\\wamp64\\www\\Mbody_prjt\\templates\\base.front.html.twig");
     }
 }

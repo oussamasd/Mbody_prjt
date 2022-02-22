@@ -244,11 +244,16 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
                     <a href=\"";
             // line 94
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityUpdate", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 94)]), "html", null, true);
-            echo "\"> Edit </a>
+            echo "\"> <i class=\"fa-solid fa-cog fa-spin\"></i> </a>
+
                     <a href=\"";
-            // line 95
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityDelete", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 95)]), "html", null, true);
-            echo "\">Delete</a>
+            // line 96
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ActivityDelete", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 96)]), "html", null, true);
+            echo "\"><i class=\"fa-solid fa-xmark\"></i></a>
+
+
+
+
 
                 </td>
 
@@ -258,7 +263,7 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 101
+        // line 106
         echo "    </table>
     
 ";
@@ -282,7 +287,7 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
 
     public function getDebugInfo()
     {
-        return array (  262 => 101,  250 => 95,  246 => 94,  241 => 92,  237 => 91,  233 => 90,  229 => 89,  225 => 88,  222 => 87,  218 => 86,  204 => 75,  194 => 68,  185 => 62,  178 => 58,  171 => 54,  166 => 52,  160 => 49,  153 => 45,  148 => 43,  142 => 40,  135 => 36,  131 => 35,  125 => 32,  118 => 28,  113 => 26,  107 => 23,  100 => 19,  96 => 18,  90 => 15,  83 => 11,  78 => 9,  72 => 6,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  267 => 106,  251 => 96,  246 => 94,  241 => 92,  237 => 91,  233 => 90,  229 => 89,  225 => 88,  222 => 87,  218 => 86,  204 => 75,  194 => 68,  185 => 62,  178 => 58,  171 => 54,  166 => 52,  160 => 49,  153 => 45,  148 => 43,  142 => 40,  135 => 36,  131 => 35,  125 => 32,  118 => 28,  113 => 26,  107 => 23,  100 => 19,  96 => 18,  90 => 15,  83 => 11,  78 => 9,  72 => 6,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -380,8 +385,13 @@ class __TwigTemplate_c93ed409af0dd8fdd7c2a3b2223852fb5d2aca24fadd102010fb0294cd0
                 <td>{{ e.getDescriptionAct()}}</td>
                 <td>{{ e.getCategory.getNomCat()}} </td>
                 <td>
-                    <a href=\"{{ path('ActivityUpdate',{\"id\":e.getId}) }}\"> Edit </a>
-                    <a href=\"{{ path('ActivityDelete',{\"id\":e.getId}) }}\">Delete</a>
+                    <a href=\"{{ path('ActivityUpdate',{\"id\":e.getId}) }}\"> <i class=\"fa-solid fa-cog fa-spin\"></i> </a>
+
+                    <a href=\"{{ path('ActivityDelete',{\"id\":e.getId}) }}\"><i class=\"fa-solid fa-xmark\"></i></a>
+
+
+
+
 
                 </td>
 

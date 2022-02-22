@@ -53,6 +53,12 @@
     {% endfor %}
 {% endblock %}
 
-{% block jq %}
+{% block c %}
+    <script type="text/javascript">
+        console.log("hhh");
+        $(document).ready(function(){
+            console.log("errrrr");
 
+        });
+    </script>
 {% endblock %}

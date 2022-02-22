@@ -69,26 +69,31 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/css/font.css"), "html", null, true);
         echo "\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/css/widget.css"), "html", null, true);
+        echo "\">
     <!-- Google fonts - Muli-->
     <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Muli:300,400,700\">
     <!-- theme stylesheet-->
     <link rel=\"stylesheet\" href=\"";
-        // line 19
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/css/style.default.css"), "html", null, true);
         echo "\" id=\"theme-stylesheet\">
     <!-- Custom stylesheet - for your changes-->
     <link rel=\"stylesheet\" href=\"";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/css/custom.css"), "html", null, true);
         echo "\">
     <!-- Favicon-->
     <link rel=\"shortcut icon\" href=\"";
-        // line 23
+        // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/img/favicon.ico"), "html", null, true);
         echo "\">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]><![endif]-->
+    <script src=\"https://kit.fontawesome.com/235b7b7294.js\" crossorigin=\"anonymous\"></script>
     <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>
-    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script><![endif]-->
+    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>
 </head>
 <body>
 <header class=\"header\">
@@ -239,7 +244,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         <!-- Sidebar Header-->
         <div class=\"sidebar-header d-flex align-items-center\">
             <div class=\"avatar\"><img src=\"";
-        // line 176
+        // line 178
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/avatar-6.jpg"), "html", null, true);
         echo "\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
             <div class=\"title\">
@@ -280,9 +285,9 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         </div>
 
         ";
-        // line 214
+        // line 216
         $this->displayBlock('body', $context, $blocks);
-        // line 235
+        // line 237
         echo "
 
 
@@ -301,35 +306,35 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 </div>
 <!-- JavaScript files-->
 <script src=\"";
-        // line 252
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 253
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/popper.js/umd/popper.min.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 254
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 255
+        // line 257
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery.cookie/jquery.cookie.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 256
+        // line 258
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 257
+        // line 259
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery-validation/jquery.validate.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 258
+        // line 260
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/js/charts-home.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 259
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/js/front.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -361,7 +366,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
     }
 
-    // line 214
+    // line 216
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -371,7 +376,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 215
+        // line 217
         echo "        <section class=\"no-padding-bottom\">
             <div class=\"container-fluid\">
                 <div class=\"row\">
@@ -412,7 +417,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
     public function getDebugInfo()
     {
-        return array (  375 => 215,  365 => 214,  346 => 6,  333 => 259,  329 => 258,  325 => 257,  321 => 256,  317 => 255,  313 => 254,  309 => 253,  305 => 252,  286 => 235,  284 => 214,  243 => 176,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
+        return array (  380 => 217,  370 => 216,  351 => 6,  338 => 261,  334 => 260,  330 => 259,  326 => 258,  322 => 257,  318 => 256,  314 => 255,  310 => 254,  291 => 237,  289 => 216,  248 => 178,  91 => 24,  86 => 22,  81 => 20,  74 => 16,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -432,6 +437,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
     <link rel=\"stylesheet\" href=\"{{ asset('Back/vendor/font-awesome/css/font-awesome.min.css') }}\">
     <!-- Custom Font Icons CSS-->
     <link rel=\"stylesheet\" href=\"{{ asset('Back/css/font.css') }}\">
+    <link rel=\"stylesheet\" href=\"{{ asset('Back/css/widget.css') }}\">
     <!-- Google fonts - Muli-->
     <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Muli:300,400,700\">
     <!-- theme stylesheet-->
@@ -440,9 +446,10 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
     <link rel=\"stylesheet\" href=\"{{ asset('Back/css/custom.css') }}\">
     <!-- Favicon-->
     <link rel=\"shortcut icon\" href=\"{{ asset('Back/img/favicon.ico') }}\">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]><![endif]-->
+    <script src=\"https://kit.fontawesome.com/235b7b7294.js\" crossorigin=\"anonymous\"></script>
     <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>
-    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script><![endif]-->
+    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>
 </head>
 <body>
 <header class=\"header\">

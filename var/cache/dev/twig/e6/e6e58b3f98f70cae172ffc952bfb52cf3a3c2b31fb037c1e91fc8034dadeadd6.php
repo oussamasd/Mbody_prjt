@@ -36,6 +36,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
             'pict' => [$this, 'block_pict'],
             'Exercice' => [$this, 'block_Exercice'],
             'jquery' => [$this, 'block_jquery'],
+            'c' => [$this, 'block_c'],
         ];
     }
 
@@ -367,14 +368,9 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
 ";
         // line 286
-        echo "<script type=\"text/javascript\">
-    console.log(\"errrrr\");
-    \$(document).ready(function(){
-        console.log(\"errrrr\");
-
-    });
-</script>
-
+        $this->displayBlock('c', $context, $blocks);
+        // line 288
+        echo "
 </html>
 
 ";
@@ -674,6 +670,24 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     }
 
+    // line 286
+    public function block_c($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "c"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "c"));
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "base.details.html.twig";
@@ -686,7 +700,7 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
 
     public function getDebugInfo()
     {
-        return array (  666 => 249,  661 => 248,  651 => 247,  632 => 210,  620 => 201,  608 => 192,  596 => 183,  593 => 182,  583 => 181,  569 => 171,  561 => 166,  553 => 161,  545 => 156,  537 => 151,  529 => 146,  525 => 144,  515 => 143,  501 => 75,  491 => 74,  472 => 67,  453 => 66,  441 => 61,  431 => 60,  410 => 55,  400 => 29,  390 => 28,  370 => 286,  363 => 273,  359 => 272,  353 => 269,  349 => 268,  345 => 267,  341 => 266,  337 => 265,  331 => 262,  327 => 261,  321 => 258,  315 => 255,  311 => 254,  307 => 253,  303 => 251,  301 => 247,  295 => 244,  290 => 242,  286 => 241,  282 => 240,  277 => 238,  256 => 219,  254 => 181,  246 => 175,  244 => 143,  192 => 94,  176 => 80,  174 => 74,  164 => 67,  160 => 66,  156 => 64,  154 => 60,  148 => 56,  146 => 55,  125 => 37,  116 => 30,  114 => 28,  106 => 23,  102 => 22,  98 => 21,  94 => 20,  90 => 19,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  63 => 10,  52 => 1,);
+        return array (  674 => 286,  662 => 249,  657 => 248,  647 => 247,  628 => 210,  616 => 201,  604 => 192,  592 => 183,  589 => 182,  579 => 181,  565 => 171,  557 => 166,  549 => 161,  541 => 156,  533 => 151,  525 => 146,  521 => 144,  511 => 143,  497 => 75,  487 => 74,  468 => 67,  449 => 66,  437 => 61,  427 => 60,  406 => 55,  396 => 29,  386 => 28,  373 => 288,  371 => 286,  364 => 273,  360 => 272,  354 => 269,  350 => 268,  346 => 267,  342 => 266,  338 => 265,  332 => 262,  328 => 261,  322 => 258,  316 => 255,  312 => 254,  308 => 253,  304 => 251,  302 => 247,  296 => 244,  291 => 242,  287 => 241,  283 => 240,  278 => 238,  257 => 219,  255 => 181,  247 => 175,  245 => 143,  193 => 94,  177 => 80,  175 => 74,  165 => 67,  161 => 66,  157 => 64,  155 => 60,  149 => 56,  147 => 55,  126 => 37,  117 => 30,  115 => 28,  107 => 23,  103 => 22,  99 => 21,  95 => 20,  91 => 19,  87 => 18,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  64 => 10,  53 => 1,);
     }
 
     public function getSourceContext()
@@ -976,13 +990,8 @@ class __TwigTemplate_6e1c91ef3f46302a27dae883e3c3b4ee91e01a015d28c0e65ff12dbd771
         });
     });
 </script>#}
-<script type=\"text/javascript\">
-    console.log(\"errrrr\");
-    \$(document).ready(function(){
-        console.log(\"errrrr\");
-
-    });
-</script>
+{% block c %}
+{% endblock %}
 
 </html>
 
