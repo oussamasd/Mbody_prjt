@@ -1,50 +1,86 @@
 {% extends 'base.back.html.twig' %}
 {% block body %}
+    <div style="padding-left:40%">
 <h1>add activite</h1>
 {#{{ form(formActivity) }}#}
 {{ form_start(formActivity , {'attr': {'novalidate': 'novalidate'}}) }}
 <table>
     <tr>
         <td>  {{ form_label(formActivity.nom_Act,"Nom Activite")}}  </td>
-        <td>  {{ form_errors(formActivity.nom_Act) }} </td>
+
         <td> {{ form_widget(formActivity.nom_Act)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.nom_Act) }} </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formActivity.date_Act,"Date Activite")}}  </td>
-        <td>  {{ form_errors(formActivity.date_Act) }} </td>
         <td> {{ form_widget(formActivity.date_Act)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.date_Act) }} </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formActivity.temp_act,"Temps  Activite")}}  </td>
-        <td>  {{ form_errors(formActivity.temp_act) }} </td>
+
         <td> {{ form_widget(formActivity.temp_act)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.temp_act) }} </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formActivity.description_Act,"Description")}}  </td>
-        <td>  {{ form_errors(formActivity.description_Act) }} </td>
         <td> {{ form_widget(formActivity.description_Act)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.description_Act) }} </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formActivity.category,"Category")}}  </td>
-        <td>  {{ form_errors(formActivity.category) }} </td>
+
         <td> {{ form_widget(formActivity.category)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.category) }} </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formActivity.images,"Image")}}  </td>
-        <td>  {{ form_errors(formActivity.images) }} </td>
+
         <td> {{ form_widget(formActivity.images)}}   </td>
     </tr>
+    <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.images) }} </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_row(formActivity.exercices) }}
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            {{ form_row(formActivity.Add) }}
+        </td>
+
+    </tr>
 </table>
+    </div>
 
 {{ form_end(formActivity) }}
-    <table border="1">
+    <table border="1" style="width: 100%">
         <tr>
-            <td>nom activitie</td>
-            <td>date activite</td>
-            <td>temps activite </td>
-            <td>description </td>
-            <td>category </td>
-            <td>Action </td>
+            <th style="color: #fffb4c">nom activitie</th>
+            <th>date activite</th>
+            <th>temps activite </th>
+            <th>description </th>
+            <th>category </th>
+            <th>Action </th>
 
         </tr>
         {% for e in activities %}

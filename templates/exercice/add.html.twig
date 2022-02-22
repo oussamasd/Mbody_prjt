@@ -2,42 +2,62 @@
 {% block body %}
 <h1>add exercice</h1>
 {#{{ form(formExercice) }}#}
-{{ form_start(formExercice) }}
+{{ form_start(formExercice, {'attr': {'novalidate': 'novalidate'}}) }}
 <table>
     <tr>
          <td>  {{ form_label(formExercice.nom_Exercice,"Nom Exercice")}}  </td>
-        <td>  {{ form_errors(formExercice.nom_Exercice) }} </td>
+
         <td> {{ form_widget(formExercice.nom_Exercice)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>
+         {{ form_errors(formExercice.nom_Exercice) }}
+        </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formExercice.dure_Exercice,"Duree Exercice")}}  </td>
-        <td>  {{ form_errors(formExercice.dure_Exercice) }} </td>
+
         <td> {{ form_widget(formExercice.dure_Exercice)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>
+          {{ form_errors(formExercice.dure_Exercice) }}
+        </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formExercice.description_Exercice,"Description Exercice")}}  </td>
-        <td>  {{ form_errors(formExercice.description_Exercice) }} </td>
+
         <td> {{ form_widget(formExercice.description_Exercice)}}   </td>
     </tr>
     <tr>
+        <td></td>
+        <td>
+          {{ form_errors(formExercice.description_Exercice) }}
+        </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formExercice.category,"Category")}}  </td>
-        <td>  {{ form_errors(formExercice.category) }} </td>
+
         <td> {{ form_widget(formExercice.category)}}   </td>
     </tr>
     <tr>
-
-
+        <td></td>
+        <td>
+          {{ form_errors(formExercice.category) }}
+        </td>
     </tr>
 </table>
  {{ form_widget(formExercice.Add)}}
 {{ form_end(formExercice) }}
-    <table border="1">
+    <table border="1" style="width: 100%">
         <tr>
-            <td>nom exercice</td>
-            <td>dure exercice</td>
-            <td>description </td>
-            <td>category</td>
-            <td>Action</td>
+            <th style="color: yellow">nom exercice</th>
+            <th style="color: yellow">dure exercice</th>
+            <th style="color: yellow" >description </th>
+            <th style="color: yellow" >category</th>
+            <th style="color: yellow">Action</th>
 
         </tr>
         {% for e in exercices %}
