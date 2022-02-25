@@ -138,4 +138,5 @@ class AbonnementController extends AbstractController
             'abonnements' => $abonnementRepository->findAll(),
         ]);
     }
+
 }

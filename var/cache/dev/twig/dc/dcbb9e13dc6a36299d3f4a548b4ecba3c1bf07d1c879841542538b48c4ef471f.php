@@ -152,61 +152,59 @@ class __TwigTemplate_2bf83369995874af772d9f152e585b280065e1e1934da80696f598933c8
             </div>
         </div>
     </section>
+    <section class=\"section\" id=\"trainers\" >
     <div class=\"container\">
-
         <div class=\"row\">
-            <div class=\"col-lg-6 offset-lg-3\">
-                <div class=\"section-heading\">
-                    <h2>nos <em>offres</em></h2>
-                    <img src=\"";
-        // line 49
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
-        echo "\" alt=\"second one\">
-
-                    <table class=\"table\">
-                        <thead>
-
-                        <tr>
-                            <th> Delai</th>
-                            <th>Nom</th>
-                            <th>Description</th>
-                            <th>Nom-abonnement</th>
-                        </tr>
-                        </thead>
-                        <tbody>
                         ";
-        // line 62
+        // line 46
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["offres"]) || array_key_exists("offres", $context) ? $context["offres"] : (function () { throw new RuntimeError('Variable "offres" does not exist.', 62, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["offres"]) || array_key_exists("offres", $context) ? $context["offres"] : (function () { throw new RuntimeError('Variable "offres" does not exist.', 46, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["offre"]) {
-            // line 63
-            echo "                            <tr>
+            // line 47
+            echo "                            <div class=\"col-lg-4\">
+                                <div class=\"trainer-item\" >
+                                    <div class=\"image-thumb\">
+                                    </div>
+                                    <div class=\"down-content\">
 
-                                <td>";
-            // line 65
-            ((twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 65)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 65), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                                <td>";
-            // line 66
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "nom", [], "any", false, false, false, 66), "html", null, true);
-            echo "</td>
-                                <td>";
-            // line 67
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "Description", [], "any", false, false, false, 67), "html", null, true);
-            echo "</td>
-                                <td>";
-            // line 68
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["offre"], "getNomAbonnement", [], "any", false, false, false, 68), "getNom", [], "method", false, false, false, 68), "html", null, true);
-            echo "</td>
+                                        <th> <span> delai:</span></th>
+                                        <h4> ";
+            // line 54
+            ((twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 54)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "delai", [], "any", false, false, false, 54), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            echo "</h4>
+                                        <th> <span> nom:</span></th>
+                                        <h4>";
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "nom", [], "any", false, false, false, 56), "html", null, true);
+            echo "</h4>
+                                        <th> <span>description:</span></th>
+                                        <h4>";
+            // line 58
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["offre"], "description", [], "any", false, false, false, 58), "html", null, true);
+            echo "</h4>
+                                        <th> <span> nom-abonnement:</span></th>
+                                        <h4>";
+            // line 60
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["offre"], "getNomAbonnement", [], "any", false, false, false, 60), "getNom", [], "method", false, false, false, 60), "html", null, true);
+            echo "</h4>
 
-                            </tr>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                              ";
+            // line 71
+            echo "
+
                         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 72
-            echo "                            <tr>
+            // line 74
+            echo "                            <h1>vide</h1>
+                            <tr>
                                 <td colspan=\"5\">no records found</td>
                             </tr>
                         ";
@@ -214,17 +212,15 @@ class __TwigTemplate_2bf83369995874af772d9f152e585b280065e1e1934da80696f598933c8
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 76
-        echo "                        </tbody>
-                    </table>
-                </div>
-            </div>
+        // line 79
+        echo "
+
         </div>
     </div>
-
+</section>
 
     ";
-        // line 85
+        // line 86
         echo "    <form method=\"post\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_new");
         echo "\" >
@@ -251,7 +247,7 @@ class __TwigTemplate_2bf83369995874af772d9f152e585b280065e1e1934da80696f598933c8
 
     public function getDebugInfo()
     {
-        return array (  228 => 85,  218 => 76,  209 => 72,  200 => 68,  196 => 67,  192 => 66,  188 => 65,  184 => 63,  179 => 62,  163 => 49,  151 => 39,  142 => 35,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  107 => 17,  101 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  224 => 86,  216 => 79,  206 => 74,  199 => 71,  189 => 60,  184 => 58,  179 => 56,  174 => 54,  165 => 47,  160 => 46,  151 => 39,  142 => 35,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  107 => 17,  101 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -298,46 +294,47 @@ class __TwigTemplate_2bf83369995874af772d9f152e585b280065e1e1934da80696f598933c8
             </div>
         </div>
     </section>
+    <section class=\"section\" id=\"trainers\" >
     <div class=\"container\">
-
         <div class=\"row\">
-            <div class=\"col-lg-6 offset-lg-3\">
-                <div class=\"section-heading\">
-                    <h2>nos <em>offres</em></h2>
-                    <img src=\"{{ asset('assets/images/features-first-icon.png') }}\" alt=\"second one\">
-
-                    <table class=\"table\">
-                        <thead>
-
-                        <tr>
-                            <th> Delai</th>
-                            <th>Nom</th>
-                            <th>Description</th>
-                            <th>Nom-abonnement</th>
-                        </tr>
-                        </thead>
-                        <tbody>
                         {% for offre in offres %}
-                            <tr>
+                            <div class=\"col-lg-4\">
+                                <div class=\"trainer-item\" >
+                                    <div class=\"image-thumb\">
+                                    </div>
+                                    <div class=\"down-content\">
 
-                                <td>{{ offre.delai ? offre.delai|date('Y-m-d H:i:s') : '' }}</td>
+                                        <th> <span> delai:</span></th>
+                                        <h4> {{ offre.delai ? offre.delai|date('Y-m-d H:i:s') : '' }}</h4>
+                                        <th> <span> nom:</span></th>
+                                        <h4>{{ offre.nom }}</h4>
+                                        <th> <span>description:</span></th>
+                                        <h4>{{ offre.description }}</h4>
+                                        <th> <span> nom-abonnement:</span></th>
+                                        <h4>{{ offre.getNomAbonnement.getNom() }}</h4>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                              {#  <td>{{ offre.delai ? offre.delai|date('Y-m-d H:i:s') : '' }}</td>
                                 <td>{{ offre.nom }}</td>
                                 <td>{{ offre.Description }}</td>
-                                <td>{{ offre.getNomAbonnement.getNom()}}</td>
+                                <td>{{ offre.getNomAbonnement.getNom()}}</td>#}
 
-                            </tr>
+
                         {% else %}
+                            <h1>vide</h1>
                             <tr>
                                 <td colspan=\"5\">no records found</td>
                             </tr>
                         {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
+
         </div>
     </div>
-
+</section>
 
     {#   <a href=\"{{ path('abonnement_new') }}\">Créer nouvelle</a>#}
     <form method=\"post\" action=\"{{ path('abonnement_new') }}\" >
