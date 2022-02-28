@@ -1,0 +1,35 @@
+{{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+
+    <tr>
+        <th>Nom:</th>
+        {{ form_widget(form.nom) }}
+        {% if not form.nom.vars.valid %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.nom) }}
+        </div>
+        {% endif %}
+    </tr>
+<tr>
+    <th>type:</th>
+    {{ form_widget(form.type) }}
+    {% if not form.type.vars.valid %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.type) }}
+        </div>
+</tr>
+    {% endif %}
+<tr>
+<th>description:</th>
+{{ form_widget(form.description) }}
+    {% if not form.description.vars.valid %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.description) }}
+        </div>
+
+    {% endif %}
+</tr>
+
+
+{{ form_widget(form) }}
+    <button class="btn btn-primary">{{ button_label|default('envoyer') }}</button>
+{{ form_end(form) }}

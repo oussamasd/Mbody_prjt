@@ -15,4 +15,11 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
+    'categories' => [[], ['_controller' => 'App\\Controller\\CategoriesController::index'], [], [['text', '/categories']], [], []],
+    'produits_index' => [[], ['_controller' => 'App\\Controller\\ProduitsController::index'], [], [['text', '/produits/back']], [], []],
+    'produits_index2' => [[], ['_controller' => 'App\\Controller\\ProduitsController::index2'], [], [['text', '/produits/front']], [], []],
+    'produits_new' => [[], ['_controller' => 'App\\Controller\\ProduitsController::new'], [], [['text', '/produits/new']], [], []],
+    'produits_show' => [['id'], ['_controller' => 'App\\Controller\\ProduitsController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/produits']], [], []],
+    'produits_edit' => [['id'], ['_controller' => 'App\\Controller\\ProduitsController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id'], ['text', '/produits']], [], []],
+    'produits_delete' => [['id'], ['_controller' => 'App\\Controller\\ProduitsController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/produits']], [], []],
 ];
