@@ -21,6 +21,8 @@ return [
     'ActivityDelete' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/DeleteActivity']], [], []],
     'activitySchedule' => [[], ['_controller' => 'App\\Controller\\ActivityController::Schedule'], [], [['text', '/activitySchedule']], [], []],
     'activityDetails' => [['id'], ['_controller' => 'App\\Controller\\ActivityController::showmore'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/activity/details']], [], []],
+    'activityjson' => [[], ['_controller' => 'App\\Controller\\ActivityController::index2'], [], [['text', '/activity/json/All']], [], []],
+    'activitytest' => [[], ['_controller' => 'App\\Controller\\ActivityController::index3'], [], [['text', '/activity/test/test']], [], []],
     'category' => [[], ['_controller' => 'App\\Controller\\CategoryController::index'], [], [['text', '/category']], [], []],
     'categoryAdd' => [[], ['_controller' => 'App\\Controller\\CategoryController::add'], [], [['text', '/addCategory']], [], []],
     'exercice' => [[], ['_controller' => 'App\\Controller\\ExerciceController::index'], [], [['text', '/exercice']], [], []],

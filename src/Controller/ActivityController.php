@@ -8,7 +8,9 @@ use App\Form\ActivityType;
 use App\Repository\ActivityRepository;
 use App\Repository\ExerciceRepository;
 use DateInterval;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,9 +22,15 @@ class ActivityController extends AbstractController
     /**
      * @Route("/activity", name="activity")
      */
-    public function index(): Response
+    public function index(Request $request , PaginatorInterface $paginator): Response
     {
-        $activity= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+        $data= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+        var_dump($this->getUser());
+        $activity= $paginator->paginate(
+            $data,  //notre data
+            $request->query->getInt('page',1), //numero de la page en cour : par defaut 1
+            6 //nombre des elements
+        );
 //        $h=$activity[15]->getImages();
 //        var_dump(sizeof($h));
         return $this->render('activity/Affichactivity.html.twig', [
@@ -221,6 +229,41 @@ class ActivityController extends AbstractController
         return $this->render('activity/detailActivity.html.twig', [
             'activity' => $activity ,
         ]);
+    }
+    /**
+     * @Route("/activity/json/All", name="activityjson")
+     */
+    public function index2(): Response
+    {
+        $activity= $this->getDoctrine()->getRepository(Activity::class)->findAll();
+//        $h=$activity[15]->getImages();
+//        var_dump(sizeof($h));
+        /*return $this->render('activity/Affichactivity.html.twig', [
+            'activities' => $activity ,
+        ]);*/
+        $tb = array();
+        $dt=array();
+        foreach ($activity as $key =>$cat){
+            $dt[$key]['id'] = $cat->getId();
+            $dt[$key]['nom_Act'] = $cat->getNomAct();
+            $dt[$key]['date_Act'] = $cat->getDateAct();
+            $dt[$key]['temp_act'] = $cat->getTempAct();
+            $dt[$key]['description_Act'] =$cat->getDescriptionAct();
+            $dt[$key]['categoryId'] = $cat->getCategory()->getId();
+            $dt[$key]['categoryNom'] =$cat->getCategory()->getNomCat();
+            $dt[$key]['exercices'] = $cat->getExercices();
+           // $dt[$key]['images'] = $cat->getDureExercice();
+
+        }
+        return new JsonResponse($dt);
+    }
+    /**
+     * @Route("/activity/test/test", name="activitytest")
+     */
+    public function index3(Request $request , PaginatorInterface $paginator): Response
+    {
+
+        return $this->render('activity/testt.html.twig');
     }
 
 }

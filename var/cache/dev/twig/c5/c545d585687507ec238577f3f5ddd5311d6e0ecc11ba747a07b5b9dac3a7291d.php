@@ -77,7 +77,7 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
 
         // line 3
         echo "    <div style=\"background-color: gray ; width: 70px ; height: 30px ; align-items: center ;align-content: center\">
-        <a  href=\"/activitySchedule\"><h5>Back</h5></a>
+        <a  href=\"/activitySchedule\"><h5>Home</h5></a>
     </div>
     <div style=\"background-color: yellow ; width: 130px ; height: 30px ; align-items: center ;align-content: center\">
         <a  href=\"/activity\"><h5>Show More</h5></a>
@@ -349,7 +349,7 @@ class __TwigTemplate_124d6a3fa3cc45aa03cc76aa8b89b2db556c41d0ec592fed64967f6f955
         return new Source("{% extends 'base.details.html.twig' %}
 {% block tp %}
     <div style=\"background-color: gray ; width: 70px ; height: 30px ; align-items: center ;align-content: center\">
-        <a  href=\"/activitySchedule\"><h5>Back</h5></a>
+        <a  href=\"/activitySchedule\"><h5>Home</h5></a>
     </div>
     <div style=\"background-color: yellow ; width: 130px ; height: 30px ; align-items: center ;align-content: center\">
         <a  href=\"/activity\"><h5>Show More</h5></a>

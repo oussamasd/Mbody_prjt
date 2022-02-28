@@ -1,7 +1,7 @@
 {% extends 'base.details.html.twig' %}
 {% block tp %}
     <div style="background-color: gray ; width: 70px ; height: 30px ; align-items: center ;align-content: center">
-        <a  href="/activitySchedule"><h5>Back</h5></a>
+        <a  href="/activitySchedule"><h5>Home</h5></a>
     </div>
     <div style="background-color: yellow ; width: 130px ; height: 30px ; align-items: center ;align-content: center">
         <a  href="/activity"><h5>Show More</h5></a>
@@ -13,7 +13,8 @@
 
     {% if i|length >0 %}
 
-        <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" class="img-fluid" id="big_img" alt="">
+       <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" class="img-fluid" id="big_img" alt="">
+{#        <img src="http://127.0.0.1:8000/uploads/30e8f34236460ef32d5efbc1ed5df021.jpeg" class="img-fluid" id="big_img" alt="">#}
     {% else%}
         <img src="http://127.0.0.1:8000/uploads/noimg.jpg" alt="">
     {% endif %}
@@ -31,13 +32,14 @@
     {{ activity.getDescriptionAct() }}
 {% endblock %}
 {% block pict %}
-    {% for image in i %}
+   {% for image in i %}
     <li>
 
             <img class="img-fluid" src="http://127.0.0.1:8000/uploads/{{ image.getImageUrl() }}" id="small_img" alt="">
 
     </li>
     {% endfor %}
+
 {% endblock %}
 {% block Exercice %}
     {% for e in activity.exercices %}
@@ -51,14 +53,27 @@
         </div>
     </div>
     {% endfor %}
+    <script>
+        // console.error("errrrr");
+        // $(document).ready(function (){
+        //     $("#bt").click(function (){
+        //         $("h1").toggle();
+        //
+        //     });
+        // });
+        console.log("errrrr");
+        $(document).ready(function(){
+            console.log("errrrr");
+            $(".img-fluid").click(function(){
+                $("#big_img").attr('src',$(this).attr('src'));
+            });
+        });
+
+    </script>
+
 {% endblock %}
 
 {% block c %}
-    <script type="text/javascript">
-        console.log("hhh");
-        $(document).ready(function(){
-            console.log("errrrr");
 
-        });
-    </script>
+
 {% endblock %}

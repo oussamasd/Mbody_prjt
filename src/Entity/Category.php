@@ -8,12 +8,14 @@ use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
+
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
  */
 class Category
 {
     /**
+     *
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -21,6 +23,7 @@ class Category
     private $id;
 
     /**
+     *
      * @ORM\Column(type="string", length=100)
      * @Assert\NotBlank(message = " nom est obligatoire")
      */

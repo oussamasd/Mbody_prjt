@@ -16,6 +16,8 @@ return [
         '/activity' => [[['_route' => 'activity', '_controller' => 'App\\Controller\\ActivityController::index'], null, null, null, false, false, null]],
         '/addActivity' => [[['_route' => 'activityAdd', '_controller' => 'App\\Controller\\ActivityController::add'], null, null, null, false, false, null]],
         '/activitySchedule' => [[['_route' => 'activitySchedule', '_controller' => 'App\\Controller\\ActivityController::Schedule'], null, null, null, false, false, null]],
+        '/activity/json/All' => [[['_route' => 'activityjson', '_controller' => 'App\\Controller\\ActivityController::index2'], null, null, null, false, false, null]],
+        '/activity/test/test' => [[['_route' => 'activitytest', '_controller' => 'App\\Controller\\ActivityController::index3'], null, null, null, false, false, null]],
         '/category' => [[['_route' => 'category', '_controller' => 'App\\Controller\\CategoryController::index'], null, null, null, false, false, null]],
         '/addCategory' => [[['_route' => 'categoryAdd', '_controller' => 'App\\Controller\\CategoryController::add'], null, null, null, false, false, null]],
         '/exercice' => [[['_route' => 'exercice', '_controller' => 'App\\Controller\\ExerciceController::index'], null, null, null, false, false, null]],

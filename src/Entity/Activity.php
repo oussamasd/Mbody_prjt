@@ -46,7 +46,7 @@ class Activity
     private $description_Act;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Category::class)
+     * @ORM\ManyToOne(targetEntity=Category::class , cascade={"REFRESH"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;

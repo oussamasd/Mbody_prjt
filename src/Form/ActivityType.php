@@ -50,7 +50,7 @@ class ActivityType extends AbstractType
                 'label' => false,
                 'multiple' => true,
                 'mapped' => false,
-                'required' => true
+                'required' => false
             ])
             ->add('Add',SubmitType::class)
 

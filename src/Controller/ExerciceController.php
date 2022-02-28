@@ -6,6 +6,7 @@ use App\Entity\Exercice;
 use App\Form\ExerciceType;
 use App\Repository\ExerciceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,9 +19,20 @@ class ExerciceController extends AbstractController
     public function index(): Response
     {
         $exercices= $this->getDoctrine()->getRepository(Exercice::class)->findAll();
-        return $this->render('exercice/index.html.twig', [
+       /* return $this->render('exercice/index.html.twig', [
             'exercices' => $exercices ,
-        ]);
+        ]);*/
+        $dt=array();
+        foreach ($exercices as $key =>$cat){
+            $dt[$key]['id'] = $cat->getId();
+            $dt[$key]['nom_Exercice'] = $cat->getNomExercice();
+            $dt[$key]['description_Exercice'] = $cat->getDescriptionExercice();
+            $dt[$key]['categoryId'] = $cat->getCategory()->getId();
+            $dt[$key]['categoryNom'] =$cat->getCategory()->getNomCat();
+            $dt[$key]['dure_Exercice'] = $cat->getDureExercice();
+
+        }
+        return new JsonResponse($dt);
     }
 
     /**

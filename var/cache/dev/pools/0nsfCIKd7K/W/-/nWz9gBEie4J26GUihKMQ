@@ -21,7 +21,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 null,
             ],
             'message' => [
-                1 => ' date est obligatoire',
+                1 => ' la dure de l\'exercice  est obligatoire',
             ],
             'groups' => [
                 1 => [

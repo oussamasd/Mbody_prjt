@@ -28,7 +28,7 @@ class Exercice
 
     /**
      * @ORM\Column(type="string", length=100)
-     * @Assert\NotBlank(message = " date est obligatoire")
+     * @Assert\NotBlank(message = " la dure de l'exercice  est obligatoire")
      */
     private $dure_Exercice;
 

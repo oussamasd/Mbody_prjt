@@ -24,6 +24,10 @@
             </div>
         </div>
     </div>
+    <div>
+        <input id="myInput" type="text" , placeholder="Search...." >
+        <h1 id="ii"></h1>
+    </div>
 
     <div class="row">
         {% for activity in activities %}
@@ -108,7 +112,23 @@
             </div>
         </div>
         {% endfor %}
+
     </div>
+    <div style="margin-left: 50%">
+    {{ knp_pagination_render(activities) }}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".col-lg-4").filter(function() {
+                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                 });
+
+            });
+        });
+    </script>
 {% endblock %}
 {% block b4 %}
 {% endblock %}
