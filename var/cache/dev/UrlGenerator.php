@@ -23,7 +23,6 @@ return [
     'ck' => [[], ['_controller' => 'App\\Controller\\AbonnementController::afficher'], [], [['text', '/abonnement/abon/back']], [], []],
     'abonnement_front' => [[], ['_controller' => 'App\\Controller\\AbonnementController::index1'], [], [['text', '/abonnement/frontabon']], [], []],
     'abonnement_index10' => [[], ['_controller' => 'App\\Controller\\AbonnementController::index10'], [], [['text', '/abonnement/mobile/json/abonnement']], [], []],
-    'sortname' => [[], ['_controller' => 'App\\Controller\\AbonnementController::triname'], [], [['text', '/abonnement/abon/back']], [], []],
     'offre_index' => [[], ['_controller' => 'App\\Controller\\OffreController::index'], [], [['text', '/offre/']], [], []],
     'offre_new' => [[], ['_controller' => 'App\\Controller\\OffreController::new'], [], [['text', '/offre/new']], [], []],
     'offre_show' => [['id'], ['_controller' => 'App\\Controller\\OffreController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],

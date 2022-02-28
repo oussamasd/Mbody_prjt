@@ -15,10 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/abonnement' => [[['_route' => 'abonnement_index', '_controller' => 'App\\Controller\\AbonnementController::index'], null, ['GET' => 0], null, true, false, null]],
         '/abonnement/new' => [[['_route' => 'abonnement_new', '_controller' => 'App\\Controller\\AbonnementController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/abonnement/abon/back' => [
-            [['_route' => 'ck', '_controller' => 'App\\Controller\\AbonnementController::afficher'], null, ['GET' => 0], null, false, false, null],
-            [['_route' => 'sortname', '_controller' => 'App\\Controller\\AbonnementController::triname'], null, null, null, false, false, null],
-        ],
+        '/abonnement/abon/back' => [[['_route' => 'ck', '_controller' => 'App\\Controller\\AbonnementController::afficher'], null, ['GET' => 0], null, false, false, null]],
         '/abonnement/mobile/json/abonnement' => [[['_route' => 'abonnement_index10', '_controller' => 'App\\Controller\\AbonnementController::index10'], null, null, null, false, false, null]],
         '/offre' => [[['_route' => 'offre_index', '_controller' => 'App\\Controller\\OffreController::index'], null, ['GET' => 0], null, true, false, null]],
         '/offre/new' => [[['_route' => 'offre_new', '_controller' => 'App\\Controller\\OffreController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],

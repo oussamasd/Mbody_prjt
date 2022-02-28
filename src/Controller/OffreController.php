@@ -9,6 +9,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -29,7 +31,7 @@ class OffreController extends AbstractController
     /**
      * @Route("/new", name="offre_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, EntityManagerInterface $entityManager,MailerInterface $mailer): Response
     {
         $offre = new Offre();
         $form = $this->createForm(OffreType::class, $offre);
@@ -38,6 +40,18 @@ class OffreController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($offre);
             $entityManager->flush();
+            $email = (new Email())
+                ->from($offre->getNom().gettext('@esprit.tn'))
+                ->to('masmoudi.hadil@esprit.tn')
+                //->cc('cc@example.com')
+                //->bcc('bcc@example.com')
+                //->replyTo('fabien@example.com')
+                //->priority(Email::PRIORITY_HIGH)
+                ->subject($offre->getNom().gettext(' est ajouter dans la salle de sport MBODYUP !'))
+                ->text('Sending emails is fun again!')
+                ->html($offre->getDescription().gettext(''));
+
+            $mailer->send($email);
 
             return $this->redirectToRoute('offre_index', [], Response::HTTP_SEE_OTHER);
         }

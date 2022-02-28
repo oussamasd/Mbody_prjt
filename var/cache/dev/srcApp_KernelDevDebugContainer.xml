@@ -5350,10 +5350,11 @@
         <argument key="offrerep" type="service_closure" id="App\Repository\OffreRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.x8FmIZ0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.CjplhxF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="mailer" type="service_closure" id="mailer.mailer"/>
       </argument>
     </service>
     <service id=".service_locator.3suOlCd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5367,6 +5368,13 @@
       <argument type="collection">
         <argument key="abonnement" type="service_closure" id=".errored..service_locator.yNRteaR.App\Entity\Abonnement"/>
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.CCgCFXi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="abonnementRepository" type="service_closure" id="App\Repository\AbonnementRepository"/>
+        <argument key="paginator" type="service_closure" id="knp_paginator"/>
       </argument>
     </service>
     <service id=".service_locator.g3TY9AI" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5401,40 +5409,38 @@
         <argument key="offre" type="service_closure" id=".errored..service_locator.qC9bCef.App\Entity\Offre"/>
       </argument>
     </service>
-    <service id=".service_locator.7ibQdA1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.GWQxjOD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AbonnementController::Liste" type="service_closure" id=".service_locator.5G5NXiw"/>
-        <argument key="App\Controller\AbonnementController::afficher" type="service_closure" id=".service_locator.g3TY9AI"/>
+        <argument key="App\Controller\AbonnementController::afficher" type="service_closure" id=".service_locator.CCgCFXi"/>
         <argument key="App\Controller\AbonnementController::delete" type="service_closure" id=".service_locator.yNRteaR"/>
         <argument key="App\Controller\AbonnementController::edit" type="service_closure" id=".service_locator.yNRteaR"/>
         <argument key="App\Controller\AbonnementController::index" type="service_closure" id=".service_locator.oxIwhvM"/>
         <argument key="App\Controller\AbonnementController::index1" type="service_closure" id=".service_locator.g3TY9AI"/>
         <argument key="App\Controller\AbonnementController::index10" type="service_closure" id=".service_locator.oxIwhvM"/>
-        <argument key="App\Controller\AbonnementController::new" type="service_closure" id=".service_locator.x8FmIZ0"/>
+        <argument key="App\Controller\AbonnementController::new" type="service_closure" id=".service_locator.CjplhxF"/>
         <argument key="App\Controller\AbonnementController::show" type="service_closure" id=".service_locator.3suOlCd"/>
-        <argument key="App\Controller\AbonnementController::triname" type="service_closure" id=".service_locator.3suOlCd"/>
         <argument key="App\Controller\OffreController::afficher" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController::delete" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController::edit" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController::index" type="service_closure" id=".service_locator.Jh7UbNl"/>
-        <argument key="App\Controller\OffreController::new" type="service_closure" id=".service_locator.x8FmIZ0"/>
+        <argument key="App\Controller\OffreController::new" type="service_closure" id=".service_locator.CjplhxF"/>
         <argument key="App\Controller\OffreController::show" type="service_closure" id=".service_locator.2zmwW.5"/>
         <argument key="App\Controller\AbonnementController:Liste" type="service_closure" id=".service_locator.5G5NXiw"/>
-        <argument key="App\Controller\AbonnementController:afficher" type="service_closure" id=".service_locator.g3TY9AI"/>
+        <argument key="App\Controller\AbonnementController:afficher" type="service_closure" id=".service_locator.CCgCFXi"/>
         <argument key="App\Controller\AbonnementController:delete" type="service_closure" id=".service_locator.yNRteaR"/>
         <argument key="App\Controller\AbonnementController:edit" type="service_closure" id=".service_locator.yNRteaR"/>
         <argument key="App\Controller\AbonnementController:index" type="service_closure" id=".service_locator.oxIwhvM"/>
         <argument key="App\Controller\AbonnementController:index1" type="service_closure" id=".service_locator.g3TY9AI"/>
         <argument key="App\Controller\AbonnementController:index10" type="service_closure" id=".service_locator.oxIwhvM"/>
-        <argument key="App\Controller\AbonnementController:new" type="service_closure" id=".service_locator.x8FmIZ0"/>
+        <argument key="App\Controller\AbonnementController:new" type="service_closure" id=".service_locator.CjplhxF"/>
         <argument key="App\Controller\AbonnementController:show" type="service_closure" id=".service_locator.3suOlCd"/>
-        <argument key="App\Controller\AbonnementController:triname" type="service_closure" id=".service_locator.3suOlCd"/>
         <argument key="App\Controller\OffreController:afficher" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController:delete" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController:edit" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController:index" type="service_closure" id=".service_locator.Jh7UbNl"/>
-        <argument key="App\Controller\OffreController:new" type="service_closure" id=".service_locator.x8FmIZ0"/>
+        <argument key="App\Controller\OffreController:new" type="service_closure" id=".service_locator.CjplhxF"/>
         <argument key="App\Controller\OffreController:show" type="service_closure" id=".service_locator.2zmwW.5"/>
       </argument>
     </service>
@@ -5889,12 +5895,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.7ibQdA1"/>
+      <argument type="service" id=".service_locator.GWQxjOD"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.7ibQdA1"/>
+      <argument type="service" id=".service_locator.GWQxjOD"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6300,7 +6306,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.7ibQdA1"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.GWQxjOD"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

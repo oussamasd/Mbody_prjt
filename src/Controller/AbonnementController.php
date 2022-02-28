@@ -12,6 +12,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Gedmo\Sluggable\Util\Urlizer;
 use Dompdf\Dompdf;
@@ -21,6 +22,7 @@ use Knp\Component\Pager\PaginatorInterface ;
 use Symfony\Component\Form\FormBuilderInterface;
 use App\Controller\NormalizerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Mime\Email;
 
 
 /**
@@ -48,7 +50,7 @@ class AbonnementController extends AbstractController
     /**
      * @Route("/new", name="abonnement_new", methods={"GET", "POST"})
      */
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, EntityManagerInterface $entityManager,MailerInterface $mailer): Response
     {
         $abonnement = new Abonnement();
         $form = $this->createForm(AbonnementType::class, $abonnement);
@@ -68,6 +70,19 @@ class AbonnementController extends AbstractController
                 $abonnement->setPhoto($newFilename);
                 $entityManager->persist($abonnement);
                 $entityManager->flush();
+                $email = (new Email())
+                    ->from($abonnement->getNom().gettext('@esprit.tn'))
+                    ->to('masmoudi.hadil@esprit.tn')
+                    //->cc('cc@example.com')
+                    //->bcc('bcc@example.com')
+                    //->replyTo('fabien@example.com')
+                    //->priority(Email::PRIORITY_HIGH)
+                    ->subject($abonnement->getNom().gettext(' est ajouter dans la salle de sport MBODYUP !'))
+                    ->text('Sending emails is fun again!')
+                    ->html($abonnement->getDescription().gettext(''));
+
+
+                $mailer->send($email);
 
 
                 return $this->redirectToRoute('ck', [], Response::HTTP_SEE_OTHER);
@@ -142,10 +157,17 @@ class AbonnementController extends AbstractController
     /**
      * @Route("/abon/back", name="ck", methods={"GET"})
      */
-    public function afficher(AbonnementRepository $abonnementRepository): Response
+    public function afficher(AbonnementRepository $abonnementRepository,Request $request,PaginatorInterface $paginator): Response
     {
+        $donnees = $this->getDoctrine()->getRepository(Abonnement::class)->findAll();
+
+        $abonnement= $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1),
+            3
+        );
         return $this->render('abonnement/indexback.html.twig', [
-            'abonnements' => $abonnementRepository->findAll(),
+            'abonnements' => $abonnement
         ]);
     }
 
@@ -211,16 +233,6 @@ class AbonnementController extends AbstractController
         }
         return new JsonResponse($dt);
 
-    }
-    /**
-     * @Route("/abon/back", name="sortname")
-     */
-    public function triname(Abonnement $abonnement): Response{
-        $abonnement = $this->getDoctrine()->getRepository(Abonnement::class)->sortName();
-        return $this->render('abonnement/indexback.html.twig', [
-            'controller_name' => 'AbonnementController',
-            'namesorted' => $abonnement,
-        ]);
     }
 
 }

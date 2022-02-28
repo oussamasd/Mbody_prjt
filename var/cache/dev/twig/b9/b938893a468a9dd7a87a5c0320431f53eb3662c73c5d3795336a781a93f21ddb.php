@@ -171,17 +171,17 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
-            ";
-            // line 52
-            echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 52, $this->source); })()));
-            echo "
+
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['abonnement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 54
-        echo "        </tbody>
+        echo "        ";
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 54, $this->source); })()));
+        echo "
+    </tbody>
     </table>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
     <script>
@@ -196,16 +196,16 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
     </script>
 
 ";
-        // line 69
+        // line 70
         echo "
      ";
-        // line 71
+        // line 72
         echo "<form method=\"post\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_new");
         echo "\" >
 <button type=\"btn\" class=\"btn btn-success\"> ";
-        // line 72
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 72, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
+        // line 73
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 73, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
         echo "</button>
 </form>
 
@@ -213,7 +213,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 
 
     ";
-        // line 78
+        // line 79
         $this->displayBlock('b1', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -232,7 +232,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b1"));
 
-        // line 79
+        // line 80
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -254,7 +254,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 
     public function getDebugInfo()
     {
-        return array (  236 => 79,  217 => 78,  208 => 72,  203 => 71,  200 => 69,  184 => 54,  176 => 52,  171 => 49,  161 => 44,  157 => 43,  149 => 38,  146 => 37,  144 => 36,  138 => 32,  134 => 31,  130 => 30,  126 => 29,  122 => 28,  118 => 27,  115 => 26,  110 => 25,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  236 => 80,  217 => 79,  208 => 73,  203 => 72,  200 => 70,  181 => 54,  171 => 49,  161 => 44,  157 => 43,  149 => 38,  146 => 37,  144 => 36,  138 => 32,  134 => 31,  130 => 30,  126 => 29,  122 => 28,  118 => 27,  115 => 26,  110 => 25,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -310,9 +310,10 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
             <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
-            {{ knp_pagination_render(articles) }}
+
         {% endfor %}
-        </tbody>
+        {{ knp_pagination_render(abonnements) }}
+    </tbody>
     </table>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
     <script>
