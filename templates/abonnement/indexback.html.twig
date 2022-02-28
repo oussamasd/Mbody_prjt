@@ -3,8 +3,9 @@
 {% block title %}Abonnement index{% endblock %}
 
 {% block body %}
-    <h1>Liste des abonnements</h1>
 
+    <h1 style="color: #d5606e">Liste des abonnements</h1>
+    <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher..">
     <table class="table">
         <thead>
             <tr>
@@ -18,7 +19,9 @@
 
             </tr>
         </thead>
+
         <tbody>
+    <tbody  id="myTable">
         {% for abonnement in abonnements %}
             <tr>
                 <td>{{ abonnement.id }}</td>
@@ -46,14 +49,32 @@
             <tr>
                 <td colspan="5">no records found</td>
             </tr>
+            {{ knp_pagination_render(articles) }}
         {% endfor %}
         </tbody>
     </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+{#    <div class="pagination"> {{ knp_pagination_render(abonnements) }} </div>#}
 
      {#   <a href="{{ path('abonnement_new') }}">Créer nouvelle</a>#}
 <form method="post" action="{{ path('abonnement_new') }}" >
 <button type="btn" class="btn btn-success"> {{ button_label|default('Ajouter') }}</button>
 </form>
+
+    <button  class="btn btn-info mr-2" onclick="window.print()" ><i class="fa fa-print" aria-hidden="true"></i></i>  Imprimer</button>
+
+
     {% block b1 %}
         {% endblock %}
 {% endblock %}

@@ -3,12 +3,12 @@
 {% block title %}Abonnement index{% endblock %}
 
 {% block b1 %}
-
     <section class="section" id="trainers" >
 
         <div class="container">
 
             <div class="row">
+
                 {% for p in abonnements %}
                     <div class="col-lg-4">
                         <div class="trainer-item" >
@@ -43,7 +43,17 @@
     <section class="section" id="trainers" >
     <div class="container">
         <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>nos <em>offres</em></h2>
+
+                    <img src="{{ asset('assets/images/features-first-icon.png') }}" alt="second one">
+                </div>
+
+            </div>
+
                         {% for offre in offres %}
+
                             <div class="col-lg-4">
                                 <div class="trainer-item" >
                                     <div class="image-thumb">
@@ -75,12 +85,13 @@
                             <tr>
                                 <td colspan="5">no records found</td>
                             </tr>
-                        {% endfor %}
 
+                        {% endfor %}
 
         </div>
     </div>
 </section>
+
 
     {#   <a href="{{ path('abonnement_new') }}">Créer nouvelle</a>#}
     <form method="post" action="{{ path('abonnement_new') }}" >

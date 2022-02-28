@@ -18,6 +18,12 @@ class AbonnementRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Abonnement::class);
     }
+    public function sortName(): array{
+        return $this->createQueryBuilder('l')
+            ->orderBy('l.nom' , 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
 
     // /**
     //  * @return Abonnement[] Returns an array of Abonnement objects

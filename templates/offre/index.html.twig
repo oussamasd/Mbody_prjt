@@ -3,8 +3,8 @@
 {% block title %}Offre index{% endblock %}
 
 {% block body %}
-    <h1>Liste des offres</h1>
-
+    <h1 style="color: #d5606e">Liste des offres</h1>
+    <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher..">
     <table class="table">
         <thead>
             <tr>
@@ -17,6 +17,7 @@
             </tr>
         </thead>
         <tbody>
+        <tbody  id="myTable">
         {% for offre in offres %}
             <tr>
                 <td>{{ offre.id }}</td>
@@ -45,9 +46,21 @@
         {% endfor %}
         </tbody>
     </table>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 {#    <a href="{{ path('offre_new') }}">Créer nouveau</a>#}
     <form method="post" action="{{ path('offre_new') }}" >
         <button type="btn" class="btn btn-success"> {{ button_label|default('Ajouter') }}</button>
     </form>
+
+    <button  class="btn btn-info mr-2" onclick="window.print()" ><i class="fa fa-print" aria-hidden="true"></i></i>  Imprimer</button>
 {% endblock %}
