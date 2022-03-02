@@ -1,0 +1,396 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* admin/index.html.twig */
+class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533c7047 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 2
+        return "base.back.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/index.html.twig"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/index.html.twig"));
+
+        $this->parent = $this->loadTemplate("base.back.html.twig", "admin/index.html.twig", 2);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Admin. | ";
+        $this->displayParentBlock("title", $context, $blocks);
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 5
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 6
+        echo "
+    <style>
+
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+<div class=\"container-fluid\">
+<div class=\"card shadow mb-4\">
+    <div class=\"card-header py-3\">
+        <h6 class=\"m-0 font-weight-bold text-primary\">
+            Liste des utilisateurs
+            </h6>
+    </div>
+    <div class=\"form-group\">
+        <div class=\"input-group\">
+            <div class=\"input-group-prepend\">
+                <button type=\"button\" class=\"btn btn-primary\" >Chercher</button>
+            </div>
+            <input type=\"text\" id=\"myInput\" class=\"form-control\" placeholder=\"Chercher une User\">
+        </div>
+    </div>
+
+
+    <div class=\"card-body\">
+        <div class=\"table-responsive\">
+";
+        // line 32
+        echo "            <table class=\"table table-bordered\"  width=\"100%\" cellspacing=\"0\">
+
+                <thead>
+                <br>
+
+                <th  style=\"width: 100px\">cin</th>
+                <th style=\"width: 100px\">nom</th>
+                <th style=\"width: 100px\">email</th>
+                <th style=\"width: 100px\">role</th>
+                <th style=\"width: 100px\">actions</th>
+                <th style=\"width: 100px\">envoyer un email)</th>
+
+                </thead>
+                <tbody id=\"myTable\">
+                ";
+        // line 46
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 46, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
+            // line 47
+            echo "                <tr>
+                    <td>";
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "cin", [], "any", false, false, false, 48), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 49
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 49), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 50), "html", null, true);
+            echo "</td>
+                    <td>  ";
+            // line 51
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 51));
+            foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
+                // line 52
+                echo "                            ";
+                if ((0 === twig_compare($context["role"], "ROLE_USER"))) {
+                    // line 53
+                    echo "                                  Utilisateur
+
+                            ";
+                } elseif ((0 === twig_compare(                // line 55
+$context["role"], "ROLE_ADMIN"))) {
+                    // line 56
+                    echo "                                Administrateur
+                            ";
+                }
+                // line 58
+                echo "                        ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 59
+            echo "                    </td>
+                    <td> <a href=\"";
+            // line 60
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("supprimerU", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 60)]), "html", null, true);
+            echo "\" class=\"btn btn-danger btn-circle\" >
+                            <i class='fa fa-remove'></i></a>
+                        <div class=\"my-2\"> </div>
+                        ";
+            // line 63
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 63));
+            foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
+                // line 64
+                echo "                        ";
+                if ((0 === twig_compare($context["role"], "ROLE_USER"))) {
+                    // line 65
+                    echo "                            <a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("modifierU", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 65)]), "html", null, true);
+                    echo "\"  class=\"btn btn-info btn-circle\"><i class=\"fa fa-wrench\"></i></i></a>
+
+
+                            ";
+                } elseif ((0 === twig_compare(                // line 68
+$context["role"], "ROLE_ADMIN"))) {
+                    // line 69
+                    echo "                        ";
+                }
+                // line 70
+                echo "                           ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 71
+            echo "
+
+                    </td>
+                     <td>
+
+
+                        <div class=\"my-2\"> </div>
+                         <a href=\"  ";
+            // line 78
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 78)]), "html", null, true);
+            echo "\" class=\"btn btn-light btn-icon-split\"  >
+                              <span class=\"icon text-gray-600\" >
+                                <i class=\"fas fa-arrow-right\">
+                                </i>
+                            </span>
+                             <span class=\"text \">envoyer un email</span>
+
+                         </a>
+
+                    </td>
+                </tr>
+
+
+                </tbody ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 91
+        echo ">
+            </table>
+            <button  class=\"btn btn-info mr-2\" onclick=\"window.print()\" ><i class=\"fa fa-print\" aria-hidden=\"true\"></i></i> Imprimer</button>
+
+        </div>
+
+        </div>
+</div>
+</div>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#myInput\").on(\"keyup\", function() {
+                var  value = \$(this).val().toLowerCase();
+                \$(\"#myTable\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "admin/index.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  237 => 91,  217 => 78,  208 => 71,  202 => 70,  199 => 69,  197 => 68,  190 => 65,  187 => 64,  183 => 63,  177 => 60,  174 => 59,  168 => 58,  164 => 56,  162 => 55,  158 => 53,  155 => 52,  151 => 51,  147 => 50,  143 => 49,  139 => 48,  136 => 47,  132 => 46,  116 => 32,  89 => 6,  79 => 5,  59 => 3,  36 => 2,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("
+{% extends 'base.back.html.twig' %}
+{% block title %}Admin. | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <style>
+
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+<div class=\"container-fluid\">
+<div class=\"card shadow mb-4\">
+    <div class=\"card-header py-3\">
+        <h6 class=\"m-0 font-weight-bold text-primary\">
+            Liste des utilisateurs
+            </h6>
+    </div>
+    <div class=\"form-group\">
+        <div class=\"input-group\">
+            <div class=\"input-group-prepend\">
+                <button type=\"button\" class=\"btn btn-primary\" >Chercher</button>
+            </div>
+            <input type=\"text\" id=\"myInput\" class=\"form-control\" placeholder=\"Chercher une User\">
+        </div>
+    </div>
+
+
+    <div class=\"card-body\">
+        <div class=\"table-responsive\">
+{#            <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\"></p>#}
+            <table class=\"table table-bordered\"  width=\"100%\" cellspacing=\"0\">
+
+                <thead>
+                <br>
+
+                <th  style=\"width: 100px\">cin</th>
+                <th style=\"width: 100px\">nom</th>
+                <th style=\"width: 100px\">email</th>
+                <th style=\"width: 100px\">role</th>
+                <th style=\"width: 100px\">actions</th>
+                <th style=\"width: 100px\">envoyer un email)</th>
+
+                </thead>
+                <tbody id=\"myTable\">
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.cin }}</td>
+                    <td>{{ user.nom }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>  {% for role in user.roles %}
+                            {% if role == \"ROLE_USER\" %}
+                                  Utilisateur
+
+                            {% elseif role == \"ROLE_ADMIN\" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> <a href=\"{{ path ('supprimerU' ,{'id':user.id}) }}\" class=\"btn btn-danger btn-circle\" >
+                            <i class='fa fa-remove'></i></a>
+                        <div class=\"my-2\"> </div>
+                        {% for role in user.roles %}
+                        {% if role == \"ROLE_USER\"   %}
+                            <a href=\"{{ path ('modifierU' ,{'id':user.id}) }}\"  class=\"btn btn-info btn-circle\"><i class=\"fa fa-wrench\"></i></i></a>
+
+
+                            {% elseif  role == \"ROLE_ADMIN\" %}
+                        {% endif %}
+                           {% endfor %}
+
+
+                    </td>
+                     <td>
+
+
+                        <div class=\"my-2\"> </div>
+                         <a href=\"  {{path('contact',{'id':user.id})  }}\" class=\"btn btn-light btn-icon-split\"  >
+                              <span class=\"icon text-gray-600\" >
+                                <i class=\"fas fa-arrow-right\">
+                                </i>
+                            </span>
+                             <span class=\"text \">envoyer un email</span>
+
+                         </a>
+
+                    </td>
+                </tr>
+
+
+                </tbody {% endfor %}>
+            </table>
+            <button  class=\"btn btn-info mr-2\" onclick=\"window.print()\" ><i class=\"fa fa-print\" aria-hidden=\"true\"></i></i> Imprimer</button>
+
+        </div>
+
+        </div>
+</div>
+</div>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#myInput\").on(\"keyup\", function() {
+                var  value = \$(this).val().toLowerCase();
+                \$(\"#myTable\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}
+", "admin/index.html.twig", "C:\\xampp\\htdocs\\Mbody_prjt\\templates\\admin\\index.html.twig");
+    }
+}

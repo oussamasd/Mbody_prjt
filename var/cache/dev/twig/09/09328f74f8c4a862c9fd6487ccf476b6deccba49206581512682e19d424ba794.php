@@ -66,7 +66,7 @@ https://templatemo.com/tm-548-training-studio
         // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/bootstrap.min.css"), "html", null, true);
         echo "\">
-
+      <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css\">
     <link rel=\"stylesheet\" type=\"text/css\" href=\"";
         // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/font-awesome.css"), "html", null, true);
@@ -78,6 +78,95 @@ https://templatemo.com/tm-548-training-studio
         echo "\">
 
     </head>
+  <style>
+      * {
+          padding: 0;
+          margin: 0
+      }
+
+      .container {
+
+          display: flex;
+
+
+      }
+
+      .profile {
+          position: relative;
+          text-align: center;
+          margin-top: 60px
+      }
+
+
+
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          transition: all 2s
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block
+      }
+
+      .dropdown-content a:hover {
+          background-color: #ddd
+      }
+
+      .dropdown:hover .dropdown-content {
+          display: block
+      }
+
+      .profile ul {
+          background-color: #fff;
+          width: 200px;
+          height: 190px;
+          border-radius: 10px;
+          right: 25px;
+          top: 7px;
+          position: absolute;
+          padding: 8px;
+          transition: all 0.5s;
+          z-index: 1
+      }
+
+      .profile ul::before {
+          content: '';
+          position: absolute;
+          background-color: #fff;
+          height: 10px;
+          width: 10px;
+          top: -5px;
+          transform: rotate(45deg)
+      }
+
+      .profile ul li {
+          list-style: none;
+          text-align: left;
+          font-size: 15px;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          transition: all 0.5s;
+          cursor: pointer;
+          border-radius: 4px
+      }
+
+      .profile ul li:hover {
+          background-color: #eee
+      }
+
+      .profile ul li i {
+          margin-right: 7px
+      }
+  </style>
     
     <body>
     
@@ -112,8 +201,54 @@ https://templatemo.com/tm-548-training-studio
                             <li class=\"scroll-to-section\"><a href=\"#schedule\">Abonnement</a></li>
                             <li class=\"scroll-to-section\"><a href=\"#schedule\">Entraineur</a></li>
                             <li class=\"scroll-to-section\"><a href=\"#contact-us\">Feedback</a></li>
-                            <li class=\"main-button\"><a href=\"#\">Sign Up</a></li>
-                        </ul>        
+                            ";
+        // line 151
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 152
+            echo "                                <li class=\"scroll-to-section\"> <a href=\"";
+            echo "/admin";
+            echo "\">Admin</a></li>
+                            ";
+        }
+        // line 154
+        echo "
+                             ";
+        // line 155
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 155, $this->source); })()), "user", [], "any", false, false, false, 155)) {
+            // line 156
+            echo "                                 <aside>
+                                 <div class=\"container \" >
+                                     <div class=\"dropdown \">
+                                         <div class=\"profile\"> ";
+            // line 159
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 159, $this->source); })()), "user", [], "any", false, false, false, 159), "username", [], "any", false, false, false, 159), "html", null, true);
+            echo "
+                                             <div class=\"dropdown-content\">
+                                                 <ul>
+                                                     <li><i class='bx bx-cog'></i><span>Settings</span></li>
+                                                     <li><i class='bx bx-user'></i><span>Profiles</span></li>
+                                                     <li><i class='bx bx-cog'></i><span>Inbox</span></li>
+                                                     <li><i class='bx bx-cog'></i><span>Help</span></li>
+                                                     <li><i class='bx bx-log-in-circle'></i><span><a href=\"";
+            // line 166
+            echo "logout";
+            echo "\">Logout</a> /span></li>
+                                                 </ul>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 </aside>
+                            ";
+        } else {
+            // line 174
+            echo "                            <li class=\"main-button\"><a href=\"";
+            echo "login";
+            echo "\">Sign Up</a></li>
+                            ";
+        }
+        // line 176
+        echo "                        </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
@@ -129,7 +264,7 @@ https://templatemo.com/tm-548-training-studio
     <div class=\"main-banner\" id=\"top\">
         <video autoplay muted loop id=\"bg-video\">
             <source src=\"";
-        // line 78
+        // line 191
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/gym-video.mp4"), "html", null, true);
         echo "\" type=\"video/mp4\" />
         </video>
@@ -150,9 +285,9 @@ https://templatemo.com/tm-548-training-studio
     <section class=\"section\" id=\"features\">
         <div class=\"container\">
             ";
-        // line 96
+        // line 209
         $this->displayBlock('Produit', $context, $blocks);
-        // line 175
+        // line 288
         echo "        </div>
     </section>
     <!-- ***** Features Item End ***** -->
@@ -179,9 +314,9 @@ https://templatemo.com/tm-548-training-studio
     <section class=\"section\" id=\"our-classes\">
         <div class=\"container\">
             ";
-        // line 200
+        // line 313
         $this->displayBlock('Activite', $context, $blocks);
-        // line 258
+        // line 371
         echo "        </div>
     </section>
     <!-- ***** Our Classes End ***** -->
@@ -193,7 +328,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"section-heading dark-bg\">
                         <h2>Classes <em>Schedule</em></h2>
                         <img src=\"";
-        // line 268
+        // line 381
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -262,7 +397,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"section-heading\">
                         <h2>Expert <em>Trainers</em></h2>
                         <img src=\"";
-        // line 334
+        // line 447
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -274,7 +409,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 343
+        // line 456
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/first-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -295,7 +430,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 361
+        // line 474
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/second-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -316,7 +451,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class=\"trainer-item\">
                         <div class=\"image-thumb\">
                             <img src=\"";
-        // line 379
+        // line 492
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/third-trainer.jpg"), "html", null, true);
         echo "\" alt=\"\">
                         </div>
@@ -403,49 +538,49 @@ https://templatemo.com/tm-548-training-studio
 
     <!-- jQuery -->
     <script src=\"";
-        // line 463
+        // line 576
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery-2.1.0.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Bootstrap -->
     <script src=\"";
-        // line 466
+        // line 579
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/popper.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 467
+        // line 580
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Plugins -->
     <script src=\"";
-        // line 470
+        // line 583
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scrollreveal.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 471
+        // line 584
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/waypoints.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 472
+        // line 585
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 473
+        // line 586
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/imgfix.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 474
+        // line 587
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mixitup.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 475
+        // line 588
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/accordions.js"), "html", null, true);
         echo "\"></script>
     
     <!-- Global Init -->
     <script src=\"";
-        // line 478
+        // line 591
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -459,7 +594,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 96
+    // line 209
     public function block_Produit($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -469,13 +604,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Produit"));
 
-        // line 97
+        // line 210
         echo "            <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
                         <h2>Choose <em>Hadil</em></h2>
                         <img src=\"";
-        // line 101
+        // line 214
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"waves\">
                         <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
@@ -486,7 +621,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 109
+        // line 222
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"First One\">
                             </div>
@@ -499,7 +634,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 119
+        // line 232
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"second one\">
                             </div>
@@ -512,7 +647,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 129
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"third gym training\">
                             </div>
@@ -529,7 +664,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 143
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"fourth muscle\">
                             </div>
@@ -542,7 +677,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 153
+        // line 266
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"training fifth\">
                             </div>
@@ -555,7 +690,7 @@ https://templatemo.com/tm-548-training-studio
                         <li class=\"feature-item\">
                             <div class=\"left-icon\">
                                 <img src=\"";
-        // line 163
+        // line 276
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/features-first-icon.png"), "html", null, true);
         echo "\" alt=\"gym training\">
                             </div>
@@ -577,7 +712,7 @@ https://templatemo.com/tm-548-training-studio
 
     }
 
-    // line 200
+    // line 313
     public function block_Activite($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -587,13 +722,13 @@ https://templatemo.com/tm-548-training-studio
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Activite"));
 
-        // line 201
+        // line 314
         echo "            <div class=\"row\">
                 <div class=\"col-lg-6 offset-lg-3\">
                     <div class=\"section-heading\">
                         <h2>Our <em>Classes</em></h2>
                         <img src=\"";
-        // line 205
+        // line 318
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/line-dec.png"), "html", null, true);
         echo "\" alt=\"\">
                         <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
@@ -604,21 +739,21 @@ https://templatemo.com/tm-548-training-studio
               <div class=\"col-lg-4\">
                 <ul>
                   <li><a href='#tabs-1'><img src=\"";
-        // line 213
+        // line 326
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
         echo "\" alt=\"\">First Training Class</a></li>
                   <li><a href='#tabs-2'><img src=\"";
-        // line 214
+        // line 327
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">Second Training Class</a></a></li>
+        echo "\" alt=\"\">Second Training Class</a></li>
                   <li><a href='#tabs-3'><img src=\"";
-        // line 215
+        // line 328
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">Third Training Class</a></a></li>
+        echo "\" alt=\"\">Third Training Class</a></li>
                   <li><a href='#tabs-4'><img src=\"";
-        // line 216
+        // line 329
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/tabs-first-icon.png"), "html", null, true);
-        echo "\" alt=\"\">Fourth Training Class</a></a></li>
+        echo "\" alt=\"\">Fourth Training Class</a></li>
                   <div class=\"main-rounded-button\"><a href=\"#\">View All Schedules</a></div>
                 </ul>
               </div>
@@ -626,7 +761,7 @@ https://templatemo.com/tm-548-training-studio
                 <section class='tabs-content'>
                   <article id='tabs-1'>
                     <img src=\"";
-        // line 223
+        // line 336
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-01.jpg"), "html", null, true);
         echo "\" alt=\"First Class\">
                     <h4>First Training Class</h4>
@@ -637,7 +772,7 @@ https://templatemo.com/tm-548-training-studio
                   </article>
                   <article id='tabs-2'>
                     <img src=\"";
-        // line 231
+        // line 344
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-02.jpg"), "html", null, true);
         echo "\" alt=\"Second Training\">
                     <h4>Second Training Class</h4>
@@ -648,7 +783,7 @@ https://templatemo.com/tm-548-training-studio
                   </article>
                   <article id='tabs-3'>
                     <img src=\"";
-        // line 239
+        // line 352
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-03.jpg"), "html", null, true);
         echo "\" alt=\"Third Class\">
                     <h4>Third Training Class</h4>
@@ -659,7 +794,7 @@ https://templatemo.com/tm-548-training-studio
                   </article>
                   <article id='tabs-4'>
                     <img src=\"";
-        // line 247
+        // line 360
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/training-image-04.jpg"), "html", null, true);
         echo "\" alt=\"Fourth Training\">
                     <h4>Fourth Training Class</h4>
@@ -692,7 +827,7 @@ https://templatemo.com/tm-548-training-studio
 
     public function getDebugInfo()
     {
-        return array (  663 => 247,  652 => 239,  641 => 231,  630 => 223,  620 => 216,  616 => 215,  612 => 214,  608 => 213,  597 => 205,  591 => 201,  581 => 200,  559 => 163,  546 => 153,  533 => 143,  516 => 129,  503 => 119,  490 => 109,  479 => 101,  473 => 97,  463 => 96,  449 => 478,  443 => 475,  439 => 474,  435 => 473,  431 => 472,  427 => 471,  423 => 470,  417 => 467,  413 => 466,  407 => 463,  320 => 379,  299 => 361,  278 => 343,  266 => 334,  197 => 268,  185 => 258,  183 => 200,  156 => 175,  154 => 96,  133 => 78,  77 => 25,  72 => 23,  67 => 21,  45 => 1,);
+        return array (  798 => 360,  787 => 352,  776 => 344,  765 => 336,  755 => 329,  751 => 328,  747 => 327,  743 => 326,  732 => 318,  726 => 314,  716 => 313,  694 => 276,  681 => 266,  668 => 256,  651 => 242,  638 => 232,  625 => 222,  614 => 214,  608 => 210,  598 => 209,  584 => 591,  578 => 588,  574 => 587,  570 => 586,  566 => 585,  562 => 584,  558 => 583,  552 => 580,  548 => 579,  542 => 576,  455 => 492,  434 => 474,  413 => 456,  401 => 447,  332 => 381,  320 => 371,  318 => 313,  291 => 288,  289 => 209,  268 => 191,  251 => 176,  245 => 174,  234 => 166,  224 => 159,  219 => 156,  217 => 155,  214 => 154,  208 => 152,  206 => 151,  77 => 25,  72 => 23,  67 => 21,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -718,12 +853,101 @@ https://templatemo.com/tm-548-training-studio
 -->
     <!-- Additional CSS Files -->
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('assets/css/bootstrap.min.css') }}\">
-
+      <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css\">
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('assets/css/font-awesome.css') }}\">
 
     <link rel=\"stylesheet\" href=\"{{ asset('assets/css/templatemo-training-studio.css') }}\">
 
     </head>
+  <style>
+      * {
+          padding: 0;
+          margin: 0
+      }
+
+      .container {
+
+          display: flex;
+
+
+      }
+
+      .profile {
+          position: relative;
+          text-align: center;
+          margin-top: 60px
+      }
+
+
+
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          transition: all 2s
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block
+      }
+
+      .dropdown-content a:hover {
+          background-color: #ddd
+      }
+
+      .dropdown:hover .dropdown-content {
+          display: block
+      }
+
+      .profile ul {
+          background-color: #fff;
+          width: 200px;
+          height: 190px;
+          border-radius: 10px;
+          right: 25px;
+          top: 7px;
+          position: absolute;
+          padding: 8px;
+          transition: all 0.5s;
+          z-index: 1
+      }
+
+      .profile ul::before {
+          content: '';
+          position: absolute;
+          background-color: #fff;
+          height: 10px;
+          width: 10px;
+          top: -5px;
+          transform: rotate(45deg)
+      }
+
+      .profile ul li {
+          list-style: none;
+          text-align: left;
+          font-size: 15px;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          transition: all 0.5s;
+          cursor: pointer;
+          border-radius: 4px
+      }
+
+      .profile ul li:hover {
+          background-color: #eee
+      }
+
+      .profile ul li i {
+          margin-right: 7px
+      }
+  </style>
     
     <body>
     
@@ -758,7 +982,31 @@ https://templatemo.com/tm-548-training-studio
                             <li class=\"scroll-to-section\"><a href=\"#schedule\">Abonnement</a></li>
                             <li class=\"scroll-to-section\"><a href=\"#schedule\">Entraineur</a></li>
                             <li class=\"scroll-to-section\"><a href=\"#contact-us\">Feedback</a></li>
-                            <li class=\"main-button\"><a href=\"#\">Sign Up</a></li>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <li class=\"scroll-to-section\"> <a href=\"{{ '/admin' }}\">Admin</a></li>
+                            {% endif %}
+
+                             {% if app.user %}
+                                 <aside>
+                                 <div class=\"container \" >
+                                     <div class=\"dropdown \">
+                                         <div class=\"profile\"> {{ app.user.username }}
+                                             <div class=\"dropdown-content\">
+                                                 <ul>
+                                                     <li><i class='bx bx-cog'></i><span>Settings</span></li>
+                                                     <li><i class='bx bx-user'></i><span>Profiles</span></li>
+                                                     <li><i class='bx bx-cog'></i><span>Inbox</span></li>
+                                                     <li><i class='bx bx-cog'></i><span>Help</span></li>
+                                                     <li><i class='bx bx-log-in-circle'></i><span><a href=\"{{ 'logout' }}\">Logout</a> /span></li>
+                                                 </ul>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 </aside>
+                            {% else %}
+                            <li class=\"main-button\"><a href=\"{{ 'login' }}\">Sign Up</a></li>
+                            {% endif %}
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -910,9 +1158,9 @@ https://templatemo.com/tm-548-training-studio
               <div class=\"col-lg-4\">
                 <ul>
                   <li><a href='#tabs-1'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">First Training Class</a></li>
-                  <li><a href='#tabs-2'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">Second Training Class</a></a></li>
-                  <li><a href='#tabs-3'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">Third Training Class</a></a></li>
-                  <li><a href='#tabs-4'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">Fourth Training Class</a></a></li>
+                  <li><a href='#tabs-2'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">Second Training Class</a></li>
+                  <li><a href='#tabs-3'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">Third Training Class</a></li>
+                  <li><a href='#tabs-4'><img src=\"{{ asset('assets/images/tabs-first-icon.png') }}\" alt=\"\">Fourth Training Class</a></li>
                   <div class=\"main-rounded-button\"><a href=\"#\">View All Schedules</a></div>
                 </ul>
               </div>
@@ -1177,6 +1425,6 @@ https://templatemo.com/tm-548-training-studio
     <script src=\"{{ asset('assets/js/custom.js') }}\"></script>
 
   </body>
-</html>", "base.front.html.twig", "C:\\wamp64\\www\\Mbody_Prjt\\templates\\base.front.html.twig");
+</html>", "base.front.html.twig", "C:\\xampp\\htdocs\\Mbody_prjt\\templates\\base.front.html.twig");
     }
 }

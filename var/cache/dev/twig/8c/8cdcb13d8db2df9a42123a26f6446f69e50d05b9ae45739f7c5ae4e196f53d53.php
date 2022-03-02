@@ -1,0 +1,895 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* base.signup.html.twig */
+class __TwigTemplate_486af6847cc5d9f731cce1bb72aa4e21c9fd05b7e1a4dda5594ac42f19c9e6cd extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+            'login' => [$this, 'block_login'],
+            'register' => [$this, 'block_register'],
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.signup.html.twig"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "base.signup.html.twig"));
+
+        // line 1
+        echo "<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Snippet - BBBootstrap</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <style> @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #c4c3ca;
+
+            overflow-x: hidden
+        }
+
+        a {
+            cursor: pointer;
+            transition: all 200ms linear
+        }
+
+        a:hover {
+            text-decoration: none
+        }
+
+        .link {
+            color: #c4c3ca
+        }
+
+        .link:hover {
+            color: #ffeba7
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.7
+        }
+
+        h4 {
+            font-weight: 600
+        }
+
+        h6 span {
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            display: block
+        }
+
+        .full-height {
+            min-height: 100vh
+        }
+
+        [type=\"checkbox\"]:checked,
+        [type=\"checkbox\"]:not(:checked) {
+            position: absolute;
+            left: -9999px
+        }
+
+        .checkbox:checked+label,
+        .checkbox:not(:checked)+label {
+            position: relative;
+            display: block;
+            text-align: center;
+            width: 60px;
+            height: 16px;
+            border-radius: 8px;
+            padding: 0;
+            margin: 10px auto;
+            cursor: pointer;
+            background-color: #ffeba7
+        }
+
+        .checkbox:checked+label:before,
+        .checkbox:not(:checked)+label:before {
+            position: absolute;
+            display: block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: #ffeba7;
+            background-color: #102770;
+            font-family: 'unicons';
+            content: '\\eb4f';
+            z-index: 20;
+            top: -10px;
+            left: -10px;
+            line-height: 36px;
+            text-align: center;
+            font-size: 24px;
+            transition: all 0.5s ease
+        }
+
+        .checkbox:checked+label:before {
+            transform: translateX(44px) rotate(-270deg)
+        }
+
+        .card-3d-wrap {
+            position: relative;
+            width: 440px;
+            max-width: 100%;
+            height: 400px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            perspective: 800px;
+            margin-top: 60px
+        }
+
+        .card-3d-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            transition: all 600ms ease-out
+        }
+
+        .card-front,
+        .card-back {
+            width: 525px;
+            height: 600px;
+            background-color: #2a2b38;
+            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+            /*background-position: top center;*/
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            border-radius: 6px;
+            left: 0;
+            top: 0;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .card-back {
+            transform: rotateY(180deg)
+        }
+
+        .checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+            transform: rotateY(180deg)
+        }
+
+        .center-wrap {
+            position: absolute;
+            width: 100%;
+            padding: 0 35px;
+            top: 50%;
+            left: 0;
+            transform: translate3d(0, -50%, 35px) perspective(100px);
+            z-index: 20;
+            display: block
+        }
+
+        .form-group {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0
+        }
+
+        .form-style {
+            padding: 13px 20px;
+            padding-left: 55px;
+            height: 48px;
+            width: 100%;
+            font-weight: 500;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.5px;
+            outline: none;
+            color: #c4c3ca;
+            background-color: #1f2029;
+            border: none;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+        }
+
+        .form-style:focus,
+        .form-style:active {
+            border: none;
+            outline: none;
+            box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 48px;
+            font-size: 24px;
+            line-height: 48px;
+            text-align: left;
+            color: #ffeba7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:-ms-input-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input::-moz-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:-moz-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input::-webkit-input-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus:-ms-input-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus::-moz-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus:-moz-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus::-webkit-input-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .btn {
+            border-radius: 4px;
+            height: 44px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            padding: 0 30px;
+            letter-spacing: 1px;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center;
+            -ms-flex-pack: center;
+            text-align: center;
+            border: none;
+            background-color: #ffeba7;
+            color: #102770;
+            box-shadow: 0 8px 24px 0 rgba(255, 235, 167, .2)
+        }
+
+        .btn:active,
+        .btn:focus {
+            background-color: #102770;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2)
+        }
+
+        .btn:hover {
+            background-color: #102770;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2)
+        }
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: block;
+            z-index: 100;
+            transition: all 250ms linear
+        }
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+            display: block
+        }</style>
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+<a href=\"";
+        // line 338
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\" class=\"logo\" target=\"_blank\"> <img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("retour.png"), "html", null, true);
+        echo "\" alt=\"\"> </a>
+<video id=\"background-video\" autoplay loop muted poster=\"https://assets.codepen.io/6093409/river.jpg\">
+    <source src=\"";
+        // line 340
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bg.mp4"), "html", null, true);
+        echo "\" type=\"video/mp4\">
+</video>
+
+<div class=\"section\">
+    <div class=\"container\">
+        <div class=\"row full-height justify-content-center\">
+            <div class=\"col-12 text-center align-self-center py-5\">
+                <div class=\"section pb-5 pt-5 pt-sm-2 text-center\">
+                    <div class=\"card-3d-wrap mx-auto\">
+                        <div class=\"card-3d-wrapper\">
+                            <div class=\"card-front\">
+                                <div class=\"center-wrap\">
+                                    <div class=\"section text-center\">
+                                        ";
+        // line 353
+        $this->displayBlock('login', $context, $blocks);
+        // line 359
+        echo "                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"card-back\">
+                                <div class=\"center-wrap\">
+                                    <div class=\"section text-center\">
+                                        ";
+        // line 365
+        $this->displayBlock('register', $context, $blocks);
+        // line 371
+        echo "                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src=''></script>
+<script type='text/javascript' src=''></script>
+<script type='text/Javascript'></script>
+</body>
+</html>";
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 353
+    public function block_login($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "login"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "login"));
+
+        // line 354
+        echo "                                        <h4 class=\"mb-4 pb-3\">Log In</h4>
+                                        <div class=\"form-group\"> <input type=\"email\" name=\"logemail\" class=\"form-style\" placeholder=\"Your Email\" id=\"logemail\" autocomplete=\"off\"> <i class=\"input-icon uil uil-at\"></i> </div>
+                                        <div class=\"form-group mt-2\"> <input type=\"password\" name=\"logpass\" class=\"form-style\" placeholder=\"Your Password\" id=\"logpass\" autocomplete=\"off\"> <i class=\"input-icon uil uil-lock-alt\"></i> </div> <a href=\"#\" class=\"btn mt-4\">submit</a>
+                                        <p class=\"mb-0 mt-4 text-center\"><a href=\"#0\" class=\"link\">Forgot your password?</a></p>
+                                        ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 365
+    public function block_register($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "register"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "register"));
+
+        // line 366
+        echo "                                        <h4 class=\"mb-4 pb-3\">Sign Up</h4>
+                                        <div class=\"form-group\"> <input type=\"text\" name=\"logname\" class=\"form-style\" placeholder=\"Your Full Name\" id=\"logname\" autocomplete=\"off\">  </div>
+                                        <div class=\"form-group mt-2\"> <input type=\"email\" name=\"logemail\" class=\"form-style\" placeholder=\"Your Email\" id=\"logemail\" autocomplete=\"off\"> <i class=\"input-icon uil uil-at\"></i> </div>
+                                        <div class=\"form-group mt-2\"> <input type=\"password\" name=\"logpass\" class=\"form-style\" placeholder=\"Your Password\" id=\"logpass\" autocomplete=\"off\"> <i class=\"input-icon uil uil-lock-alt\"></i> </div> <a href=\"#\" class=\"btn mt-4\">submit</a>
+                                        ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "base.signup.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  478 => 366,  468 => 365,  454 => 354,  444 => 353,  419 => 371,  417 => 365,  409 => 359,  407 => 353,  391 => 340,  384 => 338,  45 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Snippet - BBBootstrap</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <style> @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #c4c3ca;
+
+            overflow-x: hidden
+        }
+
+        a {
+            cursor: pointer;
+            transition: all 200ms linear
+        }
+
+        a:hover {
+            text-decoration: none
+        }
+
+        .link {
+            color: #c4c3ca
+        }
+
+        .link:hover {
+            color: #ffeba7
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.7
+        }
+
+        h4 {
+            font-weight: 600
+        }
+
+        h6 span {
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: 700
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            display: block
+        }
+
+        .full-height {
+            min-height: 100vh
+        }
+
+        [type=\"checkbox\"]:checked,
+        [type=\"checkbox\"]:not(:checked) {
+            position: absolute;
+            left: -9999px
+        }
+
+        .checkbox:checked+label,
+        .checkbox:not(:checked)+label {
+            position: relative;
+            display: block;
+            text-align: center;
+            width: 60px;
+            height: 16px;
+            border-radius: 8px;
+            padding: 0;
+            margin: 10px auto;
+            cursor: pointer;
+            background-color: #ffeba7
+        }
+
+        .checkbox:checked+label:before,
+        .checkbox:not(:checked)+label:before {
+            position: absolute;
+            display: block;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            color: #ffeba7;
+            background-color: #102770;
+            font-family: 'unicons';
+            content: '\\eb4f';
+            z-index: 20;
+            top: -10px;
+            left: -10px;
+            line-height: 36px;
+            text-align: center;
+            font-size: 24px;
+            transition: all 0.5s ease
+        }
+
+        .checkbox:checked+label:before {
+            transform: translateX(44px) rotate(-270deg)
+        }
+
+        .card-3d-wrap {
+            position: relative;
+            width: 440px;
+            max-width: 100%;
+            height: 400px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            perspective: 800px;
+            margin-top: 60px
+        }
+
+        .card-3d-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            transition: all 600ms ease-out
+        }
+
+        .card-front,
+        .card-back {
+            width: 525px;
+            height: 600px;
+            background-color: #2a2b38;
+            background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+            /*background-position: top center;*/
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            border-radius: 6px;
+            left: 0;
+            top: 0;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .card-back {
+            transform: rotateY(180deg)
+        }
+
+        .checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+            transform: rotateY(180deg)
+        }
+
+        .center-wrap {
+            position: absolute;
+            width: 100%;
+            padding: 0 35px;
+            top: 50%;
+            left: 0;
+            transform: translate3d(0, -50%, 35px) perspective(100px);
+            z-index: 20;
+            display: block
+        }
+
+        .form-group {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0
+        }
+
+        .form-style {
+            padding: 13px 20px;
+            padding-left: 55px;
+            height: 48px;
+            width: 100%;
+            font-weight: 500;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.5px;
+            outline: none;
+            color: #c4c3ca;
+            background-color: #1f2029;
+            border: none;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+        }
+
+        .form-style:focus,
+        .form-style:active {
+            border: none;
+            outline: none;
+            box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+        }
+
+        .input-icon {
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 48px;
+            font-size: 24px;
+            line-height: 48px;
+            text-align: left;
+            color: #ffeba7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:-ms-input-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input::-moz-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:-moz-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input::-webkit-input-placeholder {
+            color: #c4c3ca;
+            opacity: 0.7;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus:-ms-input-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus::-moz-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus:-moz-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .form-group input:focus::-webkit-input-placeholder {
+            opacity: 0;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear
+        }
+
+        .btn {
+            border-radius: 4px;
+            height: 44px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            -webkit-transition: all 200ms linear;
+            transition: all 200ms linear;
+            padding: 0 30px;
+            letter-spacing: 1px;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center;
+            -ms-flex-pack: center;
+            text-align: center;
+            border: none;
+            background-color: #ffeba7;
+            color: #102770;
+            box-shadow: 0 8px 24px 0 rgba(255, 235, 167, .2)
+        }
+
+        .btn:active,
+        .btn:focus {
+            background-color: #102770;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2)
+        }
+
+        .btn:hover {
+            background-color: #102770;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2)
+        }
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: block;
+            z-index: 100;
+            transition: all 250ms linear
+        }
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+            display: block
+        }</style>
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+<a href=\"{{ path('app_login') }}\" class=\"logo\" target=\"_blank\"> <img src=\"{{ asset('retour.png') }}\" alt=\"\"> </a>
+<video id=\"background-video\" autoplay loop muted poster=\"https://assets.codepen.io/6093409/river.jpg\">
+    <source src=\"{{ asset ('bg.mp4') }}\" type=\"video/mp4\">
+</video>
+
+<div class=\"section\">
+    <div class=\"container\">
+        <div class=\"row full-height justify-content-center\">
+            <div class=\"col-12 text-center align-self-center py-5\">
+                <div class=\"section pb-5 pt-5 pt-sm-2 text-center\">
+                    <div class=\"card-3d-wrap mx-auto\">
+                        <div class=\"card-3d-wrapper\">
+                            <div class=\"card-front\">
+                                <div class=\"center-wrap\">
+                                    <div class=\"section text-center\">
+                                        {% block login %}
+                                        <h4 class=\"mb-4 pb-3\">Log In</h4>
+                                        <div class=\"form-group\"> <input type=\"email\" name=\"logemail\" class=\"form-style\" placeholder=\"Your Email\" id=\"logemail\" autocomplete=\"off\"> <i class=\"input-icon uil uil-at\"></i> </div>
+                                        <div class=\"form-group mt-2\"> <input type=\"password\" name=\"logpass\" class=\"form-style\" placeholder=\"Your Password\" id=\"logpass\" autocomplete=\"off\"> <i class=\"input-icon uil uil-lock-alt\"></i> </div> <a href=\"#\" class=\"btn mt-4\">submit</a>
+                                        <p class=\"mb-0 mt-4 text-center\"><a href=\"#0\" class=\"link\">Forgot your password?</a></p>
+                                        {% endblock %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"card-back\">
+                                <div class=\"center-wrap\">
+                                    <div class=\"section text-center\">
+                                        {% block register %}
+                                        <h4 class=\"mb-4 pb-3\">Sign Up</h4>
+                                        <div class=\"form-group\"> <input type=\"text\" name=\"logname\" class=\"form-style\" placeholder=\"Your Full Name\" id=\"logname\" autocomplete=\"off\">  </div>
+                                        <div class=\"form-group mt-2\"> <input type=\"email\" name=\"logemail\" class=\"form-style\" placeholder=\"Your Email\" id=\"logemail\" autocomplete=\"off\"> <i class=\"input-icon uil uil-at\"></i> </div>
+                                        <div class=\"form-group mt-2\"> <input type=\"password\" name=\"logpass\" class=\"form-style\" placeholder=\"Your Password\" id=\"logpass\" autocomplete=\"off\"> <i class=\"input-icon uil uil-lock-alt\"></i> </div> <a href=\"#\" class=\"btn mt-4\">submit</a>
+                                        {% endblock %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src=''></script>
+<script type='text/javascript' src=''></script>
+<script type='text/Javascript'></script>
+</body>
+</html>", "base.signup.html.twig", "C:\\xampp\\htdocs\\Mbody_prjt\\templates\\base.signup.html.twig");
+    }
+}

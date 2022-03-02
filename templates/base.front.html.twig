@@ -19,12 +19,101 @@ https://templatemo.com/tm-548-training-studio
 -->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
-
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-training-studio.css') }}">
 
     </head>
+  <style>
+      * {
+          padding: 0;
+          margin: 0
+      }
+
+      .container {
+
+          display: flex;
+
+
+      }
+
+      .profile {
+          position: relative;
+          text-align: center;
+          margin-top: 60px
+      }
+
+
+
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          transition: all 2s
+      }
+
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block
+      }
+
+      .dropdown-content a:hover {
+          background-color: #ddd
+      }
+
+      .dropdown:hover .dropdown-content {
+          display: block
+      }
+
+      .profile ul {
+          background-color: #fff;
+          width: 200px;
+          height: 190px;
+          border-radius: 10px;
+          right: 25px;
+          top: 7px;
+          position: absolute;
+          padding: 8px;
+          transition: all 0.5s;
+          z-index: 1
+      }
+
+      .profile ul::before {
+          content: '';
+          position: absolute;
+          background-color: #fff;
+          height: 10px;
+          width: 10px;
+          top: -5px;
+          transform: rotate(45deg)
+      }
+
+      .profile ul li {
+          list-style: none;
+          text-align: left;
+          font-size: 15px;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          transition: all 0.5s;
+          cursor: pointer;
+          border-radius: 4px
+      }
+
+      .profile ul li:hover {
+          background-color: #eee
+      }
+
+      .profile ul li i {
+          margin-right: 7px
+      }
+  </style>
     
     <body>
     
@@ -59,7 +148,31 @@ https://templatemo.com/tm-548-training-studio
                             <li class="scroll-to-section"><a href="#schedule">Abonnement</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Entraineur</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Feedback</a></li>
-                            <li class="main-button"><a href="#">Sign Up</a></li>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <li class="scroll-to-section"> <a href="{{ '/admin' }}">Admin</a></li>
+                            {% endif %}
+
+                             {% if app.user %}
+                                 <aside>
+                                 <div class="container " >
+                                     <div class="dropdown ">
+                                         <div class="profile"> {{ app.user.username }}
+                                             <div class="dropdown-content">
+                                                 <ul>
+                                                     <li><i class='bx bx-cog'></i><span>Settings</span></li>
+                                                     <li><i class='bx bx-user'></i><span>Profiles</span></li>
+                                                     <li><i class='bx bx-cog'></i><span>Inbox</span></li>
+                                                     <li><i class='bx bx-cog'></i><span>Help</span></li>
+                                                     <li><i class='bx bx-log-in-circle'></i><span><a href="{{ 'logout' }}">Logout</a> /span></li>
+                                                 </ul>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 </aside>
+                            {% else %}
+                            <li class="main-button"><a href="{{ 'login' }}">Sign Up</a></li>
+                            {% endif %}
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -211,9 +324,9 @@ https://templatemo.com/tm-548-training-studio
               <div class="col-lg-4">
                 <ul>
                   <li><a href='#tabs-1'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">First Training Class</a></li>
-                  <li><a href='#tabs-2'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">Second Training Class</a></a></li>
-                  <li><a href='#tabs-3'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">Third Training Class</a></a></li>
-                  <li><a href='#tabs-4'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">Fourth Training Class</a></a></li>
+                  <li><a href='#tabs-2'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">Second Training Class</a></li>
+                  <li><a href='#tabs-3'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">Third Training Class</a></li>
+                  <li><a href='#tabs-4'><img src="{{ asset('assets/images/tabs-first-icon.png') }}" alt="">Fourth Training Class</a></li>
                   <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
                 </ul>
               </div>

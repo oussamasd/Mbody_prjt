@@ -1,0 +1,111 @@
+
+{% extends 'base.back.html.twig' %}
+{% block title %}Admin. | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <style>
+
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+<div class="container-fluid">
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Liste des utilisateurs
+            </h6>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-primary" >Chercher</button>
+            </div>
+            <input type="text" id="myInput" class="form-control" placeholder="Chercher une User">
+        </div>
+    </div>
+
+
+    <div class="card-body">
+        <div class="table-responsive">
+{#            <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher.."></p>#}
+            <table class="table table-bordered"  width="100%" cellspacing="0">
+
+                <thead>
+                <br>
+
+                <th  style="width: 100px">cin</th>
+                <th style="width: 100px">nom</th>
+                <th style="width: 100px">email</th>
+                <th style="width: 100px">role</th>
+                <th style="width: 100px">actions</th>
+                <th style="width: 100px">envoyer un email)</th>
+
+                </thead>
+                <tbody id="myTable">
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.cin }}</td>
+                    <td>{{ user.nom }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>  {% for role in user.roles %}
+                            {% if role == "ROLE_USER" %}
+                                  Utilisateur
+
+                            {% elseif role == "ROLE_ADMIN" %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td> <a href="{{ path ('supprimerU' ,{'id':user.id}) }}" class="btn btn-danger btn-circle" >
+                            <i class='fa fa-remove'></i></a>
+                        <div class="my-2"> </div>
+                        {% for role in user.roles %}
+                        {% if role == "ROLE_USER"   %}
+                            <a href="{{ path ('modifierU' ,{'id':user.id}) }}"  class="btn btn-info btn-circle"><i class="fa fa-wrench"></i></i></a>
+
+
+                            {% elseif  role == "ROLE_ADMIN" %}
+                        {% endif %}
+                           {% endfor %}
+
+
+                    </td>
+                     <td>
+
+
+                        <div class="my-2"> </div>
+                         <a href="  {{path('contact',{'id':user.id})  }}" class="btn btn-light btn-icon-split"  >
+                              <span class="icon text-gray-600" >
+                                <i class="fas fa-arrow-right">
+                                </i>
+                            </span>
+                             <span class="text ">envoyer un email</span>
+
+                         </a>
+
+                    </td>
+                </tr>
+
+
+                </tbody {% endfor %}>
+            </table>
+            <button  class="btn btn-info mr-2" onclick="window.print()" ><i class="fa fa-print" aria-hidden="true"></i></i> Imprimer</button>
+
+        </div>
+
+        </div>
+</div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var  value = $(this).val().toLowerCase();
+                $("#myTable").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}

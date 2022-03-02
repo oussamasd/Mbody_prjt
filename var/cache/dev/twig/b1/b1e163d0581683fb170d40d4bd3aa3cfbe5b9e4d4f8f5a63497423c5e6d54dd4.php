@@ -76,6 +76,6 @@ class __TwigTemplate_d1c2b96cf09ee07ca9550a2cb523e3ea83ee8d5b69ffa8ef4e31d6942a9
 
     <h1>hello oussama</h1>
 {% endblock %}#}
-", "test/index.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\test\\index.html.twig");
+", "test/index.html.twig", "C:\\xampp\\htdocs\\Mbody_prjt\\templates\\test\\index.html.twig");
     }
 }

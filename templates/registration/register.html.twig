@@ -1,0 +1,37 @@
+
+{% extends 'base.signup.html.twig' %}
+{% block title %}Register{% endblock %}
+
+{% block login %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+    <div class="container">
+        <center> <h1 class="mb-4 pb-3">Register</h1> </center>
+        <table>
+            <tr>
+      <tr class="form-group">
+        {{ form_start(registrationForm,{'attr':{'novalidate':'novalidate'}}) }}
+
+        {{ form_row(registrationForm.cin,{ label :'Cin     ' }) }}<i class="input-icon uil uil-user"></i><br>
+                    {{ form_row(registrationForm.password, {
+                        label: 'Password '
+                    }) }}<i class="input-icon uil uil-user"></i><br>
+        {{ form_row(registrationForm.nom ,{ label :'Nom ' }) }}<i class="input-icon uil uil-user"></i><br>
+                    {{ form_row(registrationForm.adresse,{ label :'Adresse ' }) }}<i class="input-icon uil uil-user"></i><br>
+
+
+        {{ form_row(registrationForm.email ,{ label :'Email' }) }}<i class="input-icon uil uil-user"></i><br>
+                    {{ form_row(registrationForm.prenom ,{ label :'Prenom' }) }}<i class="input-icon uil uil-user"></i><br>
+
+        {{ form_row(registrationForm.numero ,{ label :'Numero' }) }}<i class="input-icon uil uil-user"></i><br>
+
+      </div>
+            </tr>
+        </table>
+
+        <br>
+        <center> <button type="submit" class="btn">Register</button> </center>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

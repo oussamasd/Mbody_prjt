@@ -1,0 +1,27 @@
+{% extends ('base.back.html.twig') %}
+
+{% block title %}Modifier un utilisateur{% endblock %}
+
+{% block body %}
+    <table>
+
+    <h1>Modifier un utilisateur</h1>
+    {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+
+        <tr>
+            <td>{{ form_row(form.cin) }}</td>
+            <td>{{ form_row(form.nom) }}</td>
+            <td>{{ form_row(form.prenom) }}</td>
+            <td>{{ form_row(form.email) }}</td>
+
+            <td>{{ form_row(form.roles) }}</td>
+            <td>{{ form_row(form.adresse) }}</td>
+            <td>{{ form_row(form.numero) }}</td>
+            <td>{{ form_row(form.password, {
+        label: 'Password'
+    }) }}</td>
+        </tr>
+    </table>
+    {{ form_end(form) }}
+
+{% endblock %}

@@ -228,7 +228,10 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
                     <div aria-labelledby=\"languages\" class=\"dropdown-menu\"><a rel=\"nofollow\" href=\"#\" class=\"dropdown-item\"> <img src=\"img/flags/16/DE.png\" alt=\"English\" class=\"mr-2\"><span>German</span></a><a rel=\"nofollow\" href=\"#\" class=\"dropdown-item\"> <img src=\"img/flags/16/FR.png\" alt=\"English\" class=\"mr-2\"><span>French  </span></a></div>
                 </div>
                 <!-- Log out               -->
-                <div class=\"list-inline-item logout\">                   <a id=\"logout\" href=\"login.html\" class=\"nav-link\"> <span class=\"d-none d-sm-inline\">Logout </span><i class=\"icon-logout\"></i></a></div>
+                <div class=\"list-inline-item logout\">                   <a id=\"logout\" href=\"";
+        // line 166
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\" class=\"nav-link\"> <span class=\"d-none d-sm-inline\">Logout </span><i class=\"icon-logout\"></i></a></div>
             </div>
         </div>
     </nav>
@@ -251,8 +254,8 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"#\">ALL Users</a></li>
+                    <li><a href=\"#\"></a></li>
                     <li><a href=\"#\">Page</a></li>
                 </ul>
             </li>
@@ -409,7 +412,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
     public function getDebugInfo()
     {
-        return array (  372 => 215,  362 => 214,  343 => 6,  330 => 259,  326 => 258,  322 => 257,  318 => 256,  314 => 255,  310 => 254,  306 => 253,  302 => 252,  283 => 235,  281 => 214,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
+        return array (  375 => 215,  365 => 214,  346 => 6,  333 => 259,  329 => 258,  325 => 257,  321 => 256,  317 => 255,  313 => 254,  309 => 253,  305 => 252,  286 => 235,  284 => 214,  233 => 166,  87 => 23,  82 => 21,  77 => 19,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -579,7 +582,7 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
                     <div aria-labelledby=\"languages\" class=\"dropdown-menu\"><a rel=\"nofollow\" href=\"#\" class=\"dropdown-item\"> <img src=\"img/flags/16/DE.png\" alt=\"English\" class=\"mr-2\"><span>German</span></a><a rel=\"nofollow\" href=\"#\" class=\"dropdown-item\"> <img src=\"img/flags/16/FR.png\" alt=\"English\" class=\"mr-2\"><span>French  </span></a></div>
                 </div>
                 <!-- Log out               -->
-                <div class=\"list-inline-item logout\">                   <a id=\"logout\" href=\"login.html\" class=\"nav-link\"> <span class=\"d-none d-sm-inline\">Logout </span><i class=\"icon-logout\"></i></a></div>
+                <div class=\"list-inline-item logout\">                   <a id=\"logout\" href=\"{{ path('app_logout') }}\" class=\"nav-link\"> <span class=\"d-none d-sm-inline\">Logout </span><i class=\"icon-logout\"></i></a></div>
             </div>
         </div>
     </nav>
@@ -602,8 +605,8 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"#\">ALL Users</a></li>
+                    <li><a href=\"#\"></a></li>
                     <li><a href=\"#\">Page</a></li>
                 </ul>
             </li>
@@ -674,6 +677,6 @@ class __TwigTemplate_2614e3454783b6724251dcb8af967d01df008dd91e067638d15b70757df
 <script src=\"{{ asset('Back/js/charts-home.js') }}\"></script>
 <script src=\"{{ asset('Back/js/front.js') }}\"></script>
 </body>
-</html>", "base.back.html.twig", "C:\\wamp64\\www\\Mbody_Prjt\\templates\\base.back.html.twig");
+</html>", "base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_prjt\\templates\\base.back.html.twig");
     }
 }
