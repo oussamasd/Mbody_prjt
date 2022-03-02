@@ -179,59 +179,66 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
     </div>
     <div>
         <input id=\"myInput\" type=\"text\" , placeholder=\"Search....\" >
-        <h1 id=\"ii\"></h1>
+
+        ";
+        // line 33
+        echo "
     </div>
 
     <div class=\"row\">
         ";
-        // line 33
+        // line 37
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 33, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 37, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["activity"]) {
-            // line 34
+            // line 38
             echo "            ";
-            $context["i"] = twig_get_attribute($this->env, $this->source, $context["activity"], "getImages", [], "method", false, false, false, 34);
-            // line 56
+            $context["i"] = twig_get_attribute($this->env, $this->source, $context["activity"], "getImages", [], "method", false, false, false, 38);
+            // line 60
             echo "
 ";
-            // line 59
+            // line 63
             echo "
 ";
-            // line 78
+            // line 82
             echo "        <div class=\"col-lg-4\">
             <div class=\"trainer-item\">
                 <div class=\"image-thumb\">
                     ";
-            // line 81
-            if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 81, $this->source); })())), 0))) {
-                // line 82
+            // line 85
+            if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 85, $this->source); })())), 0))) {
+                // line 86
                 echo "
                     <img src=\"http://127.0.0.1:8000/uploads/";
-                // line 83
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 83, $this->source); })()), 0, [], "array", false, false, false, 83), "getImageUrl", [], "method", false, false, false, 83), "html", null, true);
+                // line 87
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 87, $this->source); })()), 0, [], "array", false, false, false, 87), "getImageUrl", [], "method", false, false, false, 87), "html", null, true);
                 echo "\" alt=\"\">
                     ";
             } else {
-                // line 85
+                // line 89
                 echo "                    <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">
                     ";
             }
-            // line 87
+            // line 91
             echo "
 
                 </div>
                 <div class=\"down-content\">
                     <span>";
-            // line 91
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["activity"], "getCategory", [], "any", false, false, false, 91), "getNomCat", [], "method", false, false, false, 91), "html", null, true);
+            // line 95
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["activity"], "getCategory", [], "any", false, false, false, 95), "getNomCat", [], "method", false, false, false, 95), "html", null, true);
             echo "</span>
                     <h4>";
-            // line 92
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getNomAct", [], "method", false, false, false, 92), "html", null, true);
+            // line 96
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getNomAct", [], "method", false, false, false, 96), "html", null, true);
             echo "</h4>
+                    <h6>";
+            // line 97
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDateAct", [], "any", false, false, false, 97), "Y-m-d"), "html", null, true);
+            echo "</h6>
                     <p>";
-            // line 93
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDescriptionAct", [], "method", false, false, false, 93), "html", null, true);
+            // line 98
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDescriptionAct", [], "method", false, false, false, 98), "html", null, true);
             echo "</p>
                     <table>
                     <tr>
@@ -246,8 +253,8 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                         <td>
                             <div class=\"stage\">
                                 <a class=\"lnkSchow\" href=\"/activity/details/";
-            // line 106
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getId", [], "method", false, false, false, 106), "html", null, true);
+            // line 111
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getId", [], "method", false, false, false, 111), "html", null, true);
             echo "\">Read More</a>
                             </div>
                         </td>
@@ -261,13 +268,13 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['activity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 115
+        // line 120
         echo "
     </div>
     <div style=\"margin-left: 50%\">
     ";
-        // line 118
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 118, $this->source); })()));
+        // line 123
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 123, $this->source); })()));
         echo "
     </div>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
@@ -278,11 +285,11 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                 \$(\".col-lg-4\").filter(function() {
                  \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
                  });
-                
+
             });
         });
     </script>
-";
+  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -318,7 +325,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
 
     }
 
-    // line 133
+    // line 153
     public function block_b4($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -348,7 +355,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
 
     public function getDebugInfo()
     {
-        return array (  322 => 133,  310 => 16,  305 => 15,  295 => 14,  270 => 118,  265 => 115,  250 => 106,  234 => 93,  230 => 92,  226 => 91,  220 => 87,  216 => 85,  211 => 83,  208 => 82,  206 => 81,  201 => 78,  198 => 59,  195 => 56,  192 => 34,  188 => 33,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
+        return array (  329 => 153,  317 => 16,  312 => 15,  302 => 14,  277 => 123,  272 => 120,  257 => 111,  241 => 98,  237 => 97,  233 => 96,  229 => 95,  223 => 91,  219 => 89,  214 => 87,  211 => 86,  209 => 85,  204 => 82,  201 => 63,  198 => 60,  195 => 38,  191 => 37,  185 => 33,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -381,7 +388,11 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
     </div>
     <div>
         <input id=\"myInput\" type=\"text\" , placeholder=\"Search....\" >
-        <h1 id=\"ii\"></h1>
+
+        {#<input id=\"check\" type=\"checkbox\" name=\"disponible\" value=\"{{ date }}\" placeholder=\"haha\">
+        <label for=\"disponible\"> disponble</label>
+        <div id=\"result\" style=\"background: yellow;\"></div>#}
+
     </div>
 
     <div class=\"row\">
@@ -445,6 +456,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                 <div class=\"down-content\">
                     <span>{{ activity.getCategory.getNomCat() }}</span>
                     <h4>{{ activity.getNomAct() }}</h4>
+                    <h6>{{ activity.getDateAct|date('Y-m-d') }}</h6>
                     <p>{{ activity.getDescriptionAct() }}</p>
                     <table>
                     <tr>
@@ -480,10 +492,25 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                 \$(\".col-lg-4\").filter(function() {
                  \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
                  });
-                
+
             });
         });
     </script>
+  {#  <script>
+        \$(document).ready(function(){
+            \$('input[type=\"checkbox\"]').click(function(){
+                var values = \$(this).val().toLowerCase();
+                if(\$(this).is(\":checked\")){
+                    \$(\".col-lg-4 \").filter(function() {
+                        \$(this).toggle(\$(this).text().equalTo(values))
+                    });
+                }
+                else if(\$(this).is(\":not(:checked)\")){
+                    \$(\"#result\").html(\"Checkbox is unchecked.\");
+                }
+            });
+        });
+    </script>#}
 {% endblock %}
 {% block b4 %}
 {% endblock %}

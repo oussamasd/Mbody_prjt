@@ -26,7 +26,11 @@
     </div>
     <div>
         <input id="myInput" type="text" , placeholder="Search...." >
-        <h1 id="ii"></h1>
+
+        {#<input id="check" type="checkbox" name="disponible" value="{{ date }}" placeholder="haha">
+        <label for="disponible"> disponble</label>
+        <div id="result" style="background: yellow;"></div>#}
+
     </div>
 
     <div class="row">
@@ -90,6 +94,7 @@
                 <div class="down-content">
                     <span>{{ activity.getCategory.getNomCat() }}</span>
                     <h4>{{ activity.getNomAct() }}</h4>
+                    <h6>{{ activity.getDateAct|date('Y-m-d') }}</h6>
                     <p>{{ activity.getDescriptionAct() }}</p>
                     <table>
                     <tr>
@@ -129,6 +134,21 @@
             });
         });
     </script>
+  {#  <script>
+        $(document).ready(function(){
+            $('input[type="checkbox"]').click(function(){
+                var values = $(this).val().toLowerCase();
+                if($(this).is(":checked")){
+                    $(".col-lg-4 ").filter(function() {
+                        $(this).toggle($(this).text().equalTo(values))
+                    });
+                }
+                else if($(this).is(":not(:checked)")){
+                    $("#result").html("Checkbox is unchecked.");
+                }
+            });
+        });
+    </script>#}
 {% endblock %}
 {% block b4 %}
 {% endblock %}

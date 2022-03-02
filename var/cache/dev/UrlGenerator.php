@@ -31,4 +31,5 @@ return [
     'ExerciceDelete' => [['id'], ['_controller' => 'App\\Controller\\ExerciceController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/DeleteExercice']], [], []],
     'test' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/test']], [], []],
     'test1' => [[], ['_controller' => 'App\\Controller\\TestController::index2'], [], [['text', '/test1']], [], []],
+    'test2' => [[], ['_controller' => 'App\\Controller\\TestController::index3'], [], [['text', '/test2']], [], []],
 ];

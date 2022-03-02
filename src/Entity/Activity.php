@@ -63,10 +63,21 @@ class Activity
      */
     private $images;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="activities")
+     */
+    private $participe;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $quantite;
+
     public function __construct()
     {
         $this->exercices = new ArrayCollection();
         $this->images = new ArrayCollection();
+        $this->participe = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -191,5 +202,41 @@ class Activity
     {
         $metadata->addPropertyConstraint('date_Act', new Assert\GreaterThan(date('Y-m-d')));
         $metadata->addPropertyConstraint('date_Act', new Assert\NotNull());
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getParticipe(): Collection
+    {
+        return $this->participe;
+    }
+
+    public function addParticipe(User $participe): self
+    {
+        if (!$this->participe->contains($participe)) {
+            $this->participe[] = $participe;
+        }
+
+        return $this;
+    }
+
+    public function removeParticipe(User $participe): self
+    {
+        $this->participe->removeElement($participe);
+
+        return $this;
+    }
+
+    public function getQuantite(): ?int
+    {
+        return $this->quantite;
+    }
+
+    public function setQuantite(?int $quantite): self
+    {
+        $this->quantite = $quantite;
+
+        return $this;
     }
 }

@@ -32,6 +32,15 @@
         <td>  {{ form_errors(formActivity.temp_act) }} </td>
     </tr>
     <tr>
+        <td>  {{ form_label(formActivity.quantite,"nombre de participation")}}  </td>
+
+        <td> {{ form_widget(formActivity.quantite)}}   </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>  {{ form_errors(formActivity.quantite) }} </td>
+    </tr>
+    <tr>
         <td>  {{ form_label(formActivity.description_Act,"Description")}}  </td>
         <td> {{ form_widget(formActivity.description_Act)}}   </td>
     </tr>

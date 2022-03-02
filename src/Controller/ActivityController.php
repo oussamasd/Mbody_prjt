@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Entity\Activity;
 use App\Entity\ImageActEx;
+use App\Entity\User;
 use App\Form\ActivityType;
+use App\Form\PaticipeType;
 use App\Repository\ActivityRepository;
 use App\Repository\ExerciceRepository;
 use DateInterval;
@@ -25,7 +27,7 @@ class ActivityController extends AbstractController
     public function index(Request $request , PaginatorInterface $paginator): Response
     {
         $data= $this->getDoctrine()->getRepository(Activity::class)->findAll();
-        var_dump($this->getUser());
+       // var_dump($this->getUser());
         $activity= $paginator->paginate(
             $data,  //notre data
             $request->query->getInt('page',1), //numero de la page en cour : par defaut 1
@@ -35,6 +37,7 @@ class ActivityController extends AbstractController
 //        var_dump(sizeof($h));
         return $this->render('activity/Affichactivity.html.twig', [
             'activities' => $activity ,
+            'date' =>date("Y-m-d")
         ]);
     }
     /**
@@ -222,12 +225,36 @@ class ActivityController extends AbstractController
     /**
      * @Route("/activity/details/{id}", name="activityDetails")
      */
-    public function showmore($id): Response
+    public function showmore($id , Request $request): Response
     {
+        $form= $this->createForm(PaticipeType::class);
+        $form->handleRequest($request);
         $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
+        //user is the participation .... after integration change it to
+        //$participant=$this->getUser();
+        $participant = $this->getDoctrine()->getRepository(User::class)->find(2);
+        //pour teste user est  participé
+        $particpe=false;
+        foreach($activity->getParticipe() as $pp){
+            if($pp==$participant){
+                $particpe=true;
+            }
+        }
+
+
+        if($form->isSubmitted()){
+
+            $activity->addParticipe($participant);
+            $em= $this->getDoctrine()->getManager();
+            $em->flush();
+        }
+
 
         return $this->render('activity/detailActivity.html.twig', [
             'activity' => $activity ,
+            'btnParticipe' =>$form->createView(),
+            'participe'=>$particpe,
+            'userparticipated'=>sizeof($activity->getParticipe())
         ]);
     }
     /**

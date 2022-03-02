@@ -24,6 +24,7 @@ return [
         '/addExercice' => [[['_route' => 'exerciceAdd', '_controller' => 'App\\Controller\\ExerciceController::add'], null, null, null, false, false, null]],
         '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::index'], null, null, null, false, false, null]],
         '/test1' => [[['_route' => 'test1', '_controller' => 'App\\Controller\\TestController::index2'], null, null, null, false, false, null]],
+        '/test2' => [[['_route' => 'test2', '_controller' => 'App\\Controller\\TestController::index3'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

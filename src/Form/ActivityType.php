@@ -34,6 +34,7 @@ class ActivityType extends AbstractType
                 // adds a class that can be selected in JavaScript
                ])
             ->add('temp_act')
+            ->add('quantite')
             ->add('description_Act')
 
             ->add('category', EntityType::class, array(

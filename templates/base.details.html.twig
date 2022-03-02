@@ -54,17 +54,21 @@
                     <div class="feature-img">
                         {% block fimage %} <img class="img-fluid"  src="{{ asset('detail/assets/img/blog/single_blog_1.png') }}" alt="">{% endblock %}
                     </div>
+                    {% block Participe %}
+                    {% endblock %}
                     <div class="blog_details">
-
+                        {% block tit %}
                         <h2>
-                            {% block tit %}
+
                             Second divided from form fish beast made every of seas
                             all gathered us saying he our
-                            {% endblock %}
+
                         </h2>
+                        {% endblock %}
                         <ul class="blog-info-link mt-3 mb-4">
                             <li><a href="#">{% block cat %}<i class="fa fa-comments"></i> 03 Comments</a>{% endblock %}</li>
                             <li><a href="#">{% block dt %}<i class="fa fa-user"></i> Travel, Lifestyle</a>{% endblock %}</li>
+                            <li><a href="#">{% block qt %}<i class="fa fa-user"></i> Travel, Lifestyle</a>{% endblock %}</li>
 
                         </ul>
 
