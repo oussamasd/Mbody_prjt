@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\ContactType;
+use App\Form\SearchUserType;
 use App\Form\UserType;
 use App\Repository\UserRepository;
 use Symfony\Component\Mailer\MailerInterface;
@@ -31,14 +32,23 @@ class AdminController extends AbstractController
     /**
      * @Route("/admin", name="admin")
      */
-    public function admin()
+    public function admin(Request $request)
     {
 
 
         $users = $this->getDoctrine()->getRepository(User::class)->findAll();
+        $formSearch= $this->createForm(SearchUserType::class);
+        $formSearch->handleRequest($request);
+        if($formSearch->isSubmitted()){
+            $cin= $formSearch->getData()->getCin();
+            $result= $this->getDoctrine()->getRepository(User::class)->searchUser($cin);
+            return $this->render("admin/index.html.twig",["users"=>$result, 'formSearch'=>$formSearch->createView()]);
+        }
 
         return $this->render('admin/index.html.twig', [
             'users' => $users,
+            'formSearch'=>$formSearch->createView(),
+
 
         ]);
     }

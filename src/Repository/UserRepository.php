@@ -52,6 +52,14 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         ;
     }
     */
+    public function searchUser($cin)
+    {
+        return $this->createQueryBuilder('s')
+            ->andWhere('s.cin LIKE :x')
+            ->setParameter('x', '%'.$cin.'%')
+            ->getQuery()
+            ->execute();
+    }
 
     /*
     public function findOneBySomeField($value): ?User

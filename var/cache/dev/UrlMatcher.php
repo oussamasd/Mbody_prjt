@@ -20,12 +20,11 @@ return [
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginFormController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\LoginFormController::logout'], null, null, null, false, false, null]],
         '/oubli-pass' => [[['_route' => 'app_forgotten_password', '_controller' => 'App\\Controller\\LoginFormController::oubliPass'], null, null, null, false, false, null]],
+        '/profile/user' => [[['_route' => 'app_profile_user', '_controller' => 'App\\Controller\\ProfileUserController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/ajouterUserJ' => [[['_route' => 'ajouterUserJ', '_controller' => 'App\\Controller\\RegistrationController::SignupAction'], null, null, null, false, false, null]],
         '/Signin' => [[['_route' => 'signin', '_controller' => 'App\\Controller\\RegistrationController::signinAction'], null, null, null, false, false, null]],
         '/user/getPasswordByEmail' => [[['_route' => 'app_password', '_controller' => 'App\\Controller\\RegistrationController::getPassswordByEmail'], null, null, null, false, false, null]],
-        '/reset-password' => [[['_route' => 'app_forgot_password_request', '_controller' => 'App\\Controller\\ResetPasswordController::request'], null, null, null, false, false, null]],
-        '/reset-password/check-email' => [[['_route' => 'app_check_email', '_controller' => 'App\\Controller\\ResetPasswordController::checkEmail'], null, null, null, false, false, null]],
         '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -53,8 +52,8 @@ return [
                     .'|ctivation/([^/]++)(*:242)'
                 .')'
                 .'|/supprimerUserJson/([^/]++)(*:278)'
-                .'|/reset\\-password/reset(?:/([^/]++))?(*:322)'
-                .'|/test/profileuser/([^/]++)(*:356)'
+                .'|/reset_pass/([^/]++)(*:306)'
+                .'|/test/profileuser/([^/]++)(*:340)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -69,8 +68,8 @@ return [
         215 => [[['_route' => 'supprimerU', '_controller' => 'App\\Controller\\RegistrationController::supprimer'], ['id'], null, null, false, true, null]],
         242 => [[['_route' => 'activation', '_controller' => 'App\\Controller\\RegistrationController::activation'], ['token'], null, null, false, true, null]],
         278 => [[['_route' => 'supprimerUs_Json', '_controller' => 'App\\Controller\\AdminController::supprimerJson'], ['id'], null, null, false, true, null]],
-        322 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
-        356 => [
+        306 => [[['_route' => 'app_reset_password', '_controller' => 'App\\Controller\\LoginFormController::resetPassword'], ['token'], null, null, false, true, null]],
+        340 => [
             [['_route' => 'profileuser', '_controller' => 'App\\Controller\\TestController::profileuser'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

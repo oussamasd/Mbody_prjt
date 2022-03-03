@@ -86,7 +86,7 @@ class __TwigTemplate_db6d3f0412713a7f3d93fbe543fd15ba8b51e50e9ba6dfb04082d389a96
 
         // line 6
         echo "    <h1>Réinitialisation du mot de passe</h1>
-    <p>Veuillez entrer votre nouveau mot de passe ci-dessous.</p>
+    <p><h6>Veuillez entrer votre nouveau mot de passe ci-dessous.</h6></p>
     <form method=\"post\">
         <label for=\"inputPassword\">Password</label>
         <input type=\"password\" name=\"password\" id=\"inputPassword\" placeholder=\"Mot de passe\" required>
@@ -131,7 +131,7 @@ class __TwigTemplate_db6d3f0412713a7f3d93fbe543fd15ba8b51e50e9ba6dfb04082d389a96
 
 {% block login %}
     <h1>Réinitialisation du mot de passe</h1>
-    <p>Veuillez entrer votre nouveau mot de passe ci-dessous.</p>
+    <p><h6>Veuillez entrer votre nouveau mot de passe ci-dessous.</h6></p>
     <form method=\"post\">
         <label for=\"inputPassword\">Password</label>
         <input type=\"password\" name=\"password\" id=\"inputPassword\" placeholder=\"Mot de passe\" required>

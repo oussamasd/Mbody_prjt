@@ -25,7 +25,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/register", name="app_register")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder,MailerInterface $mailer): Response
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder,\Swift_Mailer $mailer): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -44,13 +44,13 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
             // do anything else you need here, like send an email
-            $message=(new Email())
-                ->From('kasmi.iskander4@gmail.com')
-                ->To($user->getEmail())
-                ->text(
+            $message=(new \Swift_Message('activation de compte'))
+                ->setFrom('iskander.KASMI@esprit.tn.com')
+                ->setTo($user->getEmail())
+                ->setBody(
 
                     $this->renderView('contact/activation.html.twig',['token'=>$user->getActivationToken()]
-                    )
+                    ),'text/html'
 
                 );
             $mailer->send($message);
@@ -88,9 +88,11 @@ class RegistrationController extends AbstractController
         // On supprime le token
         $user->setActivationToken(null);
         $entityManager = $this->getDoctrine()->getManager();
+        $user->setIsVerified(true);
         $entityManager->persist($user);
         $entityManager->flush();
         // On génère un message
+
         $this->addFlash('message', 'Utilisateur activé avec succès');
         // On retourne à l'accueil
         return $this->redirectToRoute('test');

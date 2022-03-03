@@ -1,0 +1,85 @@
+
+{% extends 'base.back.html.twig' %}
+{% block title %}Admin. | {{ parent() }}{% endblock %}
+
+
+{% block body %}
+
+    <style>
+        <style>
+        .logo {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: block;
+            z-index: 100;
+            transition: all 250ms linear
+        }
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+            display: block
+        }
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">
+                    {{ app.user.username }}
+                </h6>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    {#            <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher.."></p>#}
+
+<table>
+
+                    <th  style="width: 100px">cin</th>
+                            <td>{{ user.cin }}</td>
+                    <th style="width: 100px">nom</th>
+                            <td>{{ user.nom }}</td>
+                    <th style="width: 100px">email</th>
+                            <td>{{ user.email }}</td>
+                    <th  style="width: 100px">prenom</th>
+                            <td>{{ user.prenom }}</td>
+                    <th style="width: 100px">adress</th>
+                            <td>{{ user.adresse }}</td>
+                    <th style="width: 100px">numero</th>
+                            <td>{{ user.numero}}</td>
+                    <th style="width: 100px"> verification email</th>
+                            <td>  {% if user.isVerified == false %}
+                                        <img class="logo" src="{{ asset ('non.png') }} " alt="" height="27px" width="27px">
+                                <h4> veuillez vous verifier votre mail et confirmer votre compte </h4>
+                                {% else %}
+                                        <img class="logo" src="{{ asset ('oui.png') }}" alt="" height="27px" width="27px">
+                            </td>
+                    {% endif %}
+
+</table>
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("myInput").on("keyup", function() {
+                var  value = $(this).val().toLowerCase();
+                $("myTable").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}

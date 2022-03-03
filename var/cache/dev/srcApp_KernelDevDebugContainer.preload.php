@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerEM5Vb1Y/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/Container1zcCNv0/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -40,17 +40,16 @@ $classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\AppMobileController';
 $classes[] = 'App\Controller\ContactController';
 $classes[] = 'App\Controller\LoginFormController';
+$classes[] = 'App\Controller\ProfileUserController';
 $classes[] = 'App\Controller\RegistrationController';
-$classes[] = 'App\Controller\ResetPasswordController';
-$classes[] = 'SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelper';
-$classes[] = 'SymfonyCasts\Bundle\ResetPassword\Generator\ResetPasswordTokenGenerator';
-$classes[] = 'SymfonyCasts\Bundle\ResetPassword\Generator\ResetPasswordRandomGenerator';
 $classes[] = 'App\Controller\TestController';
 $classes[] = 'App\Form\ChangePasswordFormType';
 $classes[] = 'App\Form\ContactMailType';
 $classes[] = 'App\Form\ContactType';
+$classes[] = 'App\Form\ProfileUserType';
 $classes[] = 'App\Form\RegistrationFormType';
 $classes[] = 'App\Form\ResetPassType';
+$classes[] = 'App\Form\SearchUserType';
 $classes[] = 'App\Form\UserType';
 $classes[] = 'App\Repository\ResetPasswordRequestRepository';
 $classes[] = 'App\Repository\UserRepository';
@@ -60,6 +59,8 @@ $classes[] = 'Doctrine\Bundle\DoctrineBundle\Dbal\ManagerRegistryAwareConnection
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Registry';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';
 $classes[] = 'SymfonyCasts\Bundle\ResetPassword\Command\ResetPasswordRemoveExpiredCommand';
+$classes[] = 'SymfonyCasts\Bundle\ResetPassword\Util\ResetPasswordCleaner';
+$classes[] = 'SymfonyCasts\Bundle\ResetPassword\Persistence\Fake\FakeResetPasswordInternalRepository';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController';
 $classes[] = 'Symfony\Component\Cache\Adapter\PhpArrayAdapter';
@@ -449,8 +450,6 @@ $classes[] = 'Swift_Transport';
 $classes[] = 'Symfony\Bundle\SwiftmailerBundle\DependencyInjection\SwiftmailerTransportFactory';
 $classes[] = 'Swift_Transport_SpoolTransport';
 $classes[] = 'Swift_MemorySpool';
-$classes[] = 'SymfonyCasts\Bundle\ResetPassword\Util\ResetPasswordCleaner';
-$classes[] = 'SymfonyCasts\Bundle\ResetPassword\Persistence\Fake\FakeResetPasswordInternalRepository';
 $classes[] = 'Symfony\Component\Translation\Extractor\ChainExtractor';
 $classes[] = 'Symfony\Component\Translation\Extractor\PhpExtractor';
 $classes[] = 'Symfony\Bridge\Twig\Translation\TwigExtractor';

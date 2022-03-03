@@ -99,20 +99,33 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
             Liste des utilisateurs
             </h6>
     </div>
+   ";
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formSearch"]) || array_key_exists("formSearch", $context) ? $context["formSearch"] : (function () { throw new RuntimeError('Variable "formSearch" does not exist.', 19, $this->source); })()), 'form_start');
+        echo "
     <div class=\"form-group\">
         <div class=\"input-group\">
             <div class=\"input-group-prepend\">
-                <button type=\"button\" class=\"btn btn-primary\" >Chercher</button>
+                  ";
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formSearch"]) || array_key_exists("formSearch", $context) ? $context["formSearch"] : (function () { throw new RuntimeError('Variable "formSearch" does not exist.', 23, $this->source); })()), "search", [], "any", false, false, false, 23), 'row', ["attr" => ["class" => "btn btn-primary", "type" => "button"]]);
+        echo "
             </div>
-            <input type=\"text\" id=\"myInput\" class=\"form-control\" placeholder=\"Chercher une User\">
+
+            ";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formSearch"]) || array_key_exists("formSearch", $context) ? $context["formSearch"] : (function () { throw new RuntimeError('Variable "formSearch" does not exist.', 26, $this->source); })()), "cin", [], "any", false, false, false, 26), 'widget', ["attr" => ["class" => "form-control", "id" => "myInput", "placeholder" => "Chercher une User  : Inserer son cin ", "type" => "text"]]);
+        echo "
         </div>
     </div>
-
-
+    ";
+        // line 29
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formSearch"]) || array_key_exists("formSearch", $context) ? $context["formSearch"] : (function () { throw new RuntimeError('Variable "formSearch" does not exist.', 29, $this->source); })()), 'form_end');
+        echo "
     <div class=\"card-body\">
         <div class=\"table-responsive\">
 ";
-        // line 32
+        // line 33
         echo "            <table class=\"table table-bordered\"  width=\"100%\" cellspacing=\"0\">
 
                 <thead>
@@ -128,83 +141,83 @@ class __TwigTemplate_7ed8b5b9f2d02591233859e0623d38c4045a52afe06173ccb025d511533
                 </thead>
                 <tbody id=\"myTable\">
                 ";
-        // line 46
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 46, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 47, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 47
+            // line 48
             echo "                <tr>
                     <td>";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "cin", [], "any", false, false, false, 48), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "cin", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
                     <td>";
             // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 50), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 51), "html", null, true);
             echo "</td>
                     <td>  ";
-            // line 51
+            // line 52
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 51));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 52));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 52
+                // line 53
                 echo "                            ";
                 if ((0 === twig_compare($context["role"], "ROLE_USER"))) {
-                    // line 53
+                    // line 54
                     echo "                                  Utilisateur
 
                             ";
-                } elseif ((0 === twig_compare(                // line 55
+                } elseif ((0 === twig_compare(                // line 56
 $context["role"], "ROLE_ADMIN"))) {
-                    // line 56
+                    // line 57
                     echo "                                Administrateur
                             ";
                 }
-                // line 58
+                // line 59
                 echo "                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 59
+            // line 60
             echo "                    </td>
                     <td> <a href=\"";
-            // line 60
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("supprimerU", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 60)]), "html", null, true);
+            // line 61
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("supprimerU", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 61)]), "html", null, true);
             echo "\" class=\"btn btn-danger btn-circle\" >
                             <i class='fa fa-remove'></i></a>
                         <div class=\"my-2\"> </div>
                         ";
-            // line 63
+            // line 64
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 63));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 64));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 64
+                // line 65
                 echo "                        ";
                 if ((0 === twig_compare($context["role"], "ROLE_USER"))) {
-                    // line 65
+                    // line 66
                     echo "                            <a href=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("modifierU", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 65)]), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("modifierU", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 66)]), "html", null, true);
                     echo "\"  class=\"btn btn-info btn-circle\"><i class=\"fa fa-wrench\"></i></i></a>
 
 
                             ";
-                } elseif ((0 === twig_compare(                // line 68
+                } elseif ((0 === twig_compare(                // line 69
 $context["role"], "ROLE_ADMIN"))) {
-                    // line 69
+                    // line 70
                     echo "                        ";
                 }
-                // line 70
+                // line 71
                 echo "                           ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 71
+            // line 72
             echo "
 
                     </td>
@@ -213,8 +226,8 @@ $context["role"], "ROLE_ADMIN"))) {
 
                         <div class=\"my-2\"> </div>
                          <a href=\"  ";
-            // line 78
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 78)]), "html", null, true);
+            // line 79
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 79)]), "html", null, true);
             echo "\" class=\"btn btn-light btn-icon-split\"  >
                               <span class=\"icon text-gray-600\" >
                                 <i class=\"fas fa-arrow-right\">
@@ -233,7 +246,7 @@ $context["role"], "ROLE_ADMIN"))) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 91
+        // line 92
         echo ">
             </table>
             <button  class=\"btn btn-info mr-2\" onclick=\"window.print()\" ><i class=\"fa fa-print\" aria-hidden=\"true\"></i></i> Imprimer</button>
@@ -246,9 +259,9 @@ $context["role"], "ROLE_ADMIN"))) {
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
     <script>
         \$(document).ready(function(){
-            \$(\"#myInput\").on(\"keyup\", function() {
+            \$(\"myInput\").on(\"keyup\", function() {
                 var  value = \$(this).val().toLowerCase();
-                \$(\"#myTable\").filter(function() {
+                \$(\"myTable\").filter(function() {
                     \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
@@ -275,7 +288,7 @@ $context["role"], "ROLE_ADMIN"))) {
 
     public function getDebugInfo()
     {
-        return array (  237 => 91,  217 => 78,  208 => 71,  202 => 70,  199 => 69,  197 => 68,  190 => 65,  187 => 64,  183 => 63,  177 => 60,  174 => 59,  168 => 58,  164 => 56,  162 => 55,  158 => 53,  155 => 52,  151 => 51,  147 => 50,  143 => 49,  139 => 48,  136 => 47,  132 => 46,  116 => 32,  89 => 6,  79 => 5,  59 => 3,  36 => 2,);
+        return array (  250 => 92,  230 => 79,  221 => 72,  215 => 71,  212 => 70,  210 => 69,  203 => 66,  200 => 65,  196 => 64,  190 => 61,  187 => 60,  181 => 59,  177 => 57,  175 => 56,  171 => 54,  168 => 53,  164 => 52,  160 => 51,  156 => 50,  152 => 49,  149 => 48,  145 => 47,  129 => 33,  123 => 29,  117 => 26,  111 => 23,  104 => 19,  89 => 6,  79 => 5,  59 => 3,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -298,16 +311,17 @@ $context["role"], "ROLE_ADMIN"))) {
             Liste des utilisateurs
             </h6>
     </div>
+   {{ form_start(formSearch)}}
     <div class=\"form-group\">
         <div class=\"input-group\">
             <div class=\"input-group-prepend\">
-                <button type=\"button\" class=\"btn btn-primary\" >Chercher</button>
+                  {{form_row(formSearch.search ,{'attr':{'class':'btn btn-primary','type':'button'}})  }}
             </div>
-            <input type=\"text\" id=\"myInput\" class=\"form-control\" placeholder=\"Chercher une User\">
+
+            {{ form_widget(formSearch.cin,{'attr':{'class':'form-control','id':'myInput','placeholder':'Chercher une User  : Inserer son cin ','type':'text'}}) }}
         </div>
     </div>
-
-
+    {{ form_end(formSearch) }}
     <div class=\"card-body\">
         <div class=\"table-responsive\">
 {#            <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\"></p>#}
@@ -382,9 +396,9 @@ $context["role"], "ROLE_ADMIN"))) {
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
     <script>
         \$(document).ready(function(){
-            \$(\"#myInput\").on(\"keyup\", function() {
+            \$(\"myInput\").on(\"keyup\", function() {
                 var  value = \$(this).val().toLowerCase();
-                \$(\"#myTable\").filter(function() {
+                \$(\"myTable\").filter(function() {
                     \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });

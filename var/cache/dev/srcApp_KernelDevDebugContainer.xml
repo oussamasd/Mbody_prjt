@@ -165,7 +165,7 @@
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">C:\xampp\htdocs\Mbody_prjt/templates</parameter>
-    <parameter key="web_profiler.debug_toolbar.intercept_redirects">true</parameter>
+    <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
     <parameter key="monolog.swift_mailer.handlers" type="collection"/>
@@ -406,20 +406,18 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\LoginFormController"/>
       </call>
     </service>
+    <service id="App\Controller\ProfileUserController" class="App\Controller\ProfileUserController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\ProfileUserController"/>
+      </call>
+    </service>
     <service id="App\Controller\RegistrationController" class="App\Controller\RegistrationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\RegistrationController"/>
-      </call>
-    </service>
-    <service id="App\Controller\ResetPasswordController" class="App\Controller\ResetPasswordController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <argument type="service" id="symfonycasts.reset_password.helper"/>
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\ResetPasswordController"/>
       </call>
     </service>
     <service id="App\Controller\TestController" class="App\Controller\TestController" public="true" autowire="true" autoconfigure="true">
@@ -441,10 +439,16 @@
     <service id="App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\ProfileUserType" class="App\Form\ProfileUserType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\ResetPassType" class="App\Form\ResetPassType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\SearchUserType" class="App\Form\SearchUserType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true">
@@ -890,8 +894,10 @@
         <argument>App\Form\ChangePasswordFormType</argument>
         <argument>App\Form\ContactMailType</argument>
         <argument>App\Form\ContactType</argument>
+        <argument>App\Form\ProfileUserType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\ResetPassType</argument>
+        <argument>App\Form\SearchUserType</argument>
         <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -1226,7 +1232,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.mGiUJqf"/>
+      <argument type="service" id=".service_locator.8JXjT2W"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3620,7 +3626,7 @@
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
       <argument type="service" id="twig"/>
-      <argument>true</argument>
+      <argument>false</argument>
       <argument>2</argument>
       <argument type="service" id="router.default" on-invalid="ignore"/>
       <argument>^/((index|app(_[\w]+)?)\.php/)?_wdt</argument>
@@ -5322,12 +5328,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LoginFormController" class="App\Controller\LoginFormController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LoginFormController" class="App\Controller\LoginFormController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LoginFormController" class="App\Controller\LoginFormController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProfileUserController" class="App\Controller\ProfileUserController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProfileUserController" class="App\Controller\ProfileUserController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProfileUserController" class="App\Controller\ProfileUserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ResetPasswordController" class="App\Controller\ResetPasswordController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ResetPasswordController" class="App\Controller\ResetPasswordController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\ResetPasswordController" class="App\Controller\ResetPasswordController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TestController" class="App\Controller\TestController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TestController" class="App\Controller\TestController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5339,10 +5345,14 @@
     <service id=".abstract.instanceof.App\Form\ContactMailType" class="App\Form\ContactMailType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProfileUserType" class="App\Form\ProfileUserType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ProfileUserType" class="App\Form\ProfileUserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ResetPassType" class="App\Form\ResetPassType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ResetPassType" class="App\Form\ResetPassType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SearchUserType" class="App\Form\SearchUserType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\SearchUserType" class="App\Form\SearchUserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" abstract="true"/>
@@ -5674,10 +5684,10 @@
         <argument key="passwordEncoder" type="service_closure" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.8oMmtrZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.V4D8S.7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="mailer" type="service_closure" id="mailer.mailer"/>
+        <argument key="mailer" type="service_closure" id="swiftmailer.mailer.default"/>
         <argument key="passwordEncoder" type="service_closure" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
@@ -5694,13 +5704,7 @@
         <argument key="passwordEncoder" type="service_closure" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.qZ_VNPK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="userPasswordEncoder" type="service_closure" id="security.user_password_encoder.generic"/>
-      </argument>
-    </service>
-    <service id=".service_locator.FOPg3wO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.KdfXIIM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::afficherJson" type="service_closure" id=".service_locator.BvcyOg1"/>
@@ -5713,10 +5717,8 @@
         <argument key="App\Controller\LoginFormController::resetPassword" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\RegistrationController::SignupAction" type="service_closure" id=".service_locator.wqYLTIs"/>
         <argument key="App\Controller\RegistrationController::activation" type="service_closure" id=".service_locator.kxx4hsb"/>
-        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.8oMmtrZ"/>
+        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.V4D8S.7"/>
         <argument key="App\Controller\RegistrationController::signinAction" type="service_closure" id=".service_locator.BvcyOg1"/>
-        <argument key="App\Controller\ResetPasswordController::request" type="service_closure" id=".service_locator.iP8eVIx"/>
-        <argument key="App\Controller\ResetPasswordController::reset" type="service_closure" id=".service_locator.qZ_VNPK"/>
         <argument key="App\Controller\TestController::profileuser" type="service_closure" id=".service_locator.tIQ5Q0N"/>
         <argument key="App\Controller\AdminController:afficherJson" type="service_closure" id=".service_locator.BvcyOg1"/>
         <argument key="App\Controller\AdminController:editUser" type="service_closure" id=".service_locator.tIQ5Q0N"/>
@@ -5728,10 +5730,8 @@
         <argument key="App\Controller\LoginFormController:resetPassword" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\RegistrationController:SignupAction" type="service_closure" id=".service_locator.wqYLTIs"/>
         <argument key="App\Controller\RegistrationController:activation" type="service_closure" id=".service_locator.kxx4hsb"/>
-        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.8oMmtrZ"/>
+        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.V4D8S.7"/>
         <argument key="App\Controller\RegistrationController:signinAction" type="service_closure" id=".service_locator.BvcyOg1"/>
-        <argument key="App\Controller\ResetPasswordController:request" type="service_closure" id=".service_locator.iP8eVIx"/>
-        <argument key="App\Controller\ResetPasswordController:reset" type="service_closure" id=".service_locator.qZ_VNPK"/>
         <argument key="App\Controller\TestController:profileuser" type="service_closure" id=".service_locator.tIQ5Q0N"/>
       </argument>
     </service>
@@ -5794,14 +5794,16 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.mGiUJqf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.8JXjT2W" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ChangePasswordFormType" type="service_closure" id="App\Form\ChangePasswordFormType"/>
         <argument key="App\Form\ContactMailType" type="service_closure" id="App\Form\ContactMailType"/>
         <argument key="App\Form\ContactType" type="service_closure" id="App\Form\ContactType"/>
+        <argument key="App\Form\ProfileUserType" type="service_closure" id="App\Form\ProfileUserType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\ResetPassType" type="service_closure" id="App\Form\ResetPassType"/>
+        <argument key="App\Form\SearchUserType" type="service_closure" id="App\Form\SearchUserType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
@@ -6056,15 +6058,15 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
-    <service id=".service_locator.vdmMuyE.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
-      <argument>App\Controller\RegistrationController</argument>
+    <service id=".service_locator.vdmMuyE.App\Controller\ProfileUserController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ProfileUserController"/>
+      <argument>App\Controller\ProfileUserController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
-    <service id=".service_locator.vdmMuyE.App\Controller\ResetPasswordController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\ResetPasswordController"/>
-      <argument>App\Controller\ResetPasswordController</argument>
+    <service id=".service_locator.vdmMuyE.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
+      <argument>App\Controller\RegistrationController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -6220,12 +6222,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.FOPg3wO"/>
+      <argument type="service" id=".service_locator.KdfXIIM"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.FOPg3wO"/>
+      <argument type="service" id=".service_locator.KdfXIIM"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6648,7 +6650,7 @@
     <service id="Swift_Transport" alias="swiftmailer.mailer.default.transport.spool" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.FOPg3wO"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.KdfXIIM"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

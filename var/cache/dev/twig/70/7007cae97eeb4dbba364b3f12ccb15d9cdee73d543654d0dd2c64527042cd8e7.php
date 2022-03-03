@@ -24,12 +24,16 @@ class __TwigTemplate_2ba61e5452ee25b8b90cb9deaa83639241d398e0138d4ec562603f9ddcb
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'login' => [$this, 'block_login'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.login.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -41,16 +45,8 @@ class __TwigTemplate_2ba61e5452ee25b8b90cb9deaa83639241d398e0138d4ec562603f9ddcb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "security/forgotten_password.html.twig"));
 
-        // line 1
-        echo "
- ";
-        // line 2
-        $this->displayBlock('title', $context, $blocks);
-        // line 3
-        echo "
-";
-        // line 4
-        $this->displayBlock('login', $context, $blocks);
+        $this->parent = $this->loadTemplate("base.login.html.twig", "security/forgotten_password.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -90,10 +86,13 @@ class __TwigTemplate_2ba61e5452ee25b8b90cb9deaa83639241d398e0138d4ec562603f9ddcb
 
         // line 5
         echo "
-        <h6>Mot de passe oublié</h6>
- ";
-        // line 7
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["emailForm"]) || array_key_exists("emailForm", $context) ? $context["emailForm"] : (function () { throw new RuntimeError('Variable "emailForm" does not exist.', 7, $this->source); })()), 'form');
+        <h1>Mot de passe oublié</h1>
+    <br>
+    <h6>vous devez insere un email</h6>
+    <br>
+        ";
+        // line 10
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["emailForm"]) || array_key_exists("emailForm", $context) ? $context["emailForm"] : (function () { throw new RuntimeError('Variable "emailForm" does not exist.', 10, $this->source); })()), 'form');
         echo "
 
 ";
@@ -110,20 +109,28 @@ class __TwigTemplate_2ba61e5452ee25b8b90cb9deaa83639241d398e0138d4ec562603f9ddcb
         return "security/forgotten_password.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  96 => 7,  92 => 5,  82 => 4,  63 => 2,  53 => 4,  50 => 3,  48 => 2,  45 => 1,);
+        return array (  95 => 10,  88 => 5,  78 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
+        return new Source("{% extends 'base.login.html.twig' %}
  {% block title %}Mot de passe oublié {% endblock %}
 
 {% block login %}
 
-        <h6>Mot de passe oublié</h6>
- {{ form(emailForm) }}
+        <h1>Mot de passe oublié</h1>
+    <br>
+    <h6>vous devez insere un email</h6>
+    <br>
+        {{ form(emailForm) }}
 
 {% endblock %}
 ", "security/forgotten_password.html.twig", "C:\\xampp\\htdocs\\Mbody_prjt\\templates\\security\\forgotten_password.html.twig");

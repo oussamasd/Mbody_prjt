@@ -16,16 +16,17 @@
             Liste des utilisateurs
             </h6>
     </div>
+   {{ form_start(formSearch)}}
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <button type="button" class="btn btn-primary" >Chercher</button>
+                  {{form_row(formSearch.search ,{'attr':{'class':'btn btn-primary','type':'button'}})  }}
             </div>
-            <input type="text" id="myInput" class="form-control" placeholder="Chercher une User">
+
+            {{ form_widget(formSearch.cin,{'attr':{'class':'form-control','id':'myInput','placeholder':'Chercher une User  : Inserer son cin ','type':'text'}}) }}
         </div>
     </div>
-
-
+    {{ form_end(formSearch) }}
     <div class="card-body">
         <div class="table-responsive">
 {#            <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher.."></p>#}
@@ -100,9 +101,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("#myInput").on("keyup", function() {
+            $("myInput").on("keyup", function() {
                 var  value = $(this).val().toLowerCase();
-                $("#myTable").filter(function() {
+                $("myTable").filter(function() {
                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
