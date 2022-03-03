@@ -9,7 +9,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
     [
         'stdClass' => [
             'type' => [
-                1 => 'integer',
+                1 => 'object',
             ],
             'precision' => [
                 1 => null,

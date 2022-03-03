@@ -14,48 +14,27 @@ class Rating
 {
 
 
-    /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     */
-    private $Iduser;
 
-    /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     */
-    private $Idactivity;
 
     /**
      * @ORM\Column(type="integer")
      */
     private $rate;
 
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity=Activity::class, inversedBy="ratings")
+     */
+    private $idActivity;
+
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity=User::class)
+     */
+    private $Iduser;
 
 
-    public function getIduser(): ?User
-    {
-        return $this->Iduser;
-    }
 
-    public function setIduser(User $Iduser): self
-    {
-        $this->Iduser = $Iduser;
-
-        return $this;
-    }
-
-    public function getIdactivity(): ?Activity
-    {
-        return $this->Idactivity;
-    }
-
-    public function setIdactivity(Activity $Idactivity): self
-    {
-        $this->Idactivity = $Idactivity;
-
-        return $this;
-    }
 
     public function getRate(): ?int
     {
@@ -65,6 +44,30 @@ class Rating
     public function setRate(int $rate): self
     {
         $this->rate = $rate;
+
+        return $this;
+    }
+
+    public function getIdActivity(): ?Activity
+    {
+        return $this->idActivity;
+    }
+
+    public function setIdActivity(?Activity $idActivity): self
+    {
+        $this->idActivity = $idActivity;
+
+        return $this;
+    }
+
+    public function getIduser(): ?User
+    {
+        return $this->Iduser;
+    }
+
+    public function setIduser(?User $Iduser): self
+    {
+        $this->Iduser = $Iduser;
 
         return $this;
     }

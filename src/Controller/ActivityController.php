@@ -236,6 +236,13 @@ class ActivityController extends AbstractController
         //user is the participation .... after integration change it to
         //$participant=$this->getUser();
         $participant = $this->getDoctrine()->getRepository(User::class)->find(2);
+        $didRated = $this->getDoctrine()->getRepository(Rating::class)->findOneBy(array('Iduser'=>$participant ,'idActivity'=>$activity));
+        $heRated=false;
+
+        if($didRated !=null){
+            $heRated=true;
+        }
+        var_dump($heRated);
         //pour teste user est  participé
         $particpe=false;
         foreach($activity->getParticipe() as $pp){
@@ -254,21 +261,23 @@ class ActivityController extends AbstractController
         var_dump((int)$req->request->get('rate'));
         $rate=(int)$req->request->get('rate');
         $rated = new Rating();
-        /*if($rate!=0 and $rate != null){
+        if($rate!=0 and $rate != null){
             $rated->setIduser($participant);
             $rated->setIdactivity($activity);
             $rated->setRate($rate);
             $em=$this->getDoctrine()->getManager();
             $em->persist($rated);
             $em->flush();
-        }*/
+        }
 
 
         return $this->render('activity/detailActivity.html.twig', [
             'activity' => $activity ,
             'btnParticipe' =>$form->createView(),
             'participe'=>$particpe,
-            'userparticipated'=>sizeof($activity->getParticipe())
+            'userparticipated'=>sizeof($activity->getParticipe()),
+            'heRated'=>$heRated,
+            'didRated'=>$didRated
         ]);
     }
     /**

@@ -334,7 +334,11 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("activityDetails", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 65, $this->source); })()), "getId", [], "any", false, false, false, 65)]), "html", null, true);
         echo "\" method=\"post\">
     <div style=\"margin-left: 80%\">
-        <input type=\"text\" value=\"\" id=\"ratenote\" name=\"rate\" />
+        ";
+        // line 67
+        if ( !(isset($context["heRated"]) || array_key_exists("heRated", $context) ? $context["heRated"] : (function () { throw new RuntimeError('Variable "heRated" does not exist.', 67, $this->source); })())) {
+            // line 68
+            echo "        <input type=\"hidden\" value=\"\" id=\"ratenote\" name=\"rate\" />
         <button style=\"background: none ; border: none\">
 
 
@@ -344,7 +348,37 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
             <i class=\"star\" data-note=\"4\">&#9733;</i>
             <i class=\"star\" data-note=\"5\">&#9733;</i>
         </button>
-    </div>
+        ";
+        } else {
+            // line 79
+            echo "            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 79, $this->source); })()), "getRate", [], "any", false, false, false, 79)));
+            foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+                // line 80
+                echo "                <i class=\"hover2\" >&#9733;</i>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 82
+            echo "            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(1, (5 - twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 82, $this->source); })()), "getRate", [], "any", false, false, false, 82))));
+            foreach ($context['_seq'] as $context["_key"] => $context["j"]) {
+                // line 83
+                echo "                <i class=\"star2\" >&#9733;</i>
+            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['j'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 85
+            echo "        ";
+        }
+        // line 86
+        echo "    </div>
  </form>
 
 
@@ -358,7 +392,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 83
+    // line 92
     public function block_pict($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -368,17 +402,17 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "pict"));
 
-        // line 84
+        // line 93
         echo "   ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 84, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 93, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 85
+            // line 94
             echo "    <li>
 
             <img class=\"img-fluid\" style=\"height: 50% ; width: 100%\" src=\"http://127.0.0.1:8000/uploads/";
-            // line 87
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "getImageUrl", [], "method", false, false, false, 87), "html", null, true);
+            // line 96
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "getImageUrl", [], "method", false, false, false, 96), "html", null, true);
             echo "\" id=\"small_img\" alt=\"\">
 
     </li>
@@ -387,7 +421,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 91
+        // line 100
         echo "
 ";
         
@@ -398,7 +432,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 93
+    // line 102
     public function block_Exercice($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -408,24 +442,24 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Exercice"));
 
-        // line 94
+        // line 103
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 94, $this->source); })()), "exercices", [], "any", false, false, false, 94));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 103, $this->source); })()), "exercices", [], "any", false, false, false, 103));
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 95
+            // line 104
             echo "    <div class=\"media post_item\">
         <img  style=\" width:40%\" src=\"http://127.0.0.1:8000/uploads/noimg.jpg\"  alt=\"post\">
         <div class=\"media-body\">
             <a href=\"blog_details.html\">
                 <h3>";
-            // line 99
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 99), "html", null, true);
+            // line 108
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 108), "html", null, true);
             echo "</h3>
             </a>
             <p>";
-            // line 101
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 101), "html", null, true);
+            // line 110
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 110), "html", null, true);
             echo "</p>
         </div>
     </div>
@@ -434,7 +468,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 105
+        // line 114
         echo "    <script>
 
 
@@ -505,7 +539,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 168
+    // line 177
     public function block_c($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -515,7 +549,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "c"));
 
-        // line 169
+        // line 178
         echo "
 
 ";
@@ -539,7 +573,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     public function getDebugInfo()
     {
-        return array (  519 => 169,  509 => 168,  438 => 105,  428 => 101,  423 => 99,  417 => 95,  412 => 94,  402 => 93,  391 => 91,  381 => 87,  377 => 85,  372 => 84,  362 => 83,  333 => 65,  323 => 64,  310 => 62,  300 => 61,  285 => 59,  275 => 58,  260 => 56,  250 => 55,  237 => 53,  227 => 52,  213 => 47,  209 => 45,  206 => 44,  202 => 42,  197 => 40,  193 => 39,  188 => 38,  186 => 37,  183 => 36,  181 => 35,  175 => 32,  170 => 29,  160 => 28,  146 => 23,  136 => 22,  124 => 19,  121 => 18,  117 => 16,  114 => 15,  112 => 14,  109 => 13,  99 => 12,  82 => 3,  72 => 2,  61 => 1,  59 => 11,  46 => 1,);
+        return array (  553 => 178,  543 => 177,  472 => 114,  462 => 110,  457 => 108,  451 => 104,  446 => 103,  436 => 102,  425 => 100,  415 => 96,  411 => 94,  406 => 93,  396 => 92,  381 => 86,  378 => 85,  371 => 83,  366 => 82,  359 => 80,  354 => 79,  341 => 68,  339 => 67,  333 => 65,  323 => 64,  310 => 62,  300 => 61,  285 => 59,  275 => 58,  260 => 56,  250 => 55,  237 => 53,  227 => 52,  213 => 47,  209 => 45,  206 => 44,  202 => 42,  197 => 40,  193 => 39,  188 => 38,  186 => 37,  183 => 36,  181 => 35,  175 => 32,  170 => 29,  160 => 28,  146 => 23,  136 => 22,  124 => 19,  121 => 18,  117 => 16,  114 => 15,  112 => 14,  109 => 13,  99 => 12,  82 => 3,  72 => 2,  61 => 1,  59 => 11,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -610,7 +644,8 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 {% block star %}
  <form action=\"{{ path('activityDetails',{'id':activity.getId}) }}\" method=\"post\">
     <div style=\"margin-left: 80%\">
-        <input type=\"text\" value=\"\" id=\"ratenote\" name=\"rate\" />
+        {% if not heRated %}
+        <input type=\"hidden\" value=\"\" id=\"ratenote\" name=\"rate\" />
         <button style=\"background: none ; border: none\">
 
 
@@ -620,6 +655,14 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
             <i class=\"star\" data-note=\"4\">&#9733;</i>
             <i class=\"star\" data-note=\"5\">&#9733;</i>
         </button>
+        {% else %}
+            {% for i in 1..didRated.getRate %}
+                <i class=\"hover2\" >&#9733;</i>
+            {% endfor %}
+            {% for j in 1..5-didRated.getRate %}
+                <i class=\"star2\" >&#9733;</i>
+            {% endfor %}
+        {% endif %}
     </div>
  </form>
 

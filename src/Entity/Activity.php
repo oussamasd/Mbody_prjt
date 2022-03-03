@@ -73,11 +73,17 @@ class Activity
      */
     private $quantite;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Rating::class, mappedBy="idActivity")
+     */
+    private $ratings;
+
     public function __construct()
     {
         $this->exercices = new ArrayCollection();
         $this->images = new ArrayCollection();
         $this->participe = new ArrayCollection();
+        $this->ratings = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -236,6 +242,36 @@ class Activity
     public function setQuantite(?int $quantite): self
     {
         $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Rating[]
+     */
+    public function getRatings(): Collection
+    {
+        return $this->ratings;
+    }
+
+    public function addRating(Rating $rating): self
+    {
+        if (!$this->ratings->contains($rating)) {
+            $this->ratings[] = $rating;
+            $rating->setIdActivity($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRating(Rating $rating): self
+    {
+        if ($this->ratings->removeElement($rating)) {
+            // set the owning side to null (unless already changed)
+            if ($rating->getIdActivity() === $this) {
+                $rating->setIdActivity(null);
+            }
+        }
 
         return $this;
     }

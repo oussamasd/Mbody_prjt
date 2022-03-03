@@ -64,7 +64,8 @@
 {% block star %}
  <form action="{{ path('activityDetails',{'id':activity.getId}) }}" method="post">
     <div style="margin-left: 80%">
-        <input type="text" value="" id="ratenote" name="rate" />
+        {% if not heRated %}
+        <input type="hidden" value="" id="ratenote" name="rate" />
         <button style="background: none ; border: none">
 
 
@@ -74,6 +75,14 @@
             <i class="star" data-note="4">&#9733;</i>
             <i class="star" data-note="5">&#9733;</i>
         </button>
+        {% else %}
+            {% for i in 1..didRated.getRate %}
+                <i class="hover2" >&#9733;</i>
+            {% endfor %}
+            {% for j in 1..5-didRated.getRate %}
+                <i class="star2" >&#9733;</i>
+            {% endfor %}
+        {% endif %}
     </div>
  </form>
 
