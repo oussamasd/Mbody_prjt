@@ -65,12 +65,17 @@
 
                         </h2>
                         {% endblock %}
+                        <p>
                         <ul class="blog-info-link mt-3 mb-4">
-                            <li><a href="#">{% block cat %}<i class="fa fa-comments"></i> 03 Comments</a>{% endblock %}</li>
-                            <li><a href="#">{% block dt %}<i class="fa fa-user"></i> Travel, Lifestyle</a>{% endblock %}</li>
-                            <li><a href="#">{% block qt %}<i class="fa fa-user"></i> Travel, Lifestyle</a>{% endblock %}</li>
+                            <li>{% block cat %}<i class="fa fa-comments"></i> 03 Comments{% endblock %}</li>
+                            <li>{% block dt %}<i class="fa fa-user"></i> Travel, Lifestyle{% endblock %}</li>
+                            <li>{% block qt %}<i class="fa fa-user"></i> Travel, Lifestyle{% endblock %}</li>
+                            {% block star %}
 
+                            {% endblock %}
                         </ul>
+
+                        </p>
 
 
                         <div class="quote-wrapper">

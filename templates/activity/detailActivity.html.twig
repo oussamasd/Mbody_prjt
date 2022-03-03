@@ -61,6 +61,25 @@
 {% block des %}
     {{ activity.getDescriptionAct() }}
 {% endblock %}
+{% block star %}
+ <form action="{{ path('activityDetails',{'id':activity.getId}) }}" method="post">
+    <div style="margin-left: 80%">
+        <input type="text" value="" id="ratenote" name="rate" />
+        <button style="background: none ; border: none">
+
+
+            <i class="star" data-note="1">&#9733;</i>
+            <i class="star" data-note="2">&#9733;</i>
+            <i class="star" data-note="3">&#9733;</i>
+            <i class="star" data-note="4">&#9733;</i>
+            <i class="star" data-note="5">&#9733;</i>
+        </button>
+    </div>
+ </form>
+
+
+
+{% endblock %}
 {% block pict %}
    {% for image in i %}
     <li>
@@ -84,21 +103,64 @@
     </div>
     {% endfor %}
     <script>
-        // console.error("errrrr");
-        // $(document).ready(function (){
-        //     $("#bt").click(function (){
-        //         $("h1").toggle();
-        //
-        //     });
-        // });
-        console.log("errrrr");
+
+
         $(document).ready(function(){
-            console.log("errrrr");
+
             $(".img-fluid").click(function(){
                 $("#big_img").attr('src',$(this).attr('src'));
             });
         });
 
+    </script>
+    <script>
+        const stars =document.querySelectorAll('.star');
+        let check = false;
+        stars.forEach(star=>{
+            star.addEventListener('mouseover',selectStars);
+            star.addEventListener('mouseleave',unselectStars);
+
+            star.addEventListener('click',activeSelect);
+
+
+
+        })
+        function selectStars(e){
+            const data =e.target;
+            const etoiles = priviousSiblings(data);
+            if(!check){
+                etoiles.forEach(etoile=>{
+                    etoile.classList.add('hover');
+                })
+            }
+
+
+        }
+        function unselectStars(e){
+            const data =e.target;
+            const etoiles = priviousSiblings(data);
+            if(!check){
+                etoiles.forEach(etoile=>{
+                    etoile.classList.remove('hover');
+                })
+            }
+
+        }
+        function priviousSiblings(data){
+            let values=[data];
+            while (data= data.previousSibling){
+                if(data.nodeName ==='I'){
+                    values.push(data);
+                }
+            }
+            return values;
+        }
+        function  activeSelect(e){
+            check=true;
+           /* document.querySelector('.ratenote').innerHTML='Note: '+ e.target.dataset.note;*/
+            document.getElementById("ratenote").value = e.target.dataset.note;
+
+        }
     </script>
 
 {% endblock %}

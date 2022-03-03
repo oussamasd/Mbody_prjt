@@ -40,23 +40,74 @@ class __TwigTemplate_be84f85682a2bf587f78295d23b771e36aaa717793215bb7d7ff13e97f8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "test/rating.html.twig"));
 
         // line 1
-        echo "<html>
+        echo "<!DOCTYPE html>
+<html lang=\"en\">
 <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css\">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js\"></script>
+    <style>
+        .star{
+            font-size: 1.5rem;
+        }
+        .hover{
+            color: yellow;
+        }
+    </style>
+
 </head>
 <body>
-<div id=\"rateYo\"></div>
+<i class=\"star\" data-note=\"1\">&#9733;</i>
+<i class=\"star\" data-note=\"2\">&#9733;</i>
+<i class=\"star\" data-note=\"3\">&#9733;</i>
+<i class=\"star\" data-note=\"4\">&#9733;</i>
+<i class=\"star\" data-note=\"5\">&#9733;</i>
+<i class=\"note\">Note:</i>
 
-<script type=\"text/javascript\">
-    \$(function () {
+<script>
+    const stars =document.querySelectorAll('.star');
+    let check = false;
+    stars.forEach(star=>{
+        star.addEventListener('mouseover',selectStars);
+        star.addEventListener('mouseleave',unselectStars);
 
-        \$(\"#rateYo\").rateYo({
-            precision: 2,
-        });
-    });
+            star.addEventListener('click',activeSelect);
+
+
+
+    })
+    function selectStars(e){
+        const data =e.target;
+        const etoiles = priviousSiblings(data);
+        if(!check){
+            etoiles.forEach(etoile=>{
+                etoile.classList.add('hover');
+            })
+        }
+
+
+    }
+    function unselectStars(e){
+        const data =e.target;
+        const etoiles = priviousSiblings(data);
+        if(!check){
+            etoiles.forEach(etoile=>{
+                etoile.classList.remove('hover');
+            })
+        }
+
+    }
+    function priviousSiblings(data){
+        let values=[data];
+        while (data= data.previousSibling){
+            if(data.nodeName ==='I'){
+                values.push(data);
+            }
+        }
+        return values;
+    }
+    function  activeSelect(e){
+        check=true;
+
+        document.querySelector('.note').innerHTML='Note: '+ e.target.dataset.note;
+    }
 </script>
 </body>
 </html>";
@@ -80,23 +131,74 @@ class __TwigTemplate_be84f85682a2bf587f78295d23b771e36aaa717793215bb7d7ff13e97f8
 
     public function getSourceContext()
     {
-        return new Source("<html>
+        return new Source("<!DOCTYPE html>
+<html lang=\"en\">
 <head>
-    <!-- Latest compiled and minified CSS -->
-    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css\">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js\"></script>
+    <style>
+        .star{
+            font-size: 1.5rem;
+        }
+        .hover{
+            color: yellow;
+        }
+    </style>
+
 </head>
 <body>
-<div id=\"rateYo\"></div>
+<i class=\"star\" data-note=\"1\">&#9733;</i>
+<i class=\"star\" data-note=\"2\">&#9733;</i>
+<i class=\"star\" data-note=\"3\">&#9733;</i>
+<i class=\"star\" data-note=\"4\">&#9733;</i>
+<i class=\"star\" data-note=\"5\">&#9733;</i>
+<i class=\"note\">Note:</i>
 
-<script type=\"text/javascript\">
-    \$(function () {
+<script>
+    const stars =document.querySelectorAll('.star');
+    let check = false;
+    stars.forEach(star=>{
+        star.addEventListener('mouseover',selectStars);
+        star.addEventListener('mouseleave',unselectStars);
 
-        \$(\"#rateYo\").rateYo({
-            precision: 2,
-        });
-    });
+            star.addEventListener('click',activeSelect);
+
+
+
+    })
+    function selectStars(e){
+        const data =e.target;
+        const etoiles = priviousSiblings(data);
+        if(!check){
+            etoiles.forEach(etoile=>{
+                etoile.classList.add('hover');
+            })
+        }
+
+
+    }
+    function unselectStars(e){
+        const data =e.target;
+        const etoiles = priviousSiblings(data);
+        if(!check){
+            etoiles.forEach(etoile=>{
+                etoile.classList.remove('hover');
+            })
+        }
+
+    }
+    function priviousSiblings(data){
+        let values=[data];
+        while (data= data.previousSibling){
+            if(data.nodeName ==='I'){
+                values.push(data);
+            }
+        }
+        return values;
+    }
+    function  activeSelect(e){
+        check=true;
+
+        document.querySelector('.note').innerHTML='Note: '+ e.target.dataset.note;
+    }
 </script>
 </body>
 </html>", "test/rating.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\test\\rating.html.twig");

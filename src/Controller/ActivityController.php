@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Activity;
 use App\Entity\ImageActEx;
+use App\Entity\Rating;
 use App\Entity\User;
 use App\Form\ActivityType;
 use App\Form\PaticipeType;
@@ -223,10 +224,12 @@ class ActivityController extends AbstractController
         //return $this->render('activity/test.html.twig',array('cu'=>$Act2));
     }
     /**
-     * @Route("/activity/details/{id}", name="activityDetails")
+     * @Route("/activity/details/{id}", name="activityDetails" )
      */
-    public function showmore($id , Request $request): Response
+    public function showmore($id , Request $request , Request $req): Response
     {
+
+
         $form= $this->createForm(PaticipeType::class);
         $form->handleRequest($request);
         $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
@@ -248,6 +251,17 @@ class ActivityController extends AbstractController
             $em= $this->getDoctrine()->getManager();
             $em->flush();
         }
+        var_dump((int)$req->request->get('rate'));
+        $rate=(int)$req->request->get('rate');
+        $rated = new Rating();
+        /*if($rate!=0 and $rate != null){
+            $rated->setIduser($participant);
+            $rated->setIdactivity($activity);
+            $rated->setRate($rate);
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($rated);
+            $em->flush();
+        }*/
 
 
         return $this->render('activity/detailActivity.html.twig', [
