@@ -79,6 +79,17 @@
 {#                </div>#}
 {#            </div>#}
 {#        </div>#}
+            {% set prt = activity.getRatings() %}
+            {% set sommerate = 0 %}
+            {% for p in prt %}
+               {% set sommerate = sommerate + p.getRate()   %}
+            {% endfor%}
+            {% set rate = 0 %}
+            {% if  activity.getRatings()|length !=0 %}
+            {% set rate = sommerate / activity.getRatings()|length %}
+           {# {% set rateapproche = rate | int  %}#}
+            {% endif %}
+
         <div class="col-lg-4">
             <div class="trainer-item">
                 <div class="image-thumb">
@@ -92,7 +103,52 @@
 
                 </div>
                 <div class="down-content">
-                    <span>{{ activity.getCategory.getNomCat() }}</span>
+                    <tr>
+                        <td>
+                            <span>{{ activity.getCategory.getNomCat() }}</span>
+                        </td>
+                        <td >
+
+                    <span style="padding-left: 30%">
+
+                            {% if rate ==0 %}
+                                {% for i in 1..5 %}
+                                    <i class="hover" style="color: black">&#9733;</i>
+
+                                {% endfor %}
+                            {% else %}
+
+                                {% for i in 1..rate %}
+                                    <i class="hover" style="color: gold">&#9733;</i>
+
+                                {% endfor %}
+
+                                {% if rate |length ==1 %}
+                                    {% for j in 1..5-rate %}
+                                        <i class="star2" style="color: black" >&#9733;</i>
+                                    {% endfor %}
+                                {% else %}
+                                    {% for l in 1..6-rate %}
+                                        <i class="star2" style="color: black" >&#9733;</i>
+                                    {% endfor %}
+
+                                {% endif%}
+                            {% endif %}
+
+                            <i style="font-size: large"> {{ rate }}</i>
+                    </span>
+
+                        </td>
+                    </tr>
+
+
+
+
+
+
+
+
+
                     <h4>{{ activity.getNomAct() }}</h4>
                     <h6>{{ activity.getDateAct|date('Y-m-d') }}</h6>
                     <p>{{ activity.getDescriptionAct() }}</p>

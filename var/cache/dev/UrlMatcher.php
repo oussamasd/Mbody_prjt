@@ -25,6 +25,7 @@ return [
         '/test' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::index'], null, null, null, false, false, null]],
         '/test1' => [[['_route' => 'test1', '_controller' => 'App\\Controller\\TestController::index2'], null, null, null, false, false, null]],
         '/test2' => [[['_route' => 'test2', '_controller' => 'App\\Controller\\TestController::index3'], null, null, null, false, false, null]],
+        '/test3' => [[['_route' => 'test3', '_controller' => 'App\\Controller\\TestController::index4'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -52,6 +53,10 @@ return [
                     .'|Exercice/([^/]++)(*:282)'
                 .')'
                 .'|/activity/details/([^/]++)(*:317)'
+                .'|/commentaiire/(?'
+                    .'|([^/]++)(*:350)'
+                    .'|add/([^/]++)(*:370)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -66,8 +71,10 @@ return [
         221 => [[['_route' => 'ExerciceUpdate', '_controller' => 'App\\Controller\\ExerciceController::updateExercice'], ['id'], null, null, false, true, null]],
         257 => [[['_route' => 'ActivityDelete', '_controller' => 'App\\Controller\\ActivityController::delete'], ['id'], null, null, false, true, null]],
         282 => [[['_route' => 'ExerciceDelete', '_controller' => 'App\\Controller\\ExerciceController::delete'], ['id'], null, null, false, true, null]],
-        317 => [
-            [['_route' => 'activityDetails', '_controller' => 'App\\Controller\\ActivityController::showmore'], ['id'], null, null, false, true, null],
+        317 => [[['_route' => 'activityDetails', '_controller' => 'App\\Controller\\ActivityController::showmore'], ['id'], null, null, false, true, null]],
+        350 => [[['_route' => 'commentaiire', '_controller' => 'App\\Controller\\CommentaiireController::index'], ['idAct'], null, null, false, true, null]],
+        370 => [
+            [['_route' => 'commentaiireadd', '_controller' => 'App\\Controller\\CommentaiireController::index2'], ['idAct'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

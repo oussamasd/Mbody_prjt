@@ -78,12 +78,18 @@ class Activity
      */
     private $ratings;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Commentaire::class, mappedBy="activity")
+     */
+    private $commentaires;
+
     public function __construct()
     {
         $this->exercices = new ArrayCollection();
         $this->images = new ArrayCollection();
         $this->participe = new ArrayCollection();
         $this->ratings = new ArrayCollection();
+        $this->commentaires = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -270,6 +276,36 @@ class Activity
             // set the owning side to null (unless already changed)
             if ($rating->getIdActivity() === $this) {
                 $rating->setIdActivity(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Commentaire[]
+     */
+    public function getCommentaires(): Collection
+    {
+        return $this->commentaires;
+    }
+
+    public function addCommentaire(Commentaire $commentaire): self
+    {
+        if (!$this->commentaires->contains($commentaire)) {
+            $this->commentaires[] = $commentaire;
+            $commentaire->setActivity($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaire(Commentaire $commentaire): self
+    {
+        if ($this->commentaires->removeElement($commentaire)) {
+            // set the owning side to null (unless already changed)
+            if ($commentaire->getActivity() === $this) {
+                $commentaire->setActivity(null);
             }
         }
 

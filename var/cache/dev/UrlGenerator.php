@@ -25,6 +25,8 @@ return [
     'activitytest' => [[], ['_controller' => 'App\\Controller\\ActivityController::index3'], [], [['text', '/activity/test/test']], [], []],
     'category' => [[], ['_controller' => 'App\\Controller\\CategoryController::index'], [], [['text', '/category']], [], []],
     'categoryAdd' => [[], ['_controller' => 'App\\Controller\\CategoryController::add'], [], [['text', '/addCategory']], [], []],
+    'commentaiire' => [['idAct'], ['_controller' => 'App\\Controller\\CommentaiireController::index'], [], [['variable', '/', '[^/]++', 'idAct'], ['text', '/commentaiire']], [], []],
+    'commentaiireadd' => [['idAct'], ['_controller' => 'App\\Controller\\CommentaiireController::index2'], [], [['variable', '/', '[^/]++', 'idAct'], ['text', '/commentaiire/add']], [], []],
     'exercice' => [[], ['_controller' => 'App\\Controller\\ExerciceController::index'], [], [['text', '/exercice']], [], []],
     'exerciceAdd' => [[], ['_controller' => 'App\\Controller\\ExerciceController::add'], [], [['text', '/addExercice']], [], []],
     'ExerciceUpdate' => [['id'], ['_controller' => 'App\\Controller\\ExerciceController::updateExercice'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/updateExercice']], [], []],
@@ -32,4 +34,5 @@ return [
     'test' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/test']], [], []],
     'test1' => [[], ['_controller' => 'App\\Controller\\TestController::index2'], [], [['text', '/test1']], [], []],
     'test2' => [[], ['_controller' => 'App\\Controller\\TestController::index3'], [], [['text', '/test2']], [], []],
+    'test3' => [[], ['_controller' => 'App\\Controller\\TestController::index4'], [], [['text', '/test3']], [], []],
 ];

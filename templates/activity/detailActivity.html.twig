@@ -32,18 +32,26 @@
                 <h2>{{ activity.getNomAct() }}</h2>
             </td>
             <td style="padding-left: 400px">
-                {% if userparticipated< activity.getQuantite%}
+{#                {% set Dateact = date(activity.getDateAct) %}#}
+{#                {% if  Dateact < ctdate  %}#}
+                    {% if userparticipated< activity.getQuantite%}
 
-                    {% if not participe  %}
-                        {{ form_start(btnParticipe,{'attr': {'novalidate': 'novalidate'}}) }}
-                        {{ form_row(btnParticipe.Participe ,  { 'attr': {'class': ' button buttonparticipe'}})}}
-                        {{ form_end(btnParticipe) }}
-                    {% else %}
-                        <button disabled class="button ">Participed</button>
+                        {% if not participe  %}
+                            {{ form_start(btnParticipe,{'attr': {'novalidate': 'novalidate'}}) }}
+                            {{ form_row(btnParticipe.Participe ,  { 'attr': {'class': ' button buttonparticipe'}})}}
+                            {{ form_end(btnParticipe) }}
+                        {% else %}
+                            <button disabled class="button ">Participed</button>
+                        {% endif %}
+                    {% else%}
+                        <button disabled class="button1 ">No Place</button>
                     {% endif %}
-                {% else%}
-                    <button disabled class="button1 ">No Place</button>
-                {% endif %}
+{#                {% else %}#}
+{#                    <button disabled class="button ">passed</button>#}
+{#                    <h1>{{  not(1==2) }}</h1>#}
+
+
+{#                {% endif %}#}
             </td>
         </tr>
     </table>
@@ -51,6 +59,7 @@
 {% endblock %}
 {% block cat %}
     {{ activity.getCategory.getNomCat() }}
+
 {% endblock %}
 {% block dt %}
     {{ activity.getDateAct|date('Y-m-d') }} , {{ activity.getTempAct|date('H:m') }}
@@ -77,15 +86,15 @@
         </button>
         {% else %}
             {% for i in 1..didRated.getRate %}
-                <i class="hover2" >&#9733;</i>
-            {% endfor %}
+            <i class="hover2" >&#9733;</i>
+        {% endfor %}
             {% for j in 1..5-didRated.getRate %}
                 <i class="star2" >&#9733;</i>
             {% endfor %}
         {% endif %}
     </div>
  </form>
-
+<input type="hidden" value="{{ activity.getId() }}" id="idact"/>
 
 
 {% endblock %}
@@ -98,6 +107,11 @@
     </li>
     {% endfor %}
 
+{% endblock %}
+{% block commentaire %}
+<div class="boit-msg " id="boitmesg">
+
+</div>
 {% endblock %}
 {% block Exercice %}
     {% for e in activity.exercices %}
@@ -171,6 +185,39 @@
 
         }
     </script>
+<script>
+
+    $(document).ready(function () {
+       /* $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });*/
+        setInterval(function () {
+            let idactivity = $("#idact").text();
+            $.ajax({
+
+                url:"http://127.0.0.1:8000/commentaiire/"+idactivity,
+                type: "get",
+                dataType: "json",
+                cache: false,
+                success: function (data , status) {
+                    let lenght = data.message.length
+                    var MSG="";
+                    for (let i =0; i < lenght; i++){
+                        MSG += "<div class='messages'><Strong>"+ data.message[i].iduser + ":</Strong>"+ data.message[i].textcommentaire +"</div></br>";
+                    }
+                    $("#boitmesg").html(MSG);
+                },
+                error: function (data) {
+                    //console.log("error: ");
+                },
+            });
+        },5000);
+    });
+
+
+</script>
 
 {% endblock %}
 

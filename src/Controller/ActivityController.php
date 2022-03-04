@@ -11,7 +11,14 @@ use App\Form\PaticipeType;
 use App\Repository\ActivityRepository;
 use App\Repository\ExerciceRepository;
 use DateInterval;
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh;
+use Endroid\QrCode\Label\Alignment\LabelAlignmentCenter;
+use Endroid\QrCode\Label\Font\NotoSans;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
+use Endroid\QrCode\Writer\PngWriter;
 use Knp\Component\Pager\PaginatorInterface;
+use Swift_Attachment;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -36,6 +43,7 @@ class ActivityController extends AbstractController
         );
 //        $h=$activity[15]->getImages();
 //        var_dump(sizeof($h));
+
         return $this->render('activity/Affichactivity.html.twig', [
             'activities' => $activity ,
             'date' =>date("Y-m-d")
@@ -226,7 +234,7 @@ class ActivityController extends AbstractController
     /**
      * @Route("/activity/details/{id}", name="activityDetails" )
      */
-    public function showmore($id , Request $request , Request $req): Response
+    public function showmore($id , Request $request , Request $req , \Swift_Mailer $mailer): Response
     {
 
 
@@ -235,7 +243,8 @@ class ActivityController extends AbstractController
         $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
         //user is the participation .... after integration change it to
         //$participant=$this->getUser();
-        $participant = $this->getDoctrine()->getRepository(User::class)->find(2);
+        $participant = $this->getDoctrine()->getRepository(User::class)->find(1);
+
         $didRated = $this->getDoctrine()->getRepository(Rating::class)->findOneBy(array('Iduser'=>$participant ,'idActivity'=>$activity));
         $heRated=false;
 
@@ -253,10 +262,58 @@ class ActivityController extends AbstractController
 
 
         if($form->isSubmitted()){
+            $msgQr="participant nom :  ".$participant->getNom()."// activity nom : ".$activity->getNomAct()."////   activity date : ".$activity->getDateAct()->format('Y-m-d')."///   activity Time".$activity->getTempAct()->format('H:m');
 
+
+            //************generated QR******************
+            $result = Builder::create()
+                ->writer(new PngWriter())
+                ->writerOptions([])
+                ->data($msgQr)
+
+                ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
+                ->size(300)
+                ->margin(10)
+                ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
+
+                ->labelText('code for participation')
+                ->labelFont(new NotoSans(20))
+                ->labelAlignment(new LabelAlignmentCenter())
+                ->build();
+            //echo $result->getDataUri();
+            $img='qr.png';
+            file_put_contents($img, file_get_contents($result->getDataUri()));
+            //$participoTo=$this->getUser()->getEmail();
+            $participoTo='oussama.saddi2@gmail.com';
+            //****************send Email**************
+            $attachment = Swift_Attachment::fromPath($img);
+            $message = (new \Swift_Message('Activity Pass'))
+                ->setFrom('oussama.saddi2@gmail.com')
+                ->setTo($participoTo)
+                ->attach($attachment)
+                ->setBody(
+                    $this->renderView(
+                    // templates/emails/registration.html.twig
+                        'activity/emailform.html.twig',
+
+                        ['user'=>$participant,
+                        'activity'=>$activity
+                        ]
+
+
+
+                    ),
+                    'text/html'
+
+                )
+            ;
+
+            $mailer->send($message);
+            //*************ajouter participant*********
             $activity->addParticipe($participant);
-            $em= $this->getDoctrine()->getManager();
-            $em->flush();
+           $em= $this->getDoctrine()->getManager();
+           $em->flush();
+
         }
         var_dump((int)$req->request->get('rate'));
         $rate=(int)$req->request->get('rate');
@@ -277,7 +334,8 @@ class ActivityController extends AbstractController
             'participe'=>$particpe,
             'userparticipated'=>sizeof($activity->getParticipe()),
             'heRated'=>$heRated,
-            'didRated'=>$didRated
+            'didRated'=>$didRated,
+            'ctdate'=>(string)date('Y-m-d'),
         ]);
     }
     /**

@@ -36,6 +36,7 @@ class __TwigTemplate_63ced9352ca6a9f2700d93f6978cfb919cb58d392555c10bb2da5b3ed9e
             'qt' => [$this, 'block_qt'],
             'star' => [$this, 'block_star'],
             'des' => [$this, 'block_des'],
+            'commentaire' => [$this, 'block_commentaire'],
             'pict' => [$this, 'block_pict'],
             'Exercice' => [$this, 'block_Exercice'],
             'jquery' => [$this, 'block_jquery'],
@@ -198,36 +199,11 @@ class __TwigTemplate_63ced9352ca6a9f2700d93f6978cfb919cb58d392555c10bb2da5b3ed9e
 
                 <div class=\"comments-area\">
                     <h4>05 Comments</h4>
-                    <div class=\"comment-list\">
-                        <div class=\"single-comment justify-content-between d-flex\">
-                            <div class=\"user justify-content-between d-flex\">
-                                <div class=\"thumb\">
-                                    <img src=\"";
-        // line 103
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/img/comment/comment_1.png"), "html", null, true);
-        echo "\" alt=\"\">
-                                </div>
-                                <div class=\"desc\">
-                                    <p class=\"comment\">
-                                        Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                                    </p>
-                                    <div class=\"d-flex justify-content-between\">
-                                        <div class=\"d-flex align-items-center\">
-                                            <h5>
-                                                <a href=\"#\">Emilly Blunt</a>
-                                            </h5>
-                                            <p class=\"date\">December 4, 2017 at 3:12 pm </p>
-                                        </div>
-                                        <div class=\"reply-btn\">
-                                            <a href=\"#\" class=\"btn-reply text-uppercase\">reply</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    ";
+        // line 99
+        $this->displayBlock('commentaire', $context, $blocks);
+        // line 125
+        echo "
 
 
                 </div>
@@ -582,6 +558,53 @@ class __TwigTemplate_63ced9352ca6a9f2700d93f6978cfb919cb58d392555c10bb2da5b3ed9e
 
     }
 
+    // line 99
+    public function block_commentaire($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "commentaire"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "commentaire"));
+
+        // line 100
+        echo "                    <div class=\"comment-list\">
+                        <div class=\"single-comment justify-content-between d-flex\">
+                            <div class=\"user justify-content-between d-flex\">
+                                <div class=\"thumb\">
+                                    <img src=\"";
+        // line 104
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/img/comment/comment_1.png"), "html", null, true);
+        echo "\" alt=\"\">
+                                </div>
+                                <div class=\"desc\">
+                                    <p class=\"comment\">
+                                        Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
+                                        Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
+                                    </p>
+                                    <div class=\"d-flex justify-content-between\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <h5>
+                                                <a href=\"#\">Emilly Blunt</a>
+                                            </h5>
+                                            <p class=\"date\">December 4, 2017 at 3:12 pm </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     // line 152
     public function block_pict($context, array $blocks = [])
     {
@@ -775,7 +798,7 @@ class __TwigTemplate_63ced9352ca6a9f2700d93f6978cfb919cb58d392555c10bb2da5b3ed9e
 
     public function getDebugInfo()
     {
-        return array (  749 => 295,  737 => 258,  732 => 257,  722 => 256,  703 => 219,  691 => 210,  679 => 201,  667 => 192,  664 => 191,  654 => 190,  640 => 180,  632 => 175,  624 => 170,  616 => 165,  608 => 160,  600 => 155,  596 => 153,  586 => 152,  572 => 84,  562 => 83,  551 => 74,  541 => 73,  522 => 72,  503 => 71,  484 => 70,  468 => 61,  458 => 60,  448 => 58,  438 => 57,  417 => 55,  407 => 29,  397 => 28,  384 => 297,  382 => 295,  375 => 282,  371 => 281,  365 => 278,  361 => 277,  357 => 276,  353 => 275,  349 => 274,  343 => 271,  339 => 270,  333 => 267,  327 => 264,  323 => 263,  319 => 262,  315 => 260,  313 => 256,  307 => 253,  302 => 251,  297 => 250,  292 => 247,  271 => 228,  269 => 190,  261 => 184,  259 => 152,  207 => 103,  191 => 89,  189 => 83,  180 => 76,  178 => 73,  174 => 72,  170 => 71,  166 => 70,  162 => 68,  160 => 60,  157 => 59,  155 => 57,  152 => 56,  150 => 55,  129 => 37,  120 => 30,  118 => 28,  110 => 23,  106 => 22,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  86 => 17,  82 => 16,  78 => 15,  74 => 14,  67 => 10,  56 => 1,);
+        return array (  772 => 295,  760 => 258,  755 => 257,  745 => 256,  726 => 219,  714 => 210,  702 => 201,  690 => 192,  687 => 191,  677 => 190,  663 => 180,  655 => 175,  647 => 170,  639 => 165,  631 => 160,  623 => 155,  619 => 153,  609 => 152,  578 => 104,  572 => 100,  562 => 99,  548 => 84,  538 => 83,  527 => 74,  517 => 73,  498 => 72,  479 => 71,  460 => 70,  444 => 61,  434 => 60,  424 => 58,  414 => 57,  393 => 55,  383 => 29,  373 => 28,  360 => 297,  358 => 295,  351 => 282,  347 => 281,  341 => 278,  337 => 277,  333 => 276,  329 => 275,  325 => 274,  319 => 271,  315 => 270,  309 => 267,  303 => 264,  299 => 263,  295 => 262,  291 => 260,  289 => 256,  283 => 253,  278 => 251,  273 => 250,  268 => 247,  247 => 228,  245 => 190,  237 => 184,  235 => 152,  206 => 125,  204 => 99,  192 => 89,  190 => 83,  181 => 76,  179 => 73,  175 => 72,  171 => 71,  167 => 70,  163 => 68,  161 => 60,  158 => 59,  156 => 57,  153 => 56,  151 => 55,  130 => 37,  121 => 30,  119 => 28,  111 => 23,  107 => 22,  103 => 21,  99 => 20,  95 => 19,  91 => 18,  87 => 17,  83 => 16,  79 => 15,  75 => 14,  68 => 10,  57 => 1,);
     }
 
     public function getSourceContext()
@@ -878,6 +901,7 @@ class __TwigTemplate_63ced9352ca6a9f2700d93f6978cfb919cb58d392555c10bb2da5b3ed9e
 
                 <div class=\"comments-area\">
                     <h4>05 Comments</h4>
+                    {% block commentaire %}
                     <div class=\"comment-list\">
                         <div class=\"single-comment justify-content-between d-flex\">
                             <div class=\"user justify-content-between d-flex\">
@@ -896,14 +920,13 @@ class __TwigTemplate_63ced9352ca6a9f2700d93f6978cfb919cb58d392555c10bb2da5b3ed9e
                                             </h5>
                                             <p class=\"date\">December 4, 2017 at 3:12 pm </p>
                                         </div>
-                                        <div class=\"reply-btn\">
-                                            <a href=\"#\" class=\"btn-reply text-uppercase\">reply</a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endblock %}
 
 
 
