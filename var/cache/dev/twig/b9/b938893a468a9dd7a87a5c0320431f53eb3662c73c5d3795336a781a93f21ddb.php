@@ -91,7 +91,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
     <a href=\"";
         // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("livraison_list");
-        echo "\"class=\"btn btn-success\">pdf</a>
+        echo "\"class=\"btn btn-danger\">PDF</a>
     <a href=\"";
         // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("TrierParNom");
@@ -275,7 +275,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 {% block body %}
 
     <h1 style=\"color: #d46973\">Liste des abonnements</h1>
-    <a href=\"{{ path('livraison_list') }}\"class=\"btn btn-success\">pdf</a>
+    <a href=\"{{ path('livraison_list') }}\"class=\"btn btn-danger\">PDF</a>
     <a href=\"{{path('TrierParNom')}} \" class=\"btn btn-success btn-sm\"  href=\"https://startbootstrap.com/theme/sb-admin-pro\"><i class=\"align-middle\" ></i>Trier par Prix</a>
     <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\">
     <table class=\"table\">

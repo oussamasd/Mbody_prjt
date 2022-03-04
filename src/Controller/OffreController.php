@@ -4,14 +4,17 @@ namespace App\Controller;
 
 use App\Entity\Offre;
 use App\Form\OffreType;
+use App\Repository\AbonnementRepository;
 use App\Repository\OffreRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Abonnement;
 
 /**
  * @Route("/offre")
@@ -23,6 +26,7 @@ class OffreController extends AbstractController
      */
     public function index(OffreRepository $offreRepository): Response
     {
+
         return $this->render('offre/index.html.twig', [
             'offres' => $offreRepository->findAll(),
         ]);
@@ -114,4 +118,40 @@ class OffreController extends AbstractController
             'offres' => $offreRepository->findAll(),
         ]);
     }
+
+    /**
+     * @Route("/", name="offre_index", methods={"GET"})
+     */
+    public function page(OffreRepository $offreRepository,Request $request,PaginatorInterface $paginator): Response
+    {
+
+
+        $donnees = $this->getDoctrine()->getRepository(Offre::class)->findAll();
+
+        $offre= $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1),
+            3
+        );
+        return $this->render('offre/index.html.twig', [
+            'offres' => $offre
+        ]);
+    }
+    /**
+     * @Route("/", name="TrierParDescription", methods={"GET"})
+     */
+    public function trie(OffreRepository $offreRepository,Request $request,PaginatorInterface $paginator): Response
+    {
+        $donnees = $this->getDoctrine()->getRepository(Offre::class)->findByDescripton();
+
+        $offre= $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1),
+            3
+        );
+        return $this->render('offre/index.html.twig', [
+            'offres' => $offre
+        ]);
+    }
+
 }

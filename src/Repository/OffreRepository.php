@@ -47,4 +47,10 @@ class OffreRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findByDescripton(){
+        $em=$this->getEntityManager();
+        $query=$em->createQuery('select r from App\Entity\Offre r order by r.Description ASC');
+        return $query->getResult();
+    }
 }

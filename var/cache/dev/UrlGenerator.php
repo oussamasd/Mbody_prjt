@@ -25,10 +25,11 @@ return [
     'livraison_list' => [[], ['_controller' => 'App\\Controller\\AbonnementController::Liste'], [], [['text', '/abonnement/abon/back/list']], [], []],
     'TrierParNom' => [[], ['_controller' => 'App\\Controller\\AbonnementController::afficher5'], [], [['text', '/abonnement/abon/back/TrierParNom']], [], []],
     'abonnement_index10' => [[], ['_controller' => 'App\\Controller\\AbonnementController::index10'], [], [['text', '/abonnement/mobile/json/abonnement']], [], []],
-    'offre_index' => [[], ['_controller' => 'App\\Controller\\OffreController::index'], [], [['text', '/offre/']], [], []],
     'offre_new' => [[], ['_controller' => 'App\\Controller\\OffreController::new'], [], [['text', '/offre/new']], [], []],
     'offre_show' => [['id'], ['_controller' => 'App\\Controller\\OffreController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],
     'offre_edit' => [['id'], ['_controller' => 'App\\Controller\\OffreController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],
     'offre_delete' => [['id'], ['_controller' => 'App\\Controller\\OffreController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/offre']], [], []],
     'offre_front' => [[], ['_controller' => 'App\\Controller\\OffreController::afficher'], [], [['text', '/offre/off/front']], [], []],
+    'offre_index' => [[], ['_controller' => 'App\\Controller\\OffreController::page'], [], [['text', '/offre/']], [], []],
+    'TrierParDescription' => [[], ['_controller' => 'App\\Controller\\OffreController::trie'], [], [['text', '/offre/']], [], []],
 ];

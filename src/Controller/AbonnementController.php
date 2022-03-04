@@ -207,7 +207,7 @@ class AbonnementController extends AbstractController
         $dompdf->render();
 
         // Output the generated PDF to Browser (force download)
-        $dompdf->stream("Liste_des_articles.pdf", [
+        $dompdf->stream("Liste_des_abonnements.pdf", [
             "Attachment" => true
         ]);
 
@@ -232,7 +232,6 @@ class AbonnementController extends AbstractController
 
     /**
      * @Route("/mobile/json/abonnement", name="abonnement_index10")
-
      */
 
     public function index10(AbonnementRepository $abonnementRepository, OffreRepository $offrerep): Response

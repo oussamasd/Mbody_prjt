@@ -160,7 +160,10 @@ class __TwigTemplate_c97ede07edf2720f22a0800e2de3aad171b63dd530b7e4824b9cba2ff89
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['offre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 47
-        echo "        </tbody>
+        echo "        ";
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["offres"]) || array_key_exists("offres", $context) ? $context["offres"] : (function () { throw new RuntimeError('Variable "offres" does not exist.', 47, $this->source); })()));
+        echo "
+        </tbody>
     </table>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
     <script>
@@ -174,13 +177,13 @@ class __TwigTemplate_c97ede07edf2720f22a0800e2de3aad171b63dd530b7e4824b9cba2ff89
         });
     </script>
 ";
-        // line 61
+        // line 62
         echo "    <form method=\"post\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offre_new");
         echo "\" >
         <button type=\"btn\" class=\"btn btn-success\"> ";
-        // line 62
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 62, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
+        // line 63
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 63, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
         echo "</button>
     </form>
 
@@ -206,7 +209,7 @@ class __TwigTemplate_c97ede07edf2720f22a0800e2de3aad171b63dd530b7e4824b9cba2ff89
 
     public function getDebugInfo()
     {
-        return array (  183 => 62,  178 => 61,  163 => 47,  154 => 43,  143 => 37,  134 => 32,  129 => 27,  125 => 26,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  186 => 63,  181 => 62,  163 => 47,  154 => 43,  143 => 37,  134 => 32,  129 => 27,  125 => 26,  121 => 25,  117 => 24,  113 => 23,  110 => 22,  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -257,6 +260,7 @@ class __TwigTemplate_c97ede07edf2720f22a0800e2de3aad171b63dd530b7e4824b9cba2ff89
                 <td colspan=\"5\">no records found</td>
             </tr>
         {% endfor %}
+        {{ knp_pagination_render(offres) }}
         </tbody>
     </table>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>

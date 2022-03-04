@@ -5408,7 +5408,14 @@
         <argument key="offre" type="service_closure" id=".errored..service_locator.qC9bCef.App\Entity\Offre"/>
       </argument>
     </service>
-    <service id=".service_locator.XlzG0Ez" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.KQAWB0A" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="offreRepository" type="service_closure" id="App\Repository\OffreRepository"/>
+        <argument key="paginator" type="service_closure" id="knp_paginator"/>
+      </argument>
+    </service>
+    <service id=".service_locator.gcK9YH2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AbonnementController::Liste" type="service_closure" id=".service_locator.aXv8UbQ"/>
@@ -5426,7 +5433,9 @@
         <argument key="App\Controller\OffreController::edit" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController::index" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController::new" type="service_closure" id=".service_locator.CjplhxF"/>
+        <argument key="App\Controller\OffreController::page" type="service_closure" id=".service_locator.KQAWB0A"/>
         <argument key="App\Controller\OffreController::show" type="service_closure" id=".service_locator.2zmwW.5"/>
+        <argument key="App\Controller\OffreController::trie" type="service_closure" id=".service_locator.KQAWB0A"/>
         <argument key="App\Controller\AbonnementController:Liste" type="service_closure" id=".service_locator.aXv8UbQ"/>
         <argument key="App\Controller\AbonnementController:afficher" type="service_closure" id=".service_locator.CCgCFXi"/>
         <argument key="App\Controller\AbonnementController:afficher5" type="service_closure" id=".service_locator.CCgCFXi"/>
@@ -5442,7 +5451,9 @@
         <argument key="App\Controller\OffreController:edit" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController:index" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController:new" type="service_closure" id=".service_locator.CjplhxF"/>
+        <argument key="App\Controller\OffreController:page" type="service_closure" id=".service_locator.KQAWB0A"/>
         <argument key="App\Controller\OffreController:show" type="service_closure" id=".service_locator.2zmwW.5"/>
+        <argument key="App\Controller\OffreController:trie" type="service_closure" id=".service_locator.KQAWB0A"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5896,12 +5907,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.XlzG0Ez"/>
+      <argument type="service" id=".service_locator.gcK9YH2"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.XlzG0Ez"/>
+      <argument type="service" id=".service_locator.gcK9YH2"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6306,7 +6317,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.XlzG0Ez"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.gcK9YH2"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

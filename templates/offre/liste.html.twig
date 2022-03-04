@@ -1,0 +1,34 @@
+
+{% block title %}Abonnement index{% endblock %}
+{% block body %}
+    <h1 align = "center">Liste des Abonnement</h1>
+    <table class="table">
+        <thead>
+        <tr>
+
+            <th>Id</th>
+            <th>Delai</th>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Nom-Abonnement</th>
+            <th>actions</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for offre in offres %}
+            <tr>
+                <td>{{ offre.id }}</td>
+                <td>{{ offre.delai ? offre.delai|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ offre.nom }}</td>
+                <td>{{ offre.Description }}</td>
+                <td>{{ offre.getNomAbonnement.getNom()}}</td>
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
