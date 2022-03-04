@@ -49,6 +49,12 @@ class AbonnementRepository extends ServiceEntityRepository
     }
     */
 
+    public function findByPrix(){
+        $em=$this->getEntityManager();
+        $query=$em->createQuery('select r from App\Entity\Abonnement r order by r.prix DESC');
+        return $query->getResult();
+    }
+
 }
 
 

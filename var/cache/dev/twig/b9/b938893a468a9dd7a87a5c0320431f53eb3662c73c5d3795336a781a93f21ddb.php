@@ -87,7 +87,15 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 
         // line 6
         echo "
-    <h1 style=\"color: #d5606e\">Liste des abonnements</h1>
+    <h1 style=\"color: #d46973\">Liste des abonnements</h1>
+    <a href=\"";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("livraison_list");
+        echo "\"class=\"btn btn-success\">pdf</a>
+    <a href=\"";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("TrierParNom");
+        echo " \" class=\"btn btn-success btn-sm\"  href=\"https://startbootstrap.com/theme/sb-admin-pro\"><i class=\"align-middle\" ></i>Trier par Prix</a>
     <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\">
     <table class=\"table\">
         <thead>
@@ -100,65 +108,66 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
                 <th>image</th>
                 <th>actions</th>
 
+
             </tr>
         </thead>
 
         <tbody>
     <tbody  id=\"myTable\">
         ";
-        // line 25
+        // line 28
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 28, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["abonnement"]) {
-            // line 26
+            // line 29
             echo "            <tr>
                 <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "nom", [], "any", false, false, false, 28), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "prix", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                <td>";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "categories", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 30), "html", null, true);
+            echo " <br/></td>
                 <td>";
             // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "description", [], "any", false, false, false, 31), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "nom", [], "any", false, false, false, 31), "html", null, true);
+            echo " <br/></td>
+                <td>";
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "prix", [], "any", false, false, false, 32), "html", null, true);
+            echo " <br/></td>
+                <td>";
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "categories", [], "any", false, false, false, 33), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "description", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                 <td><img style=\"width: 150px;\" src=\"/uploads/";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "getPhoto", [], "method", false, false, false, 32), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "getPhoto", [], "method", false, false, false, 35), "html", null, true);
             echo "\"></td>
 
                 <td>
   ";
-            // line 36
+            // line 39
             echo "                    ";
-            // line 37
+            // line 40
             echo "
                     <form  action=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_show", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_show", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 41)]), "html", null, true);
             echo "\" >
                         <button type=\"submit\" name=\"submitAction\"  value=\"modifier\" class=\"btn btn-info\">Afficher</button>
                     </form>
                 </td>
                <td>
                    <form method=\"post\" action=\"";
-            // line 43
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 43)]), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 46)]), "html", null, true);
             echo "\" >
                        <button type=\"btn\" class=\"btn btn-warning\"> ";
-            // line 44
-            echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 44, $this->source); })()), "Modifier")) : ("Modifier")), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 47, $this->source); })()), "Modifier")) : ("Modifier")), "html", null, true);
             echo "</button>
                    </form>
                 </td>
@@ -167,7 +176,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 49
+            // line 52
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -177,9 +186,9 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['abonnement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 54
+        // line 57
         echo "        ";
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 54, $this->source); })()));
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 57, $this->source); })()));
         echo "
     </tbody>
     </table>
@@ -196,16 +205,16 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
     </script>
 
 ";
-        // line 70
+        // line 73
         echo "
      ";
-        // line 72
+        // line 75
         echo "<form method=\"post\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_new");
         echo "\" >
 <button type=\"btn\" class=\"btn btn-success\"> ";
-        // line 73
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 73, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
+        // line 76
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 76, $this->source); })()), "Ajouter")) : ("Ajouter")), "html", null, true);
         echo "</button>
 </form>
 
@@ -213,7 +222,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 
 
     ";
-        // line 79
+        // line 82
         $this->displayBlock('b1', $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -232,7 +241,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "b1"));
 
-        // line 80
+        // line 83
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -254,7 +263,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 
     public function getDebugInfo()
     {
-        return array (  236 => 80,  217 => 79,  208 => 73,  203 => 72,  200 => 70,  181 => 54,  171 => 49,  161 => 44,  157 => 43,  149 => 38,  146 => 37,  144 => 36,  138 => 32,  134 => 31,  130 => 30,  126 => 29,  122 => 28,  118 => 27,  115 => 26,  110 => 25,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  245 => 83,  226 => 82,  217 => 76,  212 => 75,  209 => 73,  190 => 57,  180 => 52,  170 => 47,  166 => 46,  158 => 41,  155 => 40,  153 => 39,  147 => 35,  143 => 34,  139 => 33,  135 => 32,  131 => 31,  127 => 30,  124 => 29,  119 => 28,  97 => 9,  93 => 8,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -265,7 +274,9 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
 
 {% block body %}
 
-    <h1 style=\"color: #d5606e\">Liste des abonnements</h1>
+    <h1 style=\"color: #d46973\">Liste des abonnements</h1>
+    <a href=\"{{ path('livraison_list') }}\"class=\"btn btn-success\">pdf</a>
+    <a href=\"{{path('TrierParNom')}} \" class=\"btn btn-success btn-sm\"  href=\"https://startbootstrap.com/theme/sb-admin-pro\"><i class=\"align-middle\" ></i>Trier par Prix</a>
     <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\">
     <table class=\"table\">
         <thead>
@@ -278,6 +289,7 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
                 <th>image</th>
                 <th>actions</th>
 
+
             </tr>
         </thead>
 
@@ -285,9 +297,9 @@ class __TwigTemplate_08954e70eb9d5c757d1c0b697e677c7996d79b0ad38a436d1fdf165793b
     <tbody  id=\"myTable\">
         {% for abonnement in abonnements %}
             <tr>
-                <td>{{ abonnement.id }}</td>
-                <td>{{ abonnement.nom }}</td>
-                <td>{{ abonnement.prix }}</td>
+                <td>{{ abonnement.id }} <br/></td>
+                <td>{{ abonnement.nom }} <br/></td>
+                <td>{{ abonnement.prix }} <br/></td>
                 <td>{{ abonnement.categories }}</td>
                 <td>{{ abonnement.description }}</td>
                 <td><img style=\"width: 150px;\" src=\"/uploads/{{ abonnement.getPhoto() }}\"></td>

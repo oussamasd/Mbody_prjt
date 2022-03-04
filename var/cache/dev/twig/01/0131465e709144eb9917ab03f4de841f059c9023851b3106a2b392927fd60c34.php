@@ -86,14 +86,13 @@ class __TwigTemplate_719f51ead5545b8d1f95e6f07a666750cec36c5b92f59e4b9e0cf38c861
 
         // line 6
         echo "    <h1 style=\"color: #d5606e\">Créer une nouvelle abonnement</h1>
-
     ";
-        // line 8
+        // line 7
         echo twig_include($this->env, $context, "abonnement/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ck");
         echo "\">retour à la liste</a>
 ";
@@ -117,7 +116,7 @@ class __TwigTemplate_719f51ead5545b8d1f95e6f07a666750cec36c5b92f59e4b9e0cf38c861
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  96 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -128,7 +127,6 @@ class __TwigTemplate_719f51ead5545b8d1f95e6f07a666750cec36c5b92f59e4b9e0cf38c861
 
 {% block body %}
     <h1 style=\"color: #d5606e\">Créer une nouvelle abonnement</h1>
-
     {{ include('abonnement/_form.html.twig') }}
 
     <a href=\"{{ path('ck') }}\">retour à la liste</a>

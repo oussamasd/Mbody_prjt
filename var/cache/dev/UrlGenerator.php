@@ -22,6 +22,8 @@ return [
     'abonnement_delete' => [['id'], ['_controller' => 'App\\Controller\\AbonnementController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/abonnement']], [], []],
     'ck' => [[], ['_controller' => 'App\\Controller\\AbonnementController::afficher'], [], [['text', '/abonnement/abon/back']], [], []],
     'abonnement_front' => [[], ['_controller' => 'App\\Controller\\AbonnementController::index1'], [], [['text', '/abonnement/frontabon']], [], []],
+    'livraison_list' => [[], ['_controller' => 'App\\Controller\\AbonnementController::Liste'], [], [['text', '/abonnement/abon/back/list']], [], []],
+    'TrierParNom' => [[], ['_controller' => 'App\\Controller\\AbonnementController::afficher5'], [], [['text', '/abonnement/abon/back/TrierParNom']], [], []],
     'abonnement_index10' => [[], ['_controller' => 'App\\Controller\\AbonnementController::index10'], [], [['text', '/abonnement/mobile/json/abonnement']], [], []],
     'offre_index' => [[], ['_controller' => 'App\\Controller\\OffreController::index'], [], [['text', '/offre/']], [], []],
     'offre_new' => [[], ['_controller' => 'App\\Controller\\OffreController::new'], [], [['text', '/offre/new']], [], []],

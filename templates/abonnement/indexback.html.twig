@@ -4,7 +4,9 @@
 
 {% block body %}
 
-    <h1 style="color: #d5606e">Liste des abonnements</h1>
+    <h1 style="color: #d46973">Liste des abonnements</h1>
+    <a href="{{ path('livraison_list') }}"class="btn btn-success">pdf</a>
+    <a href="{{path('TrierParNom')}} " class="btn btn-success btn-sm"  href="https://startbootstrap.com/theme/sb-admin-pro"><i class="align-middle" ></i>Trier par Prix</a>
     <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher..">
     <table class="table">
         <thead>
@@ -17,6 +19,7 @@
                 <th>image</th>
                 <th>actions</th>
 
+
             </tr>
         </thead>
 
@@ -24,9 +27,9 @@
     <tbody  id="myTable">
         {% for abonnement in abonnements %}
             <tr>
-                <td>{{ abonnement.id }}</td>
-                <td>{{ abonnement.nom }}</td>
-                <td>{{ abonnement.prix }}</td>
+                <td>{{ abonnement.id }} <br/></td>
+                <td>{{ abonnement.nom }} <br/></td>
+                <td>{{ abonnement.prix }} <br/></td>
                 <td>{{ abonnement.categories }}</td>
                 <td>{{ abonnement.description }}</td>
                 <td><img style="width: 150px;" src="/uploads/{{ abonnement.getPhoto() }}"></td>

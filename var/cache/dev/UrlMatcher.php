@@ -16,6 +16,8 @@ return [
         '/abonnement' => [[['_route' => 'abonnement_index', '_controller' => 'App\\Controller\\AbonnementController::index'], null, ['GET' => 0], null, true, false, null]],
         '/abonnement/new' => [[['_route' => 'abonnement_new', '_controller' => 'App\\Controller\\AbonnementController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/abonnement/abon/back' => [[['_route' => 'ck', '_controller' => 'App\\Controller\\AbonnementController::afficher'], null, ['GET' => 0], null, false, false, null]],
+        '/abonnement/abon/back/list' => [[['_route' => 'livraison_list', '_controller' => 'App\\Controller\\AbonnementController::Liste'], null, ['GET' => 0], null, false, false, null]],
+        '/abonnement/abon/back/TrierParNom' => [[['_route' => 'TrierParNom', '_controller' => 'App\\Controller\\AbonnementController::afficher5'], null, ['GET' => 0], null, false, false, null]],
         '/abonnement/mobile/json/abonnement' => [[['_route' => 'abonnement_index10', '_controller' => 'App\\Controller\\AbonnementController::index10'], null, null, null, false, false, null]],
         '/offre' => [[['_route' => 'offre_index', '_controller' => 'App\\Controller\\OffreController::index'], null, ['GET' => 0], null, true, false, null]],
         '/offre/new' => [[['_route' => 'offre_new', '_controller' => 'App\\Controller\\OffreController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],

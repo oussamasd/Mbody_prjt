@@ -30,6 +30,7 @@ use Symfony\Component\Mime\Email;
  */
 class AbonnementController extends AbstractController
 {
+
     /**
      * @Route("/", name="abonnement_index", methods={"GET"})
      *  @param Request $request
@@ -180,20 +181,21 @@ class AbonnementController extends AbstractController
             'abonnements' => $abonnementRepository->findAll(),
         ]);
     }
-
-    public function Liste(AbonnementRepository $abonnementRepository,Abonnement $abonnement){
-        $repository=$this->getDoctrine()->getRepository(Abonnement::class);
+    /**
+     * @Route("/abon/back/list", name="livraison_list", methods={"GET"})
+     */
+    public function Liste(AbonnementRepository $AbonnementRepository){
         $pdfOptions = new Options();
         $pdfOptions->set('defaultFont', 'Arial');
 
         // Instantiate Dompdf with our options
         $dompdf = new Dompdf($pdfOptions);
-        $abonnement=$repository->findAll();
+        $abonnement=$AbonnementRepository->findAll();
 
 
         // Retrieve the HTML generated in our twig file
-        $html = $this->renderView('article/liste.html.twig',
-            ['abonnement'=>$abonnement]);
+        $html = $this->renderView('abonnement/liste.html.twig',
+            ['abonnements'=>$abonnement]);
 
         // Load HTML to Dompdf
         $dompdf->loadHtml($html);
@@ -211,6 +213,23 @@ class AbonnementController extends AbstractController
 
 
     }
+    /**
+     * @Route("/abon/back/TrierParNom", name="TrierParNom", methods={"GET"})
+     */
+    public function afficher5(AbonnementRepository $abonnementRepository,Request $request,PaginatorInterface $paginator): Response
+    {
+        $donnees = $this->getDoctrine()->getRepository(Abonnement::class)->findByPrix();
+
+        $abonnement= $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1),
+            3
+        );
+        return $this->render('abonnement/indexback.html.twig', [
+            'abonnements' => $abonnement
+        ]);
+    }
+
     /**
      * @Route("/mobile/json/abonnement", name="abonnement_index10")
 
