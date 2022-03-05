@@ -32,4 +32,5 @@ return [
     'offre_front' => [[], ['_controller' => 'App\\Controller\\OffreController::afficher'], [], [['text', '/offre/off/front']], [], []],
     'offre_index' => [[], ['_controller' => 'App\\Controller\\OffreController::page'], [], [['text', '/offre/']], [], []],
     'TrierParDescription' => [[], ['_controller' => 'App\\Controller\\OffreController::trie'], [], [['text', '/offre/']], [], []],
+    'Offre_list' => [[], ['_controller' => 'App\\Controller\\OffreController::Liste'], [], [['text', '/offre/']], [], []],
 ];

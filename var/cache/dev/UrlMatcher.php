@@ -24,6 +24,7 @@ return [
         '/offre' => [
             [['_route' => 'offre_index', '_controller' => 'App\\Controller\\OffreController::page'], null, ['GET' => 0], null, true, false, null],
             [['_route' => 'TrierParDescription', '_controller' => 'App\\Controller\\OffreController::trie'], null, ['GET' => 0], null, true, false, null],
+            [['_route' => 'Offre_list', '_controller' => 'App\\Controller\\OffreController::Liste'], null, ['GET' => 0], null, true, false, null],
         ],
     ],
     [ // $regexpList

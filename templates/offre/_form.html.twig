@@ -1,36 +1,69 @@
 {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
-                         <tr>
-                         <th>Delai:</th>
-                         {{ form_widget(form.delai) }}
-                          {% if not form.delai.vars.valid %}
-                              <div class="alert alert-danger">
-                                  {{ form_errors(form.delai) }}
-                              </div>
-                           </tr>
-                          {% endif %}
-                           <tr>
-                               <th>Nom:</th>
-{{ form_widget(form.nom) }}
-                          {% if not form.nom.vars.valid %}
-                              <div class="alert alert-danger">
-                                  {{ form_errors(form.nom) }}
-                              </div>
 
-                          {% endif %}
+<table>
+
+                         <tr>
+                         <th style="color: #98b6b4">Delai:</th>
+                             <img src="{{ asset('/assets/images/offf.jpg') }}"  alt="logo" width="350px" height="200px">
+
+                             <td> {{ form_widget(form.delai) }} </td>
+                             <td> </td>
+                             <td>
+                                 {% if not form.delai.vars.valid %}
+                                 <div class="alert alert-danger">
+                                     {{ form_errors(form.delai) }}
+                                 </div>
+
+                                 {% endif %}
+                             </td>
+                         </tr>
+
+                           <tr>
+                               <th style="color:#98b6b4 ">Nom:</th>
+                                <td>{{ form_widget(form.nom) }} </td>
+                           </tr>
+
+    <tr>
+                               <td></td>
+                               <td>  {% if not form.nom.vars.valid %}
+                                       <div class="alert alert-danger">
+                                           {{ form_errors(form.nom) }}
+                                       </div>
+
+                                   {% endif %} </td>
                            </tr>
                         <tr>
-                        <th>Description:</th>
- {{ form_widget(form.Description) }}
-                          {% if not form.Description.vars.valid %}
-                              <div class="alert alert-danger">
-                                  {{ form_errors(form.Description) }}
-                              </div>
+                        <th style="color: #98b6b4">Description:</th>
+                            <td>  {{ form_widget(form.Description) }} </td>
                         </tr>
-                          {% endif %}
+    <tr>
+        <td> </td>
+        <td>{% if not form.Description.vars.valid %}
+            <div class="alert alert-danger">
+                {{ form_errors(form.Description) }}
+                         </div>
+            {% endif %}
+                        </td>
+                        </tr>
+    <tr>
+        <th style="color: #98b6b4">Nom_Abonnement:</th>
+        <td>  {{ form_widget(form.nom_abonnement) }} </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>  {% if not form.nom_abonnement.vars.valid %}
+                <div class="alert alert-danger">
+                    {{ form_errors(form.nom_abonnement) }}
+                </div>
+
+            {% endif %} </td>
+    </tr>
 
 
 {{ form_widget(form) }}
 {#  <button class="btn">{{ button_label|default('Send') }}</button>#}
+</table>
 <button type="btn" class="btn btn-primary"> {{ button_label|default('Envoyer') }}</button>
-
 {{ form_end(form) }}
+
+

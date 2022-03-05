@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 
 
+
 class AbonnementType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -23,7 +24,6 @@ class AbonnementType extends AbstractType
             ->add('description')
             ->add('imageFile', FileType::class, [
                 'mapped' => false])
-
         ;
     }
 

@@ -51,7 +51,7 @@ class Abonnement
 
     /**
      * @ORM\Column(type="string", length=255)
-     *  @Assert\NotBlank(message=" ce champ est obligatoire ")
+     * @Assert\NotBlank(message=" ce champ est obligatoire ")
      */
     private $Description;
 

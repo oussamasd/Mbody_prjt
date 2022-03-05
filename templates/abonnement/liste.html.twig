@@ -1,7 +1,7 @@
 
 {% block title %}Abonnement index{% endblock %}
 {% block body %}
-    <h1 align = "center">Liste des Abonnement</h1>
+    <h1 style="color:#d46973;" align = "center">Liste des Abonnements</h1>
     <table class="table">
         <thead>
         <tr>
@@ -10,9 +10,6 @@
             <th>Prix</th>
             <th>Categories</th>
             <th>Description</th>
-            <th>image</th>
-            <th>actions</th>
-
 
         </tr>
         </thead>
@@ -24,8 +21,7 @@
                 <td>{{ abonnement.prix }} <br/></td>
                 <td>{{ abonnement.categories }}</td>
                 <td>{{ abonnement.description }}</td>
-                <td><img style="width: 150px;" src="/uploads/{{ abonnement.getPhoto() }}"></td>
-
+                
             </tr>
 
         {% endfor %}

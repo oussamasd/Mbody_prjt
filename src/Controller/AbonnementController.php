@@ -211,7 +211,6 @@ class AbonnementController extends AbstractController
             "Attachment" => true
         ]);
 
-
     }
     /**
      * @Route("/abon/back/TrierParNom", name="TrierParNom", methods={"GET"})

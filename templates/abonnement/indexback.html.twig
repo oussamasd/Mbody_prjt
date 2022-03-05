@@ -11,6 +11,7 @@
     <table class="table">
         <thead>
             <tr>
+
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Prix</th>
@@ -54,7 +55,8 @@
             </tr>
 
         {% endfor %}
-        {{ knp_pagination_render(abonnements) }}
+        {{ knp_pagination_render(abonnements, 'abonnement/pagination.html.twig') }}
+
     </tbody>
     </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

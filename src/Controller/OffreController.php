@@ -7,6 +7,8 @@ use App\Form\OffreType;
 use App\Repository\AbonnementRepository;
 use App\Repository\OffreRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -142,7 +144,7 @@ class OffreController extends AbstractController
      */
     public function trie(OffreRepository $offreRepository,Request $request,PaginatorInterface $paginator): Response
     {
-        $donnees = $this->getDoctrine()->getRepository(Offre::class)->findByDescripton();
+        $donnees = $this->getDoctrine()->getRepository(Offre::class)->findByNom();
 
         $offre= $paginator->paginate(
             $donnees,
@@ -153,5 +155,36 @@ class OffreController extends AbstractController
             'offres' => $offre
         ]);
     }
+    /**
+     * @Route("/", name="Offre_list", methods={"GET"})
+     */
+    public function Liste(OffreRepository $offreRepository){
+        $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
 
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+        $offre=$offreRepository>findAll();
+
+
+        // Retrieve the HTML generated in our twig file
+        $html = $this->renderView('offre/liste.html.twig',
+            ['offres'=>$offre]);
+
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser (force download)
+        $dompdf->stream("Liste_des_offres.pdf", [
+            "Attachment" => true
+        ]);
+
+
+    }
 }

@@ -1,48 +1,70 @@
 
 {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+<table>
                          <tr>
-                         <th>Nom:</th>
-                         {{ form_widget(form.nom) }}
-                          {% if not form.nom.vars.valid %}
-                              <div class="alert alert-danger">
-                                  {{ form_errors(form.nom) }}
-                              </div>
-                          {% endif %}
+                             <th style="color:#98b6b4">Nom:</th>
+                             <td> {{ form_widget(form.nom) }} </td>
                          </tr>
+<tr>
+    <td></td>
+    <td>
+        {% if not form.nom.vars.valid %}
+            <div class="alert alert-danger">
+                {{ form_errors(form.nom) }}
+            </div>
+        {% endif %}
+    </td>
+</tr>
+
                         <tr>
-                        <th>Prix:</th>
- {{ form_widget(form.prix) }}
-                          {% if not form.prix.vars.valid %}
-                              <div class="alert alert-danger">
-                                  {{ form_errors(form.prix) }}
-                              </div>
+                        <th style="color:#98b6b4">Prix:</th>
+ <td>{{ form_widget(form.prix) }} </td>
                         </tr>
-                          {% endif %}
 <tr>
-    <th>Catégories:</th>
-    {{ form_widget(form.categories) }}
-    {% if not form.categories.vars.valid %}
-    <div class="alert alert-danger">
-        {{ form_errors(form.categories) }}
-    </div>
+<td></td>
+    <td>   {% if not form.prix.vars.valid %}
+            <div class="alert alert-danger">
+                {{ form_errors(form.prix) }}
+            </div>
+
+        {% endif %} </td>
 </tr>
-{% endif %}
+
 <tr>
-
-    <th>description:</th>
-
-    {{ form_widget(form.description) }}
-    {% if not form.description.vars.valid %}
-    <div class="alert alert-danger">
-
-        {{ form_errors(form.description) }}
-    </div>
-
+    <th style="color:#98b6b4">Catégories:</th>
+  <td> {{ form_widget(form.categories) }} </td>
 
 </tr>
-{% endif %}
-{{ form_widget(form) }}
+    <tr>
+        <td></td>
+        <td>  {% if not form.categories.vars.valid %}
+                <div class="alert alert-danger">
+                    {{ form_errors(form.categories) }}
+                </div>
+
+            {% endif %} </td>
+    </tr>
+
+<tr>
+
+    <th style="color:#98b6b4">description:</th>
+
+   <td>  {{ form_widget(form.description) }} </td>
+
+</tr>
+    <tr>
+        <td></td>
+        <td>  {{ form_errors(form.description) }} </td>
+    </tr>
+    <tr>
+
+        <th style="color:#98b6b4">image:</th>
+
+        <td>  {{ form_widget(form.imageFile) }} </td>
+
+    </tr>
+
 {#<button class="btn"> {{ button_label|default('Envoyer') }}</button>#}
+</table>
 <button type="btn" class="btn btn-primary"> {{ button_label|default('Envoyer') }}</button>
 {{ form_end(form) }}
-

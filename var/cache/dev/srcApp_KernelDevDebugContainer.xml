@@ -5415,7 +5415,7 @@
         <argument key="paginator" type="service_closure" id="knp_paginator"/>
       </argument>
     </service>
-    <service id=".service_locator.gcK9YH2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.abohUXh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AbonnementController::Liste" type="service_closure" id=".service_locator.aXv8UbQ"/>
@@ -5428,6 +5428,7 @@
         <argument key="App\Controller\AbonnementController::index10" type="service_closure" id=".service_locator.oxIwhvM"/>
         <argument key="App\Controller\AbonnementController::new" type="service_closure" id=".service_locator.CjplhxF"/>
         <argument key="App\Controller\AbonnementController::show" type="service_closure" id=".service_locator.3suOlCd"/>
+        <argument key="App\Controller\OffreController::Liste" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController::afficher" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController::delete" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController::edit" type="service_closure" id=".service_locator.qC9bCef"/>
@@ -5446,6 +5447,7 @@
         <argument key="App\Controller\AbonnementController:index10" type="service_closure" id=".service_locator.oxIwhvM"/>
         <argument key="App\Controller\AbonnementController:new" type="service_closure" id=".service_locator.CjplhxF"/>
         <argument key="App\Controller\AbonnementController:show" type="service_closure" id=".service_locator.3suOlCd"/>
+        <argument key="App\Controller\OffreController:Liste" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController:afficher" type="service_closure" id=".service_locator.Jh7UbNl"/>
         <argument key="App\Controller\OffreController:delete" type="service_closure" id=".service_locator.qC9bCef"/>
         <argument key="App\Controller\OffreController:edit" type="service_closure" id=".service_locator.qC9bCef"/>
@@ -5907,12 +5909,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.gcK9YH2"/>
+      <argument type="service" id=".service_locator.abohUXh"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.gcK9YH2"/>
+      <argument type="service" id=".service_locator.abohUXh"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6317,7 +6319,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.gcK9YH2"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.abohUXh"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

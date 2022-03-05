@@ -86,7 +86,7 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1 align = \"center\">Liste des Abonnement</h1>
+        echo "    <h1 style=\"color:#d46973;\" align = \"center\">Liste des Abonnements</h1>
     <table class=\"table\">
         <thead>
         <tr>
@@ -95,45 +95,38 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
             <th>Prix</th>
             <th>Categories</th>
             <th>Description</th>
-            <th>image</th>
-            <th>actions</th>
-
 
         </tr>
         </thead>
         <tbody>
         ";
-        // line 20
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 17, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["abonnement"]) {
-            // line 21
+            // line 18
             echo "            <tr>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 22), "html", null, true);
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 19), "html", null, true);
             echo " <br/></td>
+                <td>";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "nom", [], "any", false, false, false, 20), "html", null, true);
+            echo " <br/></td>
+                <td>";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "prix", [], "any", false, false, false, 21), "html", null, true);
+            echo " <br/></td>
+                <td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "categories", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
                 <td>";
             // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "nom", [], "any", false, false, false, 23), "html", null, true);
-            echo " <br/></td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "prix", [], "any", false, false, false, 24), "html", null, true);
-            echo " <br/></td>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "categories", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "description", [], "any", false, false, false, 23), "html", null, true);
             echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "description", [], "any", false, false, false, 26), "html", null, true);
-            echo "</td>
-                <td><img style=\"width: 150px;\" src=\"/uploads/";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "getPhoto", [], "method", false, false, false, 27), "html", null, true);
-            echo "\"></td>
-
+                
             </tr>
 
         ";
@@ -141,7 +134,7 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['abonnement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 28
         echo "        </tbody>
     </table>
 
@@ -161,7 +154,7 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
 
     public function getDebugInfo()
     {
-        return array (  145 => 32,  134 => 27,  130 => 26,  126 => 25,  122 => 24,  118 => 23,  114 => 22,  111 => 21,  107 => 20,  89 => 4,  79 => 3,  60 => 2,  50 => 3,  48 => 2,  45 => 1,);
+        return array (  138 => 28,  127 => 23,  123 => 22,  119 => 21,  115 => 20,  111 => 19,  108 => 18,  104 => 17,  89 => 4,  79 => 3,  60 => 2,  50 => 3,  48 => 2,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -169,7 +162,7 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
         return new Source("
 {% block title %}Abonnement index{% endblock %}
 {% block body %}
-    <h1 align = \"center\">Liste des Abonnement</h1>
+    <h1 style=\"color:#d46973;\" align = \"center\">Liste des Abonnements</h1>
     <table class=\"table\">
         <thead>
         <tr>
@@ -178,9 +171,6 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
             <th>Prix</th>
             <th>Categories</th>
             <th>Description</th>
-            <th>image</th>
-            <th>actions</th>
-
 
         </tr>
         </thead>
@@ -192,8 +182,7 @@ class __TwigTemplate_02705c203d8bc36a2f88bb33943c88bba752bac405984184e5a4e520940
                 <td>{{ abonnement.prix }} <br/></td>
                 <td>{{ abonnement.categories }}</td>
                 <td>{{ abonnement.description }}</td>
-                <td><img style=\"width: 150px;\" src=\"/uploads/{{ abonnement.getPhoto() }}\"></td>
-
+                
             </tr>
 
         {% endfor %}
