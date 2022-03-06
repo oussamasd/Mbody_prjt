@@ -4,8 +4,6 @@
 
                          <tr>
                          <th style="color: #98b6b4">Delai:</th>
-                             <img src="{{ asset('/assets/images/offf.jpg') }}"  alt="logo" width="350px" height="200px">
-
                              <td> {{ form_widget(form.delai) }} </td>
                              <td> </td>
                              <td>
@@ -20,7 +18,7 @@
 
                            <tr>
                                <th style="color:#98b6b4 ">Nom:</th>
-                                <td>{{ form_widget(form.nom) }} </td>
+                                <td>{{ form_widget(form.nom,{'attr':{'class':'form-control','placeholder':'Entrer votre nom'}}) }} </td>
                            </tr>
 
     <tr>
@@ -34,7 +32,7 @@
                            </tr>
                         <tr>
                         <th style="color: #98b6b4">Description:</th>
-                            <td>  {{ form_widget(form.Description) }} </td>
+                            <td>  {{ form_widget(form.Description,{'attr':{'class':'form-control','placeholder':'Entrer votre description'}}) }} </td>
                         </tr>
     <tr>
         <td> </td>

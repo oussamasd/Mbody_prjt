@@ -7,8 +7,13 @@
     <h1 style="color: #d46973">Liste des abonnements</h1>
     <a href="{{ path('livraison_list') }}"class="btn btn-danger">PDF</a>
     <a href="{{path('TrierParNom')}} " class="btn btn-success btn-sm"  href="https://startbootstrap.com/theme/sb-admin-pro"><i class="align-middle" ></i>Trier par Prix</a>
-    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fabonnement%2Flist&layout=button_count&size=small&width=91&height=20&appId" width="250" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher..">
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            </div>
+            <p style="margin-left: 950px">  <input type="text" id="myInput" class="form-control" placeholder="Chercher une abonnement">
+        </div>
+    </div>
     <table class="table">
         <thead>
             <tr>
@@ -55,7 +60,6 @@
             </tr>
 
         {% endfor %}
-        {{ knp_pagination_render(abonnements, 'abonnement/pagination.html.twig') }}
 
     </tbody>
     </table>
@@ -83,4 +87,7 @@
 
     {% block b1 %}
         {% endblock %}
+    <div style="margin-left: 25%">
+        {{ knp_pagination_render(abonnements, 'abonnement/pagination.html.twig') }}
+    </div>
 {% endblock %}

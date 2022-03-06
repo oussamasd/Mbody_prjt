@@ -3,7 +3,8 @@
 <table>
                          <tr>
                              <th style="color:#98b6b4">Nom:</th>
-                             <td> {{ form_widget(form.nom) }} </td>
+                             <td> {{ form_widget(form.nom,{'attr':{'class':'form-control','placeholder':'Entrer votre nom'}}
+                                 ) }} </td>
                          </tr>
 <tr>
     <td></td>
@@ -18,7 +19,7 @@
 
                         <tr>
                         <th style="color:#98b6b4">Prix:</th>
- <td>{{ form_widget(form.prix) }} </td>
+ <td>{{ form_widget(form.prix,{'attr':{'class':'form-control','placeholder':'Entrer votre prix'}}) }} </td>
                         </tr>
 <tr>
 <td></td>
@@ -32,7 +33,7 @@
 
 <tr>
     <th style="color:#98b6b4">Catégories:</th>
-  <td> {{ form_widget(form.categories) }} </td>
+  <td> {{ form_widget(form.categories,{'attr':{'class':'form-control','placeholder':'Entrer votre catégorie'}}) }} </td>
 
 </tr>
     <tr>
@@ -49,7 +50,7 @@
 
     <th style="color:#98b6b4">description:</th>
 
-   <td>  {{ form_widget(form.description) }} </td>
+   <td>  {{ form_widget(form.description,{'attr':{'class':'form-control','placeholder':'Entrer votre description'}}) }} </td>
 
 </tr>
     <tr>

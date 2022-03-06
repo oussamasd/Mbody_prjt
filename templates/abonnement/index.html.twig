@@ -26,8 +26,8 @@
                                     <h4>{{ p.description }}</h4>
                                     <th> <span> Catégories:</span></th>
                                 <h4>{{ p.categories }}</h4>
-
-
+                                <a href="https://www.facebook.com/oussama.saddi.7/" ><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/hadilmasmoudi/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -68,8 +68,9 @@
                                         <h4>{{ offre.description }}</h4>
                                         <th> <span> nom-abonnement:</span></th>
                                         <h4>{{ offre.getNomAbonnement.getNom() }}</h4>
-
-
+                                        <a href="https://www.facebook.com/oussama.saddi.7/" ><i class="fa fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com/hadilmasmoudi/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +79,6 @@
                                 <td>{{ offre.nom }}</td>
                                 <td>{{ offre.Description }}</td>
                                 <td>{{ offre.getNomAbonnement.getNom()}}</td>#}
-
 
                         {% else %}
                             <h1>vide</h1>
@@ -91,7 +91,6 @@
         </div>
     </div>
 </section>
-
 
     {#   <a href="{{ path('abonnement_new') }}">Créer nouvelle</a>#}
     <form method="post" action="{{ path('abonnement_new') }}" >

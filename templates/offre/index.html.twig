@@ -4,8 +4,14 @@
 
 {% block body %}
     <h1 style="color: #d5606e">Liste des offres</h1>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            </div>
+            <p style="margin-left: 950px">  <input type="text" id="myInput" class="form-control" placeholder="Chercher une offre">
+        </div>
+    </div>
 
-    <p style="margin-left: 950px"> <input  id="myInput"  type="text" placeholder="Rechercher..">
     <table class="table">
         <thead>
             <tr>
@@ -45,7 +51,6 @@
                 <td colspan="5">no records found</td>
             </tr>
         {% endfor %}
-        {{ knp_pagination_render(offres,'offre/pagination.html.twig') }}
         </tbody>
     </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -65,4 +70,8 @@
     </form>
 
     <button  class="btn btn-info mr-2" onclick="window.print()" ><i class="fa fa-print" aria-hidden="true"></i></i>  Imprimer</button>
+<div style="margin-left: 25%">
+{{ knp_pagination_render(offres,'offre/pagination.html.twig') }}
+</div>
+
 {% endblock %}

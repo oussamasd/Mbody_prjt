@@ -129,8 +129,8 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
             // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "categories", [], "any", false, false, false, 28), "html", null, true);
             echo "</h4>
-
-
+                                <a href=\"https://www.facebook.com/oussama.saddi.7/\" ><i class=\"fa fa-facebook\"></i></a>
+                                <a href=\"https://www.instagram.com/hadilmasmoudi/\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a>
                             </div>
                         </div>
                     </div>
@@ -201,16 +201,16 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
             // line 70
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["offre"], "getNomAbonnement", [], "any", false, false, false, 70), "getNom", [], "method", false, false, false, 70), "html", null, true);
             echo "</h4>
-
-
+                                        <a href=\"https://www.facebook.com/oussama.saddi.7/\" ><i class=\"fa fa-facebook\"></i></a>
+                                        <a href=\"https://www.instagram.com/hadilmasmoudi/\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
                               ";
-            // line 81
+            // line 82
             echo "
-
                         ";
             $context['_iterated'] = true;
         }
@@ -232,9 +232,8 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
     </div>
 </section>
 
-
     ";
-        // line 97
+        // line 96
         echo "    <form method=\"post\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("abonnement_new");
         echo "\" >
@@ -261,7 +260,7 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
 
     public function getDebugInfo()
     {
-        return array (  238 => 97,  230 => 90,  219 => 84,  212 => 81,  202 => 70,  197 => 68,  192 => 66,  187 => 64,  177 => 56,  172 => 55,  164 => 50,  151 => 39,  142 => 35,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  107 => 17,  101 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  237 => 96,  230 => 90,  219 => 84,  213 => 82,  202 => 70,  197 => 68,  192 => 66,  187 => 64,  177 => 56,  172 => 55,  164 => 50,  151 => 39,  142 => 35,  130 => 28,  125 => 26,  120 => 24,  115 => 22,  107 => 17,  101 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -294,8 +293,8 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
                                     <h4>{{ p.description }}</h4>
                                     <th> <span> Catégories:</span></th>
                                 <h4>{{ p.categories }}</h4>
-
-
+                                <a href=\"https://www.facebook.com/oussama.saddi.7/\" ><i class=\"fa fa-facebook\"></i></a>
+                                <a href=\"https://www.instagram.com/hadilmasmoudi/\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a>
                             </div>
                         </div>
                     </div>
@@ -336,8 +335,9 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
                                         <h4>{{ offre.description }}</h4>
                                         <th> <span> nom-abonnement:</span></th>
                                         <h4>{{ offre.getNomAbonnement.getNom() }}</h4>
-
-
+                                        <a href=\"https://www.facebook.com/oussama.saddi.7/\" ><i class=\"fa fa-facebook\"></i></a>
+                                        <a href=\"https://www.instagram.com/hadilmasmoudi/\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +346,6 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
                                 <td>{{ offre.nom }}</td>
                                 <td>{{ offre.Description }}</td>
                                 <td>{{ offre.getNomAbonnement.getNom()}}</td>#}
-
 
                         {% else %}
                             <h1>vide</h1>
@@ -359,7 +358,6 @@ class __TwigTemplate_a96ba6f3b49212a6399a1cf9077ae4f4a3e1f28111a14b424c37dbf3100
         </div>
     </div>
 </section>
-
 
     {#   <a href=\"{{ path('abonnement_new') }}\">Créer nouvelle</a>#}
     <form method=\"post\" action=\"{{ path('abonnement_new') }}\" >
