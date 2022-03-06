@@ -132,6 +132,6 @@ class __TwigTemplate_4ccb3e5e9f8a543e3e2070b1487eaa0fc810ae01c0f6f744e39a1e7c8b9
     </span>
     {{ title }}
 </a>
-", "@KnpPaginator/Pagination/bootstrap_v5_bi_sortable_link.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\bootstrap_v5_bi_sortable_link.html.twig");
+", "@KnpPaginator/Pagination/bootstrap_v5_bi_sortable_link.html.twig", "C:\\Users\\Mehdi AZZAZ\\Mbody_Prjt\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\bootstrap_v5_bi_sortable_link.html.twig");
     }
 }

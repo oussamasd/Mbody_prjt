@@ -251,16 +251,16 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+
+                    <li><a href=\"/categories/new\">Ajouter categories</a></li>
+                    <li><a href=\"/produits/new\">Ajouter produits</a></li>
                 </ul>
             </li>
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>table </a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"/categories/\">Table categories</a></li>
+                    <li><a href=\"/produits/\">Table produits</a></li>
+
                 </ul>
             </li>
 
@@ -602,16 +602,16 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>information</a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+
+                    <li><a href=\"/categories/new\">Ajouter categories</a></li>
+                    <li><a href=\"/produits/new\">Ajouter produits</a></li>
                 </ul>
             </li>
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>table </a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
-                    <li><a href=\"#\">Page</a></li>
+                    <li><a href=\"/categories/\">Table categories</a></li>
+                    <li><a href=\"/produits/\">Table produits</a></li>
+
                 </ul>
             </li>
 
@@ -674,6 +674,6 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 <script src=\"{{ asset('Back/js/charts-home.js') }}\"></script>
 <script src=\"{{ asset('Back/js/front.js') }}\"></script>
 </body>
-</html>", "base.back.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\base.back.html.twig");
+</html>", "base.back.html.twig", "C:\\Users\\Mehdi AZZAZ\\Mbody_Prjt\\templates\\base.back.html.twig");
     }
 }

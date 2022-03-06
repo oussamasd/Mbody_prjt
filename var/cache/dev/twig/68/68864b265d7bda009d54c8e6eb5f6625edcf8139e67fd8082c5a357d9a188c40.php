@@ -89,14 +89,8 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
 
     <button  class=\"btn btn-info mr-2\" onclick=\"window.print()\" ><i class=\"fa fa-print\" aria-hidden=\"true\"></i></i>  Imprimer</button>
     <br>
-    <div class=\"form-group\">
-        <div class=\"input-group\">
-            <div class=\"input-group-prepend\">
-                <button type=\"button\" class=\"btn btn-primary\" >Chercher</button>
-            </div>
-            <input type=\"text\" id=\"rech\" class=\"form-control\" placeholder=\"Chercher un catégories\">
-        </div>
-    </div>
+
+    <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\">
     <h1> Table des Categories </h1>
 
     <table class=\"table\" style=\"border: medium solid #000000\">
@@ -110,43 +104,44 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
             </tr>
         </thead>
         <tbody>
+        <tbody  id=\"myTable\">
         ";
-        // line 30
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 30, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 25, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 31
+            // line 26
             echo "            <tr>
                 <td >";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 32), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td >";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "nom", [], "any", false, false, false, 33), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "nom", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td >";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "type", [], "any", false, false, false, 34), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "type", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
                 <td >";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "description", [], "any", false, false, false, 35), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "description", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
 
                 <td>
                     <a class=\"btn btn-info mr-2\" href=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_show", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_show", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo "\">show</a>
                     <a class=\"btn btn-info mr-2\" href=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 39)]), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 34)]), "html", null, true);
             echo "\">edit</a>
                     <a class=\"btn btn-info mr-2\" href=\"";
-            // line 40
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 40)]), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 35)]), "html", null, true);
             echo "\">delete</a>
 
                 </td>
@@ -155,7 +150,7 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 45
+            // line 40
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -164,12 +159,23 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 44
         echo "        </tbody>
     </table>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#myInput\").on(\"keyup\", function() {
+                var value = \$(this).val().toLowerCase();
+                \$(\"#myTable tr\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 
     <a class=\"btn btn-primary\" href=\"";
-        // line 52
+        // line 58
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("categories_new");
         echo "\">Create new</a>
 ";
@@ -193,7 +199,7 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
 
     public function getDebugInfo()
     {
-        return array (  173 => 52,  168 => 49,  159 => 45,  149 => 40,  145 => 39,  141 => 38,  135 => 35,  131 => 34,  127 => 33,  123 => 32,  120 => 31,  115 => 30,  88 => 5,  78 => 4,  59 => 2,  36 => 1,);
+        return array (  179 => 58,  163 => 44,  154 => 40,  144 => 35,  140 => 34,  136 => 33,  130 => 30,  126 => 29,  122 => 28,  118 => 27,  115 => 26,  110 => 25,  88 => 5,  78 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -206,14 +212,8 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
 
     <button  class=\"btn btn-info mr-2\" onclick=\"window.print()\" ><i class=\"fa fa-print\" aria-hidden=\"true\"></i></i>  Imprimer</button>
     <br>
-    <div class=\"form-group\">
-        <div class=\"input-group\">
-            <div class=\"input-group-prepend\">
-                <button type=\"button\" class=\"btn btn-primary\" >Chercher</button>
-            </div>
-            <input type=\"text\" id=\"rech\" class=\"form-control\" placeholder=\"Chercher un catégories\">
-        </div>
-    </div>
+
+    <p style=\"margin-left: 950px\"> <input  id=\"myInput\"  type=\"text\" placeholder=\"Rechercher..\">
     <h1> Table des Categories </h1>
 
     <table class=\"table\" style=\"border: medium solid #000000\">
@@ -227,6 +227,7 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
             </tr>
         </thead>
         <tbody>
+        <tbody  id=\"myTable\">
         {% for category in categories %}
             <tr>
                 <td >{{ category.id }}</td>
@@ -248,6 +249,17 @@ class __TwigTemplate_d10ff2790e9b7cb56ba82dffb88d6d494ae9e2f16135f6d0d2bf986dc87
         {% endfor %}
         </tbody>
     </table>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
+    <script>
+        \$(document).ready(function(){
+            \$(\"#myInput\").on(\"keyup\", function() {
+                var value = \$(this).val().toLowerCase();
+                \$(\"#myTable tr\").filter(function() {
+                    \$(this).toggle(\$(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 
     <a class=\"btn btn-primary\" href=\"{{ path('categories_new') }}\">Create new</a>
 {% endblock %}

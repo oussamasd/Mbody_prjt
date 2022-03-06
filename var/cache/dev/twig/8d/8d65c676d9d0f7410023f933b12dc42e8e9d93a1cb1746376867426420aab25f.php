@@ -1784,6 +1784,6 @@ class __TwigTemplate_582d4819235a32309994032d1b5139b9d76b46e13a4a72a68fb8056522b
 <!-- Main Theme JS file    -->
 <script src=\"{{ asset('Frontjs/theme.js')}}\"></script>
 </body>
-</html>", "MbodyUp/base.front.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\MbodyUp\\base.front.html.twig");
+</html>", "MbodyUp/base.front.html.twig", "C:\\Users\\Mehdi AZZAZ\\Mbody_Prjt\\templates\\MbodyUp\\base.front.html.twig");
     }
 }

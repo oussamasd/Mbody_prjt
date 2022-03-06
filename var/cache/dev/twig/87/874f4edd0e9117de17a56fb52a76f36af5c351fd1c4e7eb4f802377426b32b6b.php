@@ -581,6 +581,6 @@ class __TwigTemplate_90c902b3bc3170ce33d82dfa300832dff6ffbaa5d3ea32dc5d284888598
 <script src=\"vendor/jquery-validation/jquery.validate.min.js\"></script>
 <script src=\"js/front.js\"></script>
 </body>
-</html>", "MbodyUp/base.html.twig", "C:\\xampp\\htdocs\\Mbody_Prjt\\templates\\MbodyUp\\base.html.twig");
+</html>", "MbodyUp/base.html.twig", "C:\\Users\\Mehdi AZZAZ\\Mbody_Prjt\\templates\\MbodyUp\\base.html.twig");
     }
 }

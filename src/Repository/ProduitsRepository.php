@@ -47,4 +47,10 @@ class ProduitsRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findByPrix(){
+        $em=$this->getEntityManager();
+        $query=$em->createQuery('select r from App\Entity\Produits r order by r.prix DESC');
+        return $query->getResult();
+    }
+
 }

@@ -1,4 +1,10 @@
 {
+    "behat/transliterator": {
+        "version": "v1.3.0"
+    },
+    "composer/package-versions-deprecated": {
+        "version": "1.11.99.4"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -77,11 +83,17 @@
     "doctrine/sql-formatter": {
         "version": "1.1.2"
     },
+    "dompdf/dompdf": {
+        "version": "v1.2.0"
+    },
     "egulias/email-validator": {
         "version": "3.1.2"
     },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
+    },
+    "gedmo/doctrine-extensions": {
+        "version": "v3.5.0"
     },
     "knplabs/knp-components": {
         "version": "v3.4.0"
@@ -106,6 +118,12 @@
     },
     "phar-io/version": {
         "version": "3.1.1"
+    },
+    "phenx/php-font-lib": {
+        "version": "0.5.4"
+    },
+    "phenx/php-svg-lib": {
+        "version": "0.4.0"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
@@ -159,6 +177,9 @@
     },
     "psr/log": {
         "version": "1.1.4"
+    },
+    "sabberworm/php-css-parser": {
+        "version": "8.4.0"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"
@@ -219,6 +240,9 @@
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.3.0"
     },
     "symfony/asset": {
         "version": "v4.4.37"
@@ -495,6 +519,20 @@
     },
     "symfony/stopwatch": {
         "version": "v4.4.37"
+    },
+    "symfony/swiftmailer-bundle": {
+        "version": "3.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "f0b2fccdca2dfd97dc2fd5ad216d5e27c4f895ac"
+        },
+        "files": [
+            "./config/packages/dev/swiftmailer.yaml",
+            "./config/packages/swiftmailer.yaml",
+            "./config/packages/test/swiftmailer.yaml"
+        ]
     },
     "symfony/translation": {
         "version": "4.4",

@@ -5,7 +5,31 @@
 
     {% block b1 %}
 
+    {% endblock %}
 
+{% block page  %}
+    <br>
+    <div style="margin-left: 43%">
+        {{ knp_pagination_render(produits,'produits/pagination.html.twig') }}
+    </div>
+
+{% endblock %}
+{% block rech %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#trainers").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > 100)
+                });
+            });
+        });
+    </script>
+{% endblock %}
+    {% block rech1 %}
+    <div style=""> <input  id="myInput"  type="text" placeholder="Rechercher..">
     {% endblock %}
     {#{% block prix %}#}
 

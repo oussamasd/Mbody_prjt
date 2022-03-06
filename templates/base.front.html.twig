@@ -54,7 +54,7 @@ https://templatemo.com/tm-548-training-studio
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
-                            <li class="scroll-to-section"><a href="#features">Produit</a></li>
+                            <li class="scroll-to-section"><a href="/produits">Produit</a></li>
                             <li class="scroll-to-section"><a href="#our-classes">Activite</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Abonnement</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Entraineur</a></li>
@@ -71,8 +71,120 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
+    <!-- ***** Testimonials Starts ***** -->
+    <section class="section" id="trainers">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading">
+                        <h2>Expert <em>Trainers</em></h2>
+                        <img src="{{ asset('assets/images/line-dec.png') }}" alt="">
+                        {% block rech %}
+                            <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p> {% endblock %}
+                    </div>
+                </div>
+            </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#trainers ").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+
+        <section class="section" id="trainers" >
+            <div class="container">
+                <div class="row">
+                    {% for produit in produits %}
+                    <div class="col-lg-4">
+                        <div class="trainer-item" >
+                            <div class="image-thumb">
+                                <img src="../uploads/{{ produit.photo }}">
+                            </div>
+                            <div class="down-content">
+                                <span>
+
+                                    <tr>
+                                        <td>
+                                           <h5>Nom:</h5>
+                                        </td>
+                                        <td>
+                                            {{ produit.nom }}
+                                        </td>
+                                    </tr> </span>
+                                <h4>Prix:{{ produit.prix }} dt</h4>
+
+                                <a href="{{ path('cart_add', {'id': produit.id }) }}" class="btn btn-success float-right">Ajouter au panier</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                        <h2>Expert <em>Trainers</em></h2>
+                        <img src="{{ asset('assets/images/line-dec.png') }}" alt="">
+                        {% block rech1 %}
+                            <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p> {% endblock %}
+
+                       <div style="background: red ; margin-outside: 30%">
+                           <p>hello world</p>
+
+                       </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+        {% block page %}
+            <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p> {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ***** Main Banner Area Start ***** -->
+    {% block b1 %}
+
     <div class="main-banner" id="top">
         <video autoplay muted loop id="bg-video">
             <source src="{{ asset('assets/images/gym-video.mp4') }}" type="video/mp4" />
@@ -89,11 +201,11 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-
     <!-- ***** Features Item Start ***** -->
+
     <section class="section" id="features">
         <div class="container">
-            {% block Produit %}
+
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
@@ -171,12 +283,14 @@ https://templatemo.com/tm-548-training-studio
                     </ul>
                 </div>
             </div>
-            {% endblock %}
+
         </div>
     </section>
+
     <!-- ***** Features Item End ***** -->
 
     <!-- ***** Call to Action Start ***** -->
+
     <section class="section" id="call-to-action">
         <div class="container">
             <div class="row">
@@ -256,6 +370,7 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </section>
     <!-- ***** Our Classes End ***** -->
+
     
     <section class="section" id="schedule">
         <div class="container">
@@ -321,6 +436,7 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </section>
+
 
     <!-- ***** Testimonials Starts ***** -->
     <section class="section" id="trainers">
@@ -392,6 +508,7 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </section>
+
     <!-- ***** Testimonials Ends ***** -->
     
     <!-- ***** Contact Us Area Starts ***** -->
@@ -439,8 +556,9 @@ https://templatemo.com/tm-548-training-studio
             </div>
         </div>
     </section>
+    {% endblock %}
     <!-- ***** Contact Us Area Ends ***** -->
-    
+
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
