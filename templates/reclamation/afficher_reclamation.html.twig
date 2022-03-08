@@ -1,0 +1,31 @@
+{% extends 'base.front.html.twig' %}
+{% block title %}Afficher Reclamation{% endblock %}
+{% block body %}
+
+{#        <tr>#}
+{#            <td style="border: thin solid #6495ed" bgcolor="#c4c2ff">Name</td>#}
+{#            <td style="border: thin solid #6495ed" bgcolor="#c4c2ff">Description</td>#}
+{#            <td style="border: thin solid #6495ed" bgcolor="#c4c2ff">Type Reclamation</td>#}
+{#        </tr>#}
+    <h1 style="color: #0c5460">Les Reclamations :</h1>
+        {% for i in reclamations %}
+            <br>
+            <br>
+            <h2 style="color: #AA3333">Reclamation Numero :{{ i.id }}</h2>
+
+            <tr>
+                <br>
+                <h2 style="color: #ff6003">Nom du Reclamateur:  </h2>
+                <h4>{{ i.nom }}</h4>
+<br>
+                <h2 style="color: #ff6003">Description: </h2>
+                <h4>{{ i.description }}</h4>
+                <br>
+                <h2 style="color: #ff6003">Le type de Reclamation: </h2>
+                <h4>{{ i.typeReclamation.getNom()}}</h4>
+                <tr>
+            </tr>
+        {% endfor %}
+    {{ knp_pagination_render(reclamations) }}
+    {#    <li class="main-button"><a href="{{ path('reclamation_new' )}}">Ajouter Reclamation</a></li>#}
+{% endblock %}

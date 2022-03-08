@@ -1,0 +1,51 @@
+{% extends 'base.back.html.twig' %}
+
+{% block reclamation %}
+    {% block rec %}
+        <h1 style="color: #ffa2d9">Listes des Types Reclamation</h1>
+        <button  class="btn btn-info mr-2" onclick="window.print()" ><i class="fa fa-print" aria-hidden="true"></i></i> Imprimer</button>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-primary" >Chercher</button>
+                </div>
+                <input type="text" id="myInput" class="form-control" placeholder="Chercher une Reclamation">
+            </div>
+        </div>
+        <a class="btn btn-success" href="{{ path('OrderByRecc') }}">Tri By Nom</a>
+        <table style="border: medium solid #000000" >
+            <tr>
+                <td style="border: thin solid #6495ed" width="5%" bgcolor="#aca1ff"  >Id</td>
+                <td style="border: thin solid #6495ed" bgcolor="#aca1ff">Nom</td>
+                <td style="border: thin solid #6495ed" bgcolor="#aca1ff">Action</td>
+            </tr>
+            <tbody  id="myTable">
+            {% for i in type_reclamations %}
+                <tr style="border: thin solid #f6fff7" width="5%" bgcolor="#f6fff7">
+                    <td style="border: thin solid #6495ed">{{ i.id }}</td>
+                    <td style="border: thin solid #6495ed">{{ i.nom }}</td>
+
+                    <td style="border: thin solid #6495ed">
+                        <a class="btn btn-info mr-2" href="{{ path('type_reclamation_show',{"id":i.id}) }}">ShowMore</a>
+
+                        <a  type="button" class="btn btn-primary" href="{{ path('type_reclamation_delete',{"id":i.id}) }}">Delete</a>
+                                              <a class="btn btn-success"     href="{{ path('type_reclamation_edit',{"id":i.id}) }}">Modifier</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+    {% endblock %}
+    {#    <li class="main-button"><a href="{{ path('reclamation_new' )}}">Ajouter Reclamation</a></li>#}
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.back.html.twig' %}
+
+{% block reclamation %}
+    {% block rec %}
+        <h1 style="color: #ffa2d9">Listes des Reclamation</h1>
+        <button  class="btn btn-info mr-2" onclick="window.print()" ></i></i><i class="fa fa-download" aria-hidden="true"></i> ScreenShot</button>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-primary" ><i class="fa fa-search" aria-hidden="true"></i> Chercher</button>
+                </div>
+                <input type="text" id="myInput" class="form-control" placeholder="Chercher une Reclamation">
+            </div>
+        </div>
+        <a class="btn btn-success" href="{{ path('OrderByRec') }}">Tri By Name</a>
+        <a style="margin-left: 800px" class="btn btn-info mr-2" href="{{ path('reclamation_listp') }}"><i class="fa fa-print" aria-hidden="true"></i> Impression</a>
+        <table style="border: medium solid #000000" >
+            <tr>
+                <td style="border: thin solid #6495ed" width="5%" bgcolor="#aca1ff"  >Id</td>
+                <td style="border: thin solid #6495ed" bgcolor="#aca1ff">Name</td>
+                <td style="border: thin solid #6495ed" bgcolor="#aca1ff">Description</td>
+                <td style="border: thin solid #6495ed" bgcolor="#aca1ff">Type Reclamation</td>
+                <td style="border: thin solid #6495ed" bgcolor="#aca1ff">Action</td>
+            </tr>
+            <tbody  id="myTable">
+            {% for i in reclamations %}
+                <tr style="border: thin solid #f6fff7" width="5%" bgcolor="#f6fff7">
+                    <td style="border: thin solid #6495ed">{{ i.id }}</td>
+                    <td style="border: thin solid #6495ed">{{ i.nom }}</td>
+                    <td style="border: thin solid #6495ed">{{ i.description }}</td>
+                    <td style="border: thin solid #6495ed">{{ i.typeReclamation.getNom()}}</td>
+
+                    <td style="border: thin solid #6495ed">
+                        <a class="btn btn-info mr-2" href="{{ path('reclamation_show',{"id":i.id}) }}"><i class="fa fa-info" aria-hidden="true"></i> ShowMore</a>
+                        <a  type="button" class="btn btn-primary" href="{{ path('reclamation_delete',{"id":i.id}) }}"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</a>
+                       <a class="btn btn-success" href="{{ path('reclamation_edit',{"id":i.id}) }}"><i class="fa fa-pencil" aria-hidden="true"></i> Modifier</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        {{ knp_pagination_render(reclamations) }}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+    {% endblock %}
+    {#    <li class="main-button"><a href="{{ path('reclamation_new' )}}">Ajouter Reclamation</a></li>#}
+{% endblock %}
+
+{#{% block body %}#}
+{#    <h1>Reclamation index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Nom</th>#}
+{#                <th>Description</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for reclamation in reclamations %}#}
+{#            <tr>#}
+{#                <td>{{ reclamation.id }}</td>#}
+{#                <td>{{ reclamation.nom }}</td>#}
+{#                <td>{{ reclamation.description }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('reclamation_show', {'id': reclamation.id}) }}">show</a>#}
+{#                    <a href="{{ path('reclamation_edit', {'id': reclamation.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="4">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    <a href="{{ path('reclamation_new') }}">Create new</a>#}
+{#{% endblock %}#}

@@ -1,0 +1,34 @@
+{% extends 'base.back.html.twig' %}
+
+{% block title %}Reclamation{% endblock %}
+
+{% block body %}
+    <h1 style="color: #b505ff" >Reclamation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th style="color: #ff6003" bgcolor="#f6fff7">Id</th>
+                <td bgcolor="#f6fff7">{{ reclamation.id }}</td>
+            </tr>
+            <tr>
+                <th bgcolor="#f6fff7" style="color: #ff6003">Nom</th>
+                <td bgcolor="#f6fff7">{{ reclamation.nom }}</td>
+            </tr>
+            <tr>
+                <th style="color: #ff6003" bgcolor="#f6fff7">Description</th>
+                <td bgcolor="#f6fff7">{{ reclamation.description }}</td>
+            </tr>
+            <tr>
+                <th style="color: #ff6003" bgcolor="#f6fff7">Type Reclamation</th>
+                <td bgcolor="#f6fff7">{{ reclamation.typeReclamation.getNom() }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-info mr-2" href="{{ path('reclamation_index') }}">back to list</a>
+
+    <a class="btn btn-success" href="{{ path('reclamation_edit', {'id': reclamation.id}) }}">edit</a>
+
+    {{ include('reclamation/_delete_form.html.twig') }}
+{% endblock %}

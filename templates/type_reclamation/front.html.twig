@@ -1,0 +1,11 @@
+{% extends 'base.front.html.twig' %}
+{% block reclamation %}
+    <button class="btn btn-danger dropdown-toggle"    id="menu1" type="button" data-toggle="dropdown" >Reclamation<span class="caret"></span></button>
+    <ul class="dropdown-menu" style="background: rgba(250,117,9,0.2)"  role="menu" aria-labelledby="menu1">
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1"  href="{{ path('reclamation_new' )}}">Ajouter Reclamation</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1"  href="{{ path('reclamation_index2' )}}">Afficher Reclamation</a></li>
+        <li role="presentation" class="divider"></li>
+    </ul>
+{% endblock %}
