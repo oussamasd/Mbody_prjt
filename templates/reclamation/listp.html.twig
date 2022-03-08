@@ -1,0 +1,77 @@
+{% block reclamation %}
+    {% block rec %}
+        <h1 align="center" style="color: #ffa2d9">Listes des Reclamation</h1><hr>
+{#        <button  class="btn btn-info mr-2" onclick="window.print()" ><i class="fa fa-print" aria-hidden="true"></i></i> Imprimer</button>#}
+{#        <div class="form-group">#}
+{#            <div class="input-group">#}
+{#                <div class="input-group-prepend">#}
+{#                    <button type="button" class="btn btn-primary" >Chercher</button>#}
+{#                </div>#}
+{#                <input type="text" id="myInput" class="form-control" placeholder="Chercher une Reclamation">#}
+{#            </div>#}
+{#        </div>#}
+{#        <a class="btn btn-success" href="{{ path('OrderByRec') }}">Tri By Name</a>#}
+        <table >
+            <tr>
+                <td style="color: #AA3333" >Name</td>
+                <td style="color: #AA3333">Description</td>
+                <td style="color: #AA3333">Type Reclamation</td>
+            </tr>
+            <tbody  id="myTable">
+            {% for i in reclamations %}
+                <tr>
+                    <td>{{ i.nom }}</td>
+                    <td>{{ i.description }}</td>
+                    <td>{{ i.typeReclamation.getNom()}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+{#        {{ knp_pagination_render(reclamations) }}#}
+{#        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>#}
+{#        <script>#}
+{#            $(document).ready(function(){#}
+{#                $("#myInput").on("keyup", function() {#}
+{#                    var value = $(this).val().toLowerCase();#}
+{#                    $("#myTable tr").filter(function() {#}
+{#                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)#}
+{#                    });#}
+{#                });#}
+{#            });#}
+{#        </script>#}
+    {% endblock %}
+    {#    <li class="main-button"><a href="{{ path('reclamation_new' )}}">Ajouter Reclamation</a></li>#}
+{% endblock %}
+
+{#{% block body %}#}
+{#    <h1>Reclamation index</h1>#}
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Nom</th>#}
+{#                <th>Description</th>#}
+{#                <th>actions</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for reclamation in reclamations %}#}
+{#            <tr>#}
+{#                <td>{{ reclamation.id }}</td>#}
+{#                <td>{{ reclamation.nom }}</td>#}
+{#                <td>{{ reclamation.description }}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('reclamation_show', {'id': reclamation.id}) }}">show</a>#}
+{#                    <a href="{{ path('reclamation_edit', {'id': reclamation.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="4">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+{#    <a href="{{ path('reclamation_new') }}">Create new</a>#}
+{#{% endblock %}#}

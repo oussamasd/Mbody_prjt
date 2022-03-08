@@ -8,11 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController extends AbstractController
 {
+
     /**
-     * @Route("/test", name="test")
+     * @Route("/ilyes", name="test")
      */
-    public function index(): Response
+    public function back(): Response
     {
         return $this->render('test/index.html.twig');
     }
+
+
 }

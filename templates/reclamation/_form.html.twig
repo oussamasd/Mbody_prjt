@@ -1,0 +1,31 @@
+{{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+<tr>
+    <h3 style="color: #AA3333">nom:</h3>
+    {{ form_widget(form.nom) }}
+    {% if not form.nom.vars.valid %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.nom) }}
+        </div>
+    {% endif %}
+</tr>
+<br>
+<tr>
+    <br>
+    <h3 style="color: #AA3333">description:</h3>
+    {{ form_widget(form.description) }}
+    {% if not form.description.vars.valid %}
+        <div class="alert alert-danger">
+            {{ form_errors(form.description) }}
+        </div>
+    {% endif %}
+</tr>
+<br>
+<tr>
+    <br>
+    <h3 style="color: #AA3333">Type Reclamation:</h3>
+</tr>
+{{ form_widget(form) }}
+<br>
+<button class="btn btn-success">{{ button_label|default('envoyer') }}</button>
+
+{{ form_end(form) }}

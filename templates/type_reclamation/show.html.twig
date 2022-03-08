@@ -1,0 +1,26 @@
+{% extends 'base.back.html.twig' %}
+
+{% block title %}TypeReclamation{% endblock %}
+
+{% block body %}
+    <h1 style="color: #b505ff">TypeReclamation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th style="color: #ff6003" bgcolor="#f6fff7">Id</th>
+                <td style="color: #ff6003" bgcolor="#f6fff7">{{ type_reclamation.id }}</td>
+            </tr>
+            <tr>
+                <th style="color: #ff6003" bgcolor="#f6fff7">Nom</th>
+                <td style="color: #ff6003" bgcolor="#f6fff7">{{ type_reclamation.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-info mr-2" href="{{ path('type_reclamation_index') }}">back to list</a>
+
+    <a class="btn btn-success" href="{{ path('type_reclamation_edit', {'id': type_reclamation.id}) }}">edit</a>
+
+    {{ include('type_reclamation/_delete_form.html.twig') }}
+{% endblock %}
