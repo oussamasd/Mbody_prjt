@@ -211,11 +211,16 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
             echo "                        <button disabled class=\"button1 \">No Place</button>
                     ";
         }
-        // line 52
+        // line 49
+        echo "                <iframe src=\"https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1:8000%2Factivity%2Fdetails%2F";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 49, $this->source); })()), "getId", [], "method", false, false, false, 49), "html", null, true);
+        echo "%2F&layout=button_count&size=large&appId=214722496787236&width=110&height=28\" width=\"110\" height=\"28\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
+                ";
+        // line 53
         echo "
 
 ";
-        // line 55
+        // line 56
         echo "            </td>
         </tr>
     </table>
@@ -229,7 +234,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 60
+    // line 61
     public function block_cat($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -239,9 +244,9 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "cat"));
 
-        // line 61
+        // line 62
         echo "    ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 61, $this->source); })()), "getCategory", [], "any", false, false, false, 61), "getNomCat", [], "method", false, false, false, 61), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 62, $this->source); })()), "getCategory", [], "any", false, false, false, 62), "getNomCat", [], "method", false, false, false, 62), "html", null, true);
         echo "
 
 ";
@@ -253,7 +258,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 64
+    // line 65
     public function block_dt($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -263,11 +268,11 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "dt"));
 
-        // line 65
+        // line 66
         echo "    ";
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 65, $this->source); })()), "getDateAct", [], "any", false, false, false, 65), "Y-m-d"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 66, $this->source); })()), "getDateAct", [], "any", false, false, false, 66), "Y-m-d"), "html", null, true);
         echo " , ";
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 65, $this->source); })()), "getTempAct", [], "any", false, false, false, 65), "H:m"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 66, $this->source); })()), "getTempAct", [], "any", false, false, false, 66), "H:m"), "html", null, true);
         echo "
 ";
         
@@ -278,7 +283,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 67
+    // line 68
     public function block_qt($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -288,11 +293,11 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "qt"));
 
-        // line 68
+        // line 69
         echo "   participer par : ";
-        echo twig_escape_filter($this->env, (isset($context["userparticipated"]) || array_key_exists("userparticipated", $context) ? $context["userparticipated"] : (function () { throw new RuntimeError('Variable "userparticipated" does not exist.', 68, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, (isset($context["userparticipated"]) || array_key_exists("userparticipated", $context) ? $context["userparticipated"] : (function () { throw new RuntimeError('Variable "userparticipated" does not exist.', 69, $this->source); })()), "html", null, true);
         echo " /";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 68, $this->source); })()), "getQuantite", [], "any", false, false, false, 68), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 69, $this->source); })()), "getQuantite", [], "any", false, false, false, 69), "html", null, true);
         echo "
 ";
         
@@ -303,7 +308,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 70
+    // line 71
     public function block_des($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -313,9 +318,9 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "des"));
 
-        // line 71
+        // line 72
         echo "    ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 71, $this->source); })()), "getDescriptionAct", [], "method", false, false, false, 71), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 72, $this->source); })()), "getDescriptionAct", [], "method", false, false, false, 72), "html", null, true);
         echo "
 ";
         
@@ -326,7 +331,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 73
+    // line 74
     public function block_star($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -336,15 +341,15 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "star"));
 
-        // line 74
+        // line 75
         echo " <form action=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("activityDetails", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 74, $this->source); })()), "getId", [], "any", false, false, false, 74)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("activityDetails", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 75, $this->source); })()), "getId", [], "any", false, false, false, 75)]), "html", null, true);
         echo "\" method=\"post\">
-    <div style=\"margin-left: 80%\">
+    <div style=\"margin-left: 80%\" class=\"ratee\">
         ";
-        // line 76
-        if ( !(isset($context["heRated"]) || array_key_exists("heRated", $context) ? $context["heRated"] : (function () { throw new RuntimeError('Variable "heRated" does not exist.', 76, $this->source); })())) {
-            // line 77
+        // line 77
+        if ( !(isset($context["heRated"]) || array_key_exists("heRated", $context) ? $context["heRated"] : (function () { throw new RuntimeError('Variable "heRated" does not exist.', 77, $this->source); })())) {
+            // line 78
             echo "        <input type=\"hidden\" value=\"\" id=\"ratenote\" name=\"rate\" />
         <button style=\"background: none ; border: none\">
 
@@ -357,40 +362,49 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         </button>
         ";
         } else {
-            // line 88
+            // line 89
             echo "            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 88, $this->source); })()), "getRate", [], "any", false, false, false, 88)));
+            $context['_seq'] = twig_ensure_traversable(range(1, twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 89, $this->source); })()), "getRate", [], "any", false, false, false, 89)));
             foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                // line 89
+                // line 90
                 echo "            <i class=\"hover2\" >&#9733;</i>
         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 91
+            // line 92
             echo "            ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(range(1, (5 - twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 91, $this->source); })()), "getRate", [], "any", false, false, false, 91))));
-            foreach ($context['_seq'] as $context["_key"] => $context["j"]) {
-                // line 92
-                echo "                <i class=\"star2\" >&#9733;</i>
-            ";
+            if ((0 !== twig_compare((5 - twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 92, $this->source); })()), "getRate", [], "any", false, false, false, 92)), 0))) {
+                // line 93
+                echo "                ";
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(range(1, (5 - twig_get_attribute($this->env, $this->source, (isset($context["didRated"]) || array_key_exists("didRated", $context) ? $context["didRated"] : (function () { throw new RuntimeError('Variable "didRated" does not exist.', 93, $this->source); })()), "getRate", [], "any", false, false, false, 93))));
+                foreach ($context['_seq'] as $context["_key"] => $context["j"]) {
+                    // line 94
+                    echo "                    <i class=\"star2\" >&#9733;</i>
+                ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['j'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 96
+                echo "            ";
             }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['j'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 94
+            // line 97
             echo "        ";
         }
-        // line 95
+        // line 98
         echo "    </div>
  </form>
 <input type=\"hidden\" value=\"";
-        // line 97
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 97, $this->source); })()), "getId", [], "method", false, false, false, 97), "html", null, true);
+        // line 100
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 100, $this->source); })()), "getId", [], "method", false, false, false, 100), "html", null, true);
         echo "\" id=\"idact\"/>
+";
+        // line 103
+        echo "
 
 
 ";
@@ -402,7 +416,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 101
+    // line 107
     public function block_pict($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -412,17 +426,17 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "pict"));
 
-        // line 102
+        // line 108
         echo "   ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 102, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 108, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-            // line 103
+            // line 109
             echo "    <li>
 
             <img class=\"img-fluid\" style=\"height: 50% ; width: 100%\" src=\"http://127.0.0.1:8000/uploads/";
-            // line 105
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "getImageUrl", [], "method", false, false, false, 105), "html", null, true);
+            // line 111
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["image"], "getImageUrl", [], "method", false, false, false, 111), "html", null, true);
             echo "\" id=\"small_img\" alt=\"\">
 
     </li>
@@ -431,7 +445,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 109
+        // line 115
         echo "
 ";
         
@@ -442,7 +456,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 111
+    // line 117
     public function block_commentaire($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -452,7 +466,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "commentaire"));
 
-        // line 112
+        // line 118
         echo "<div class=\"boit-msg \" id=\"boitmesg\">
 
 </div>
@@ -465,7 +479,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 116
+    // line 122
     public function block_Exercice($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -475,24 +489,24 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Exercice"));
 
-        // line 117
+        // line 123
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 117, $this->source); })()), "exercices", [], "any", false, false, false, 117));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["activity"]) || array_key_exists("activity", $context) ? $context["activity"] : (function () { throw new RuntimeError('Variable "activity" does not exist.', 123, $this->source); })()), "exercices", [], "any", false, false, false, 123));
         foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 118
+            // line 124
             echo "    <div class=\"media post_item\">
         <img  style=\" width:40%\" src=\"http://127.0.0.1:8000/uploads/noimg.jpg\"  alt=\"post\">
         <div class=\"media-body\">
             <a href=\"blog_details.html\">
                 <h3>";
-            // line 122
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 122), "html", null, true);
+            // line 128
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 128), "html", null, true);
             echo "</h3>
             </a>
             <p>";
-            // line 124
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 124), "html", null, true);
+            // line 130
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 130), "html", null, true);
             echo "</p>
         </div>
     </div>
@@ -501,7 +515,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 128
+        // line 134
         echo "    <script>
 
 
@@ -561,6 +575,39 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
             document.getElementById(\"ratenote\").value = e.target.dataset.note;
 
         }
+        \$(document).ready(
+            function () {
+            let idactivity = \$(\"#idact\").val();
+            \$.ajax({
+
+                url:\"http://127.0.0.1:8000/activity/json/detail/\"+idactivity,
+                type: \"get\",
+                dataType: \"json\",
+                cache: false,
+                success: function (data , status) {
+                    console.log(\"hello\",data.rate);
+                    let rt=\"\";
+                   if (data.rate!=0){
+                       for (let i=0 ; i<data.rate ; i++){
+                           rt+=\"<i class='hover2' >&#9733;</i>\";
+
+                       }
+                       for (let i=0 ; i<5-data.rate ; i++){
+                           rt+=\"<i class='star2' >&#9733;</i>\";
+
+                       }
+                       \$(\".ratee\").html(rt);
+                   }
+
+
+
+                },
+                error: function (data) {
+                    console.log(\"err\",idactivity );
+                },
+            });
+
+        });
     </script>
 <script>
 
@@ -570,8 +617,50 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
                 'X-CSRF-TOKEN': \$('meta[name=\"csrf-token\"]').attr('content')
             }
         });*/
+        //post information for commentaire
+        \$(\"#commentForm\").submit(function(e)
+        {
+            e.preventDefault();
+            var formData  =\$(\"#commentForm\").serialize(); //data mn formulaire
+            let idact = \$(\"#idact\").val();
+            // let user = \$(\"#user\").val();
+            var msg = \$(\"#website\").val();
+            console.log(idact);
+           // let date = \$(\"#nom\").text();
+
+
+            \$.ajax({
+
+
+                url:\"http://127.0.0.1:8000/commentaiire/add/\"+msg+\"/\"+idact,
+                type:\"post\",
+                data:formData,
+                success:function(dataBack)
+                {
+                    // \t\$(\"#boitmesg\").append(`
+                    //       \t<div> <Strong>\${nom}  :</Strong> \${msg}\t</div>
+
+                    //  `)
+                    /*console.log(\"sucess\");
+                    \$('.hh').val(\"\");
+                    document.getElementById(\"website\").value = \"\";*/
+
+
+
+                }, error: function (xhr, status, error)
+                {
+                    console.log(error);
+                }
+            });
+            \$('.hh').val(\"\");
+            document.getElementById(\"website\").value = \"\";
+
+
+
+        });
+        //get Information for commentaire
         setInterval(function () {
-            let idactivity = \$(\"#idact\").text();
+            let idactivity = \$(\"#idact\").val();
             \$.ajax({
 
                 url:\"http://127.0.0.1:8000/commentaiire/\"+idactivity,
@@ -579,15 +668,73 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
                 dataType: \"json\",
                 cache: false,
                 success: function (data , status) {
-                    let lenght = data.message.length
+                    console.log(data)
+                     let l = data.length;
+                    var  tt= \"<div class='comment-list'>\"+
+                        \"<div class='single-comment justify-content-between d-flex'>\"+
+                            \"<div class='user justify-content-between d-flex'>\"+
+                                \"<div class='thumb'>\"+
+                                    \"<img src='";
+        // line 292
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/img/comment/comment_1.png"), "html", null, true);
+        echo "' alt=''>\"+
+                                \"</div>\"+
+                                \"<div class='desc'>\"+
+                                   \"<p class='comment'>\" +
+                                       \"hh\"+
+                                    \"</p>\"+
+                                   \"<div class='d-flex justify-content-between'>\" +
+                                       \"<div class='d-flex align-items-center'>\" +
+                                           \"<h5>\" +
+                                            \"Emilly Blunt\"    +
+                                           \"</h5>\" +
+                                           \"<p class='date'>December 4, 2017 at 3:12 pm </p>\" +
+                                        \"</div>\"+
+
+                                   \"</div>\" +
+                               \"</div>\" +
+                           \"</div>\" +
+                       \"</div>\" +
+                   \"</div>\" ;
+
+
+
+                    console.log(l,\"taille\");
+
                     var MSG=\"\";
-                    for (let i =0; i < lenght; i++){
-                        MSG += \"<div class='messages'><Strong>\"+ data.message[i].iduser + \":</Strong>\"+ data.message[i].textcommentaire +\"</div></br>\";
-                    }
+                     for (let i =0; i < l; i++){
+                         MSG += \"<div class='comment-list'>\"+
+                             \"<div class='single-comment justify-content-between d-flex'>\"+
+                             \"<div class='user justify-content-between d-flex'>\"+
+                             \"<div class='thumb'>\"+
+                             \"<img src='";
+        // line 322
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("detail/assets/img/comment/comment_1.png"), "html", null, true);
+        echo "' alt=''>\"+
+                             \"</div>\"+
+                             \"<div class='desc'>\"+
+                             \"<p class='comment'>\" +
+                             data[i].textcommentaire+
+                             \"</p>\"+
+                             \"<div class='d-flex justify-content-between'>\" +
+                             \"<div class='d-flex align-items-center'>\" +
+                             \"<h5>\" +
+                             data[i].iduser    +
+                             \"</h5>\" +
+                             \"<p class='date'>\"+data[i].dateCom+\"</p>\" +
+                             \"</div>\"+
+
+                             \"</div>\" +
+                             \"</div>\" +
+                             \"</div>\" +
+                             \"</div>\" +
+                             \"</div>\" ;
+                         //\"<div class='messages'><Strong>\"+ data[i].iduser + \":</Strong>\"+ data[i].textcommentaire +\"</div></br>\"
+                     }
                     \$(\"#boitmesg\").html(MSG);
                 },
                 error: function (data) {
-                    //console.log(\"error: \");
+                    console.log(\"err\",idactivity );
                 },
             });
         },5000);
@@ -605,7 +752,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     }
 
-    // line 224
+    // line 357
     public function block_c($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -615,7 +762,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "c"));
 
-        // line 225
+        // line 358
         echo "
 
 ";
@@ -639,7 +786,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 
     public function getDebugInfo()
     {
-        return array (  619 => 225,  609 => 224,  505 => 128,  495 => 124,  490 => 122,  484 => 118,  479 => 117,  469 => 116,  456 => 112,  446 => 111,  435 => 109,  425 => 105,  421 => 103,  416 => 102,  406 => 101,  392 => 97,  388 => 95,  385 => 94,  378 => 92,  373 => 91,  366 => 89,  361 => 88,  348 => 77,  346 => 76,  340 => 74,  330 => 73,  317 => 71,  307 => 70,  292 => 68,  282 => 67,  267 => 65,  257 => 64,  243 => 61,  233 => 60,  219 => 55,  215 => 52,  211 => 47,  208 => 46,  204 => 44,  199 => 42,  195 => 41,  190 => 40,  188 => 39,  185 => 38,  182 => 37,  176 => 32,  171 => 29,  161 => 28,  147 => 23,  137 => 22,  125 => 19,  122 => 18,  118 => 16,  115 => 15,  113 => 14,  110 => 13,  100 => 12,  83 => 3,  73 => 2,  62 => 1,  60 => 11,  47 => 1,);
+        return array (  766 => 358,  756 => 357,  712 => 322,  679 => 292,  519 => 134,  509 => 130,  504 => 128,  498 => 124,  493 => 123,  483 => 122,  470 => 118,  460 => 117,  449 => 115,  439 => 111,  435 => 109,  430 => 108,  420 => 107,  407 => 103,  403 => 100,  399 => 98,  396 => 97,  393 => 96,  386 => 94,  381 => 93,  378 => 92,  371 => 90,  366 => 89,  353 => 78,  351 => 77,  345 => 75,  335 => 74,  322 => 72,  312 => 71,  297 => 69,  287 => 68,  272 => 66,  262 => 65,  248 => 62,  238 => 61,  224 => 56,  220 => 53,  215 => 49,  211 => 47,  208 => 46,  204 => 44,  199 => 42,  195 => 41,  190 => 40,  188 => 39,  185 => 38,  182 => 37,  176 => 32,  171 => 29,  161 => 28,  147 => 23,  137 => 22,  125 => 19,  122 => 18,  118 => 16,  115 => 15,  113 => 14,  110 => 13,  100 => 12,  83 => 3,  73 => 2,  62 => 1,  60 => 11,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -692,7 +839,8 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
                     {% else%}
                         <button disabled class=\"button1 \">No Place</button>
                     {% endif %}
-{#                {% else %}#}
+                <iframe src=\"https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1:8000%2Factivity%2Fdetails%2F{{ activity.getId() }}%2F&layout=button_count&size=large&appId=214722496787236&width=110&height=28\" width=\"110\" height=\"28\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
+                {#                {% else %}#}
 {#                    <button disabled class=\"button \">passed</button>#}
 {#                    <h1>{{  not(1==2) }}</h1>#}
 
@@ -718,7 +866,7 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
 {% endblock %}
 {% block star %}
  <form action=\"{{ path('activityDetails',{'id':activity.getId}) }}\" method=\"post\">
-    <div style=\"margin-left: 80%\">
+    <div style=\"margin-left: 80%\" class=\"ratee\">
         {% if not heRated %}
         <input type=\"hidden\" value=\"\" id=\"ratenote\" name=\"rate\" />
         <button style=\"background: none ; border: none\">
@@ -734,13 +882,18 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
             {% for i in 1..didRated.getRate %}
             <i class=\"hover2\" >&#9733;</i>
         {% endfor %}
-            {% for j in 1..5-didRated.getRate %}
-                <i class=\"star2\" >&#9733;</i>
-            {% endfor %}
+            {% if 5-didRated.getRate !=0 %}
+                {% for j in 1..5-didRated.getRate %}
+                    <i class=\"star2\" >&#9733;</i>
+                {% endfor %}
+            {% endif %}
         {% endif %}
     </div>
  </form>
 <input type=\"hidden\" value=\"{{ activity.getId() }}\" id=\"idact\"/>
+{#    <input type=\"hidden\" value=\"{{ user }}\" id=\"user\"/>#}
+{# <h1 id=\"idact\" hidden>{{activity.getId()}}</h1>#}
+
 
 
 {% endblock %}
@@ -830,6 +983,39 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
             document.getElementById(\"ratenote\").value = e.target.dataset.note;
 
         }
+        \$(document).ready(
+            function () {
+            let idactivity = \$(\"#idact\").val();
+            \$.ajax({
+
+                url:\"http://127.0.0.1:8000/activity/json/detail/\"+idactivity,
+                type: \"get\",
+                dataType: \"json\",
+                cache: false,
+                success: function (data , status) {
+                    console.log(\"hello\",data.rate);
+                    let rt=\"\";
+                   if (data.rate!=0){
+                       for (let i=0 ; i<data.rate ; i++){
+                           rt+=\"<i class='hover2' >&#9733;</i>\";
+
+                       }
+                       for (let i=0 ; i<5-data.rate ; i++){
+                           rt+=\"<i class='star2' >&#9733;</i>\";
+
+                       }
+                       \$(\".ratee\").html(rt);
+                   }
+
+
+
+                },
+                error: function (data) {
+                    console.log(\"err\",idactivity );
+                },
+            });
+
+        });
     </script>
 <script>
 
@@ -839,8 +1025,50 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
                 'X-CSRF-TOKEN': \$('meta[name=\"csrf-token\"]').attr('content')
             }
         });*/
+        //post information for commentaire
+        \$(\"#commentForm\").submit(function(e)
+        {
+            e.preventDefault();
+            var formData  =\$(\"#commentForm\").serialize(); //data mn formulaire
+            let idact = \$(\"#idact\").val();
+            // let user = \$(\"#user\").val();
+            var msg = \$(\"#website\").val();
+            console.log(idact);
+           // let date = \$(\"#nom\").text();
+
+
+            \$.ajax({
+
+
+                url:\"http://127.0.0.1:8000/commentaiire/add/\"+msg+\"/\"+idact,
+                type:\"post\",
+                data:formData,
+                success:function(dataBack)
+                {
+                    // \t\$(\"#boitmesg\").append(`
+                    //       \t<div> <Strong>\${nom}  :</Strong> \${msg}\t</div>
+
+                    //  `)
+                    /*console.log(\"sucess\");
+                    \$('.hh').val(\"\");
+                    document.getElementById(\"website\").value = \"\";*/
+
+
+
+                }, error: function (xhr, status, error)
+                {
+                    console.log(error);
+                }
+            });
+            \$('.hh').val(\"\");
+            document.getElementById(\"website\").value = \"\";
+
+
+
+        });
+        //get Information for commentaire
         setInterval(function () {
-            let idactivity = \$(\"#idact\").text();
+            let idactivity = \$(\"#idact\").val();
             \$.ajax({
 
                 url:\"http://127.0.0.1:8000/commentaiire/\"+idactivity,
@@ -848,15 +1076,67 @@ class __TwigTemplate_d1af7a9260f59d2612a20fd9d5d587d48ab29eebf04c79acb2f04d1121a
                 dataType: \"json\",
                 cache: false,
                 success: function (data , status) {
-                    let lenght = data.message.length
+                    console.log(data)
+                     let l = data.length;
+                    var  tt= \"<div class='comment-list'>\"+
+                        \"<div class='single-comment justify-content-between d-flex'>\"+
+                            \"<div class='user justify-content-between d-flex'>\"+
+                                \"<div class='thumb'>\"+
+                                    \"<img src='{{ asset('detail/assets/img/comment/comment_1.png') }}' alt=''>\"+
+                                \"</div>\"+
+                                \"<div class='desc'>\"+
+                                   \"<p class='comment'>\" +
+                                       \"hh\"+
+                                    \"</p>\"+
+                                   \"<div class='d-flex justify-content-between'>\" +
+                                       \"<div class='d-flex align-items-center'>\" +
+                                           \"<h5>\" +
+                                            \"Emilly Blunt\"    +
+                                           \"</h5>\" +
+                                           \"<p class='date'>December 4, 2017 at 3:12 pm </p>\" +
+                                        \"</div>\"+
+
+                                   \"</div>\" +
+                               \"</div>\" +
+                           \"</div>\" +
+                       \"</div>\" +
+                   \"</div>\" ;
+
+
+
+                    console.log(l,\"taille\");
+
                     var MSG=\"\";
-                    for (let i =0; i < lenght; i++){
-                        MSG += \"<div class='messages'><Strong>\"+ data.message[i].iduser + \":</Strong>\"+ data.message[i].textcommentaire +\"</div></br>\";
-                    }
+                     for (let i =0; i < l; i++){
+                         MSG += \"<div class='comment-list'>\"+
+                             \"<div class='single-comment justify-content-between d-flex'>\"+
+                             \"<div class='user justify-content-between d-flex'>\"+
+                             \"<div class='thumb'>\"+
+                             \"<img src='{{ asset('detail/assets/img/comment/comment_1.png') }}' alt=''>\"+
+                             \"</div>\"+
+                             \"<div class='desc'>\"+
+                             \"<p class='comment'>\" +
+                             data[i].textcommentaire+
+                             \"</p>\"+
+                             \"<div class='d-flex justify-content-between'>\" +
+                             \"<div class='d-flex align-items-center'>\" +
+                             \"<h5>\" +
+                             data[i].iduser    +
+                             \"</h5>\" +
+                             \"<p class='date'>\"+data[i].dateCom+\"</p>\" +
+                             \"</div>\"+
+
+                             \"</div>\" +
+                             \"</div>\" +
+                             \"</div>\" +
+                             \"</div>\" +
+                             \"</div>\" ;
+                         //\"<div class='messages'><Strong>\"+ data[i].iduser + \":</Strong>\"+ data[i].textcommentaire +\"</div></br>\"
+                     }
                     \$(\"#boitmesg\").html(MSG);
                 },
                 error: function (data) {
-                    //console.log(\"error: \");
+                    console.log(\"err\",idactivity );
                 },
             });
         },5000);

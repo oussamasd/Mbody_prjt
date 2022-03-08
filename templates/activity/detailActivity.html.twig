@@ -46,7 +46,8 @@
                     {% else%}
                         <button disabled class="button1 ">No Place</button>
                     {% endif %}
-{#                {% else %}#}
+                <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1:8000%2Factivity%2Fdetails%2F{{ activity.getId() }}%2F&layout=button_count&size=large&appId=214722496787236&width=110&height=28" width="110" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                {#                {% else %}#}
 {#                    <button disabled class="button ">passed</button>#}
 {#                    <h1>{{  not(1==2) }}</h1>#}
 
@@ -72,7 +73,7 @@
 {% endblock %}
 {% block star %}
  <form action="{{ path('activityDetails',{'id':activity.getId}) }}" method="post">
-    <div style="margin-left: 80%">
+    <div style="margin-left: 80%" class="ratee">
         {% if not heRated %}
         <input type="hidden" value="" id="ratenote" name="rate" />
         <button style="background: none ; border: none">
@@ -88,13 +89,18 @@
             {% for i in 1..didRated.getRate %}
             <i class="hover2" >&#9733;</i>
         {% endfor %}
-            {% for j in 1..5-didRated.getRate %}
-                <i class="star2" >&#9733;</i>
-            {% endfor %}
+            {% if 5-didRated.getRate !=0 %}
+                {% for j in 1..5-didRated.getRate %}
+                    <i class="star2" >&#9733;</i>
+                {% endfor %}
+            {% endif %}
         {% endif %}
     </div>
  </form>
 <input type="hidden" value="{{ activity.getId() }}" id="idact"/>
+{#    <input type="hidden" value="{{ user }}" id="user"/>#}
+{# <h1 id="idact" hidden>{{activity.getId()}}</h1>#}
+
 
 
 {% endblock %}
@@ -184,6 +190,39 @@
             document.getElementById("ratenote").value = e.target.dataset.note;
 
         }
+        $(document).ready(
+            function () {
+            let idactivity = $("#idact").val();
+            $.ajax({
+
+                url:"http://127.0.0.1:8000/activity/json/detail/"+idactivity,
+                type: "get",
+                dataType: "json",
+                cache: false,
+                success: function (data , status) {
+                    console.log("hello",data.rate);
+                    let rt="";
+                   if (data.rate!=0){
+                       for (let i=0 ; i<data.rate ; i++){
+                           rt+="<i class='hover2' >&#9733;</i>";
+
+                       }
+                       for (let i=0 ; i<5-data.rate ; i++){
+                           rt+="<i class='star2' >&#9733;</i>";
+
+                       }
+                       $(".ratee").html(rt);
+                   }
+
+
+
+                },
+                error: function (data) {
+                    console.log("err",idactivity );
+                },
+            });
+
+        });
     </script>
 <script>
 
@@ -193,8 +232,50 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });*/
+        //post information for commentaire
+        $("#commentForm").submit(function(e)
+        {
+            e.preventDefault();
+            var formData  =$("#commentForm").serialize(); //data mn formulaire
+            let idact = $("#idact").val();
+            // let user = $("#user").val();
+            var msg = $("#website").val();
+            console.log(idact);
+           // let date = $("#nom").text();
+
+
+            $.ajax({
+
+
+                url:"http://127.0.0.1:8000/commentaiire/add/"+msg+"/"+idact,
+                type:"post",
+                data:formData,
+                success:function(dataBack)
+                {
+                    // 	$("#boitmesg").append(`
+                    //       	<div> <Strong>${nom}  :</Strong> ${msg}	</div>
+
+                    //  `)
+                    /*console.log("sucess");
+                    $('.hh').val("");
+                    document.getElementById("website").value = "";*/
+
+
+
+                }, error: function (xhr, status, error)
+                {
+                    console.log(error);
+                }
+            });
+            $('.hh').val("");
+            document.getElementById("website").value = "";
+
+
+
+        });
+        //get Information for commentaire
         setInterval(function () {
-            let idactivity = $("#idact").text();
+            let idactivity = $("#idact").val();
             $.ajax({
 
                 url:"http://127.0.0.1:8000/commentaiire/"+idactivity,
@@ -202,15 +283,67 @@
                 dataType: "json",
                 cache: false,
                 success: function (data , status) {
-                    let lenght = data.message.length
+                    console.log(data)
+                     let l = data.length;
+                    var  tt= "<div class='comment-list'>"+
+                        "<div class='single-comment justify-content-between d-flex'>"+
+                            "<div class='user justify-content-between d-flex'>"+
+                                "<div class='thumb'>"+
+                                    "<img src='{{ asset('detail/assets/img/comment/comment_1.png') }}' alt=''>"+
+                                "</div>"+
+                                "<div class='desc'>"+
+                                   "<p class='comment'>" +
+                                       "hh"+
+                                    "</p>"+
+                                   "<div class='d-flex justify-content-between'>" +
+                                       "<div class='d-flex align-items-center'>" +
+                                           "<h5>" +
+                                            "Emilly Blunt"    +
+                                           "</h5>" +
+                                           "<p class='date'>December 4, 2017 at 3:12 pm </p>" +
+                                        "</div>"+
+
+                                   "</div>" +
+                               "</div>" +
+                           "</div>" +
+                       "</div>" +
+                   "</div>" ;
+
+
+
+                    console.log(l,"taille");
+
                     var MSG="";
-                    for (let i =0; i < lenght; i++){
-                        MSG += "<div class='messages'><Strong>"+ data.message[i].iduser + ":</Strong>"+ data.message[i].textcommentaire +"</div></br>";
-                    }
+                     for (let i =0; i < l; i++){
+                         MSG += "<div class='comment-list'>"+
+                             "<div class='single-comment justify-content-between d-flex'>"+
+                             "<div class='user justify-content-between d-flex'>"+
+                             "<div class='thumb'>"+
+                             "<img src='{{ asset('detail/assets/img/comment/comment_1.png') }}' alt=''>"+
+                             "</div>"+
+                             "<div class='desc'>"+
+                             "<p class='comment'>" +
+                             data[i].textcommentaire+
+                             "</p>"+
+                             "<div class='d-flex justify-content-between'>" +
+                             "<div class='d-flex align-items-center'>" +
+                             "<h5>" +
+                             data[i].iduser    +
+                             "</h5>" +
+                             "<p class='date'>"+data[i].dateCom+"</p>" +
+                             "</div>"+
+
+                             "</div>" +
+                             "</div>" +
+                             "</div>" +
+                             "</div>" +
+                             "</div>" ;
+                         //"<div class='messages'><Strong>"+ data[i].iduser + ":</Strong>"+ data[i].textcommentaire +"</div></br>"
+                     }
                     $("#boitmesg").html(MSG);
                 },
                 error: function (data) {
-                    //console.log("error: ");
+                    console.log("err",idactivity );
                 },
             });
         },5000);

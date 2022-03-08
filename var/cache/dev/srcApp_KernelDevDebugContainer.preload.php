@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerZg0oUih/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/Container8e9DKCH/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -27,6 +27,7 @@ $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
 $classes[] = 'Symfony\Bundle\WebServerBundle\WebServerBundle';
 $classes[] = 'Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
 $classes[] = 'Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle';
+$classes[] = 'Symfony\UX\Chartjs\ChartjsBundle';
 $classes[] = 'Symfony\Component\HttpClient\TraceableHttpClient';
 $classes[] = 'Symfony\Contracts\HttpClient\HttpClientInterface';
 $classes[] = 'Symfony\Component\HttpClient\HttpClient';
@@ -74,6 +75,7 @@ $classes[] = 'Symfony\Component\HttpKernel\CacheClearer\Psr6CacheClearer';
 $classes[] = 'Symfony\Component\Cache\Adapter\ArrayAdapter';
 $classes[] = 'Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer';
 $classes[] = 'Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate';
+$classes[] = 'Symfony\UX\Chartjs\Builder\ChartBuilder';
 $classes[] = 'Symfony\Component\Config\Resource\SelfCheckingResourceChecker';
 $classes[] = 'Symfony\Component\Config\ResourceCheckerConfigCacheFactory';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Command\AboutCommand';

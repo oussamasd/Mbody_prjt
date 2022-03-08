@@ -28,6 +28,7 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'css' => [$this, 'block_css'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -94,6 +95,12 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
     <script src=\"https://kit.fontawesome.com/235b7b7294.js\" crossorigin=\"anonymous\"></script>
     <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>
     <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>
+    <style>
+        ";
+        // line 30
+        $this->displayBlock('css', $context, $blocks);
+        // line 32
+        echo "    </style>
 </head>
 <body>
 <header class=\"header\">
@@ -244,7 +251,7 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
         <!-- Sidebar Header-->
         <div class=\"sidebar-header d-flex align-items-center\">
             <div class=\"avatar\"><img src=\"";
-        // line 178
+        // line 182
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/avatar-6.jpg"), "html", null, true);
         echo "\" alt=\"...\" class=\"img-fluid rounded-circle\"></div>
             <div class=\"title\">
@@ -266,8 +273,22 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
             </li>
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Gestion Activite </a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"/addActivity\">Activite</a></li>
-                    <li><a href=\"addExercice\">Exercice</a></li>
+                    <li><a href=\"";
+        // line 202
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("activityAdd");
+        echo "\">Activite</a></li>
+                    <li><a href=\"";
+        // line 203
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("activityall");
+        echo "\">show activity</a></li>
+                    <li><a href=\"";
+        // line 204
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("exerciceAdd");
+        echo "\">Exercice</a></li>
+                    <li><a href=\"";
+        // line 205
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("exerciceback");
+        echo "\">show exercice</a></li>
                     <li><a href=\"addCategory\">Category</a></li>
                 </ul>
             </li>
@@ -285,9 +306,9 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
         </div>
 
         ";
-        // line 216
+        // line 222
         $this->displayBlock('body', $context, $blocks);
-        // line 237
+        // line 243
         echo "
 
 
@@ -306,35 +327,35 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 </div>
 <!-- JavaScript files-->
 <script src=\"";
-        // line 254
+        // line 260
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 255
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/popper.js/umd/popper.min.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 256
+        // line 262
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 257
+        // line 263
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery.cookie/jquery.cookie.js"), "html", null, true);
         echo "\"> </script>
 <script src=\"";
-        // line 258
+        // line 264
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/chart.js/Chart.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 259
+        // line 265
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/vendor/jquery-validation/jquery.validate.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 260
+        // line 266
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/js/charts-home.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 261
+        // line 267
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Back/js/front.js"), "html", null, true);
         echo "\"></script>
 </body>
@@ -366,7 +387,27 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 
     }
 
-    // line 216
+    // line 30
+    public function block_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        // line 31
+        echo "        ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 222
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -376,7 +417,7 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 217
+        // line 223
         echo "        <section class=\"no-padding-bottom\">
             <div class=\"container-fluid\">
                 <div class=\"row\">
@@ -417,7 +458,7 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
 
     public function getDebugInfo()
     {
-        return array (  380 => 217,  370 => 216,  351 => 6,  338 => 261,  334 => 260,  330 => 259,  326 => 258,  322 => 257,  318 => 256,  314 => 255,  310 => 254,  291 => 237,  289 => 216,  248 => 178,  91 => 24,  86 => 22,  81 => 20,  74 => 16,  70 => 15,  65 => 13,  60 => 11,  52 => 6,  45 => 1,);
+        return array (  421 => 223,  411 => 222,  401 => 31,  391 => 30,  372 => 6,  359 => 267,  355 => 266,  351 => 265,  347 => 264,  343 => 263,  339 => 262,  335 => 261,  331 => 260,  312 => 243,  310 => 222,  290 => 205,  286 => 204,  282 => 203,  278 => 202,  255 => 182,  103 => 32,  101 => 30,  92 => 24,  87 => 22,  82 => 20,  75 => 16,  71 => 15,  66 => 13,  61 => 11,  53 => 6,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -450,6 +491,10 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
     <script src=\"https://kit.fontawesome.com/235b7b7294.js\" crossorigin=\"anonymous\"></script>
     <script src=\"https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js\"></script>
     <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>
+    <style>
+        {% block css %}
+        {% endblock %}
+    </style>
 </head>
 <body>
 <header class=\"header\">
@@ -619,8 +664,10 @@ class __TwigTemplate_0d7362542d05fa9fbe89d56fb9292fc9a30795d65d9c8e9d6afc92cfdc1
             </li>
             <li><a href=\"#exampledropdownDropdown\" aria-expanded=\"false\" data-toggle=\"collapse\"> <i class=\"icon-windows\"></i>Gestion Activite </a>
                 <ul id=\"exampledropdownDropdown\" class=\"collapse list-unstyled \">
-                    <li><a href=\"/addActivity\">Activite</a></li>
-                    <li><a href=\"addExercice\">Exercice</a></li>
+                    <li><a href=\"{{ path('activityAdd')}}\">Activite</a></li>
+                    <li><a href=\"{{ path('activityall')}}\">show activity</a></li>
+                    <li><a href=\"{{ path('exerciceAdd')}}\">Exercice</a></li>
+                    <li><a href=\"{{ path('exerciceback')}}\">show exercice</a></li>
                     <li><a href=\"addCategory\">Category</a></li>
                 </ul>
             </li>

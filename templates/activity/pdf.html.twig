@@ -1,0 +1,40 @@
+<table>
+    <tr>
+        <td>
+            Nom :
+        </td>
+        <td>
+           {{ user.getNom }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Nom  Activity :
+        </td>
+        <td>
+            {{ activity.getNomAct }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            date :
+        </td>
+        <td>
+            {{ activity.getDateAct|date("Y-m-d") }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            temp :
+        </td>
+        <td>
+            {{ activity.getTempAct|date("H:m") }}
+        </td>
+    </tr>
+
+
+</table>
+<div >
+    <img src="{{ imgqr }}" alt=""/>
+</div>
+

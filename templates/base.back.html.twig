@@ -26,6 +26,10 @@
     <script src="https://kit.fontawesome.com/235b7b7294.js" crossorigin="anonymous"></script>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style>
+        {% block css %}
+        {% endblock %}
+    </style>
 </head>
 <body>
 <header class="header">
@@ -195,8 +199,10 @@
             </li>
             <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Gestion Activite </a>
                 <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="/addActivity">Activite</a></li>
-                    <li><a href="addExercice">Exercice</a></li>
+                    <li><a href="{{ path('activityAdd')}}">Activite</a></li>
+                    <li><a href="{{ path('activityall')}}">show activity</a></li>
+                    <li><a href="{{ path('exerciceAdd')}}">Exercice</a></li>
+                    <li><a href="{{ path('exerciceback')}}">show exercice</a></li>
                     <li><a href="addCategory">Category</a></li>
                 </ul>
             </li>

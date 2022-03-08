@@ -1,6 +1,42 @@
 {% extends 'base.back.html.twig' %}
+{% block css %}
+    {{ parent() }}
+    .dibtn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .sub {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+
+    .sub:hover {
+    background-color: #e65f32;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+    }
+{% endblock %}
 {% block body %}
-    <div style="margin-left:25% ;padding-left: 10%; height: 40%;width: 40%">
+    <center>
+
+
+{#    <div style="margin-left:25% ;padding-left: 10%; height: 40%;width: 40%">#}
 <h1>add exercice</h1>
 {#{{ form(formExercice) }}#}
 {{ form_start(formExercice, {'attr': {'novalidate': 'novalidate'}}) }}
@@ -8,7 +44,7 @@
     <tr>
          <td>  {{ form_label(formExercice.nom_Exercice,"Nom Exercice")}}  </td>
 
-        <td> {{ form_widget(formExercice.nom_Exercice)}}   </td>
+        <td> {{ form_widget(formExercice.nom_Exercice,{'attr':{'class':'form-control','placeholder':'Entrer nom exercice'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -19,7 +55,7 @@
     <tr>
         <td>  {{ form_label(formExercice.dure_Exercice,"Duree Exercice")}}  </td>
 
-        <td> {{ form_widget(formExercice.dure_Exercice)}}   </td>
+        <td> {{ form_widget(formExercice.dure_Exercice,{'attr':{'class':'form-control','placeholder':'Entrer duree exercice'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -30,7 +66,7 @@
     <tr>
         <td>  {{ form_label(formExercice.description_Exercice,"Description Exercice")}}  </td>
 
-        <td> {{ form_widget(formExercice.description_Exercice)}}   </td>
+        <td> {{ form_widget(formExercice.description_Exercice,{'attr':{'class':'form-control','placeholder':'Entrer description exercice'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -49,40 +85,51 @@
           {{ form_errors(formExercice.category) }}
         </td>
     </tr>
-    <tr>
-
-            <td>
-                {{ form_row(formExercice.Add) }}
-            </td>
 
 
 
-    </tr>
+
+
+
+
+
 </table>
-    </div>
+        <div class="dibtn" style="margin-top: 20px">
+        {{ form_row(formExercice.Add,{'attr':{'class':'sub'}}) }}
+        </div>
+
+
+
+        {#    </div>#}
  {{ form_widget(formExercice.Add)}}
 {{ form_end(formExercice) }}
-    <table border="1" style="width: 100%">
-        <tr>
-            <th style="color: yellow">nom exercice</th>
-            <th style="color: yellow">dure exercice</th>
-            <th style="color: yellow" >description </th>
-            <th style="color: yellow" >category</th>
-            <th style="color: yellow">Action</th>
+        <div style="margin-top: 20px">
 
-        </tr>
-        {% for e in exercices %}
-            <tr>
-                <td>{{ e.getNomExercice()}}</td>
-                <td>{{ e.getDureExercice()}}</td>
-                <td>{{ e.getDescriptionExercice()}} </td>
-                <td>{{ e.getCategory().getNomCat()}}</td>
-                <td>
-                    <a href="{{ path('ExerciceUpdate',{"id":e.getId}) }}"> <i class="fa-solid fa-cog fa-spin"></i> </a>
-                    <a href="{{ path('ExerciceDelete',{"id":e.getId}) }}"><i class="fa-solid fa-xmark"></i></a>
+            <a href="{{ path('exerciceback')}}"><h6> back to list</h6></a>
 
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+        </div>
+{#    <table border="1" style="width: 100%">#}
+{#        <tr>#}
+{#            <th style="color: yellow">nom exercice</th>#}
+{#            <th style="color: yellow">dure exercice</th>#}
+{#            <th style="color: yellow" >description </th>#}
+{#            <th style="color: yellow" >category</th>#}
+{#            <th style="color: yellow">Action</th>#}
+
+{#        </tr>#}
+{#        {% for e in exercices %}#}
+{#            <tr>#}
+{#                <td>{{ e.getNomExercice()}}</td>#}
+{#                <td>{{ e.getDureExercice()}}</td>#}
+{#                <td>{{ e.getDescriptionExercice()}} </td>#}
+{#                <td>{{ e.getCategory().getNomCat()}}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('ExerciceUpdate',{"id":e.getId}) }}"> <i class="fa-solid fa-cog fa-spin"></i> </a>#}
+{#                    <a href="{{ path('ExerciceDelete',{"id":e.getId}) }}"><i class="fa-solid fa-xmark"></i></a>#}
+
+{#                </td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#    </table>#}
+    </center>
 {% endblock %}

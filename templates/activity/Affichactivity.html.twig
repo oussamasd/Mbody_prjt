@@ -36,49 +36,7 @@
     <div class="row">
         {% for activity in activities %}
             {% set i =activity.getImages() %}
-{#        <div class="col-lg-4">#}
-{#            <div class="trainer-item">#}
-{#                <div class="image-thumb">#}
-{#                    <img src="{{ asset('assets/images/first-trainer.jpg') }}" alt="">#}
-{#                </div>#}
-{#                <div class="down-content">#}
-{#                    <span>Strength Trainer</span>#}
-{#                    <h4>Bret D. Bowers</h4>#}
-{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
-{#                    <ul class="social-icons">#}
-{#                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
-{#                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
-{#                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>#}
-{#                        <li><a href="#"><i class="fa fa-behance"></i></a></li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="col-lg-4">#}
-{#            <div class="trainer-item">#}
-{#                <div class="image-thumb">#}
 
-{#                    {% if i|length >0 %}#}
-{#                        {% set imgg ="uploads/"+{{ i[0].getImageUrl() }}  %}#}
-
-{#                        <img src="http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}" alt="">#}
-{#                     {% else%}#}
-{#                         <img src="http://127.0.0.1:8000/uploads/noimg.jpg" alt="">#}
-{#                    {% endif %}#}
-{#                </div>#}
-{#                <div class="down-content">#}
-{#                    <span>Muscle Trainer</span>#}
-{#                    <h4>Hector T. Daigl</h4>#}
-{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
-{#                    <ul class="social-icons">#}
-{#                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
-{#                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
-{#                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>#}
-{#                        <li><a href="#"><i class="fa fa-behance"></i></a></li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
             {% set prt = activity.getRatings() %}
             {% set sommerate = 0 %}
             {% for p in prt %}
@@ -123,6 +81,7 @@
 
                                 {% endfor %}
 
+                                {% if 5-rate !=0 %}
                                 {% if rate |length ==1 %}
                                     {% for j in 1..5-rate %}
                                         <i class="star2" style="color: black" >&#9733;</i>
@@ -133,6 +92,7 @@
                                     {% endfor %}
 
                                 {% endif%}
+                                {% endif %}
                             {% endif %}
 
                             <i style="font-size: large"> {{ rate }}</i>
@@ -156,8 +116,8 @@
                     <tr>
                         <td>
                     <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/oussama.saddi.7/" ><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/o_sama2312/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
                     </ul>

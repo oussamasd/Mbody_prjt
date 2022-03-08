@@ -25,6 +25,7 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'css' => [$this, 'block_css'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -55,6 +56,59 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
     }
 
     // line 2
+    public function block_css($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "css"));
+
+        // line 3
+        echo "    ";
+        $this->displayParentBlock("css", $context, $blocks);
+        echo "
+    .dibtn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .sub {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+
+    .sub:hover {
+    background-color: #e65f32;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+    }
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 35
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -64,167 +118,142 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 3
-        echo "    <div style=\"margin-left:25% ;padding-left: 10%; height: 40%;width: 40%\">
-<h1>add exercice</h1>
+        // line 36
+        echo "    <center>
+
+
 ";
-        // line 6
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 6, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
+        // line 40
+        echo "<h1>add exercice</h1>
+";
+        // line 42
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 42, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
 <table>
     <tr>
          <td>  ";
-        // line 9
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 9, $this->source); })()), "nom_Exercice", [], "any", false, false, false, 9), 'label', ["label" => "Nom Exercice"]);
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 45, $this->source); })()), "nom_Exercice", [], "any", false, false, false, 45), 'label', ["label" => "Nom Exercice"]);
         echo "  </td>
 
         <td> ";
-        // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 11, $this->source); })()), "nom_Exercice", [], "any", false, false, false, 11), 'widget');
+        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 47, $this->source); })()), "nom_Exercice", [], "any", false, false, false, 47), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrer nom exercice"]]);
         echo "   </td>
     </tr>
     <tr>
         <td></td>
         <td>
          ";
-        // line 16
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 16, $this->source); })()), "nom_Exercice", [], "any", false, false, false, 16), 'errors');
+        // line 52
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 52, $this->source); })()), "nom_Exercice", [], "any", false, false, false, 52), 'errors');
         echo "
         </td>
     </tr>
     <tr>
         <td>  ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 20, $this->source); })()), "dure_Exercice", [], "any", false, false, false, 20), 'label', ["label" => "Duree Exercice"]);
+        // line 56
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 56, $this->source); })()), "dure_Exercice", [], "any", false, false, false, 56), 'label', ["label" => "Duree Exercice"]);
         echo "  </td>
 
         <td> ";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 22, $this->source); })()), "dure_Exercice", [], "any", false, false, false, 22), 'widget');
+        // line 58
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 58, $this->source); })()), "dure_Exercice", [], "any", false, false, false, 58), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrer duree exercice"]]);
         echo "   </td>
     </tr>
     <tr>
         <td></td>
         <td>
           ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 27, $this->source); })()), "dure_Exercice", [], "any", false, false, false, 27), 'errors');
-        echo "
-        </td>
-    </tr>
-    <tr>
-        <td>  ";
-        // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 31, $this->source); })()), "description_Exercice", [], "any", false, false, false, 31), 'label', ["label" => "Description Exercice"]);
-        echo "  </td>
-
-        <td> ";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 33, $this->source); })()), "description_Exercice", [], "any", false, false, false, 33), 'widget');
-        echo "   </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-          ";
-        // line 38
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 38, $this->source); })()), "description_Exercice", [], "any", false, false, false, 38), 'errors');
-        echo "
-        </td>
-    </tr>
-    <tr>
-        <td>  ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 42, $this->source); })()), "category", [], "any", false, false, false, 42), 'label', ["label" => "Category"]);
-        echo "  </td>
-
-        <td> ";
-        // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 44, $this->source); })()), "category", [], "any", false, false, false, 44), 'widget');
-        echo "   </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-          ";
-        // line 49
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 49, $this->source); })()), "category", [], "any", false, false, false, 49), 'errors');
-        echo "
-        </td>
-    </tr>
-    <tr>
-
-            <td>
-                ";
-        // line 55
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 55, $this->source); })()), "Add", [], "any", false, false, false, 55), 'row');
-        echo "
-            </td>
-
-
-
-    </tr>
-</table>
-    </div>
- ";
         // line 63
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 63, $this->source); })()), "Add", [], "any", false, false, false, 63), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 63, $this->source); })()), "dure_Exercice", [], "any", false, false, false, 63), 'errors');
+        echo "
+        </td>
+    </tr>
+    <tr>
+        <td>  ";
+        // line 67
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 67, $this->source); })()), "description_Exercice", [], "any", false, false, false, 67), 'label', ["label" => "Description Exercice"]);
+        echo "  </td>
+
+        <td> ";
+        // line 69
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 69, $this->source); })()), "description_Exercice", [], "any", false, false, false, 69), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrer description exercice"]]);
+        echo "   </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+          ";
+        // line 74
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 74, $this->source); })()), "description_Exercice", [], "any", false, false, false, 74), 'errors');
+        echo "
+        </td>
+    </tr>
+    <tr>
+        <td>  ";
+        // line 78
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 78, $this->source); })()), "category", [], "any", false, false, false, 78), 'label', ["label" => "Category"]);
+        echo "  </td>
+
+        <td> ";
+        // line 80
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 80, $this->source); })()), "category", [], "any", false, false, false, 80), 'widget');
+        echo "   </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+          ";
+        // line 85
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 85, $this->source); })()), "category", [], "any", false, false, false, 85), 'errors');
+        echo "
+        </td>
+    </tr>
+
+
+
+
+
+
+
+
+</table>
+        <div class=\"dibtn\" style=\"margin-top: 20px\">
+        ";
+        // line 98
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 98, $this->source); })()), "Add", [], "any", false, false, false, 98), 'row', ["attr" => ["class" => "sub"]]);
+        echo "
+        </div>
+
+
+
+        ";
+        // line 104
+        echo " ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 104, $this->source); })()), "Add", [], "any", false, false, false, 104), 'widget');
         echo "
 ";
-        // line 64
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 64, $this->source); })()), 'form_end');
+        // line 105
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formExercice"]) || array_key_exists("formExercice", $context) ? $context["formExercice"] : (function () { throw new RuntimeError('Variable "formExercice" does not exist.', 105, $this->source); })()), 'form_end');
         echo "
-    <table border=\"1\" style=\"width: 100%\">
-        <tr>
-            <th style=\"color: yellow\">nom exercice</th>
-            <th style=\"color: yellow\">dure exercice</th>
-            <th style=\"color: yellow\" >description </th>
-            <th style=\"color: yellow\" >category</th>
-            <th style=\"color: yellow\">Action</th>
+        <div style=\"margin-top: 20px\">
 
-        </tr>
-        ";
-        // line 74
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["exercices"]) || array_key_exists("exercices", $context) ? $context["exercices"] : (function () { throw new RuntimeError('Variable "exercices" does not exist.', 74, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["e"]) {
-            // line 75
-            echo "            <tr>
-                <td>";
-            // line 76
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getNomExercice", [], "method", false, false, false, 76), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 77
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDureExercice", [], "method", false, false, false, 77), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 78
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["e"], "getDescriptionExercice", [], "method", false, false, false, 78), "html", null, true);
-            echo " </td>
-                <td>";
-            // line 79
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["e"], "getCategory", [], "method", false, false, false, 79), "getNomCat", [], "method", false, false, false, 79), "html", null, true);
-            echo "</td>
-                <td>
-                    <a href=\"";
-            // line 81
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ExerciceUpdate", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 81)]), "html", null, true);
-            echo "\"> <i class=\"fa-solid fa-cog fa-spin\"></i> </a>
-                    <a href=\"";
-            // line 82
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ExerciceDelete", ["id" => twig_get_attribute($this->env, $this->source, $context["e"], "getId", [], "any", false, false, false, 82)]), "html", null, true);
-            echo "\"><i class=\"fa-solid fa-xmark\"></i></a>
+            <a href=\"";
+        // line 108
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("exerciceback");
+        echo "\"><h6> back to list</h6></a>
 
-                </td>
-            </tr>
-        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['e'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 87
-        echo "    </table>
+        </div>
+";
+        // line 118
+        echo "
+";
+        // line 129
+        echo "
+";
+        // line 134
+        echo "    </center>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -246,14 +275,50 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
 
     public function getDebugInfo()
     {
-        return array (  227 => 87,  216 => 82,  212 => 81,  207 => 79,  203 => 78,  199 => 77,  195 => 76,  192 => 75,  188 => 74,  175 => 64,  171 => 63,  160 => 55,  151 => 49,  143 => 44,  138 => 42,  131 => 38,  123 => 33,  118 => 31,  111 => 27,  103 => 22,  98 => 20,  91 => 16,  83 => 11,  78 => 9,  72 => 6,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  256 => 134,  253 => 129,  250 => 118,  244 => 108,  238 => 105,  233 => 104,  225 => 98,  209 => 85,  201 => 80,  196 => 78,  189 => 74,  181 => 69,  176 => 67,  169 => 63,  161 => 58,  156 => 56,  149 => 52,  141 => 47,  136 => 45,  130 => 42,  127 => 40,  122 => 36,  112 => 35,  69 => 3,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.back.html.twig' %}
+{% block css %}
+    {{ parent() }}
+    .dibtn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .sub {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+
+    .sub:hover {
+    background-color: #e65f32;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+    }
+{% endblock %}
 {% block body %}
-    <div style=\"margin-left:25% ;padding-left: 10%; height: 40%;width: 40%\">
+    <center>
+
+
+{#    <div style=\"margin-left:25% ;padding-left: 10%; height: 40%;width: 40%\">#}
 <h1>add exercice</h1>
 {#{{ form(formExercice) }}#}
 {{ form_start(formExercice, {'attr': {'novalidate': 'novalidate'}}) }}
@@ -261,7 +326,7 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
     <tr>
          <td>  {{ form_label(formExercice.nom_Exercice,\"Nom Exercice\")}}  </td>
 
-        <td> {{ form_widget(formExercice.nom_Exercice)}}   </td>
+        <td> {{ form_widget(formExercice.nom_Exercice,{'attr':{'class':'form-control','placeholder':'Entrer nom exercice'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -272,7 +337,7 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
     <tr>
         <td>  {{ form_label(formExercice.dure_Exercice,\"Duree Exercice\")}}  </td>
 
-        <td> {{ form_widget(formExercice.dure_Exercice)}}   </td>
+        <td> {{ form_widget(formExercice.dure_Exercice,{'attr':{'class':'form-control','placeholder':'Entrer duree exercice'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -283,7 +348,7 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
     <tr>
         <td>  {{ form_label(formExercice.description_Exercice,\"Description Exercice\")}}  </td>
 
-        <td> {{ form_widget(formExercice.description_Exercice)}}   </td>
+        <td> {{ form_widget(formExercice.description_Exercice,{'attr':{'class':'form-control','placeholder':'Entrer description exercice'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -302,42 +367,53 @@ class __TwigTemplate_819d80967006653caad47650438abdd14f0744a7d5e8dc551f600d947fc
           {{ form_errors(formExercice.category) }}
         </td>
     </tr>
-    <tr>
-
-            <td>
-                {{ form_row(formExercice.Add) }}
-            </td>
 
 
 
-    </tr>
+
+
+
+
+
 </table>
-    </div>
+        <div class=\"dibtn\" style=\"margin-top: 20px\">
+        {{ form_row(formExercice.Add,{'attr':{'class':'sub'}}) }}
+        </div>
+
+
+
+        {#    </div>#}
  {{ form_widget(formExercice.Add)}}
 {{ form_end(formExercice) }}
-    <table border=\"1\" style=\"width: 100%\">
-        <tr>
-            <th style=\"color: yellow\">nom exercice</th>
-            <th style=\"color: yellow\">dure exercice</th>
-            <th style=\"color: yellow\" >description </th>
-            <th style=\"color: yellow\" >category</th>
-            <th style=\"color: yellow\">Action</th>
+        <div style=\"margin-top: 20px\">
 
-        </tr>
-        {% for e in exercices %}
-            <tr>
-                <td>{{ e.getNomExercice()}}</td>
-                <td>{{ e.getDureExercice()}}</td>
-                <td>{{ e.getDescriptionExercice()}} </td>
-                <td>{{ e.getCategory().getNomCat()}}</td>
-                <td>
-                    <a href=\"{{ path('ExerciceUpdate',{\"id\":e.getId}) }}\"> <i class=\"fa-solid fa-cog fa-spin\"></i> </a>
-                    <a href=\"{{ path('ExerciceDelete',{\"id\":e.getId}) }}\"><i class=\"fa-solid fa-xmark\"></i></a>
+            <a href=\"{{ path('exerciceback')}}\"><h6> back to list</h6></a>
 
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+        </div>
+{#    <table border=\"1\" style=\"width: 100%\">#}
+{#        <tr>#}
+{#            <th style=\"color: yellow\">nom exercice</th>#}
+{#            <th style=\"color: yellow\">dure exercice</th>#}
+{#            <th style=\"color: yellow\" >description </th>#}
+{#            <th style=\"color: yellow\" >category</th>#}
+{#            <th style=\"color: yellow\">Action</th>#}
+
+{#        </tr>#}
+{#        {% for e in exercices %}#}
+{#            <tr>#}
+{#                <td>{{ e.getNomExercice()}}</td>#}
+{#                <td>{{ e.getDureExercice()}}</td>#}
+{#                <td>{{ e.getDescriptionExercice()}} </td>#}
+{#                <td>{{ e.getCategory().getNomCat()}}</td>#}
+{#                <td>#}
+{#                    <a href=\"{{ path('ExerciceUpdate',{\"id\":e.getId}) }}\"> <i class=\"fa-solid fa-cog fa-spin\"></i> </a>#}
+{#                    <a href=\"{{ path('ExerciceDelete',{\"id\":e.getId}) }}\"><i class=\"fa-solid fa-xmark\"></i></a>#}
+
+{#                </td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#    </table>#}
+    </center>
 {% endblock %}", "exercice/add.html.twig", "C:\\wamp64\\www\\Mbody_prjt\\templates\\exercice\\add.html.twig");
     }
 }

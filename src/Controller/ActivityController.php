@@ -26,6 +26,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Constraints\DateTime;
 use function PHPSTORM_META\map;
+use Dompdf\Dompdf;
+use Dompdf\Options;
+use Spipu\Html2Pdf\Html2Pdf;
 
 class ActivityController extends AbstractController
 {
@@ -82,7 +85,7 @@ class ActivityController extends AbstractController
             $em->persist($activity);
             $em->flush();
             }
-            return $this->redirectToRoute("activityAdd");
+            return $this->redirectToRoute("activityall");
         }
         return $this->render("activity/add.html.twig",
             array("formActivity"=>$form->createView() , 'activities' => $activityAll ,));
@@ -123,7 +126,7 @@ class ActivityController extends AbstractController
                 $em= $this->getDoctrine()->getManager();
                 $em->flush();
             }
-            return $this->redirectToRoute("activityAdd");
+            return $this->redirectToRoute("activityall");
         }
         return $this->render("activity/add.html.twig", array("formActivity"=>$form->createView(),'activities' => $activityAll ,));
     }
@@ -135,7 +138,7 @@ class ActivityController extends AbstractController
         $em= $this->getDoctrine()->getManager();
         $em->remove($activity);
         $em->flush();
-        return $this->redirectToRoute("activityAdd");
+        return $this->redirectToRoute("activityall");
     }
     /**
      * @Route("/activitySchedule", name="activitySchedule")
@@ -240,6 +243,7 @@ class ActivityController extends AbstractController
 
         $form= $this->createForm(PaticipeType::class);
         $form->handleRequest($request);
+        $em= $this->getDoctrine()->getManager();
         $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
         //user is the participation .... after integration change it to
         //$participant=$this->getUser();
@@ -251,7 +255,7 @@ class ActivityController extends AbstractController
         if($didRated !=null){
             $heRated=true;
         }
-        var_dump($heRated);
+        //var_dump($heRated);
         //pour teste user est  participé
         $particpe=false;
         foreach($activity->getParticipe() as $pp){
@@ -285,8 +289,43 @@ class ActivityController extends AbstractController
             file_put_contents($img, file_get_contents($result->getDataUri()));
             //$participoTo=$this->getUser()->getEmail();
             $participoTo='oussama.saddi2@gmail.com';
+            //******************************File pdf************************
+            $pdfOptions = new Options();
+            $pdfOptions->set('defaultFont', 'Arial');
+
+            // Instantiate Dompdf with our options
+            $dompdf = new Dompdf($pdfOptions);
+            //$abonnement=$AbonnementRepository->findAll();
+
+            //$html2pdf = new Html2Pdf();
+
+            // Retrieve the HTML generated in our twig file
+            $html = $this->renderView('activity/pdf.html.twig',
+                ['activity'=>$activity ,
+                  'imgqr'=>$result->getDataUri(),
+                    "user" => $participant,
+                    ]);
+
+            // Load HTML to Dompdf
+            $dompdf->loadHtml($html);
+            //$html2pdf->writeHTML($html);
+
+            //$html2pdf->output('myPdf.pdf');
+
+            // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+            $dompdf->setPaper('A4', 'portrait');
+
+
+            // Render the HTML as PDF
+            $dompdf->render();
+            $output = $dompdf->output();
+            $pdfFilepath ="test.pdf";
+            file_put_contents($pdfFilepath, $output);
+
+
+
             //****************send Email**************
-            $attachment = Swift_Attachment::fromPath($img);
+            $attachment = Swift_Attachment::fromPath($pdfFilepath);
             $message = (new \Swift_Message('Activity Pass'))
                 ->setFrom('oussama.saddi2@gmail.com')
                 ->setTo($participoTo)
@@ -311,23 +350,25 @@ class ActivityController extends AbstractController
             $mailer->send($message);
             //*************ajouter participant*********
             $activity->addParticipe($participant);
-           $em= $this->getDoctrine()->getManager();
+
            $em->flush();
 
         }
-        var_dump((int)$req->request->get('rate'));
+        //var_dump((int)$req->request->get('rate'));
         $rate=(int)$req->request->get('rate');
         $rated = new Rating();
         if($rate!=0 and $rate != null){
             $rated->setIduser($participant);
             $rated->setIdactivity($activity);
             $rated->setRate($rate);
-            $em=$this->getDoctrine()->getManager();
+            //$em=$this->getDoctrine()->getManager();
             $em->persist($rated);
             $em->flush();
         }
+        $em->flush();
 
-
+        $activity= $this->getDoctrine()->getRepository(Activity::class)->find($id);
+        $em->flush();
         return $this->render('activity/detailActivity.html.twig', [
             'activity' => $activity ,
             'btnParticipe' =>$form->createView(),
@@ -336,6 +377,7 @@ class ActivityController extends AbstractController
             'heRated'=>$heRated,
             'didRated'=>$didRated,
             'ctdate'=>(string)date('Y-m-d'),
+            'user' =>$participant,
         ]);
     }
     /**
@@ -366,12 +408,47 @@ class ActivityController extends AbstractController
         return new JsonResponse($dt);
     }
     /**
+     * @Route("/activity/json/detail/{idact}", name="activitydetailjson")
+     */
+    public function index3($idact): Response
+    {
+        $activity= $this->getDoctrine()->getRepository(Activity::class)->find($idact);
+        //$participant=$this->getUser();
+        $participant = $this->getDoctrine()->getRepository(User::class)->find(1);
+        $didRated = $this->getDoctrine()->getRepository(Rating::class)->findOneBy(array('Iduser'=>$participant ,'idActivity'=>$activity));
+        $numRate=0;
+        if($didRated !=null){
+            $numRate=$didRated->getRate();
+        }
+//
+        $tb = array();
+        $dt=array();
+        //
+            $dt['rate'] = $numRate;
+            //$dt[$key]['nom_Act'] = $cat->getNomAct();
+
+
+        //}
+        return new JsonResponse($dt);
+    }
+    /**
      * @Route("/activity/test/test", name="activitytest")
      */
-    public function index3(Request $request , PaginatorInterface $paginator): Response
+    public function index4(Request $request , PaginatorInterface $paginator): Response
     {
 
         return $this->render('activity/testt.html.twig');
+    }
+    /**
+     * @Route("/activity/back/all", name="activityall")
+     */
+    public function index10(Request $request , PaginatorInterface $paginator): Response
+    {
+        $data = $this->getDoctrine()->getRepository(Activity::class)->findAll();
+        return $this->render('activity/index.html.twig', [
+            'activities' => $data ,
+
+        ]);
     }
 
 }

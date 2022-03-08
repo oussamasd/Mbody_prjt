@@ -1,20 +1,57 @@
-<table border="1">
+{% extends 'base.back.html.twig' %}
+{% block body %}
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            </div>
+            <p style="margin-left: 950px">  <input type="text" id="myInput" class="form-control" placeholder="Chercher une activite">
+        </div>
+    </div>
+<table border="1" style="width: 100%" id="myTable">
     <tr>
-        <td>nom activitie</td>
-        <td>date activite</td>
-        <td>temps activite </td>
-        <td>description </td>
-        <td>category </td>
+        <th style="color: #fffb4c">nom activitie</th>
+        <th>date activite</th>
+        <th>temps activite </th>
+        <th>description </th>
+        <th>category </th>
+        <th>Action </th>
 
     </tr>
     {% for e in activities %}
         <tr>
             <td>{{ e.getNomAct()}}</td>
             <td>{{ e.getDateAct()|date('Y-m-d')}}</td>
-          <td>{{ e.getTempAct()|date('H:i')}} </td>
+            <td>{{ e.getTempAct()|date('H:i')}} </td>
             <td>{{ e.getDescriptionAct()}}</td>
             <td>{{ e.getCategory.getNomCat()}} </td>
+            <td>
+                <a href="{{ path('ActivityUpdate',{"id":e.getId}) }}"> <i class="fa-solid fa-cog fa-spin"></i> </a>
+
+                <a href="{{ path('ActivityDelete',{"id":e.getId}) }}"><i class="fa-solid fa-xmark"></i></a>
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/activity/details/{{ e.getId }}" >
+
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+
+
+
+
+            </td>
 
         </tr>
     {% endfor %}
 </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}

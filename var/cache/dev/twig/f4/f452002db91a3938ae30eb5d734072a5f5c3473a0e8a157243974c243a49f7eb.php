@@ -194,67 +194,63 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
             // line 38
             echo "            ";
             $context["i"] = twig_get_attribute($this->env, $this->source, $context["activity"], "getImages", [], "method", false, false, false, 38);
-            // line 60
+            // line 39
             echo "
-";
-            // line 63
-            echo "
-";
-            // line 82
-            echo "            ";
-            $context["prt"] = twig_get_attribute($this->env, $this->source, $context["activity"], "getRatings", [], "method", false, false, false, 82);
-            // line 83
+            ";
+            // line 40
+            $context["prt"] = twig_get_attribute($this->env, $this->source, $context["activity"], "getRatings", [], "method", false, false, false, 40);
+            // line 41
             echo "            ";
             $context["sommerate"] = 0;
-            // line 84
+            // line 42
             echo "            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["prt"]) || array_key_exists("prt", $context) ? $context["prt"] : (function () { throw new RuntimeError('Variable "prt" does not exist.', 84, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["prt"]) || array_key_exists("prt", $context) ? $context["prt"] : (function () { throw new RuntimeError('Variable "prt" does not exist.', 42, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-                // line 85
+                // line 43
                 echo "               ";
-                $context["sommerate"] = ((isset($context["sommerate"]) || array_key_exists("sommerate", $context) ? $context["sommerate"] : (function () { throw new RuntimeError('Variable "sommerate" does not exist.', 85, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["p"], "getRate", [], "method", false, false, false, 85));
-                // line 86
+                $context["sommerate"] = ((isset($context["sommerate"]) || array_key_exists("sommerate", $context) ? $context["sommerate"] : (function () { throw new RuntimeError('Variable "sommerate" does not exist.', 43, $this->source); })()) + twig_get_attribute($this->env, $this->source, $context["p"], "getRate", [], "method", false, false, false, 43));
+                // line 44
                 echo "            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 87
+            // line 45
             echo "            ";
             $context["rate"] = 0;
-            // line 88
+            // line 46
             echo "            ";
-            if ((0 !== twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getRatings", [], "method", false, false, false, 88)), 0))) {
-                // line 89
+            if ((0 !== twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getRatings", [], "method", false, false, false, 46)), 0))) {
+                // line 47
                 echo "            ";
-                $context["rate"] = ((isset($context["sommerate"]) || array_key_exists("sommerate", $context) ? $context["sommerate"] : (function () { throw new RuntimeError('Variable "sommerate" does not exist.', 89, $this->source); })()) / twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getRatings", [], "method", false, false, false, 89)));
-                // line 90
+                $context["rate"] = ((isset($context["sommerate"]) || array_key_exists("sommerate", $context) ? $context["sommerate"] : (function () { throw new RuntimeError('Variable "sommerate" does not exist.', 47, $this->source); })()) / twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getRatings", [], "method", false, false, false, 47)));
+                // line 48
                 echo "           ";
-                // line 91
+                // line 49
                 echo "            ";
             }
-            // line 92
+            // line 50
             echo "
         <div class=\"col-lg-4\">
             <div class=\"trainer-item\">
                 <div class=\"image-thumb\">
                     ";
-            // line 96
-            if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 96, $this->source); })())), 0))) {
-                // line 97
+            // line 54
+            if ((1 === twig_compare(twig_length_filter($this->env, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 54, $this->source); })())), 0))) {
+                // line 55
                 echo "
                     <img src=\"http://127.0.0.1:8000/uploads/";
-                // line 98
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 98, $this->source); })()), 0, [], "array", false, false, false, 98), "getImageUrl", [], "method", false, false, false, 98), "html", null, true);
+                // line 56
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["i"]) || array_key_exists("i", $context) ? $context["i"] : (function () { throw new RuntimeError('Variable "i" does not exist.', 56, $this->source); })()), 0, [], "array", false, false, false, 56), "getImageUrl", [], "method", false, false, false, 56), "html", null, true);
                 echo "\" alt=\"\">
                     ";
             } else {
-                // line 100
+                // line 58
                 echo "                    <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">
                     ";
             }
-            // line 102
+            // line 60
             echo "
 
                 </div>
@@ -262,8 +258,8 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                     <tr>
                         <td>
                             <span>";
-            // line 108
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["activity"], "getCategory", [], "any", false, false, false, 108), "getNomCat", [], "method", false, false, false, 108), "html", null, true);
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["activity"], "getCategory", [], "any", false, false, false, 66), "getNomCat", [], "method", false, false, false, 66), "html", null, true);
             echo "</span>
                         </td>
                         <td >
@@ -271,14 +267,14 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                     <span style=\"padding-left: 30%\">
 
                             ";
-            // line 114
-            if ((0 === twig_compare((isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 114, $this->source); })()), 0))) {
-                // line 115
+            // line 72
+            if ((0 === twig_compare((isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 72, $this->source); })()), 0))) {
+                // line 73
                 echo "                                ";
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(range(1, 5));
                 foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                    // line 116
+                    // line 74
                     echo "                                    <i class=\"hover\" style=\"color: black\">&#9733;</i>
 
                                 ";
@@ -286,17 +282,17 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 119
+                // line 77
                 echo "                            ";
             } else {
-                // line 120
+                // line 78
                 echo "
                                 ";
-                // line 121
+                // line 79
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 121, $this->source); })())));
+                $context['_seq'] = twig_ensure_traversable(range(1, (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 79, $this->source); })())));
                 foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                    // line 122
+                    // line 80
                     echo "                                    <i class=\"hover\" style=\"color: gold\">&#9733;</i>
 
                                 ";
@@ -304,50 +300,56 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 125
+                // line 83
                 echo "
                                 ";
-                // line 126
-                if ((0 === twig_compare(twig_length_filter($this->env, (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 126, $this->source); })())), 1))) {
-                    // line 127
-                    echo "                                    ";
-                    $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(range(1, (5 - (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 127, $this->source); })()))));
-                    foreach ($context['_seq'] as $context["_key"] => $context["j"]) {
-                        // line 128
-                        echo "                                        <i class=\"star2\" style=\"color: black\" >&#9733;</i>
-                                    ";
-                    }
-                    $_parent = $context['_parent'];
-                    unset($context['_seq'], $context['_iterated'], $context['_key'], $context['j'], $context['_parent'], $context['loop']);
-                    $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 130
+                // line 84
+                if ((0 !== twig_compare((5 - (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 84, $this->source); })())), 0))) {
+                    // line 85
                     echo "                                ";
-                } else {
-                    // line 131
-                    echo "                                    ";
-                    $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 131, $this->source); })()))));
-                    foreach ($context['_seq'] as $context["_key"] => $context["l"]) {
-                        // line 132
-                        echo "                                        <i class=\"star2\" style=\"color: black\" >&#9733;</i>
+                    if ((0 === twig_compare(twig_length_filter($this->env, (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 85, $this->source); })())), 1))) {
+                        // line 86
+                        echo "                                    ";
+                        $context['_parent'] = $context;
+                        $context['_seq'] = twig_ensure_traversable(range(1, (5 - (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 86, $this->source); })()))));
+                        foreach ($context['_seq'] as $context["_key"] => $context["j"]) {
+                            // line 87
+                            echo "                                        <i class=\"star2\" style=\"color: black\" >&#9733;</i>
                                     ";
-                    }
-                    $_parent = $context['_parent'];
-                    unset($context['_seq'], $context['_iterated'], $context['_key'], $context['l'], $context['_parent'], $context['loop']);
-                    $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 134
-                    echo "
+                        }
+                        $_parent = $context['_parent'];
+                        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['j'], $context['_parent'], $context['loop']);
+                        $context = array_intersect_key($context, $_parent) + $_parent;
+                        // line 89
+                        echo "                                ";
+                    } else {
+                        // line 90
+                        echo "                                    ";
+                        $context['_parent'] = $context;
+                        $context['_seq'] = twig_ensure_traversable(range(1, (6 - (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 90, $this->source); })()))));
+                        foreach ($context['_seq'] as $context["_key"] => $context["l"]) {
+                            // line 91
+                            echo "                                        <i class=\"star2\" style=\"color: black\" >&#9733;</i>
+                                    ";
+                        }
+                        $_parent = $context['_parent'];
+                        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['l'], $context['_parent'], $context['loop']);
+                        $context = array_intersect_key($context, $_parent) + $_parent;
+                        // line 93
+                        echo "
                                 ";
+                    }
+                    // line 95
+                    echo "                                ";
                 }
-                // line 136
+                // line 96
                 echo "                            ";
             }
-            // line 137
+            // line 97
             echo "
                             <i style=\"font-size: large\"> ";
-            // line 138
-            echo twig_escape_filter($this->env, (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 138, $this->source); })()), "html", null, true);
+            // line 98
+            echo twig_escape_filter($this->env, (isset($context["rate"]) || array_key_exists("rate", $context) ? $context["rate"] : (function () { throw new RuntimeError('Variable "rate" does not exist.', 98, $this->source); })()), "html", null, true);
             echo "</i>
                     </span>
 
@@ -363,23 +365,23 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
 
 
                     <h4>";
-            // line 152
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getNomAct", [], "method", false, false, false, 152), "html", null, true);
+            // line 112
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getNomAct", [], "method", false, false, false, 112), "html", null, true);
             echo "</h4>
                     <h6>";
-            // line 153
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDateAct", [], "any", false, false, false, 153), "Y-m-d"), "html", null, true);
+            // line 113
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDateAct", [], "any", false, false, false, 113), "Y-m-d"), "html", null, true);
             echo "</h6>
                     <p>";
-            // line 154
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDescriptionAct", [], "method", false, false, false, 154), "html", null, true);
+            // line 114
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getDescriptionAct", [], "method", false, false, false, 114), "html", null, true);
             echo "</p>
                     <table>
                     <tr>
                         <td>
                     <ul class=\"social-icons\">
-                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
+                        <li><a href=\"https://www.facebook.com/oussama.saddi.7/\" ><i class=\"fa fa-facebook\"></i></a></li>
+                        <li><a href=\"https://www.instagram.com/o_sama2312/\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
                     </ul>
@@ -387,8 +389,8 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                         <td>
                             <div class=\"stage\">
                                 <a class=\"lnkSchow\" href=\"/activity/details/";
-            // line 167
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getId", [], "method", false, false, false, 167), "html", null, true);
+            // line 127
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["activity"], "getId", [], "method", false, false, false, 127), "html", null, true);
             echo "\">Read More</a>
                             </div>
                         </td>
@@ -402,13 +404,13 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['activity'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 176
+        // line 136
         echo "
     </div>
     <div style=\"margin-left: 50%\">
     ";
-        // line 179
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 179, $this->source); })()));
+        // line 139
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["activities"]) || array_key_exists("activities", $context) ? $context["activities"] : (function () { throw new RuntimeError('Variable "activities" does not exist.', 139, $this->source); })()));
         echo "
     </div>
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
@@ -459,7 +461,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
 
     }
 
-    // line 209
+    // line 169
     public function block_b4($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -489,7 +491,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
 
     public function getDebugInfo()
     {
-        return array (  463 => 209,  451 => 16,  446 => 15,  436 => 14,  411 => 179,  406 => 176,  391 => 167,  375 => 154,  371 => 153,  367 => 152,  350 => 138,  347 => 137,  344 => 136,  340 => 134,  333 => 132,  328 => 131,  325 => 130,  318 => 128,  313 => 127,  311 => 126,  308 => 125,  300 => 122,  296 => 121,  293 => 120,  290 => 119,  282 => 116,  277 => 115,  275 => 114,  266 => 108,  258 => 102,  254 => 100,  249 => 98,  246 => 97,  244 => 96,  238 => 92,  235 => 91,  233 => 90,  230 => 89,  227 => 88,  224 => 87,  218 => 86,  215 => 85,  210 => 84,  207 => 83,  204 => 82,  201 => 63,  198 => 60,  195 => 38,  191 => 37,  185 => 33,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
+        return array (  465 => 169,  453 => 16,  448 => 15,  438 => 14,  413 => 139,  408 => 136,  393 => 127,  377 => 114,  373 => 113,  369 => 112,  352 => 98,  349 => 97,  346 => 96,  343 => 95,  339 => 93,  332 => 91,  327 => 90,  324 => 89,  317 => 87,  312 => 86,  309 => 85,  307 => 84,  304 => 83,  296 => 80,  292 => 79,  289 => 78,  286 => 77,  278 => 74,  273 => 73,  271 => 72,  262 => 66,  254 => 60,  250 => 58,  245 => 56,  242 => 55,  240 => 54,  234 => 50,  231 => 49,  229 => 48,  226 => 47,  223 => 46,  220 => 45,  214 => 44,  211 => 43,  206 => 42,  203 => 41,  201 => 40,  198 => 39,  195 => 38,  191 => 37,  185 => 33,  174 => 22,  168 => 18,  165 => 14,  155 => 13,  137 => 11,  119 => 9,  101 => 7,  83 => 5,  65 => 3,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -532,49 +534,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
     <div class=\"row\">
         {% for activity in activities %}
             {% set i =activity.getImages() %}
-{#        <div class=\"col-lg-4\">#}
-{#            <div class=\"trainer-item\">#}
-{#                <div class=\"image-thumb\">#}
-{#                    <img src=\"{{ asset('assets/images/first-trainer.jpg') }}\" alt=\"\">#}
-{#                </div>#}
-{#                <div class=\"down-content\">#}
-{#                    <span>Strength Trainer</span>#}
-{#                    <h4>Bret D. Bowers</h4>#}
-{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
-{#                    <ul class=\"social-icons\">#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class=\"col-lg-4\">#}
-{#            <div class=\"trainer-item\">#}
-{#                <div class=\"image-thumb\">#}
 
-{#                    {% if i|length >0 %}#}
-{#                        {% set imgg =\"uploads/\"+{{ i[0].getImageUrl() }}  %}#}
-
-{#                        <img src=\"http://127.0.0.1:8000/uploads/{{ i[0].getImageUrl() }}\" alt=\"\">#}
-{#                     {% else%}#}
-{#                         <img src=\"http://127.0.0.1:8000/uploads/noimg.jpg\" alt=\"\">#}
-{#                    {% endif %}#}
-{#                </div>#}
-{#                <div class=\"down-content\">#}
-{#                    <span>Muscle Trainer</span>#}
-{#                    <h4>Hector T. Daigl</h4>#}
-{#                    <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>#}
-{#                    <ul class=\"social-icons\">#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>#}
-{#                        <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
             {% set prt = activity.getRatings() %}
             {% set sommerate = 0 %}
             {% for p in prt %}
@@ -619,6 +579,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
 
                                 {% endfor %}
 
+                                {% if 5-rate !=0 %}
                                 {% if rate |length ==1 %}
                                     {% for j in 1..5-rate %}
                                         <i class=\"star2\" style=\"color: black\" >&#9733;</i>
@@ -629,6 +590,7 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                                     {% endfor %}
 
                                 {% endif%}
+                                {% endif %}
                             {% endif %}
 
                             <i style=\"font-size: large\"> {{ rate }}</i>
@@ -652,8 +614,8 @@ class __TwigTemplate_801bb569b307bf9cb27ce3bc71d4850b120cd8d33e9ed0e885b041a99e0
                     <tr>
                         <td>
                     <ul class=\"social-icons\">
-                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>
-                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>
+                        <li><a href=\"https://www.facebook.com/oussama.saddi.7/\" ><i class=\"fa fa-facebook\"></i></a></li>
+                        <li><a href=\"https://www.instagram.com/o_sama2312/\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>
                         <li><a href=\"#\"><i class=\"fa fa-behance\"></i></a></li>
                     </ul>

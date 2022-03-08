@@ -49,7 +49,7 @@ class ExerciceController extends AbstractController
             $em= $this->getDoctrine()->getManager();
             $em->persist($exercice);
             $em->flush();
-            return $this->redirectToRoute("exerciceAdd");
+            return $this->redirectToRoute("exerciceback");
         }
         return $this->render("exercice/add.html.twig",
             array("formExercice"=>$form->createView(),'exercices' => $exercices ,));
@@ -68,9 +68,9 @@ class ExerciceController extends AbstractController
         if($form->isSubmitted()&& $form->isValid()){
             $em= $this->getDoctrine()->getManager();
             $em->flush();
-            return $this->redirectToRoute("exerciceAdd");
+            return $this->redirectToRoute("exerciceback");
         }
-        return $this->render("exercice/add.html.twig", array("formExercice"=>$form->createView(),'exercices' => $exercices ,));
+        return $this->render("exercice/add.html.twig", array("formExercice"=>$form->createView()));
     }
     /**
      * @Route("/DeleteExercice/{id}",name="ExerciceDelete")
@@ -80,6 +80,14 @@ class ExerciceController extends AbstractController
         $em= $this->getDoctrine()->getManager();
         $em->remove($exercice);
         $em->flush();
-        return $this->redirectToRoute("exerciceAdd");
+        return $this->redirectToRoute("exerciceback");
+    }
+    /**
+     * @Route("/exercice/back/all",name="exerciceback")
+     */
+    public function showex(){
+        $exercice= $this->getDoctrine()->getRepository(Exercice::class)->findAll();
+
+        return $this->render("exercice/index.html.twig", array('exercices' => $exercice ));
     }
 }

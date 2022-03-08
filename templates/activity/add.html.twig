@@ -1,6 +1,42 @@
 {% extends 'base.back.html.twig' %}
+{% block css %}
+    {{ parent() }}
+    .dibtn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .sub {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+
+    .sub:hover {
+    background-color: #e65f32;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+    }
+{% endblock %}
 {% block body %}
-    <div style="padding-left:40%">
+{#    <div style="padding-left:40%">#}
+    <center>
+
+
 <h1>add activite</h1>
 {#{{ form(formActivity) }}#}
 {{ form_start(formActivity , {'attr': {'novalidate': 'novalidate'}}) }}
@@ -8,7 +44,7 @@
     <tr>
         <td>  {{ form_label(formActivity.nom_Act,"Nom Activite")}}  </td>
 
-        <td> {{ form_widget(formActivity.nom_Act)}}   </td>
+        <td> {{ form_widget(formActivity.nom_Act,{'attr':{'class':'form-control','placeholder':'Entrer nom activite'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -16,7 +52,7 @@
     </tr>
     <tr>
         <td>  {{ form_label(formActivity.date_Act,"Date Activite")}}  </td>
-        <td> {{ form_widget(formActivity.date_Act)}}   </td>
+        <td> {{ form_widget(formActivity.date_Act,{'attr':{'class':'form-control'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -34,7 +70,7 @@
     <tr>
         <td>  {{ form_label(formActivity.quantite,"nombre de participation")}}  </td>
 
-        <td> {{ form_widget(formActivity.quantite)}}   </td>
+        <td> {{ form_widget(formActivity.quantite,{'attr':{'class':'form-control','placeholder':'Entrer votre quantite'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -42,7 +78,7 @@
     </tr>
     <tr>
         <td>  {{ form_label(formActivity.description_Act,"Description")}}  </td>
-        <td> {{ form_widget(formActivity.description_Act)}}   </td>
+        <td> {{ form_widget(formActivity.description_Act,{'attr':{'class':'form-control','placeholder':'Entrer votre description'}})}}   </td>
     </tr>
     <tr>
         <td></td>
@@ -72,17 +108,25 @@
         </td>
 
     </tr>
-    <tr>
-        <td>
-            {{ form_row(formActivity.Add) }}
-        </td>
 
-    </tr>
+
 </table>
-    </div>
+        <div class="dibtn">
+
+            {{ form_row(formActivity.Add,{'attr':{'class':'sub'}}) }}
+        </div>
+
+
+
+        {#    </div>#}
 
 {{ form_end(formActivity) }}
-    <table border="1" style="width: 100%">
+        <div style="margin-top: 20px">
+
+            <a href="{{ path('activityall')}}"><h6> back to list</h6></a>
+
+        </div>
+   {# <table border="1" style="width: 100%">
         <tr>
             <th style="color: #fffb4c">nom activitie</th>
             <th>date activite</th>
@@ -104,6 +148,11 @@
 
                     <a href="{{ path('ActivityDelete',{"id":e.getId}) }}"><i class="fa-solid fa-xmark"></i></a>
 
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/activity/details/{{ e.getId }}" >
+
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
 
 
 
@@ -112,6 +161,7 @@
 
             </tr>
         {% endfor %}
-    </table>
+    </table>#}
+    </center>
     
 {% endblock %}

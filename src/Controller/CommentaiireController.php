@@ -41,28 +41,28 @@ class CommentaiireController extends AbstractController
 
     }
     /**
-     * @Route("/commentaiire/add/{idAct}", name="commentaiireadd")
+     * @Route("/commentaiire/add/{msg}/{idAct}", name="commentaiireadd")
      */
-    public function index2($idAct): Response
+    public function index2($idAct , $msg ): Response
     {
-        //$participant=$this->getUser();
-        $user = $this->getDoctrine()->getRepository(User::class)->find(2);
+        //$user=$this->getUser();
+        $user = $this->getDoctrine()->getRepository(User::class)->find(1);
         $cm = new Commentaire();
         $cm->setIduser($user);
 
-        $dte=date('Y-m-d');
+        $dte=date('Y-m-d h:m');
         var_dump($dte);
 
         $activity=$this->getDoctrine()->getRepository(Activity::class)->find($idAct);
         $cm->setActivity($activity);
-        $cm->setTextcommentaire("hahahahahh");
+        $cm->setTextcommentaire($msg);
         $cm->setDateCom($dte);
         $em=$this->getDoctrine()->getManager();
         $em->persist($cm);
         $em->flush();
 
 
-        return new JsonResponse($activity);
+        return new JsonResponse($cm);
 
     }
 }
